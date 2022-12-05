@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
@@ -11,23 +10,23 @@ using System.Windows.Forms;
 
 namespace WSA.Clases
 {
-    class Cliente
+    class Proveedor
     {
         Conexion conexion = new Conexion();
 
         //PROPIEDADES
-        public int ClienteId { get; set; }
-        public string ClienteD { get; set; }
+        public int ProveedorId { get; set; }
+        public string ProveedorD { get; set; }
 
         //METODOS
-        public void MostrarCliente(DataGridView dataGrid)
+        public void MostrarProveedor(DataGridView dataGrid)
         {
 
             try
             {
                 conexion.sqlConnection.Open();
 
-                SqlCommand sqlCommand = new SqlCommand("sp_Cliente", conexion.sqlConnection);
+                SqlCommand sqlCommand = new SqlCommand("sp_Proveedor", conexion.sqlConnection);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
 
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
@@ -57,15 +56,14 @@ namespace WSA.Clases
                 conexion.sqlConnection.Close();
             }
         }
-
-        public void BuscarCliente(DataGridView dataGrid, string valorBuscado)
+        public void BuscarProveedor(DataGridView dataGrid, string valorBuscado)
         {
 
             try
             {
                 conexion.sqlConnection.Open();
                 //Query para mostrar un cliente
-                SqlCommand sqlCommand = new SqlCommand("sp_Cliente", conexion.sqlConnection);
+                SqlCommand sqlCommand = new SqlCommand("sp_Proveedor", conexion.sqlConnection);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
 
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
@@ -96,17 +94,18 @@ namespace WSA.Clases
             }
         }
 
-        public void AgregarCliente(Cliente cliente)
+        public void AgregarProveedor(Proveedor proveedor)
         {
             try
             {
                 conexion.sqlConnection.Open();
 
-                SqlCommand sqlCommand = new SqlCommand("sp_Cliente", conexion.sqlConnection);
+                SqlCommand sqlCommand = new SqlCommand("sp_Proveedor", conexion.sqlConnection);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
 
                 // Establecer los valores de los parámetros
-                sqlCommand.Parameters.AddWithValue("@Cliente", cliente.ClienteD);
+                sqlCommand.Parameters.AddWithValue("@Proveedor_Id", proveedor.ProveedorId);
+                sqlCommand.Parameters.AddWithValue("@Proveedor", proveedor.ProveedorD);
                 sqlCommand.Parameters.AddWithValue("@accion", "insertar");
 
                 sqlCommand.ExecuteNonQuery();
@@ -122,22 +121,19 @@ namespace WSA.Clases
             }
         }
 
-        public void ModificarCliente(Cliente cliente)
+        public void ModificarProveedor(Proveedor proveedor)
         {
             try
             {
                 conexion.sqlConnection.Open();
 
-                SqlCommand sqlCommand = new SqlCommand("sp_Cliente", conexion.sqlConnection);
+                SqlCommand sqlCommand = new SqlCommand("sp_Proveedor", conexion.sqlConnection);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
 
                 // Establecer los valores de los parámetros
-                sqlCommand.Parameters.AddWithValue("@Cliente_Id", cliente.ClienteId);
-                sqlCommand.Parameters.AddWithValue("@Cliente", cliente.ClienteD);
-                
-
+                sqlCommand.Parameters.AddWithValue("@Proveedor_Id", proveedor.ProveedorId);
+                sqlCommand.Parameters.AddWithValue("@Proveedor", proveedor.ProveedorD);
                 sqlCommand.Parameters.AddWithValue("@accion", "modificar");
-
 
                 sqlCommand.ExecuteNonQuery();
             }

@@ -28,14 +28,12 @@ namespace WSA
                 getValues();
                 cliente.AgregarCliente(cliente);
                 MessageBox.Show("Cliente agregado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                refresh();
             }
             else
             {
                 MessageBox.Show("Debe llenar todos los campos", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            
-
-
         }
 
         private void getValues()

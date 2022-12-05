@@ -158,7 +158,7 @@ GO
 
 --PROCEDMIENTOS ALMACENADOS
 
-ALTER PROCEDURE sp_Cliente
+CREATE PROCEDURE sp_Cliente
 @Cliente_Id INT = NULL,
 @Cliente VARCHAR(70) = NULL,
 @valorBuscado VARCHAR(80)  = NULL,
@@ -183,6 +183,66 @@ BEGIN
 		SELECT Cliente_Id 'Código del cliente', Cliente 
 		FROM Cliente 
 		WHERE CONCAT(Cliente_Id, ' ', Cliente) LIKE CONCAT('%', @valorBuscado,'%')
+	END
+
+END
+GO
+
+CREATE PROCEDURE sp_Producto
+@Producto_Id INT = NULL,
+@Descripcion VARCHAR(80) = NULL,
+@Precio DECIMAL(6, 2) = NULL,
+@valorBuscado VARCHAR(80)  = NULL,
+@accion VARCHAR(50)
+
+AS
+BEGIN
+	IF @accion = 'insertar'
+	BEGIN
+		INSERT INTO Producto VALUES (@Descripcion, @Precio)
+	END
+	ELSE IF @accion = 'modificar'
+	BEGIN
+		UPDATE Producto SET Descripcion = @Descripcion, Precio = @Precio WHERE Producto_Id = @Producto_Id
+	END
+	ELSE IF @accion = 'mostrar'
+	BEGIN
+		SELECT Producto_Id 'Código del producto', Descripcion 'Descripción', Precio FROM Producto
+	END
+	ELSE IF @accion = 'buscar'
+	BEGIN
+		SELECT Producto_Id 'Código del producto', Descripcion 'Descripción', Precio
+		FROM Producto 
+		WHERE CONCAT(Producto_Id, ' ', Descripcion) LIKE CONCAT('%', @valorBuscado,'%')
+	END
+END
+GO
+
+CREATE PROCEDURE sp_Proveedor
+@Proveedor_Id INT = NULL,
+@Proveedor VARCHAR(70) = NULL,
+@valorBuscado VARCHAR(80)  = NULL,
+@accion VARCHAR(50)
+
+AS
+BEGIN
+	IF @accion = 'insertar'
+	BEGIN
+		INSERT INTO Proveedor VALUES (@Proveedor)
+	END
+	ELSE IF @accion = 'modificar'
+	BEGIN
+		UPDATE Proveedor SET Proveedor = @Proveedor WHERE Proveedor_Id = @Proveedor_Id
+	END
+	ELSE IF @accion = 'mostrar'
+	BEGIN
+		SELECT Proveedor_Id 'Código del proveedor', Proveedor FROM Proveedor
+	END
+	ELSE IF @accion = 'buscar'
+	BEGIN
+		SELECT Proveedor_Id 'Código del proveedor', Proveedor
+		FROM Proveedor 
+		WHERE CONCAT(Proveedor_Id, ' ', Proveedor) LIKE CONCAT('%', @valorBuscado,'%')
 	END
 
 END
