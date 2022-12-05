@@ -158,7 +158,7 @@ GO
 
 --PROCEDMIENTOS ALMACENADOS
 
-CREATE PROCEDURE sp_Cliente
+ALTER PROCEDURE sp_Cliente
 @Cliente_Id INT = NULL,
 @Cliente VARCHAR(70) = NULL,
 @valorBuscado VARCHAR(80)  = NULL,
@@ -173,6 +173,16 @@ BEGIN
 	ELSE IF @accion = 'modificar'
 	BEGIN
 		UPDATE Cliente SET Cliente = @Cliente WHERE Cliente_Id = @Cliente_Id
+	END
+	ELSE IF @accion = 'mostrar'
+	BEGIN
+		SELECT Cliente_Id 'Código del cliente', Cliente FROM Cliente
+	END
+	ELSE IF @accion = 'buscar'
+	BEGIN
+		SELECT Cliente_Id 'Código del cliente', Cliente 
+		FROM Cliente 
+		WHERE CONCAT(Cliente_Id, ' ', Cliente) LIKE CONCAT('%', @valorBuscado,'%')
 	END
 
 END

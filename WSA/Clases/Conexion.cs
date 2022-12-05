@@ -14,7 +14,7 @@ namespace WSA.Clases
 {
     class Conexion
     {
-        private static string connectionString = ConfigurationManager.ConnectionStrings["VitalCareRx.Properties.Settings.ConnectionDB"].ConnectionString;
+        private static string connectionString = ConfigurationManager.ConnectionStrings["WSA.Properties.Settings.ConnectionDB"].ConnectionString;
         public SqlConnection sqlConnection = new SqlConnection(connectionString);
     }
 }
