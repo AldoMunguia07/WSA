@@ -4,7 +4,6 @@ GO
 --DROP DATABASE WS_ALG
 -- Crear la base de datos
 
-
 CREATE DATABASE WSA_ALG
 GO
 
@@ -26,7 +25,7 @@ GO
 CREATE TABLE Conductor
 (
 	Conductor_Id INT NOT NULL IDENTITY,
-	Cliente VARCHAR(70) NOT NULL,
+	Conductor VARCHAR(70) NOT NULL,
 
 	CONSTRAINT PK_Conductor_Conductor_Id
 		PRIMARY KEY CLUSTERED (Conductor_Id)
@@ -243,6 +242,36 @@ BEGIN
 		SELECT Proveedor_Id 'Código del proveedor', Proveedor
 		FROM Proveedor 
 		WHERE CONCAT(Proveedor_Id, ' ', Proveedor) LIKE CONCAT('%', @valorBuscado,'%')
+	END
+
+END
+GO
+
+CREATE PROCEDURE sp_Conductor
+@Conductor_Id INT = NULL,
+@Conductor VARCHAR(70) = NULL,
+@valorBuscado VARCHAR(80)  = NULL,
+@accion VARCHAR(50)
+
+AS
+BEGIN
+	IF @accion = 'insertar'
+	BEGIN
+		INSERT INTO Conductor VALUES (@Conductor)
+	END
+	ELSE IF @accion = 'modificar'
+	BEGIN
+		UPDATE Conductor SET Conductor = @Conductor WHERE Conductor_Id = @Conductor_Id
+	END
+	ELSE IF @accion = 'mostrar'
+	BEGIN
+		SELECT Conductor_Id 'Código del conductor', Conductor FROM Conductor
+	END
+	ELSE IF @accion = 'buscar'
+	BEGIN
+		SELECT Conductor_Id 'Código del conductor', Conductor
+		FROM Conductor 
+		WHERE CONCAT(Conductor_Id, ' ', Conductor) LIKE CONCAT('%', @valorBuscado,'%')
 	END
 
 END
