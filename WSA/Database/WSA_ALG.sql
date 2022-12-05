@@ -157,3 +157,23 @@ CREATE TABLE Boleta
 GO
 
 --PROCEDMIENTOS ALMACENADOS
+
+CREATE PROCEDURE sp_Cliente
+@Cliente_Id INT = NULL,
+@Cliente VARCHAR(70) = NULL,
+@valorBuscado VARCHAR(80)  = NULL,
+@accion VARCHAR(50)
+
+AS
+BEGIN
+	IF @accion = 'insertar'
+	BEGIN
+		INSERT INTO Cliente VALUES (@Cliente)
+	END
+	ELSE IF @accion = 'modificar'
+	BEGIN
+		UPDATE Cliente SET Cliente = @Cliente WHERE Cliente_Id = @Cliente_Id
+	END
+
+END
+GO
