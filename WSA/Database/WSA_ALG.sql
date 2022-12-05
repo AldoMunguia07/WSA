@@ -66,6 +66,7 @@ CREATE TABLE Tipo_Usuario
 CREATE TABLE Usuario
 (
 	Usuario_Id INT NOT NULL IDENTITY,
+	Nombre_Usuario VARCHAR(80) NOT NULL,
 	Usuario VARCHAR(30) NOT NULL,
 	Contrasena VARBINARY(MAX) NOT NULL,
 	Tipo_Usuario_Id INT NOT NULL,
@@ -272,6 +273,47 @@ BEGIN
 		SELECT Conductor_Id 'Código del conductor', Conductor
 		FROM Conductor 
 		WHERE CONCAT(Conductor_Id, ' ', Conductor) LIKE CONCAT('%', @valorBuscado,'%')
+	END
+
+END
+GO
+
+CREATE PROCEDURE sp_Usuario
+@Usuario_Id INT = NULL,
+@Nombre_Usuario VARCHAR(80) = NULL,
+@Usuario VARCHAR(30) = NULL,
+@Contrasena VARCHAR(50) = NULL,
+@Tipo_Usuario_Id INT = NULL,
+@Activo BIT  = NULL,
+@valorBuscado VARCHAR(80)  = NULL,
+@accion VARCHAR(50)
+
+AS
+DECLARE @password VARBINARY(max)
+BEGIN
+	IF @accion = 'insertar'
+	BEGIN
+		SET @password = (ENCRYPTBYPASSPHRASE('WAS_ALG_ENCRYPT',@Contrasena));
+		INSERT INTO Usuario VALUES (@Nombre_Usuario, @Usuario,@password, @Tipo_Usuario_Id, @Activo)
+	END
+	ELSE IF @accion = 'modificar'
+	BEGIN
+		SET @password = (ENCRYPTBYPASSPHRASE('WAS_ALG_ENCRYPT',@Contrasena));
+		UPDATE Usuario SET Nombre_Usuario = @Nombre_Usuario, Usuario = @Usuario, Contrasena = @password, Tipo_Usuario_Id = @Tipo_Usuario_Id, Activo = @Activo
+		WHERE Usuario_Id = @Usuario_Id
+	END
+	ELSE IF @accion = 'mostrar'
+	BEGIN
+		SELECT u.Usuario_Id 'Código de usuario',  u.Nombre_Usuario Nombre, u.Usuario, tu.Tipo_Usuario 'Tipo de usuario', u.Activo
+		FROM Usuario u JOIN Tipo_Usuario tu
+		ON U.Tipo_Usuario_Id = tu.Tipo_Usuario_Id
+	END
+	ELSE IF @accion = 'buscar'
+	BEGIN
+		SELECT u.Usuario_Id 'Código de usuario',  u.Nombre_Usuario Nombre, u.Usuario, Tipo_Usuario 'Tipo de usuario', Activo
+		FROM Usuario u JOIN Tipo_Usuario tu
+		ON U.Tipo_Usuario_Id = tu.Tipo_Usuario_Id
+		WHERE CONCAT(u.Usuario_Id , ' ', u.Nombre_Usuario,' ',tu.Tipo_Usuario, ' ', u.Activo) LIKE CONCAT('%', @valorBuscado,'%')
 	END
 
 END
