@@ -278,7 +278,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE sp_Usuario
+ALTER PROCEDURE sp_Usuario
 @Usuario_Id INT = NULL,
 @Nombre_Usuario VARCHAR(80) = NULL,
 @Usuario VARCHAR(30) = NULL,
@@ -304,16 +304,24 @@ BEGIN
 	END
 	ELSE IF @accion = 'mostrar'
 	BEGIN
-		SELECT u.Usuario_Id 'Código de usuario',  u.Nombre_Usuario Nombre, u.Usuario, tu.Tipo_Usuario 'Tipo de usuario', u.Activo
+		SELECT u.Usuario_Id 'Código de usuario',  u.Nombre_Usuario Nombre, u.Usuario, tu.Tipo_Usuario 'Tipo de usuario', u.Activo, CONVERT(VARCHAR,DECRYPTBYPASSPHRASE('WAS_ALG_ENCRYPT',u.Contrasena)) Contrasena, u.Tipo_Usuario_Id
 		FROM Usuario u JOIN Tipo_Usuario tu
 		ON U.Tipo_Usuario_Id = tu.Tipo_Usuario_Id
 	END
 	ELSE IF @accion = 'buscar'
 	BEGIN
-		SELECT u.Usuario_Id 'Código de usuario',  u.Nombre_Usuario Nombre, u.Usuario, Tipo_Usuario 'Tipo de usuario', Activo
+		SELECT u.Usuario_Id 'Código de usuario',  u.Nombre_Usuario Nombre, u.Usuario, Tipo_Usuario 'Tipo de usuario', Activo, CONVERT(VARCHAR,DECRYPTBYPASSPHRASE('WAS_ALG_ENCRYPT',u.Contrasena)) Contrasena, u.Tipo_Usuario_Id
 		FROM Usuario u JOIN Tipo_Usuario tu
 		ON U.Tipo_Usuario_Id = tu.Tipo_Usuario_Id
-		WHERE CONCAT(u.Usuario_Id , ' ', u.Nombre_Usuario,' ',tu.Tipo_Usuario, ' ', u.Activo) LIKE CONCAT('%', @valorBuscado,'%')
+		WHERE CONCAT(u.Usuario_Id , ' ', u.Nombre_Usuario,' ', u.Usuario, ' ',tu.Tipo_Usuario, ' ', u.Activo) LIKE CONCAT('%', @valorBuscado,'%')
+	END
+	ELSE IF @accion = 'CargarTipoUsuario'
+	BEGIN
+		SELECT * FROM Tipo_Usuario
+	END
+	ELSE IF @accion = 'existeUsuario'
+	BEGIN
+		SELECT Usuario FROM Usuario WHERE Usuario = @Usuario
 	END
 
 END
