@@ -65,9 +65,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Boleta.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Conductor.cs" />
     <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Clases\ConfiguracionBascula.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Proveedor.cs" />
     <Compile Include="Clases\Usuario.cs" />
@@ -89,6 +91,12 @@
     </Compile>
     <Compile Include="FrmConductor.Designer.cs">
       <DependentUpon>FrmConductor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIngreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngreso.Designer.cs">
+      <DependentUpon>FrmIngreso.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmProducto.cs">
       <SubType>Form</SubType>
@@ -115,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConductor.resx">
       <DependentUpon>FrmConductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngreso.resx">
+      <DependentUpon>FrmIngreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProducto.resx">
       <DependentUpon>FrmProducto.cs</DependentUpon>

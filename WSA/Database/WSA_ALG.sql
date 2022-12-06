@@ -1,7 +1,7 @@
 USE tempdb
 GO
 
---DROP DATABASE WS_ALG
+--DROP DATABASE WSA_ALG
 -- Crear la base de datos
 
 CREATE DATABASE WSA_ALG
@@ -113,22 +113,22 @@ CREATE TABLE Boleta
 (
 	Boleta_Id INT NOT NULL IDENTITY,
 	Fecha_Entrada DATETIME NOT NULL,
-	Fecha_Salida DATETIME NOT NULL,
+	Fecha_Salida DATETIME NULL,
 	Placa_Cabezal VARCHAR(10) NOT NULL,
 	Placa_Rastra VARCHAR(10) NOT NULL,
-	Conductor_Id INT NULL,
+	Conductor_Id INT NOT NULL,
 	Cliente_Id INT NULL,
 	Proveedor_Id INT NULL,
 	Producto_Id INT NOT NULL,
-	Peso_Ingreso FLOAT NULL,
+	Peso_Ingreso FLOAT NOT NULL,
 	Unidades_Peso_Ingreso VARCHAR(4) NOT NULL,
-	Cia_Transportista VARCHAR(25) NOT NULL,
+	Cia_Transportista VARCHAR(25) NULL,
 	Envio_N VARCHAR(50) NULL,
 	Peso_Salida FLOAT NULL,
 	Unidades_Peso_Salida VARCHAR(4) NULL,
 	Barco_Id INT NOT NULL,
 	Usuario_Id INT NOT NULL,
-	Estado BIT NOT NULL,
+	Estado CHAR(1) NOT NULL,
 	Observaciones VARCHAR(200) NULL
 
 
@@ -278,7 +278,7 @@ BEGIN
 END
 GO
 
-ALTER PROCEDURE sp_Usuario
+CREATE PROCEDURE sp_Usuario
 @Usuario_Id INT = NULL,
 @Nombre_Usuario VARCHAR(80) = NULL,
 @Usuario VARCHAR(30) = NULL,
@@ -323,6 +323,44 @@ BEGIN
 	BEGIN
 		SELECT Usuario FROM Usuario WHERE Usuario = @Usuario
 	END
+
+END
+GO
+
+CREATE PROCEDURE sp_Boleta
+	@Boleta_Id INT = NULL,
+	@Fecha_Entrada DATETIME = NULL,
+	@Fecha_Salida DATETIME = NULL,
+	@Placa_Cabezal VARCHAR(10) = NULL,
+	@Placa_Rastra VARCHAR(10) = NULL,
+	@Conductor_Id INT = NULL,
+	@Cliente_Id INT = NULL,
+	@Proveedor_Id INT = NULL,
+	@Producto_Id INT = NULL,
+	@Peso_Ingreso FLOAT = NULL,
+	@Unidades_Peso_Ingreso VARCHAR(4) = NULL,
+	@Cia_Transportista VARCHAR(25) = NULL,
+	@Envio_N VARCHAR(50) = NULL,
+	@Peso_Salida FLOAT = NULL,
+	@Unidades_Peso_Salida VARCHAR(4) = NULL,
+	@Barco_Id INT = NULL,
+	@Usuario_Id INT = NULL,
+	@Estado CHAR(1) = NULL,
+	@Observaciones VARCHAR(200) = NULL,
+	@valorBuscado VARCHAR(80)  = NULL,
+	@accion VARCHAR(50)
+
+
+AS
+BEGIN
+	IF @accion = 'insertarEntrada'
+		BEGIN
+			
+			INSERT INTO Boleta(Fecha_Entrada, Placa_Cabezal, Placa_Rastra, Conductor_Id, Cliente_Id, Producto_Id, Peso_Ingreso, 
+			Unidades_Peso_Ingreso, Cia_Transportista, Envio_N, Barco_Id, Usuario_Id, Estado, Observaciones) 
+			VALUES(@Fecha_Entrada, @Placa_Cabezal, @Placa_Rastra, @Conductor_Id, @Cliente_Id, @Producto_Id, @Peso_Ingreso, @Unidades_Peso_Ingreso,
+			@Cia_Transportista, @Envio_N, @Barco_Id, @Usuario_Id, @Estado, @Observaciones)
+		END
 
 END
 GO
