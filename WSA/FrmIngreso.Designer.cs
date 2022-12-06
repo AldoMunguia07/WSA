@@ -44,7 +44,7 @@ namespace WSA
             this.txtCodigoCliente = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtProducto = new System.Windows.Forms.TextBox();
-            this.txtCodigProducto = new System.Windows.Forms.TextBox();
+            this.txtCodigoProducto = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtBarco = new System.Windows.Forms.TextBox();
             this.txtCodigoBarco = new System.Windows.Forms.TextBox();
@@ -94,12 +94,15 @@ namespace WSA
             this.txtCodigoConductor.Name = "txtCodigoConductor";
             this.txtCodigoConductor.Size = new System.Drawing.Size(47, 20);
             this.txtCodigoConductor.TabIndex = 2;
+            this.txtCodigoConductor.Leave += new System.EventHandler(this.txtCodigoConductor_Leave);
             // 
             // txtConductor
             // 
             this.txtConductor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtConductor.BackColor = System.Drawing.Color.White;
             this.txtConductor.Location = new System.Drawing.Point(177, 63);
             this.txtConductor.Name = "txtConductor";
+            this.txtConductor.ReadOnly = true;
             this.txtConductor.Size = new System.Drawing.Size(215, 20);
             this.txtConductor.TabIndex = 3;
             // 
@@ -160,8 +163,10 @@ namespace WSA
             // txtCliente
             // 
             this.txtCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCliente.BackColor = System.Drawing.Color.White;
             this.txtCliente.Location = new System.Drawing.Point(177, 214);
             this.txtCliente.Name = "txtCliente";
+            this.txtCliente.ReadOnly = true;
             this.txtCliente.Size = new System.Drawing.Size(215, 20);
             this.txtCliente.TabIndex = 12;
             // 
@@ -172,6 +177,7 @@ namespace WSA
             this.txtCodigoCliente.Name = "txtCodigoCliente";
             this.txtCodigoCliente.Size = new System.Drawing.Size(47, 20);
             this.txtCodigoCliente.TabIndex = 11;
+            this.txtCodigoCliente.Leave += new System.EventHandler(this.txtCodigoCliente_Leave);
             // 
             // label6
             // 
@@ -186,18 +192,21 @@ namespace WSA
             // txtProducto
             // 
             this.txtProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtProducto.BackColor = System.Drawing.Color.White;
             this.txtProducto.Location = new System.Drawing.Point(177, 279);
             this.txtProducto.Name = "txtProducto";
+            this.txtProducto.ReadOnly = true;
             this.txtProducto.Size = new System.Drawing.Size(215, 20);
             this.txtProducto.TabIndex = 15;
             // 
-            // txtCodigProducto
+            // txtCodigoProducto
             // 
-            this.txtCodigProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodigProducto.Location = new System.Drawing.Point(124, 279);
-            this.txtCodigProducto.Name = "txtCodigProducto";
-            this.txtCodigProducto.Size = new System.Drawing.Size(47, 20);
-            this.txtCodigProducto.TabIndex = 14;
+            this.txtCodigoProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCodigoProducto.Location = new System.Drawing.Point(124, 279);
+            this.txtCodigoProducto.Name = "txtCodigoProducto";
+            this.txtCodigoProducto.Size = new System.Drawing.Size(47, 20);
+            this.txtCodigoProducto.TabIndex = 14;
+            this.txtCodigoProducto.Leave += new System.EventHandler(this.txtCodigoProducto_Leave);
             // 
             // label7
             // 
@@ -212,8 +221,10 @@ namespace WSA
             // txtBarco
             // 
             this.txtBarco.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBarco.BackColor = System.Drawing.Color.White;
             this.txtBarco.Location = new System.Drawing.Point(177, 343);
             this.txtBarco.Name = "txtBarco";
+            this.txtBarco.ReadOnly = true;
             this.txtBarco.Size = new System.Drawing.Size(215, 20);
             this.txtBarco.TabIndex = 18;
             // 
@@ -224,6 +235,7 @@ namespace WSA
             this.txtCodigoBarco.Name = "txtCodigoBarco";
             this.txtCodigoBarco.Size = new System.Drawing.Size(47, 20);
             this.txtCodigoBarco.TabIndex = 17;
+            this.txtCodigoBarco.Leave += new System.EventHandler(this.txtCodigoBarco_Leave);
             // 
             // label8
             // 
@@ -403,7 +415,7 @@ namespace WSA
             this.Controls.Add(this.txtCodigoBarco);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtProducto);
-            this.Controls.Add(this.txtCodigProducto);
+            this.Controls.Add(this.txtCodigoProducto);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.txtCodigoCliente);
@@ -441,7 +453,7 @@ namespace WSA
         private System.Windows.Forms.TextBox txtCodigoCliente;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtProducto;
-        private System.Windows.Forms.TextBox txtCodigProducto;
+        private System.Windows.Forms.TextBox txtCodigoProducto;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBarco;
         private System.Windows.Forms.TextBox txtCodigoBarco;

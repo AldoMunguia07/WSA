@@ -21,14 +21,14 @@ namespace WSA
         {
             InitializeComponent();
             conectado = configuracionBascula.LeerDatos(mySerialPort, this, lblConexion, txtPesoBascula);
-           
+            
+
 
         }
 
         private void txtObtenerPeso_Click(object sender, EventArgs e)
         {
             Match m = Regex.Match(txtPesoBascula.Text, "(\\d+).(\\d+)|(\\d+)");
-
             if(float.Parse(m.Value) > 0)
             {
                 txtPesoEntrada.Text = m.Value;
@@ -57,7 +57,124 @@ namespace WSA
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //boleta.AgregarEntrada();
+            if(camposLlenos())
+            {
+                getValues();
+                boleta.AgregarEntrada(boleta);
+            }
+           
+        }
+
+        private void getValues()
+        {
+            boleta.FechaEntrada = DateTime.Now;
+            boleta.PlacaCabezal = txtPlacaCabezal.Text;
+            boleta.PlacaRastra = txtPlacaRastra.Text;
+            boleta.ConductorId = int.Parse(txtCodigoConductor.Text);
+            boleta.ClienteId = int.Parse(txtCodigoCliente.Text);
+            boleta.ProductoId = int.Parse(txtCodigoProducto.Text);
+            boleta.PesoIngreso = float.Parse(txtPesoEntrada.Text);
+            boleta.UnidadesPesoIngreso = Regex.Match(txtPesoBascula.Text, "([A-Za-z]+)").Value;
+            boleta.CiaTransportista = txtCia.Text;
+            boleta.EnvioN = txtEnvioN.Text;
+            boleta.BarcoId = int.Parse(txtCodigoBarco.Text);
+            boleta.UsuarioId = 1;
+            boleta.Estado = 'P';
+            boleta.Observaciones = txtObservaciones.Text;
+
+        }
+
+        private void txtCodigoConductor_Leave(object sender, EventArgs e)
+        {
+            if(txtCodigoConductor.Text != "")
+            {
+                boleta.BuscarConductor(txtCodigoConductor, txtConductor);
+            }
+            
+        }
+
+        private void txtCodigoCliente_Leave(object sender, EventArgs e)
+        {
+            if(txtCodigoCliente.Text != "")
+            {
+                boleta.BuscarCliente(txtCodigoCliente, txtCliente);
+            }
+            
+        }
+
+        private void txtCodigoProducto_Leave(object sender, EventArgs e)
+        {
+            if(txtCodigoProducto.Text != "")
+            {
+                boleta.BuscarProducto(txtCodigoProducto, txtProducto);
+            }
+            
+        }
+
+        private void txtCodigoBarco_Leave(object sender, EventArgs e)
+        {
+            if(txtCodigoBarco.Text != "")
+            {
+                boleta.BuscarBarco(txtCodigoBarco, txtBarco);
+            }
+            
+        }
+
+        private bool camposLlenos()
+        {
+            if (txtCodigoConductor.Text != "")
+            {
+                if(txtPlacaCabezal.Text != "")
+                {
+                    if(txtPlacaRastra.Text != "")
+                    {
+                        if(txtCodigoCliente.Text != "")
+                        {
+                            if(txtCodigoProducto.Text != "")
+                            {
+                                if(txtCodigoBarco.Text != "")
+                                {
+                                    if(txtPesoEntrada.Text != "")
+                                    {
+                                        return true;
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Obtenga el peso de la báscula", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Ingrese el código del barco", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Ingrese el código del producto", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ingrese el código del cliente", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ingrese la placa de la rastra", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese la placa del cabezal", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingrese el código del conductor", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            return false;
+
         }
     }
 }

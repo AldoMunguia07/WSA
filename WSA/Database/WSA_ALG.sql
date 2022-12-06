@@ -327,7 +327,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE sp_Boleta
+ALTER PROCEDURE sp_Boleta
 	@Boleta_Id INT = NULL,
 	@Fecha_Entrada DATETIME = NULL,
 	@Fecha_Salida DATETIME = NULL,
@@ -360,6 +360,26 @@ BEGIN
 			Unidades_Peso_Ingreso, Cia_Transportista, Envio_N, Barco_Id, Usuario_Id, Estado, Observaciones) 
 			VALUES(@Fecha_Entrada, @Placa_Cabezal, @Placa_Rastra, @Conductor_Id, @Cliente_Id, @Producto_Id, @Peso_Ingreso, @Unidades_Peso_Ingreso,
 			@Cia_Transportista, @Envio_N, @Barco_Id, @Usuario_Id, @Estado, @Observaciones)
+		END
+	ELSE IF @accion = 'buscarConductor'
+		BEGIN
+			SELECT * FROM Conductor WHERE Conductor_Id = @Conductor_Id
+			
+		END
+	ELSE IF @accion = 'buscarCliente'
+		BEGIN
+			SELECT * FROM Cliente WHERE Cliente_Id = @Cliente_Id
+			
+		END
+	ELSE IF @accion = 'buscarProducto'
+		BEGIN
+			SELECT * FROM Producto WHERE Producto_Id = @Producto_Id
+			
+		END
+	ELSE IF @accion = 'buscarBarco'
+		BEGIN
+			SELECT * FROM Barco WHERE Barco_Id = @Barco_Id
+			
 		END
 
 END

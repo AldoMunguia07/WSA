@@ -41,7 +41,7 @@ namespace WSA.Clases
             {
                 conexion.sqlConnection.Open();
 
-                SqlCommand sqlCommand = new SqlCommand("sp_Cliente", conexion.sqlConnection);
+                SqlCommand sqlCommand = new SqlCommand("sp_Boleta", conexion.sqlConnection);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
 
                 // Establecer los valores de los parámetros
@@ -65,6 +65,209 @@ namespace WSA.Clases
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Cerrar la conexión
+                conexion.sqlConnection.Close();
+            }
+        }
+
+        public void BuscarConductor(TextBox txtCodigoConductor, TextBox txtConductor)
+        {
+
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Boleta", conexion.sqlConnection);
+
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                // Establecer los valores de los parámetros
+                sqlCommand.Parameters.AddWithValue("@Conductor_Id", int.Parse(txtCodigoConductor.Text));
+                sqlCommand.Parameters.AddWithValue("@accion", "buscarConductor");
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                using (SqlDataReader rdr = sqlCommand.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        txtConductor.Text = rdr["Conductor"].ToString();
+                        
+                    }
+
+                }
+
+
+                DataTable dataTable = new DataTable();
+
+                sqlDataAdapter.Fill(dataTable);
+
+                if (dataTable.Rows.Count == 0) 
+                {
+                    MessageBox.Show("Conductor no encontrado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCodigoConductor.Clear();
+                    txtConductor.Clear();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                txtCodigoConductor.Clear();
+                txtConductor.Clear();
+                MessageBox.Show(ex.Message.ToString(), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+          
+
+
+            }
+            finally
+            {
+                // Cerrar la conexión
+                conexion.sqlConnection.Close();
+            }
+        }
+
+        public void BuscarCliente(TextBox txtCodigoCliente, TextBox txtCliente)
+        {
+
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Boleta", conexion.sqlConnection);
+
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                // Establecer los valores de los parámetros
+                sqlCommand.Parameters.AddWithValue("@Cliente_Id", int.Parse(txtCodigoCliente.Text));
+                sqlCommand.Parameters.AddWithValue("@accion", "buscarCliente");
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                using (SqlDataReader rdr = sqlCommand.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        txtCliente.Text = rdr["Cliente"].ToString();
+
+                    }
+
+                }
+
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+
+                if (dataTable.Rows.Count == 0)
+                {
+                    MessageBox.Show("Cliente no encontrado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCodigoCliente.Clear();
+                    txtCliente.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                txtCodigoCliente.Clear();
+                txtCliente.Clear();
+                MessageBox.Show(ex.Message.ToString(), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Cerrar la conexión
+                conexion.sqlConnection.Close();
+            }
+        }
+
+        public void BuscarProducto(TextBox txtCodigoProducto, TextBox txtProducto)
+        {
+
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Boleta", conexion.sqlConnection);
+
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                // Establecer los valores de los parámetros
+                sqlCommand.Parameters.AddWithValue("@Producto_Id", int.Parse(txtCodigoProducto.Text));
+                sqlCommand.Parameters.AddWithValue("@accion", "buscarProducto");
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                using (SqlDataReader rdr = sqlCommand.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        txtProducto.Text = rdr["Descripcion"].ToString();
+
+                    }
+
+                }
+
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+
+                if (dataTable.Rows.Count == 0)
+                {
+                    MessageBox.Show("Producto no encontrado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCodigoProducto.Clear();
+                    txtProducto.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                txtCodigoProducto.Clear();
+                txtProducto.Clear();
+                MessageBox.Show(ex.Message.ToString(), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Cerrar la conexión
+                conexion.sqlConnection.Close();
+            }
+        }
+
+        public void BuscarBarco(TextBox txtCodigoBarco, TextBox txtBarco)
+        {
+
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Boleta", conexion.sqlConnection);
+
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                // Establecer los valores de los parámetros
+                sqlCommand.Parameters.AddWithValue("@Barco_Id", int.Parse(txtCodigoBarco.Text));
+                sqlCommand.Parameters.AddWithValue("@accion", "buscarBarco");
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                using (SqlDataReader rdr = sqlCommand.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        txtBarco.Text = rdr["Descripcion"].ToString();
+
+                    }
+
+                }
+
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+
+                if (dataTable.Rows.Count == 0)
+                {
+                    MessageBox.Show("Barco no encontrado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCodigoBarco.Clear();
+                    txtBarco.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                txtCodigoBarco.Clear();
+                txtBarco.Clear();
+                MessageBox.Show(ex.Message.ToString(), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
