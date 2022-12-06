@@ -16,8 +16,11 @@ namespace WSA.Clases
     {
         public delegate void DelegadoAcceso(string accion, TextBox txtDatos);
 
-        public bool LeerDatos(SerialPort mySerialPort, FrmIngreso frmIngreso, Label lblConexion, TextBox txtPeso)
+        
+
+        public bool LeerDatos(SerialPort mySerialPort, Form form, Label lblConexion, TextBox txtPeso)
         {
+            
             try
             {
                 if (!mySerialPort.IsOpen)
@@ -45,23 +48,28 @@ namespace WSA.Clases
                 return false;
             }
 
+            
+
+
             void sp_DataReceived(object sender, SerialDataReceivedEventArgs e)
             {
-
+                
                 try
                 {
                     Thread.Sleep(500);
                     string data = mySerialPort.ReadExisting();
-                    frmIngreso.BeginInvoke(new DelegadoAcceso(si_DataReceived), new object[] { data, txtPeso });
-                }
+                    form.BeginInvoke(new DelegadoAcceso(si_DataReceived), new object[] { data, txtPeso });
+                    
+                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
+                
             }
         }
 
-        private string variable(string var)
+        public string variable(string var)
         {
             
             string[] lineas = File.ReadAllLines("c:/config/CONFIGURACION.txt");

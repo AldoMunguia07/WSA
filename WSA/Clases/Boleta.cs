@@ -17,7 +17,7 @@ namespace WSA.Clases
         //PROPIEDADES
         public int BoletaId { get; set; }
         public DateTime FechaEntrada { get; set; }
-        public DateTime FechaSalida{ get; set; }
+        public DateTime FechaSalida { get; set; }
         public string PlacaCabezal { get; set; }
         public string PlacaRastra { get; set; }
         public int ConductorId { get; set; }
@@ -27,7 +27,7 @@ namespace WSA.Clases
         public string UnidadesPesoIngreso { get; set; }
         public string CiaTransportista { get; set; }
         public string EnvioN { get; set; }
-        public float PesoSalida{ get; set; }
+        public float PesoSalida { get; set; }
         public string UnidadesPesoSalida { get; set; }
         public int BarcoId { get; set; }
         public int UsuarioId { get; set; }
@@ -73,6 +73,75 @@ namespace WSA.Clases
             }
         }
 
+        public void MostrarEntradas(DataGridView dataGrid)
+        {
+
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Boleta", conexion.sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+
+                // Establecer los valores de los parámetros
+
+                sqlCommand.Parameters.AddWithValue("@accion", "mostrarEntradas");
+
+                using (sqlDataAdapter)
+                {
+                    DataTable dataTable = new DataTable();
+
+                    sqlDataAdapter.Fill(dataTable);
+
+                    dataGrid.DataSource = dataTable;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion.sqlConnection.Close();
+            }
+        }
+
+        public void AgregarSalida(Boleta boleta)
+        {
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Boleta", conexion.sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                // Establecer los valores de los parámetros
+                sqlCommand.Parameters.AddWithValue("@Boleta_Id", boleta.BoletaId);
+                sqlCommand.Parameters.AddWithValue("@Fecha_Salida", boleta.FechaSalida);
+                sqlCommand.Parameters.AddWithValue("@Peso_Salida", boleta.PesoSalida);
+                sqlCommand.Parameters.AddWithValue("@Unidades_Peso_Salida", boleta.UnidadesPesoSalida);
+                sqlCommand.Parameters.AddWithValue("@Estado", boleta.Estado);
+                sqlCommand.Parameters.AddWithValue("@Observaciones", boleta.Observaciones);
+
+                sqlCommand.Parameters.AddWithValue("@accion", "insertarSalida");
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Cerrar la conexión
+                conexion.sqlConnection.Close();
+            }
+        }
+
         public void BuscarConductor(TextBox txtCodigoConductor, TextBox txtConductor)
         {
 
@@ -94,7 +163,7 @@ namespace WSA.Clases
                     while (rdr.Read())
                     {
                         txtConductor.Text = rdr["Conductor"].ToString();
-                        
+
                     }
 
                 }
@@ -104,7 +173,7 @@ namespace WSA.Clases
 
                 sqlDataAdapter.Fill(dataTable);
 
-                if (dataTable.Rows.Count == 0) 
+                if (dataTable.Rows.Count == 0)
                 {
                     MessageBox.Show("Conductor no encontrado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtCodigoConductor.Clear();
@@ -118,7 +187,7 @@ namespace WSA.Clases
                 txtCodigoConductor.Clear();
                 txtConductor.Clear();
                 MessageBox.Show(ex.Message.ToString(), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-          
+
 
 
             }
@@ -267,6 +336,62 @@ namespace WSA.Clases
             {
                 txtCodigoBarco.Clear();
                 txtBarco.Clear();
+                MessageBox.Show(ex.Message.ToString(), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Cerrar la conexión
+                conexion.sqlConnection.Close();
+            }
+        }
+
+        public void CargarFormularioSalida(int boletaId, DateTimePicker dtpFechaEntrada, TextBox txtCodigoConductor, TextBox txtConductor, TextBox txtPlacaCabezal, TextBox txtPlacaRastra,
+            TextBox txtCia, TextBox txtEnvioN, TextBox txtCodigoCliente, TextBox txtCliente, TextBox txtCodigoProducto, TextBox txtProducto, TextBox txtCodigoBarco, TextBox txtBarco,
+           TextBox txtPesoEntrada, TextBox txtObservaciones)
+        {
+
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Boleta", conexion.sqlConnection);
+
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                // Establecer los valores de los parámetros
+                sqlCommand.Parameters.AddWithValue("@Boleta_Id", boletaId);
+                sqlCommand.Parameters.AddWithValue("@accion", "cagarFormSalida");
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                using (SqlDataReader rdr = sqlCommand.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        dtpFechaEntrada.Value = Convert.ToDateTime(rdr["Fecha_Entrada"]);
+                        txtCodigoConductor.Text = rdr["Conductor_Id"].ToString();
+                        txtConductor.Text = rdr["Conductor"].ToString();
+                        txtPlacaCabezal.Text = rdr["Placa_Cabezal"].ToString();
+                        txtPlacaRastra.Text = rdr["Placa_Rastra"].ToString();
+                        txtCia.Text = rdr["Cia_Transportista"].ToString();
+                        txtEnvioN.Text = rdr["Envio_N"].ToString();
+                        txtCodigoCliente.Text = rdr["Cliente_Id"].ToString();
+                        txtCliente.Text = rdr["Cliente"].ToString();
+                        txtCodigoProducto.Text = rdr["Producto_Id"].ToString();
+                        txtProducto.Text = rdr["Descripcion_Producto"].ToString();
+                        txtCodigoBarco.Text = rdr["Barco_Id"].ToString();
+                        txtBarco.Text = rdr["Descripcion_Barco"].ToString();
+                        txtPesoEntrada.Text = String.Format("{0:n}", float.Parse(rdr["Peso_Ingreso"].ToString()));
+                        txtObservaciones.Text = rdr["Observaciones"].ToString();
+
+                    }
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                
                 MessageBox.Show(ex.Message.ToString(), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally

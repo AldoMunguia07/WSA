@@ -28,6 +28,7 @@ namespace WSA
 
         private void txtObtenerPeso_Click(object sender, EventArgs e)
         {
+
             Match m = Regex.Match(txtPesoBascula.Text, "(\\d+).(\\d+)|(\\d+)");
             if(float.Parse(m.Value) > 0)
             {
@@ -35,7 +36,7 @@ namespace WSA
             }
             else
             {
-                MessageBox.Show("El peso debe ser mayor a 0", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("El peso debe ser mayor a 0", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
         }
@@ -48,7 +49,8 @@ namespace WSA
             }
             else
             {
-                MessageBox.Show(String.Format("Ya se ecnuentra conectado al puerto {0}", mySerialPort.PortName), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(String.Format("Ya se ecnuentra conectado al puerto {0}", mySerialPort.PortName), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
             }
 
                     
@@ -61,6 +63,8 @@ namespace WSA
             {
                 getValues();
                 boleta.AgregarEntrada(boleta);
+                MessageBox.Show("Entrada agregada", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                this.Close();
             }
            
         }
@@ -175,6 +179,13 @@ namespace WSA
 
             return false;
 
+        }
+
+        private void FrmIngreso_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            configuracionBascula.Desconectar(mySerialPort);
+            MessageBox.Show(mySerialPort.PortName);
+            
         }
     }
 }

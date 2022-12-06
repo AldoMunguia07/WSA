@@ -361,6 +361,34 @@ BEGIN
 			VALUES(@Fecha_Entrada, @Placa_Cabezal, @Placa_Rastra, @Conductor_Id, @Cliente_Id, @Producto_Id, @Peso_Ingreso, @Unidades_Peso_Ingreso,
 			@Cia_Transportista, @Envio_N, @Barco_Id, @Usuario_Id, @Estado, @Observaciones)
 		END
+	ELSE IF @accion = 'mostrarEntradas'
+		BEGIN
+			SELECT b.Boleta_Id 'Código de boleta', b.Fecha_Entrada 'Fecha de entrada', b.Placa_Cabezal 'Placa del cabezal', b.Placa_Rastra 'Placa de la rastra', c.Conductor_Id 'Código del conductor', c.Conductor,
+			cl.Cliente, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) 'Peso de ingreso', b.Barco_Id 'Código del barco', bc.Descripcion 'Barco', b.Estado, b.Observaciones
+			FROM Boleta b JOIN Conductor c
+			ON b.Conductor_Id = c.Conductor_Id
+			JOIN Producto p ON b.Producto_Id = p.Producto_Id
+			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
+			JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
+			WHERE Estado = 'P'
+			
+		END
+	ELSE IF @accion = 'cagarFormSalida'
+		BEGIN
+			SELECT b.Fecha_Entrada, b.Conductor_Id, c.Conductor, b.Placa_Cabezal, b.Placa_Rastra, b.Cia_Transportista, b.Envio_N, b.Cliente_Id, cl.Cliente, b.Producto_Id,
+			p.Descripcion Descripcion_Producto, b.Barco_Id, bc.Descripcion Descripcion_Barco, b.Peso_Ingreso, b.Observaciones
+			FROM Boleta b JOIN Conductor c
+			ON b.Conductor_Id = c.Conductor_Id
+			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
+			JOIN Producto p ON b.Producto_Id = p.Producto_Id
+			JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
+			WHERE Boleta_Id = @Boleta_Id
+			
+		END
+	IF @accion = 'insertarSalida'
+		BEGIN
+			UPDATE Boleta SET Fecha_Salida = @Fecha_Salida, Peso_Salida = @Peso_Salida, Unidades_Peso_Salida = @Unidades_Peso_Salida, Estado = @Estado, Observaciones = @Observaciones WHERE Boleta_Id = @Boleta_Id
+		END
 	ELSE IF @accion = 'buscarConductor'
 		BEGIN
 			SELECT * FROM Conductor WHERE Conductor_Id = @Conductor_Id

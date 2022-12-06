@@ -131,41 +131,50 @@ namespace WSA
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (camposLlenos())
+            if(seleccionado)
             {
-                if (txtContrasena.TextLength >= 8)
+                if (camposLlenos())
                 {
-                    if (txtContrasena.Text == txtConfirmarContrasena.Text)
+                    if (txtContrasena.TextLength >= 8)
                     {
-                        if (!usuario.ExisteUsuario(txtUsuario.Text) || txtUsuario.Text == username)
+                        if (txtContrasena.Text == txtConfirmarContrasena.Text)
                         {
-                            getValues();
-                            usuario.ModificarUsuario(usuario);
-                            MessageBox.Show("Usuario modificado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            refresh();
+                            if (!usuario.ExisteUsuario(txtUsuario.Text) || txtUsuario.Text == username)
+                            {
+                                getValues();
+                                usuario.ModificarUsuario(usuario);
+                                MessageBox.Show("Usuario modificado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                refresh();
 
+                            }
+                            else
+                            {
+                                MessageBox.Show("El usuario ya existe", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("El usuario ya existe", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("Las contraseñas no coinciden", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Las contraseñas no coinciden", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
+                        MessageBox.Show("La contraseña debe contener al menos 8 caracteres", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
+
                 }
                 else
                 {
-                    MessageBox.Show("La contraseña debe contener al menos 8 caracteres", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe llenar todos los campos", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
             }
             else
             {
-                MessageBox.Show("Debe llenar todos los campos", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione usuario a modificar", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
 
         }
 

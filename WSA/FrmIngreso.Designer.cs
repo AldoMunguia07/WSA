@@ -363,6 +363,7 @@ namespace WSA
             // 
             // lblConexion
             // 
+            this.lblConexion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblConexion.AutoSize = true;
             this.lblConexion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConexion.ForeColor = System.Drawing.Color.Red;
@@ -384,6 +385,7 @@ namespace WSA
             // 
             // btnConectar
             // 
+            this.btnConectar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnConectar.Location = new System.Drawing.Point(782, 113);
             this.btnConectar.Name = "btnConectar";
             this.btnConectar.Size = new System.Drawing.Size(75, 23);
@@ -432,6 +434,7 @@ namespace WSA
             this.Controls.Add(this.label1);
             this.Name = "FrmIngreso";
             this.Text = "Ingreso de vehículos";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmIngreso_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
