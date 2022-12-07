@@ -153,7 +153,9 @@ namespace WSA
 
         private void barcosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            FrmBarco frmBarco = new FrmBarco();
+            CerrarFormularios();
+            CargarFormulario(frmBarco);
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)

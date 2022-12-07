@@ -31,13 +31,13 @@ namespace WSA
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtDescCliente = new System.Windows.Forms.TextBox();
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.dgvBarcos = new System.Windows.Forms.DataGridView();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBarcos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,21 +58,21 @@ namespace WSA
             this.txtDescCliente.Size = new System.Drawing.Size(190, 20);
             this.txtDescCliente.TabIndex = 1;
             // 
-            // dgvClientes
+            // dgvBarcos
             // 
-            this.dgvClientes.AllowUserToAddRows = false;
-            this.dgvClientes.AllowUserToDeleteRows = false;
-            this.dgvClientes.AllowUserToOrderColumns = true;
-            this.dgvClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.GridColor = System.Drawing.Color.DimGray;
-            this.dgvClientes.Location = new System.Drawing.Point(63, 111);
-            this.dgvClientes.Name = "dgvClientes";
-            this.dgvClientes.ReadOnly = true;
-            this.dgvClientes.Size = new System.Drawing.Size(680, 196);
-            this.dgvClientes.TabIndex = 2;
-            this.dgvClientes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvClientes_CellMouseClick);
+            this.dgvBarcos.AllowUserToAddRows = false;
+            this.dgvBarcos.AllowUserToDeleteRows = false;
+            this.dgvBarcos.AllowUserToOrderColumns = true;
+            this.dgvBarcos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvBarcos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBarcos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBarcos.GridColor = System.Drawing.Color.DimGray;
+            this.dgvBarcos.Location = new System.Drawing.Point(63, 111);
+            this.dgvBarcos.Name = "dgvBarcos";
+            this.dgvBarcos.ReadOnly = true;
+            this.dgvBarcos.Size = new System.Drawing.Size(680, 196);
+            this.dgvBarcos.TabIndex = 2;
+            this.dgvBarcos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvClientes_CellMouseClick);
             // 
             // btnGuardar
             // 
@@ -136,12 +136,12 @@ namespace WSA
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.dgvClientes);
+            this.Controls.Add(this.dgvBarcos);
             this.Controls.Add(this.txtDescCliente);
             this.Controls.Add(this.label1);
             this.Name = "FrmCliente";
-            this.Text = "FrmCliente";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            this.Text = "Clientes";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBarcos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,7 +151,7 @@ namespace WSA
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDescCliente;
-        private System.Windows.Forms.DataGridView dgvClientes;
+        private System.Windows.Forms.DataGridView dgvBarcos;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBuscar;

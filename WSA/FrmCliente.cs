@@ -43,7 +43,7 @@ namespace WSA
 
         private void cargarDatos()
         {
-            cliente.MostrarCliente(dgvClientes);
+            cliente.MostrarCliente(dgvBarcos);
         }
 
         private void refresh()
@@ -56,7 +56,7 @@ namespace WSA
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            cliente.BuscarCliente(dgvClientes, txtBuscar.Text);
+            cliente.BuscarCliente(dgvBarcos, txtBuscar.Text);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -94,7 +94,7 @@ namespace WSA
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dgvClientes.Rows[e.RowIndex];
+                DataGridViewRow row = dgvBarcos.Rows[e.RowIndex];
 
                 cliente.ClienteId = int.Parse(row.Cells[0].Value.ToString());
                 txtDescCliente.Text = row.Cells[1].Value.ToString();

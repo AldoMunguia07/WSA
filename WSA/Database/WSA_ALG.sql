@@ -298,6 +298,36 @@ BEGIN
 END
 GO
 
+CREATE PROCEDURE sp_Barco
+@Barco_Id INT = NULL,
+@Descripcion VARCHAR(70) = NULL,
+@valorBuscado VARCHAR(80)  = NULL,
+@accion VARCHAR(50)
+
+AS
+BEGIN
+	IF @accion = 'insertar'
+	BEGIN
+		INSERT INTO Barco VALUES (@Descripcion)
+	END
+	ELSE IF @accion = 'modificar'
+	BEGIN
+		UPDATE Barco SET Descripcion = @Descripcion WHERE Barco_Id = @Barco_Id
+	END
+	ELSE IF @accion = 'mostrar'
+	BEGIN
+		SELECT Barco_Id 'Código del barco', Descripcion FROM Barco
+	END
+	ELSE IF @accion = 'buscar'
+	BEGIN
+		SELECT Barco_Id 'Código del barco', Descripcion 
+		FROM Barco 
+		WHERE CONCAT(Barco_Id, ' ', Descripcion) LIKE CONCAT('%', @valorBuscado,'%')
+	END
+
+END
+GO
+
 
 CREATE PROCEDURE sp_Usuario
 @Usuario_Id INT = NULL,
