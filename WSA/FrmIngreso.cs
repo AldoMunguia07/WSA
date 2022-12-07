@@ -130,9 +130,9 @@ namespace WSA
         {
             if (txtCodigoConductor.Text != "")
             {
-                if(txtPlacaCabezal.Text != "")
+                if(/*txtPlacaCabezal.Text != ""*/true)
                 {
-                    if(txtPlacaRastra.Text != "")
+                    if(/*txtPlacaRastra.Text != ""*/true)
                     {
                         if(txtCodigoCliente.Text != "")
                         {
@@ -190,6 +190,11 @@ namespace WSA
 
 
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

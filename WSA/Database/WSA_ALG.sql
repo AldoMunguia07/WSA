@@ -114,11 +114,10 @@ CREATE TABLE Boleta
 	Boleta_Id INT NOT NULL IDENTITY,
 	Fecha_Entrada DATETIME NOT NULL,
 	Fecha_Salida DATETIME NULL,
-	Placa_Cabezal VARCHAR(10) NOT NULL,
-	Placa_Rastra VARCHAR(10) NOT NULL,
+	Placa_Cabezal VARCHAR(10) NULL,
+	Placa_Rastra VARCHAR(10) NULL,
 	Conductor_Id INT NOT NULL,
 	Cliente_Id INT NULL,
-	Proveedor_Id INT NULL,
 	Producto_Id INT NOT NULL,
 	Peso_Ingreso FLOAT NOT NULL,
 	Unidades_Peso_Ingreso VARCHAR(4) NOT NULL,
@@ -141,8 +140,6 @@ CREATE TABLE Boleta
 	CONSTRAINT FK_Boleta$Existe$Cliente
 		FOREIGN KEY (Cliente_Id) REFERENCES Cliente(Cliente_Id),
 
-	CONSTRAINT FK_Boleta$Existe$Proveedor
-		FOREIGN KEY (Proveedor_Id) REFERENCES Proveedor(Proveedor_Id),
 
 	CONSTRAINT FK_Boleta$Existe$Producto
 		FOREIGN KEY (Producto_Id) REFERENCES Producto(Producto_Id),
@@ -154,6 +151,14 @@ CREATE TABLE Boleta
 		FOREIGN KEY (Barco_Id) REFERENCES Barco(Barco_Id)
 
 );
+GO
+
+--INSERTS
+INSERT INTO Tipo_Usuario VALUES('Administrador');
+INSERT INTO Tipo_Usuario VALUES('Operador');
+
+
+INSERT INTO Usuario VALUES('Admin', 'Admin', ENCRYPTBYPASSPHRASE('WAS_ALG_ENCRYPT','admin1234'), 1, 1);
 GO
 
 --PROCEDMIENTOS ALMACENADOS
@@ -279,7 +284,7 @@ END
 GO
 
 
-ALTER PROCEDURE sp_Usuario
+CREATE PROCEDURE sp_Usuario
 @Usuario_Id INT = NULL,
 @Nombre_Usuario VARCHAR(80) = NULL,
 @Usuario VARCHAR(30) = NULL,
@@ -336,7 +341,7 @@ END
 GO
 
 
-ALTER PROCEDURE sp_Boleta
+CREATE PROCEDURE sp_Boleta
 	@Boleta_Id INT = NULL,
 	@Fecha_Entrada DATETIME = NULL,
 	@Fecha_Salida DATETIME = NULL,

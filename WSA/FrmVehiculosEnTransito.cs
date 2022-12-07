@@ -36,6 +36,7 @@ namespace WSA
             {
                 FrmSalida frmSalida = new FrmSalida(idBoleta);
                 frmSalida.ShowDialog();
+                boleta.MostrarEntradas(dgvEntradas);
                 seleccionado = false;
             }
             else
@@ -50,7 +51,7 @@ namespace WSA
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvEntradas.Rows[e.RowIndex];
-
+                row.Selected = true;
                 idBoleta = int.Parse(row.Cells[0].Value.ToString());
                 seleccionado = true;
             }

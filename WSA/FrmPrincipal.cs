@@ -7,19 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using WSA.Clases;
 namespace WSA
 {
     public partial class FrmPrincipal : Form
     {
         private int childFormNumber = 0;
-
-        public FrmPrincipal()
+        Usuario miUsuario = new Usuario();
+        public FrmPrincipal(Usuario usuario)
         {
             InitializeComponent();
             FrmVehiculosEnTransito frmVehiculosEnTransito = new FrmVehiculosEnTransito();
             CargarFormulario(frmVehiculosEnTransito);
-            barcosToolStripMenuItem.Visible = false;
+            tslbNombreUsuario.Text = usuario.NombreUsuario;
+            if (usuario.TipoUsuarioId == 2)
+            {
+                usuariosToolStripMenuItem.Visible = false;
+                administracinToolStripMenuItem.Visible = false;
+                
+            }
+            
             
         }
 

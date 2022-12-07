@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WSA.Clases
 {
-    class Usuario
+    public class Usuario
     {
         Conexion conexion = new Conexion();
 

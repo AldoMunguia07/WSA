@@ -106,7 +106,7 @@ namespace WSA.Clases
 
             if (m.Success)
             {
-                if (accion.Substring(6, 1) == "+")
+                if (accion.Substring(int.Parse(variable("POSICION_SIGNO_MAS")) - 1, 1) == "+")
                 {
                     if (float.Parse(m.Value) <= float.Parse(variable("MAX")))
                     {
