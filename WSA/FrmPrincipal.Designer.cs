@@ -63,6 +63,7 @@ namespace WSA
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.entradasAnuladasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -186,7 +187,8 @@ namespace WSA
             // 
             this.procesoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vehículosEnTransitoToolStripMenuItem,
-            this.boletasToolStripMenuItem});
+            this.boletasToolStripMenuItem,
+            this.entradasAnuladasToolStripMenuItem});
             this.procesoToolStripMenuItem.Name = "procesoToolStripMenuItem";
             this.procesoToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.procesoToolStripMenuItem.Text = "Pesaje";
@@ -279,6 +281,7 @@ namespace WSA
             this.encabezadoBoletaToolStripMenuItem.Name = "encabezadoBoletaToolStripMenuItem";
             this.encabezadoBoletaToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.encabezadoBoletaToolStripMenuItem.Text = "Encabezado boleta";
+            this.encabezadoBoletaToolStripMenuItem.Click += new System.EventHandler(this.encabezadoBoletaToolStripMenuItem_Click);
             // 
             // respaldoDeBaseDeDatosToolStripMenuItem
             // 
@@ -319,6 +322,12 @@ namespace WSA
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
+            // 
+            // entradasAnuladasToolStripMenuItem
+            // 
+            this.entradasAnuladasToolStripMenuItem.Name = "entradasAnuladasToolStripMenuItem";
+            this.entradasAnuladasToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.entradasAnuladasToolStripMenuItem.Text = "Entradas anuladas";
             // 
             // FrmPrincipal
             // 
@@ -379,6 +388,7 @@ namespace WSA
         private System.Windows.Forms.ToolStripMenuItem bitácoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem encabezadoBoletaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem respaldoDeBaseDeDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem entradasAnuladasToolStripMenuItem;
     }
 }
 

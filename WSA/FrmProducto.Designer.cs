@@ -168,7 +168,7 @@ namespace WSA
             this.Controls.Add(this.txtDescProducto);
             this.Controls.Add(this.label1);
             this.Name = "FrmProducto";
-            this.Text = "FrmProducto";
+            this.Text = "Productos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).EndInit();
             this.ResumeLayout(false);

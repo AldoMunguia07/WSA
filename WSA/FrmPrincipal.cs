@@ -176,5 +176,12 @@ namespace WSA
             CerrarFormularios();
             CargarFormulario(frmRealizarBackup);
         }
+
+        private void encabezadoBoletaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEncabezadoBoleta frmEncabezadoBoleta = new FrmEncabezadoBoleta();
+            CerrarFormularios();
+            CargarFormulario(frmEncabezadoBoleta);
+        }
     }
 }

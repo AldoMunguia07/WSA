@@ -132,7 +132,7 @@ namespace WSA
             this.Controls.Add(this.txtDescProveedor);
             this.Controls.Add(this.label1);
             this.Name = "FrmProveedores";
-            this.Text = "FrmProveedores";
+            this.Text = "Proveedores";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -63,7 +63,7 @@ namespace WSA
             this.Controls.Add(this.btnBackup);
             this.Controls.Add(this.label2);
             this.Name = "FrmRealizarBackup";
-            this.Text = "FrmRealizarBackup";
+            this.Text = "Copia de seguridad";
             this.ResumeLayout(false);
             this.PerformLayout();
 

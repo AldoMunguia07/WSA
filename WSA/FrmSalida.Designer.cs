@@ -533,7 +533,7 @@ namespace WSA
             this.Controls.Add(this.label1);
             this.Name = "FrmSalida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmSalida";
+            this.Text = "Salida de vehículo";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmSalida_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

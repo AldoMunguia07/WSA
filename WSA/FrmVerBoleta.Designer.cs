@@ -500,7 +500,7 @@ namespace WSA
             this.Controls.Add(this.lblTitulo);
             this.Name = "FrmVerBoleta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmVerBoleta";
+            this.Text = "Boleta";
             this.ResumeLayout(false);
             this.PerformLayout();
 

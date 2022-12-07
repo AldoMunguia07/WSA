@@ -140,7 +140,7 @@ namespace WSA
             this.Controls.Add(this.txtDescConductor);
             this.Controls.Add(this.label1);
             this.Name = "FrmConductor";
-            this.Text = "FrmConductor";
+            this.Text = "Conductores";
             ((System.ComponentModel.ISupportInitialize)(this.dgvConductores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

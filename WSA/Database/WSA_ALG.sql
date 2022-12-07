@@ -153,6 +153,21 @@ CREATE TABLE Boleta
 );
 GO
 
+CREATE TABLE Encabezado_Boleta
+(
+	Encabezado_Boleta_Id INT NOT NULL IDENTITY,
+	Empresa VARCHAR(70) NOT NULL,
+	Direccion VARCHAR(70) NOT NULL,
+	Telefono VARCHAR(20) NULL
+
+
+	CONSTRAINT PK_Encabezado_Boleta_Encabezado_Boleta_Id
+		PRIMARY KEY CLUSTERED (Encabezado_Boleta_Id)
+
+);
+GO
+
+
 --INSERTS
 INSERT INTO Tipo_Usuario VALUES('Administrador');
 INSERT INTO Tipo_Usuario VALUES('Operador');
@@ -341,7 +356,7 @@ END
 GO
 
 
-ALTER PROCEDURE sp_Boleta
+CREATE PROCEDURE sp_Boleta
 	@Boleta_Id INT = NULL,
 	@Fecha_Entrada DATETIME = NULL,
 	@Fecha_Salida DATETIME = NULL,
@@ -458,6 +473,4 @@ BEGIN
 
 END
 GO
-
-BACKUP DATABASE WSA_ALG TO DISK= 
 

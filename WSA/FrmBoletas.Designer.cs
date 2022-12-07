@@ -95,7 +95,7 @@ namespace WSA
             this.Controls.Add(this.dgvBoletas);
             this.Controls.Add(this.label1);
             this.Name = "FrmBoletas";
-            this.Text = "FrmBoletas";
+            this.Text = "Boletas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBoletas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

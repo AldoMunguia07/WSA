@@ -259,7 +259,7 @@ namespace WSA
             this.Controls.Add(this.txtNombreUsuario);
             this.Controls.Add(this.label1);
             this.Name = "FrmUsuario";
-            this.Text = "FrmUsuario";
+            this.Text = "Usuario";
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

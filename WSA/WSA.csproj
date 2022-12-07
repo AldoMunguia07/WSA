@@ -100,6 +100,12 @@
     <Compile Include="FrmConductor.Designer.cs">
       <DependentUpon>FrmConductor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEncabezadoBoleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEncabezadoBoleta.Designer.cs">
+      <DependentUpon>FrmEncabezadoBoleta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmIngreso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConductor.resx">
       <DependentUpon>FrmConductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEncabezadoBoleta.resx">
+      <DependentUpon>FrmEncabezadoBoleta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmIngreso.resx">
       <DependentUpon>FrmIngreso.cs</DependentUpon>
