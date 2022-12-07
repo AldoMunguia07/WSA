@@ -45,7 +45,8 @@ namespace WSA
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(670, 401);
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnModificar.Location = new System.Drawing.Point(667, 342);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 15;
@@ -55,8 +56,9 @@ namespace WSA
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(55, 342);
+            this.label3.Location = new System.Drawing.Point(55, 347);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 14;
@@ -64,7 +66,8 @@ namespace WSA
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(101, 339);
+            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBuscar.Location = new System.Drawing.Point(101, 343);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(430, 20);
             this.txtBuscar.TabIndex = 13;
@@ -72,6 +75,7 @@ namespace WSA
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(270, 26);
@@ -82,7 +86,8 @@ namespace WSA
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(670, 372);
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGuardar.Location = new System.Drawing.Point(586, 342);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 11;
@@ -95,6 +100,7 @@ namespace WSA
             this.dgvProductos.AllowUserToAddRows = false;
             this.dgvProductos.AllowUserToDeleteRows = false;
             this.dgvProductos.AllowUserToOrderColumns = true;
+            this.dgvProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.GridColor = System.Drawing.Color.DimGray;
@@ -107,6 +113,7 @@ namespace WSA
             // 
             // txtDescProducto
             // 
+            this.txtDescProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDescProducto.Location = new System.Drawing.Point(124, 87);
             this.txtDescProducto.Name = "txtDescProducto";
             this.txtDescProducto.Size = new System.Drawing.Size(190, 20);
@@ -114,6 +121,7 @@ namespace WSA
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(55, 90);
             this.label1.Name = "label1";
@@ -123,6 +131,7 @@ namespace WSA
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(346, 90);
             this.label4.Name = "label4";
@@ -132,6 +141,7 @@ namespace WSA
             // 
             // numPrecio
             // 
+            this.numPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numPrecio.Location = new System.Drawing.Point(389, 87);
             this.numPrecio.Maximum = new decimal(new int[] {
             999999,

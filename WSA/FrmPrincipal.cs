@@ -17,6 +17,10 @@ namespace WSA
         public FrmPrincipal()
         {
             InitializeComponent();
+            FrmVehiculosEnTransito frmVehiculosEnTransito = new FrmVehiculosEnTransito();
+            CargarFormulario(frmVehiculosEnTransito);
+            barcosToolStripMenuItem.Visible = false;
+            
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -66,15 +70,7 @@ namespace WSA
         {
         }
 
-        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
-        }
 
-        private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
-        }
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -102,6 +98,63 @@ namespace WSA
             {
                 childForm.Close();
             }
+        }
+
+        private void vehículosEnTransitoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVehiculosEnTransito frmVehiculosEnTransito = new FrmVehiculosEnTransito();
+            CerrarFormularios();
+            CargarFormulario(frmVehiculosEnTransito);
+        }
+
+        private void CargarFormulario(Form form)
+        {
+
+            form.MdiParent = this;
+            form.ControlBox = false;
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
+        }
+
+        private void CerrarFormularios()
+        {
+            foreach (Form childForm in MdiChildren)
+            {
+                childForm.Close();
+            }
+        }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCliente frmCliente = new FrmCliente();
+            CerrarFormularios();
+            CargarFormulario(frmCliente);
+        }
+
+        private void conductoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConductor frmConductor = new FrmConductor();
+            CerrarFormularios();
+            CargarFormulario(frmConductor);
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProducto frmProducto = new FrmProducto();
+            CerrarFormularios();
+            CargarFormulario(frmProducto);
+        }
+
+        private void barcosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUsuario frmUsuario = new FrmUsuario();
+            CerrarFormularios();
+            CargarFormulario(frmUsuario);
         }
     }
 }

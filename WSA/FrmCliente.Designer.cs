@@ -42,6 +42,7 @@ namespace WSA
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(56, 73);
             this.label1.Name = "label1";
@@ -51,6 +52,7 @@ namespace WSA
             // 
             // txtDescCliente
             // 
+            this.txtDescCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDescCliente.Location = new System.Drawing.Point(157, 70);
             this.txtDescCliente.Name = "txtDescCliente";
             this.txtDescCliente.Size = new System.Drawing.Size(190, 20);
@@ -61,6 +63,7 @@ namespace WSA
             this.dgvClientes.AllowUserToAddRows = false;
             this.dgvClientes.AllowUserToDeleteRows = false;
             this.dgvClientes.AllowUserToOrderColumns = true;
+            this.dgvClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.GridColor = System.Drawing.Color.DimGray;
@@ -73,7 +76,8 @@ namespace WSA
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(671, 355);
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGuardar.Location = new System.Drawing.Point(587, 322);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 3;
@@ -83,6 +87,7 @@ namespace WSA
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(271, 9);
@@ -93,7 +98,8 @@ namespace WSA
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(102, 322);
+            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBuscar.Location = new System.Drawing.Point(102, 323);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(430, 20);
             this.txtBuscar.TabIndex = 5;
@@ -101,8 +107,9 @@ namespace WSA
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(56, 325);
+            this.label3.Location = new System.Drawing.Point(56, 327);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 6;
@@ -110,7 +117,8 @@ namespace WSA
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(671, 384);
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnModificar.Location = new System.Drawing.Point(668, 322);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 7;

@@ -38,7 +38,7 @@ namespace WSA
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(493, 9);
@@ -65,6 +65,7 @@ namespace WSA
             // 
             // btnEntrada
             // 
+            this.btnEntrada.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnEntrada.Location = new System.Drawing.Point(23, 298);
             this.btnEntrada.Name = "btnEntrada";
             this.btnEntrada.Size = new System.Drawing.Size(118, 27);
@@ -75,6 +76,7 @@ namespace WSA
             // 
             // btnSalida
             // 
+            this.btnSalida.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnSalida.Location = new System.Drawing.Point(147, 298);
             this.btnSalida.Name = "btnSalida";
             this.btnSalida.Size = new System.Drawing.Size(118, 27);
@@ -92,7 +94,9 @@ namespace WSA
             this.Controls.Add(this.btnEntrada);
             this.Controls.Add(this.dgvEntradas);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FrmVehiculosEnTransito";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmVehiculosEnTransito";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradas)).EndInit();
             this.ResumeLayout(false);

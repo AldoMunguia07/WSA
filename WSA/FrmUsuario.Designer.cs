@@ -52,7 +52,8 @@ namespace WSA
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(670, 466);
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnModificar.Location = new System.Drawing.Point(667, 405);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 15;
@@ -62,8 +63,9 @@ namespace WSA
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(55, 407);
+            this.label3.Location = new System.Drawing.Point(55, 410);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 14;
@@ -71,7 +73,8 @@ namespace WSA
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(101, 404);
+            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBuscar.Location = new System.Drawing.Point(101, 406);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(430, 20);
             this.txtBuscar.TabIndex = 13;
@@ -79,6 +82,7 @@ namespace WSA
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(270, 9);
@@ -89,7 +93,8 @@ namespace WSA
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(670, 437);
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGuardar.Location = new System.Drawing.Point(586, 405);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 11;
@@ -102,6 +107,7 @@ namespace WSA
             this.dgvUsuarios.AllowUserToAddRows = false;
             this.dgvUsuarios.AllowUserToDeleteRows = false;
             this.dgvUsuarios.AllowUserToOrderColumns = true;
+            this.dgvUsuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.GridColor = System.Drawing.Color.DimGray;
@@ -114,6 +120,7 @@ namespace WSA
             // 
             // txtNombreUsuario
             // 
+            this.txtNombreUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombreUsuario.Location = new System.Drawing.Point(151, 71);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(110, 20);
@@ -121,6 +128,7 @@ namespace WSA
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(50, 75);
             this.label1.Name = "label1";
@@ -130,6 +138,7 @@ namespace WSA
             // 
             // txtUsuario
             // 
+            this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUsuario.Location = new System.Drawing.Point(151, 115);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(110, 20);
@@ -137,6 +146,7 @@ namespace WSA
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(102, 119);
             this.label4.Name = "label4";
@@ -146,6 +156,7 @@ namespace WSA
             // 
             // txtContrasena
             // 
+            this.txtContrasena.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtContrasena.Location = new System.Drawing.Point(421, 71);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(110, 20);
@@ -154,6 +165,7 @@ namespace WSA
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(354, 75);
             this.label5.Name = "label5";
@@ -163,6 +175,7 @@ namespace WSA
             // 
             // txtConfirmarContrasena
             // 
+            this.txtConfirmarContrasena.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtConfirmarContrasena.Location = new System.Drawing.Point(421, 115);
             this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
             this.txtConfirmarContrasena.Size = new System.Drawing.Size(110, 20);
@@ -171,6 +184,7 @@ namespace WSA
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(308, 119);
             this.label6.Name = "label6";
@@ -180,6 +194,7 @@ namespace WSA
             // 
             // btnActivo
             // 
+            this.btnActivo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnActivo.BackColor = System.Drawing.Color.Green;
             this.btnActivo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActivo.ForeColor = System.Drawing.Color.White;
@@ -193,6 +208,7 @@ namespace WSA
             // 
             // cmbTipoUsuario
             // 
+            this.cmbTipoUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbTipoUsuario.FormattingEnabled = true;
             this.cmbTipoUsuario.Location = new System.Drawing.Point(638, 71);
             this.cmbTipoUsuario.Name = "cmbTipoUsuario";
@@ -201,6 +217,7 @@ namespace WSA
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(552, 75);
             this.label7.Name = "label7";
@@ -210,6 +227,7 @@ namespace WSA
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(592, 119);
             this.label8.Name = "label8";
