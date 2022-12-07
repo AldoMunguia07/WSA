@@ -29,7 +29,6 @@ namespace WSA
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodigoConductor = new System.Windows.Forms.TextBox();
@@ -60,7 +59,6 @@ namespace WSA
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.mySerialPort = new System.IO.Ports.SerialPort(this.components);
             this.lblConexion = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.btnConectar = new System.Windows.Forms.Button();
@@ -472,7 +470,6 @@ namespace WSA
         private System.Windows.Forms.TextBox txtObservaciones;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.IO.Ports.SerialPort mySerialPort;
         private System.Windows.Forms.Label lblConexion;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnConectar;

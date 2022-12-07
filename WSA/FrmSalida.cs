@@ -24,14 +24,14 @@ namespace WSA
             idBoleta = boletaId;
             boleta.CargarFormularioSalida(idBoleta, dtpFechaEntrada, txtCodigoConductor, txtConductor, txtPlacaCabezal, txtPlacaRastra, txtCia, txtEnvioN, txtCodigoCliente, 
                 txtCliente, txtCodigoProducto, txtProducto, txtCodigoBarco, txtBarco, txtPesoEntrada, txtObservaciones);
-            conectado = configuracionBascula.LeerDatos(mySerialPort, this, lblConexion, txtPesoBascula);
+            conectado = configuracionBascula.LeerDatos(/*mySerialPort,*/ this, lblConexion, txtPesoBascula);
         }
 
         private void btnConectar_Click(object sender, EventArgs e)
         {
             if (!conectado)
             {
-                conectado = configuracionBascula.LeerDatos(mySerialPort, this, lblConexion, txtPesoBascula);
+                conectado = configuracionBascula.LeerDatos(/*mySerialPort,*/ this, lblConexion, txtPesoBascula);
             }
             else
             {
@@ -77,6 +77,11 @@ namespace WSA
             boleta.Estado = 'C';
             boleta.Observaciones = txtObservaciones.Text;
 
+        }
+
+        private void FrmSalida_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            configuracionBascula.Desconectar();
         }
     }
 }

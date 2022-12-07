@@ -488,6 +488,7 @@ namespace WSA
             this.Controls.Add(this.label1);
             this.Name = "FrmSalida";
             this.Text = "FrmSalida";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmSalida_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

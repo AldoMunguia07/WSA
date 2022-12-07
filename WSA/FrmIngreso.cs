@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WSA.Clases;
 using System.Text.RegularExpressions;
+using System.IO.Ports;
 
 namespace WSA
 {
@@ -20,7 +21,8 @@ namespace WSA
         public FrmIngreso()
         {
             InitializeComponent();
-            conectado = configuracionBascula.LeerDatos(mySerialPort, this, lblConexion, txtPesoBascula);
+            
+            conectado = configuracionBascula.LeerDatos(/*mySerialPort,*/ this, lblConexion, txtPesoBascula);
             
 
 
@@ -45,11 +47,11 @@ namespace WSA
         {
             if(!conectado)
             {
-                conectado = configuracionBascula.LeerDatos(mySerialPort, this, lblConexion, txtPesoBascula);
+                conectado = configuracionBascula.LeerDatos(/*mySerialPort,*/ this, lblConexion, txtPesoBascula);
             }
             else
             {
-                MessageBox.Show(String.Format("Ya se ecnuentra conectado al puerto {0}", mySerialPort.PortName), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(String.Format("Ya se ecnuentra conectado al puerto {0}", ""), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 
             }
 
@@ -183,9 +185,11 @@ namespace WSA
 
         private void FrmIngreso_FormClosed(object sender, FormClosedEventArgs e)
         {
-            configuracionBascula.Desconectar(mySerialPort);
-            MessageBox.Show(mySerialPort.PortName);
-            
+
+            configuracionBascula.Desconectar();
+
+
+
         }
     }
 }
