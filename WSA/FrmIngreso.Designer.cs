@@ -53,7 +53,7 @@ namespace WSA
             this.txtPesoBascula = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtPesoEntrada = new System.Windows.Forms.TextBox();
-            this.txtObtenerPeso = new System.Windows.Forms.Button();
+            this.btnObtenerPeso = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
@@ -298,16 +298,16 @@ namespace WSA
             this.txtPesoEntrada.Size = new System.Drawing.Size(179, 20);
             this.txtPesoEntrada.TabIndex = 23;
             // 
-            // txtObtenerPeso
+            // btnObtenerPeso
             // 
-            this.txtObtenerPeso.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtObtenerPeso.Location = new System.Drawing.Point(747, 163);
-            this.txtObtenerPeso.Name = "txtObtenerPeso";
-            this.txtObtenerPeso.Size = new System.Drawing.Size(110, 23);
-            this.txtObtenerPeso.TabIndex = 24;
-            this.txtObtenerPeso.Text = "Obtener peso";
-            this.txtObtenerPeso.UseVisualStyleBackColor = true;
-            this.txtObtenerPeso.Click += new System.EventHandler(this.txtObtenerPeso_Click);
+            this.btnObtenerPeso.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnObtenerPeso.Location = new System.Drawing.Point(747, 163);
+            this.btnObtenerPeso.Name = "btnObtenerPeso";
+            this.btnObtenerPeso.Size = new System.Drawing.Size(110, 23);
+            this.btnObtenerPeso.TabIndex = 24;
+            this.btnObtenerPeso.Text = "Obtener peso";
+            this.btnObtenerPeso.UseVisualStyleBackColor = true;
+            this.btnObtenerPeso.Click += new System.EventHandler(this.txtObtenerPeso_Click);
             // 
             // label11
             // 
@@ -406,7 +406,7 @@ namespace WSA
             this.Controls.Add(this.txtObservaciones);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtObtenerPeso);
+            this.Controls.Add(this.btnObtenerPeso);
             this.Controls.Add(this.txtPesoEntrada);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtPesoBascula);
@@ -466,7 +466,7 @@ namespace WSA
         private System.Windows.Forms.TextBox txtPesoBascula;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtPesoEntrada;
-        private System.Windows.Forms.Button txtObtenerPeso;
+        private System.Windows.Forms.Button btnObtenerPeso;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtObservaciones;

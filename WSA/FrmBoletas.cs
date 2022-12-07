@@ -14,10 +14,43 @@ namespace WSA
     public partial class FrmBoletas : Form
     {
         Boleta boleta = new Boleta();
+        private int idBoleta = 0;
+        private bool seleccionado = false;
         public FrmBoletas()
         {
             InitializeComponent();
-            boleta.MostrarSalidas(dgvBoletas);
+            boleta.MostrarBoletas(dgvBoletas);
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVerBoleta_Click(object sender, EventArgs e)
+        {
+            if (seleccionado)
+            {
+                FrmVerBoleta frmVerBoleta = new FrmVerBoleta(idBoleta);
+                frmVerBoleta.ShowDialog();
+                boleta.MostrarBoletas(dgvBoletas);
+                seleccionado = false;
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una boleta", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void dgvBoletas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvBoletas.Rows[e.RowIndex];
+                row.Selected = true;
+                idBoleta = int.Parse(row.Cells[0].Value.ToString());
+                seleccionado = true;
+            }
         }
     }
 }

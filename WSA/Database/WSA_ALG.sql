@@ -391,8 +391,8 @@ BEGIN
 		END
 	ELSE IF @accion = 'cagarFormSalida'
 		BEGIN
-			SELECT b.Fecha_Entrada, b.Conductor_Id, c.Conductor, b.Placa_Cabezal, b.Placa_Rastra, b.Cia_Transportista, b.Envio_N, b.Cliente_Id, cl.Cliente, b.Producto_Id,
-			p.Descripcion Descripcion_Producto, b.Barco_Id, bc.Descripcion Descripcion_Barco, b.Peso_Ingreso, b.Observaciones
+			SELECT b.Fecha_Entrada, b.Fecha_Salida, b.Conductor_Id, c.Conductor, b.Placa_Cabezal, b.Placa_Rastra, b.Cia_Transportista, b.Envio_N, b.Cliente_Id, cl.Cliente, b.Producto_Id,
+			p.Descripcion Descripcion_Producto, b.Barco_Id, bc.Descripcion Descripcion_Barco, b.Peso_Ingreso, b.Peso_Salida, ((b.Peso_Ingreso - b.Peso_Salida) * -1) Peso_Neto, b.Observaciones
 			FROM Boleta b JOIN Conductor c
 			ON b.Conductor_Id = c.Conductor_Id
 			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
@@ -407,7 +407,7 @@ BEGIN
 		END
 	ELSE IF @accion = 'mostrarSalidas'
 		BEGIN
-			SELECT b.Boleta_Id 'Código de boleta', b.Fecha_Entrada 'Fecha de entrada', b.Placa_Cabezal 'Placa del cabezal', b.Placa_Rastra 'Placa de la rastra', c.Conductor_Id 'Código del conductor', c.Conductor,
+			SELECT b.Boleta_Id 'Código de boleta', b.Fecha_Entrada 'Fecha de entrada', b.Fecha_Salida 'Fecha de salida', b.Placa_Cabezal 'Placa del cabezal', b.Placa_Rastra 'Placa de la rastra', c.Conductor_Id 'Código del conductor', c.Conductor,
 			cl.Cliente, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) 'Peso de ingreso', CONCAT(b.Peso_Salida,' ',b.Unidades_Peso_Salida) 'Peso de salida', CONCAT(((b.Peso_Ingreso - b.Peso_Salida) * -1), ' ',b.Unidades_Peso_Salida) 'Peso neto', 
 			b.Barco_Id 'Código del barco', bc.Descripcion 'Barco', b.Estado, u.Nombre_Usuario Usuario, b.Observaciones
 			FROM Boleta b JOIN Conductor c
@@ -443,3 +443,21 @@ BEGIN
 
 END
 GO
+
+CREATE PROCEDURE sp_Database
+@Ruta VARCHAR(70) = NULL,
+@accion VARCHAR(50)
+
+AS
+BEGIN
+	IF @accion = 'realizarBackup'
+	BEGIN
+		BACKUP DATABASE WSA_ALG TO DISK=@Ruta 
+	END
+
+
+END
+GO
+
+BACKUP DATABASE WSA_ALG TO DISK= 
+

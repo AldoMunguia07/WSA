@@ -31,6 +31,8 @@ namespace WSA
         {
             this.dgvBoletas = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnVerBoleta = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBoletas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,6 +50,7 @@ namespace WSA
             this.dgvBoletas.ReadOnly = true;
             this.dgvBoletas.Size = new System.Drawing.Size(1142, 196);
             this.dgvBoletas.TabIndex = 13;
+            this.dgvBoletas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBoletas_CellMouseClick);
             // 
             // label1
             // 
@@ -60,11 +63,35 @@ namespace WSA
             this.label1.TabIndex = 12;
             this.label1.Text = "Boletas";
             // 
+            // btnVerBoleta
+            // 
+            this.btnVerBoleta.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnVerBoleta.Location = new System.Drawing.Point(32, 312);
+            this.btnVerBoleta.Name = "btnVerBoleta";
+            this.btnVerBoleta.Size = new System.Drawing.Size(75, 23);
+            this.btnVerBoleta.TabIndex = 14;
+            this.btnVerBoleta.Text = "Ver boleta";
+            this.btnVerBoleta.UseVisualStyleBackColor = true;
+            this.btnVerBoleta.Click += new System.EventHandler(this.btnVerBoleta_Click);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnImprimir.Location = new System.Drawing.Point(113, 312);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(75, 23);
+            this.btnImprimir.TabIndex = 15;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
             // FrmBoletas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 385);
+            this.Controls.Add(this.btnImprimir);
+            this.Controls.Add(this.btnVerBoleta);
             this.Controls.Add(this.dgvBoletas);
             this.Controls.Add(this.label1);
             this.Name = "FrmBoletas";
@@ -79,5 +106,7 @@ namespace WSA
 
         private System.Windows.Forms.DataGridView dgvBoletas;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnVerBoleta;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

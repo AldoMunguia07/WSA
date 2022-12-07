@@ -285,6 +285,7 @@ namespace WSA
             this.respaldoDeBaseDeDatosToolStripMenuItem.Name = "respaldoDeBaseDeDatosToolStripMenuItem";
             this.respaldoDeBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.respaldoDeBaseDeDatosToolStripMenuItem.Text = "Respaldo de base de datos";
+            this.respaldoDeBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.respaldoDeBaseDeDatosToolStripMenuItem_Click);
             // 
             // toolStrip
             // 

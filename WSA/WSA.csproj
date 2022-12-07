@@ -70,6 +70,7 @@
     <Compile Include="Clases\Conductor.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\ConfiguracionBascula.cs" />
+    <Compile Include="Clases\Database.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Proveedor.cs" />
     <Compile Include="Clases\Usuario.cs" />
@@ -129,6 +130,12 @@
     <Compile Include="FrmProveedores.Designer.cs">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRealizarBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRealizarBackup.Designer.cs">
+      <DependentUpon>FrmRealizarBackup.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSalida.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +153,12 @@
     </Compile>
     <Compile Include="FrmVehiculosEnTransito.Designer.cs">
       <DependentUpon>FrmVehiculosEnTransito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVerBoleta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVerBoleta.Designer.cs">
+      <DependentUpon>FrmVerBoleta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -173,6 +186,9 @@
     <EmbeddedResource Include="FrmProveedores.resx">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRealizarBackup.resx">
+      <DependentUpon>FrmRealizarBackup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSalida.resx">
       <DependentUpon>FrmSalida.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVehiculosEnTransito.resx">
       <DependentUpon>FrmVehiculosEnTransito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVerBoleta.resx">
+      <DependentUpon>FrmVerBoleta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -169,5 +169,12 @@ namespace WSA
             CerrarFormularios();
             CargarFormulario(frmBoletas);
         }
+
+        private void respaldoDeBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRealizarBackup frmRealizarBackup = new FrmRealizarBackup();
+            CerrarFormularios();
+            CargarFormulario(frmRealizarBackup);
+        }
     }
 }

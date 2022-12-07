@@ -142,7 +142,7 @@ namespace WSA.Clases
             }
         }
 
-        public void MostrarSalidas(DataGridView dataGrid)
+        public void MostrarBoletas(DataGridView dataGrid)
         {
 
             try
@@ -431,6 +431,68 @@ namespace WSA.Clases
             catch (Exception ex)
             {
                 
+                MessageBox.Show(ex.Message.ToString(), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Cerrar la conexión
+                conexion.sqlConnection.Close();
+            }
+        }
+
+        public void CargarFormularioVerBoleta(int boletaId, DateTimePicker dtpFechaEntrada, DateTimePicker dtpHoraEntrada, DateTimePicker dtpFechaSalida, DateTimePicker dtpHoraSalida, 
+            TextBox txtCodigoConductor, TextBox txtConductor, TextBox txtPlacaCabezal, TextBox txtPlacaRastra, TextBox txtCia, TextBox txtEnvioN, TextBox txtCodigoCliente, TextBox txtCliente,
+            TextBox txtCodigoProducto, TextBox txtProducto, TextBox txtCodigoBarco, TextBox txtBarco, TextBox txtPesoEntrada, TextBox txtPesoSalida, TextBox txtPesoNeto, TextBox txtObservaciones)
+        {
+
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Boleta", conexion.sqlConnection);
+
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                // Establecer los valores de los parámetros
+                sqlCommand.Parameters.AddWithValue("@Boleta_Id", boletaId);
+                sqlCommand.Parameters.AddWithValue("@accion", "cagarFormSalida");
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                using (SqlDataReader rdr = sqlCommand.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        dtpFechaEntrada.Value = Convert.ToDateTime(rdr["Fecha_Entrada"]);
+                        dtpHoraEntrada.Value = Convert.ToDateTime(rdr["Fecha_Entrada"]);
+                        dtpFechaSalida.Value = Convert.ToDateTime(rdr["Fecha_Salida"]);
+                        dtpHoraSalida.Value = Convert.ToDateTime(rdr["Fecha_Salida"]);
+                        txtCodigoConductor.Text = rdr["Conductor_Id"].ToString();
+                        txtConductor.Text = rdr["Conductor"].ToString();
+                        txtPlacaCabezal.Text = rdr["Placa_Cabezal"].ToString();
+                        txtPlacaRastra.Text = rdr["Placa_Rastra"].ToString();
+                        txtCia.Text = rdr["Cia_Transportista"].ToString();
+                        txtEnvioN.Text = rdr["Envio_N"].ToString();
+                        txtCodigoCliente.Text = rdr["Cliente_Id"].ToString();
+                        txtCliente.Text = rdr["Cliente"].ToString();
+                        txtCodigoProducto.Text = rdr["Producto_Id"].ToString();
+                        txtProducto.Text = rdr["Descripcion_Producto"].ToString();
+                        txtCodigoBarco.Text = rdr["Barco_Id"].ToString();
+                        txtBarco.Text = rdr["Descripcion_Barco"].ToString();
+                        txtPesoEntrada.Text = String.Format("{0:n}", float.Parse(rdr["Peso_Ingreso"].ToString()));
+                        txtPesoSalida.Text = String.Format("{0:n}", float.Parse(rdr["Peso_Salida"].ToString()));
+                        txtPesoNeto.Text = String.Format("{0:n}", float.Parse(rdr["Peso_Neto"].ToString()));
+
+                        txtObservaciones.Text = rdr["Observaciones"].ToString();
+
+                    }
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
                 MessageBox.Show(ex.Message.ToString(), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
