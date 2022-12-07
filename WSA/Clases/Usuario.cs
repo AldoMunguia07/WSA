@@ -19,7 +19,7 @@ namespace WSA.Clases
         public string NombreUsuario { get; set; }
         public string UsuarioD { get; set; }
         public string Contrasena { get; set; }
-        public int TipoUsuario { get; set; }
+        public int TipoUsuarioId { get; set; }
         public bool Activo { get; set; }
 
         //METODOS
@@ -112,7 +112,7 @@ namespace WSA.Clases
                 sqlCommand.Parameters.AddWithValue("@Nombre_Usuario", usuario.NombreUsuario);
                 sqlCommand.Parameters.AddWithValue("@Usuario", usuario.UsuarioD);
                 sqlCommand.Parameters.AddWithValue("@Contrasena", usuario.Contrasena);
-                sqlCommand.Parameters.AddWithValue("@Tipo_Usuario_Id", usuario.TipoUsuario);
+                sqlCommand.Parameters.AddWithValue("@Tipo_Usuario_Id", usuario.TipoUsuarioId);
                 sqlCommand.Parameters.AddWithValue("@Activo", usuario.Activo);
                 sqlCommand.Parameters.AddWithValue("@accion", "insertar");
 
@@ -143,7 +143,7 @@ namespace WSA.Clases
                 sqlCommand.Parameters.AddWithValue("@Nombre_Usuario", usuario.NombreUsuario);
                 sqlCommand.Parameters.AddWithValue("@Usuario", usuario.UsuarioD);
                 sqlCommand.Parameters.AddWithValue("@Contrasena", usuario.Contrasena);
-                sqlCommand.Parameters.AddWithValue("@Tipo_Usuario_Id", usuario.TipoUsuario);
+                sqlCommand.Parameters.AddWithValue("@Tipo_Usuario_Id", usuario.TipoUsuarioId);
                 sqlCommand.Parameters.AddWithValue("@Activo", usuario.Activo);
                 sqlCommand.Parameters.AddWithValue("@accion", "modificar");
 
@@ -235,6 +235,51 @@ namespace WSA.Clases
             }
 
 
+        }
+
+        public void BuscarUsuario(string username, Usuario usuario)
+        {
+
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Usuario", conexion.sqlConnection);
+
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                // Establecer los valores de los parámetros
+                sqlCommand.Parameters.AddWithValue("@usuario", username.ToLower());
+                sqlCommand.Parameters.AddWithValue("@accion", "obtenerUsuario");
+
+                using (SqlDataReader rdr = sqlCommand.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        // Obtener los valores del empleado si la consulta retorna valores
+                        usuario.UsuarioId = Convert.ToInt32(rdr["Usuario_Id"]);
+                        usuario.NombreUsuario = rdr["Nombre_Usuario"].ToString();
+                        usuario.UsuarioD = rdr["Usuario"].ToString();
+                        usuario.Contrasena = rdr["Contrasena"].ToString();
+                        usuario.TipoUsuarioId = Convert.ToInt32(rdr["Tipo_Usuario_Id"].ToString());
+                        usuario.Activo = Convert.ToBoolean(rdr["Activo"]);
+                    }
+
+                }
+                // Retornar el usuario con los valores
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            }
+            finally
+            {
+                // Cerrar la conexión
+                conexion.sqlConnection.Close();
+            }
         }
     }
 }

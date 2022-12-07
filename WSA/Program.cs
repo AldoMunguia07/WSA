@@ -16,7 +16,7 @@ namespace WSA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmVehiculosEnTransito());
+            Application.Run(new FrmLogin());
         }
     }
 }

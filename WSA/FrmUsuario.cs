@@ -36,7 +36,7 @@ namespace WSA
             usuario.NombreUsuario = txtNombreUsuario.Text;
             usuario.UsuarioD = txtUsuario.Text;
             usuario.Contrasena = txtContrasena.Text;
-            usuario.TipoUsuario = (int)cmbTipoUsuario.SelectedValue;
+            usuario.TipoUsuarioId = (int)cmbTipoUsuario.SelectedValue;
             usuario.Activo = activo;
 
 
