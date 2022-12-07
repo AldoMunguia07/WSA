@@ -17,17 +17,16 @@ namespace WSA
         public FrmPrincipal(Usuario usuario)
         {
             InitializeComponent();
+            miUsuario = usuario;
             FrmVehiculosEnTransito frmVehiculosEnTransito = new FrmVehiculosEnTransito();
             CargarFormulario(frmVehiculosEnTransito);
-            tslbNombreUsuario.Text = usuario.NombreUsuario;
+            tslbNombreUsuario.Text = String.Format("{0} - {1}", usuario.NombreUsuario, usuario.TipoUsuario);
             if (usuario.TipoUsuarioId == 2)
             {
                 usuariosToolStripMenuItem.Visible = false;
                 administracinToolStripMenuItem.Visible = false;
                 
             }
-            
-            
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -162,6 +161,13 @@ namespace WSA
             FrmUsuario frmUsuario = new FrmUsuario();
             CerrarFormularios();
             CargarFormulario(frmUsuario);
+        }
+
+        private void boletasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBoletas frmBoletas = new FrmBoletas();
+            CerrarFormularios();
+            CargarFormulario(frmBoletas);
         }
     }
 }

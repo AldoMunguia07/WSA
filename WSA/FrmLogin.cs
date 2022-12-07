@@ -29,6 +29,7 @@ namespace WSA
                 if (usuario.UsuarioD == txtUsuario.Text && usuario.Contrasena == txtContrasena.Text && usuario.Activo)
                 {
                     MessageBox.Show(string.Format("¡Bienvenido {0}!", usuario.NombreUsuario), "AWS - Inicio sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    VariablesGlobales.Usuario = usuario;
                     FrmPrincipal frmPrincipal = new FrmPrincipal(usuario);
                     frmPrincipal.Show();
                     frmPrincipal.FormClosed += cerrarSesion;                    

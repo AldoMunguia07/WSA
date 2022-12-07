@@ -20,6 +20,7 @@ namespace WSA.Clases
         public string UsuarioD { get; set; }
         public string Contrasena { get; set; }
         public int TipoUsuarioId { get; set; }
+        public string TipoUsuario { get; set; }
         public bool Activo { get; set; }
 
         //METODOS
@@ -262,6 +263,7 @@ namespace WSA.Clases
                         usuario.UsuarioD = rdr["Usuario"].ToString();
                         usuario.Contrasena = rdr["Contrasena"].ToString();
                         usuario.TipoUsuarioId = Convert.ToInt32(rdr["Tipo_Usuario_Id"].ToString());
+                        usuario.TipoUsuario = rdr["Tipo_Usuario"].ToString();
                         usuario.Activo = Convert.ToBoolean(rdr["Activo"]);
                     }
 

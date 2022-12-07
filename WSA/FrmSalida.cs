@@ -22,7 +22,7 @@ namespace WSA
         {
             InitializeComponent();
             idBoleta = boletaId;
-            boleta.CargarFormularioSalida(idBoleta, dtpFechaEntrada, txtCodigoConductor, txtConductor, txtPlacaCabezal, txtPlacaRastra, txtCia, txtEnvioN, txtCodigoCliente, 
+            boleta.CargarFormularioSalida(idBoleta, dtpFechaEntrada, dtpHoraEntrada, txtCodigoConductor, txtConductor, txtPlacaCabezal, txtPlacaRastra, txtCia, txtEnvioN, txtCodigoCliente, 
                 txtCliente, txtCodigoProducto, txtProducto, txtCodigoBarco, txtBarco, txtPesoEntrada, txtObservaciones);
             conectado = configuracionBascula.LeerDatos(/*mySerialPort,*/ this, lblConexion, txtPesoBascula);
         }
@@ -56,9 +56,18 @@ namespace WSA
         {
             if(txtPesoSalida.Text != "")
             {
-                getValues();
-                boleta.AgregarSalida(boleta);
-                MessageBox.Show("Salida agregada", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if(float.Parse(txtPesoSalida.Text) > float.Parse(txtPesoEntrada.Text))
+                {
+                    getValues();
+                    boleta.AgregarSalida(boleta);
+                    MessageBox.Show("Salida agregada", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("El peso de salida debe ser mayor al peso de entrada", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
             }
             else
             {
@@ -73,7 +82,7 @@ namespace WSA
             boleta.FechaSalida = DateTime.Now;
             boleta.PesoSalida = float.Parse(txtPesoSalida.Text);
             boleta.UnidadesPesoSalida = Regex.Match(txtPesoBascula.Text, "([A-Za-z]+)").Value;
-            boleta.UsuarioId = 1;
+            boleta.UsuarioId = VariablesGlobales.Usuario.UsuarioId;
             boleta.Estado = 'C';
             boleta.Observaciones = txtObservaciones.Text;
 
@@ -82,6 +91,11 @@ namespace WSA
         private void FrmSalida_FormClosed(object sender, FormClosedEventArgs e)
         {
             configuracionBascula.Desconectar();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

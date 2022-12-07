@@ -16,7 +16,7 @@ namespace WSA
         Boleta boleta = new Boleta();
         private int idBoleta = 0;
         private bool seleccionado = false;
-
+        
         public FrmVehiculosEnTransito()
         {
             InitializeComponent();
@@ -28,6 +28,7 @@ namespace WSA
             FrmIngreso frmIngreso = new FrmIngreso();
             frmIngreso.ShowDialog();
             boleta.MostrarEntradas(dgvEntradas);
+            seleccionado = false;
         }
 
         private void btnSalida_Click(object sender, EventArgs e)

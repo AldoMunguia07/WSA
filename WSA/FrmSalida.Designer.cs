@@ -69,6 +69,8 @@ namespace WSA
             this.txtPesoEntrada = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.mySerialPort = new System.IO.Ports.SerialPort(this.components);
+            this.label16 = new System.Windows.Forms.Label();
+            this.dtpHoraEntrada = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // btnConectar
@@ -113,6 +115,7 @@ namespace WSA
             this.btnCancelar.TabIndex = 62;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -203,8 +206,10 @@ namespace WSA
             // txtEnvioN
             // 
             this.txtEnvioN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtEnvioN.BackColor = System.Drawing.Color.White;
             this.txtEnvioN.Location = new System.Drawing.Point(339, 198);
             this.txtEnvioN.Name = "txtEnvioN";
+            this.txtEnvioN.ReadOnly = true;
             this.txtEnvioN.Size = new System.Drawing.Size(91, 20);
             this.txtEnvioN.TabIndex = 53;
             // 
@@ -231,8 +236,10 @@ namespace WSA
             // txtCodigoBarco
             // 
             this.txtCodigoBarco.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCodigoBarco.BackColor = System.Drawing.Color.White;
             this.txtCodigoBarco.Location = new System.Drawing.Point(162, 377);
             this.txtCodigoBarco.Name = "txtCodigoBarco";
+            this.txtCodigoBarco.ReadOnly = true;
             this.txtCodigoBarco.Size = new System.Drawing.Size(47, 20);
             this.txtCodigoBarco.TabIndex = 50;
             // 
@@ -259,8 +266,10 @@ namespace WSA
             // txtCodigoProducto
             // 
             this.txtCodigoProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCodigoProducto.BackColor = System.Drawing.Color.White;
             this.txtCodigoProducto.Location = new System.Drawing.Point(162, 313);
             this.txtCodigoProducto.Name = "txtCodigoProducto";
+            this.txtCodigoProducto.ReadOnly = true;
             this.txtCodigoProducto.Size = new System.Drawing.Size(47, 20);
             this.txtCodigoProducto.TabIndex = 47;
             // 
@@ -287,8 +296,10 @@ namespace WSA
             // txtCodigoCliente
             // 
             this.txtCodigoCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCodigoCliente.BackColor = System.Drawing.Color.White;
             this.txtCodigoCliente.Location = new System.Drawing.Point(162, 248);
             this.txtCodigoCliente.Name = "txtCodigoCliente";
+            this.txtCodigoCliente.ReadOnly = true;
             this.txtCodigoCliente.Size = new System.Drawing.Size(47, 20);
             this.txtCodigoCliente.TabIndex = 44;
             // 
@@ -305,8 +316,10 @@ namespace WSA
             // txtCia
             // 
             this.txtCia.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCia.BackColor = System.Drawing.Color.White;
             this.txtCia.Location = new System.Drawing.Point(162, 198);
             this.txtCia.Name = "txtCia";
+            this.txtCia.ReadOnly = true;
             this.txtCia.Size = new System.Drawing.Size(91, 20);
             this.txtCia.TabIndex = 42;
             // 
@@ -323,8 +336,10 @@ namespace WSA
             // txtPlacaRastra
             // 
             this.txtPlacaRastra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPlacaRastra.BackColor = System.Drawing.Color.White;
             this.txtPlacaRastra.Location = new System.Drawing.Point(339, 150);
             this.txtPlacaRastra.Name = "txtPlacaRastra";
+            this.txtPlacaRastra.ReadOnly = true;
             this.txtPlacaRastra.Size = new System.Drawing.Size(91, 20);
             this.txtPlacaRastra.TabIndex = 40;
             // 
@@ -341,8 +356,10 @@ namespace WSA
             // txtPlacaCabezal
             // 
             this.txtPlacaCabezal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPlacaCabezal.BackColor = System.Drawing.Color.White;
             this.txtPlacaCabezal.Location = new System.Drawing.Point(162, 150);
             this.txtPlacaCabezal.Name = "txtPlacaCabezal";
+            this.txtPlacaCabezal.ReadOnly = true;
             this.txtPlacaCabezal.Size = new System.Drawing.Size(91, 20);
             this.txtPlacaCabezal.TabIndex = 38;
             // 
@@ -369,8 +386,10 @@ namespace WSA
             // txtCodigoConductor
             // 
             this.txtCodigoConductor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCodigoConductor.BackColor = System.Drawing.Color.White;
             this.txtCodigoConductor.Location = new System.Drawing.Point(162, 97);
             this.txtCodigoConductor.Name = "txtCodigoConductor";
+            this.txtCodigoConductor.ReadOnly = true;
             this.txtCodigoConductor.Size = new System.Drawing.Size(47, 20);
             this.txtCodigoConductor.TabIndex = 35;
             // 
@@ -409,7 +428,7 @@ namespace WSA
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(74, 58);
+            this.label14.Location = new System.Drawing.Point(74, 65);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(82, 13);
             this.label14.TabIndex = 67;
@@ -418,9 +437,12 @@ namespace WSA
             // dtpFechaEntrada
             // 
             this.dtpFechaEntrada.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpFechaEntrada.Location = new System.Drawing.Point(162, 54);
+            this.dtpFechaEntrada.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dtpFechaEntrada.Enabled = false;
+            this.dtpFechaEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaEntrada.Location = new System.Drawing.Point(162, 61);
             this.dtpFechaEntrada.Name = "dtpFechaEntrada";
-            this.dtpFechaEntrada.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaEntrada.Size = new System.Drawing.Size(109, 20);
             this.dtpFechaEntrada.TabIndex = 68;
             // 
             // txtPesoEntrada
@@ -443,11 +465,34 @@ namespace WSA
             this.label15.TabIndex = 69;
             this.label15.Text = "Peso entrada:";
             // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(277, 65);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(75, 13);
+            this.label16.TabIndex = 71;
+            this.label16.Text = "Hora entrada: ";
+            // 
+            // dtpHoraEntrada
+            // 
+            this.dtpHoraEntrada.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpHoraEntrada.CalendarMonthBackground = System.Drawing.Color.White;
+            this.dtpHoraEntrada.Enabled = false;
+            this.dtpHoraEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpHoraEntrada.Location = new System.Drawing.Point(358, 61);
+            this.dtpHoraEntrada.Name = "dtpHoraEntrada";
+            this.dtpHoraEntrada.Size = new System.Drawing.Size(83, 20);
+            this.dtpHoraEntrada.TabIndex = 72;
+            // 
             // FrmSalida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 492);
+            this.Controls.Add(this.dtpHoraEntrada);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.txtPesoEntrada);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.dtpFechaEntrada);
@@ -536,5 +581,7 @@ namespace WSA
         private System.Windows.Forms.TextBox txtPesoEntrada;
         private System.Windows.Forms.Label label15;
         private System.IO.Ports.SerialPort mySerialPort;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.DateTimePicker dtpHoraEntrada;
     }
 }

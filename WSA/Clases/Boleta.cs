@@ -142,6 +142,44 @@ namespace WSA.Clases
             }
         }
 
+        public void MostrarSalidas(DataGridView dataGrid)
+        {
+
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Boleta", conexion.sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+
+                // Establecer los valores de los parámetros
+
+                sqlCommand.Parameters.AddWithValue("@accion", "mostrarSalidas");
+
+                using (sqlDataAdapter)
+                {
+                    DataTable dataTable = new DataTable();
+
+                    sqlDataAdapter.Fill(dataTable);
+
+                    dataGrid.DataSource = dataTable;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion.sqlConnection.Close();
+            }
+        }
+
         public void BuscarConductor(TextBox txtCodigoConductor, TextBox txtConductor)
         {
 
@@ -345,7 +383,7 @@ namespace WSA.Clases
             }
         }
 
-        public void CargarFormularioSalida(int boletaId, DateTimePicker dtpFechaEntrada, TextBox txtCodigoConductor, TextBox txtConductor, TextBox txtPlacaCabezal, TextBox txtPlacaRastra,
+        public void CargarFormularioSalida(int boletaId, DateTimePicker dtpFechaEntrada, DateTimePicker dtpHoraEntrada, TextBox txtCodigoConductor, TextBox txtConductor, TextBox txtPlacaCabezal, TextBox txtPlacaRastra,
             TextBox txtCia, TextBox txtEnvioN, TextBox txtCodigoCliente, TextBox txtCliente, TextBox txtCodigoProducto, TextBox txtProducto, TextBox txtCodigoBarco, TextBox txtBarco,
            TextBox txtPesoEntrada, TextBox txtObservaciones)
         {
@@ -368,6 +406,7 @@ namespace WSA.Clases
                     while (rdr.Read())
                     {
                         dtpFechaEntrada.Value = Convert.ToDateTime(rdr["Fecha_Entrada"]);
+                        dtpHoraEntrada.Value = Convert.ToDateTime(rdr["Fecha_Entrada"]);
                         txtCodigoConductor.Text = rdr["Conductor_Id"].ToString();
                         txtConductor.Text = rdr["Conductor"].ToString();
                         txtPlacaCabezal.Text = rdr["Placa_Cabezal"].ToString();

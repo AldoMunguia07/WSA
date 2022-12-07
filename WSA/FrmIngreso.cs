@@ -38,7 +38,7 @@ namespace WSA
             }
             else
             {
-                MessageBox.Show("El peso debe ser mayor a 0", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El peso debe ser mayor a 0", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }
@@ -65,7 +65,7 @@ namespace WSA
             {
                 getValues();
                 boleta.AgregarEntrada(boleta);
-                MessageBox.Show("Entrada agregada", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Entrada agregada", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
            
@@ -84,7 +84,7 @@ namespace WSA
             boleta.CiaTransportista = txtCia.Text;
             boleta.EnvioN = txtEnvioN.Text;
             boleta.BarcoId = int.Parse(txtCodigoBarco.Text);
-            boleta.UsuarioId = 1;
+            boleta.UsuarioId = VariablesGlobales.Usuario.UsuarioId;
             boleta.Estado = 'P';
             boleta.Observaciones = txtObservaciones.Text;
 

@@ -53,16 +53,16 @@ namespace WSA
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barcosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administracinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bitácoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.encabezadoBoletaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.respaldoDeBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.tslbNombreUsuario = new System.Windows.Forms.ToolStripLabel();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.administracinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bitácoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.encabezadoBoletaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.respaldoDeBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -203,6 +203,7 @@ namespace WSA
             this.boletasToolStripMenuItem.Name = "boletasToolStripMenuItem";
             this.boletasToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.boletasToolStripMenuItem.Text = "Boletas";
+            this.boletasToolStripMenuItem.Click += new System.EventHandler(this.boletasToolStripMenuItem_Click);
             // 
             // gestiónToolStripMenuItem
             // 
@@ -251,6 +252,40 @@ namespace WSA
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // administracinToolStripMenuItem
+            // 
+            this.administracinToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bitácoraToolStripMenuItem,
+            this.encabezadoBoletaToolStripMenuItem,
+            this.respaldoDeBaseDeDatosToolStripMenuItem});
+            this.administracinToolStripMenuItem.Name = "administracinToolStripMenuItem";
+            this.administracinToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.administracinToolStripMenuItem.Text = "Administración";
+            // 
+            // bitácoraToolStripMenuItem
+            // 
+            this.bitácoraToolStripMenuItem.Name = "bitácoraToolStripMenuItem";
+            this.bitácoraToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.bitácoraToolStripMenuItem.Text = "Bitácora";
+            // 
+            // encabezadoBoletaToolStripMenuItem
+            // 
+            this.encabezadoBoletaToolStripMenuItem.Name = "encabezadoBoletaToolStripMenuItem";
+            this.encabezadoBoletaToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.encabezadoBoletaToolStripMenuItem.Text = "Encabezado boleta";
+            // 
+            // respaldoDeBaseDeDatosToolStripMenuItem
+            // 
+            this.respaldoDeBaseDeDatosToolStripMenuItem.Name = "respaldoDeBaseDeDatosToolStripMenuItem";
+            this.respaldoDeBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.respaldoDeBaseDeDatosToolStripMenuItem.Text = "Respaldo de base de datos";
+            // 
             // toolStrip
             // 
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -283,40 +318,6 @@ namespace WSA
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
-            // 
-            // administracinToolStripMenuItem
-            // 
-            this.administracinToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bitácoraToolStripMenuItem,
-            this.encabezadoBoletaToolStripMenuItem,
-            this.respaldoDeBaseDeDatosToolStripMenuItem});
-            this.administracinToolStripMenuItem.Name = "administracinToolStripMenuItem";
-            this.administracinToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
-            this.administracinToolStripMenuItem.Text = "Administración";
-            // 
-            // reportesToolStripMenuItem
-            // 
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.reportesToolStripMenuItem.Text = "Reportes";
-            // 
-            // bitácoraToolStripMenuItem
-            // 
-            this.bitácoraToolStripMenuItem.Name = "bitácoraToolStripMenuItem";
-            this.bitácoraToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.bitácoraToolStripMenuItem.Text = "Bitácora";
-            // 
-            // encabezadoBoletaToolStripMenuItem
-            // 
-            this.encabezadoBoletaToolStripMenuItem.Name = "encabezadoBoletaToolStripMenuItem";
-            this.encabezadoBoletaToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.encabezadoBoletaToolStripMenuItem.Text = "Encabezado boleta";
-            // 
-            // respaldoDeBaseDeDatosToolStripMenuItem
-            // 
-            this.respaldoDeBaseDeDatosToolStripMenuItem.Name = "respaldoDeBaseDeDatosToolStripMenuItem";
-            this.respaldoDeBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.respaldoDeBaseDeDatosToolStripMenuItem.Text = "Respaldo de base de datos";
             // 
             // FrmPrincipal
             // 

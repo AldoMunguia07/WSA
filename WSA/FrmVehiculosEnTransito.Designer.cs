@@ -43,9 +43,9 @@ namespace WSA
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(493, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 25);
+            this.label1.Size = new System.Drawing.Size(234, 25);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Vehículos en planta";
+            this.label1.Text = "Vehículos en transito";
             // 
             // dgvEntradas
             // 
@@ -94,7 +94,6 @@ namespace WSA
             this.Controls.Add(this.btnEntrada);
             this.Controls.Add(this.dgvEntradas);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FrmVehiculosEnTransito";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmVehiculosEnTransito";
