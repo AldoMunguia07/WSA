@@ -23,5 +23,11 @@ namespace WSA
                txtCliente, txtCodigoProducto, txtProducto, txtCodigoBarco, txtBarco, txtPesoEntrada, txtPesoSalida, txtPesoNeto, txtObservaciones);
             lblTitulo.Text = String.Format("{0}{1}", lblTitulo.Text, idBoleta);
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            FrmTicket frmTicket = new FrmTicket(idBoleta);
+            frmTicket.ShowDialog();
+        }
     }
 }

@@ -30,8 +30,8 @@ namespace WSA
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.WSA_ALGDataSet = new WSA.WSA_ALGDataSet();
             this.sp_Obtener_Encabezado_BoletaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -46,12 +46,12 @@ namespace WSA
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource3.Name = "DatosEncabezado";
-            reportDataSource3.Value = this.sp_Obtener_Encabezado_BoletaBindingSource;
-            reportDataSource4.Name = "DatosBoleta";
-            reportDataSource4.Value = this.sp_Datos_BoletaBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource5.Name = "DatosEncabezado";
+            reportDataSource5.Value = this.sp_Obtener_Encabezado_BoletaBindingSource;
+            reportDataSource6.Name = "DatosBoleta";
+            reportDataSource6.Value = this.sp_Datos_BoletaBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "WSA.Reportes.rptBoleta.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -90,7 +90,7 @@ namespace WSA
             this.Controls.Add(this.reportViewer1);
             this.Name = "FrmTicket";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmTicket";
+            this.Text = "Imprimir boleta";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmTicket_Load);
             ((System.ComponentModel.ISupportInitialize)(this.WSA_ALGDataSet)).EndInit();

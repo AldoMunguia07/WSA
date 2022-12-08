@@ -37,7 +37,7 @@ namespace WSA
             this.label14 = new System.Windows.Forms.Label();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnObtenerPeso = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.txtPesoSalida = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtEnvioN = new System.Windows.Forms.TextBox();
@@ -152,15 +152,16 @@ namespace WSA
             this.label12.TabIndex = 99;
             this.label12.Text = "Observaciones:";
             // 
-            // btnObtenerPeso
+            // btnImprimir
             // 
-            this.btnObtenerPeso.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnObtenerPeso.Location = new System.Drawing.Point(760, 487);
-            this.btnObtenerPeso.Name = "btnObtenerPeso";
-            this.btnObtenerPeso.Size = new System.Drawing.Size(110, 23);
-            this.btnObtenerPeso.TabIndex = 97;
-            this.btnObtenerPeso.Text = "Imprimir";
-            this.btnObtenerPeso.UseVisualStyleBackColor = true;
+            this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnImprimir.Location = new System.Drawing.Point(760, 487);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(110, 23);
+            this.btnImprimir.TabIndex = 97;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // txtPesoSalida
             // 
@@ -474,7 +475,7 @@ namespace WSA
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtObservaciones);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.btnObtenerPeso);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.txtPesoSalida);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtEnvioN);
@@ -516,7 +517,7 @@ namespace WSA
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtObservaciones;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnObtenerPeso;
+        private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.TextBox txtPesoSalida;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtEnvioN;
