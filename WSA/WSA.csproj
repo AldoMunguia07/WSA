@@ -72,6 +72,7 @@
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\ConfiguracionBascula.cs" />
     <Compile Include="Clases\Database.cs" />
+    <Compile Include="Clases\EncabezadoBoleta.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Proveedor.cs" />
     <Compile Include="Clases\Usuario.cs" />

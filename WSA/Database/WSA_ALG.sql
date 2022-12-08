@@ -504,3 +504,27 @@ BEGIN
 END
 GO
 
+CREATE PROCEDURE sp_Encabezado_Boleta
+@Encabezado_Boleta_Id INT = NULL,
+@Empresa VARCHAR(70) = NULL,
+@Direccion VARCHAR(70) = NULL,
+@Telefono VARCHAR(70) = NULL,
+@accion VARCHAR(50)
+
+AS
+BEGIN
+	IF @accion = 'insertar'
+	BEGIN
+		INSERT INTO Encabezado_Boleta VALUES (@Empresa, @Direccion, @Telefono)
+	END
+	ELSE IF @accion = 'modificar'
+	BEGIN
+		UPDATE Encabezado_Boleta SET Empresa = @Empresa, Direccion = @Direccion, Telefono = @Telefono   WHERE  Encabezado_Boleta_Id = @Encabezado_Boleta_Id
+	END
+	ELSE IF @accion = 'obtenerEncabezado'
+	BEGIN
+		SELECT TOP (1) * FROM Encabezado_Boleta
+	END
+
+END
+GO
