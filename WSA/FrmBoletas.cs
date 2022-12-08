@@ -24,7 +24,18 @@ namespace WSA
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-
+            
+            if (seleccionado)
+            {
+                FrmTicket frmTicket = new FrmTicket(idBoleta);
+                frmTicket.ShowDialog();
+                boleta.MostrarBoletas(dgvBoletas);
+                seleccionado = false;
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una boleta", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void btnVerBoleta_Click(object sender, EventArgs e)

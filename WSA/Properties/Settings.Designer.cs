@@ -32,5 +32,15 @@ namespace WSA.Properties {
                 return ((string)(this["ConnectionDB"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local)\\SQLEXPRESS;Initial Catalog=WSA_ALG;Integrated Security=True")]
+        public string WSA_ALGConnectionString {
+            get {
+                return ((string)(this["WSA_ALGConnectionString"]));
+            }
+        }
     }
 }
