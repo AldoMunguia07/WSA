@@ -37,13 +37,14 @@ namespace WSA
             this.dgvBarcos = new System.Windows.Forms.DataGridView();
             this.txtDescBarco = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBarcos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.Location = new System.Drawing.Point(669, 329);
+            this.btnModificar.Location = new System.Drawing.Point(669, 330);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 15;
@@ -66,7 +67,7 @@ namespace WSA
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBuscar.Location = new System.Drawing.Point(103, 330);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(430, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(373, 20);
             this.txtBuscar.TabIndex = 13;
             // 
             // label2
@@ -83,7 +84,7 @@ namespace WSA
             // btnGuardar
             // 
             this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGuardar.Location = new System.Drawing.Point(588, 329);
+            this.btnGuardar.Location = new System.Drawing.Point(588, 330);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 11;
@@ -125,11 +126,24 @@ namespace WSA
             this.label1.TabIndex = 8;
             this.label1.Text = "Nombre del barco";
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSeleccionar.Location = new System.Drawing.Point(507, 330);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(75, 23);
+            this.btnSeleccionar.TabIndex = 19;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Visible = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
             // FrmBarco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtBuscar);
@@ -139,6 +153,7 @@ namespace WSA
             this.Controls.Add(this.txtDescBarco);
             this.Controls.Add(this.label1);
             this.Name = "FrmBarco";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBarco";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBarcos)).EndInit();
             this.ResumeLayout(false);
@@ -156,5 +171,6 @@ namespace WSA
         private System.Windows.Forms.DataGridView dgvBarcos;
         private System.Windows.Forms.TextBox txtDescBarco;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSeleccionar;
     }
 }

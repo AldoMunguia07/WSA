@@ -37,13 +37,14 @@ namespace WSA
             this.dgvConductores = new System.Windows.Forms.DataGridView();
             this.txtDescConductor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConductores)).BeginInit();
             this.SuspendLayout();
             // 
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.Location = new System.Drawing.Point(667, 341);
+            this.btnModificar.Location = new System.Drawing.Point(667, 340);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 15;
@@ -66,7 +67,7 @@ namespace WSA
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBuscar.Location = new System.Drawing.Point(101, 342);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(430, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(324, 20);
             this.txtBuscar.TabIndex = 13;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -84,7 +85,7 @@ namespace WSA
             // btnGuardar
             // 
             this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGuardar.Location = new System.Drawing.Point(575, 341);
+            this.btnGuardar.Location = new System.Drawing.Point(575, 340);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 11;
@@ -126,11 +127,24 @@ namespace WSA
             this.label1.TabIndex = 8;
             this.label1.Text = "Nombre del conductor";
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSeleccionar.Location = new System.Drawing.Point(482, 340);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(75, 23);
+            this.btnSeleccionar.TabIndex = 16;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Visible = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
             // FrmConductor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtBuscar);
@@ -140,6 +154,7 @@ namespace WSA
             this.Controls.Add(this.txtDescConductor);
             this.Controls.Add(this.label1);
             this.Name = "FrmConductor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Conductores";
             ((System.ComponentModel.ISupportInitialize)(this.dgvConductores)).EndInit();
             this.ResumeLayout(false);
@@ -157,5 +172,6 @@ namespace WSA
         private System.Windows.Forms.DataGridView dgvConductores;
         private System.Windows.Forms.TextBox txtDescConductor;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSeleccionar;
     }
 }

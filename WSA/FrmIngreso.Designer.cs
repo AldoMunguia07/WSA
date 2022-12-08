@@ -62,6 +62,10 @@ namespace WSA
             this.lblConexion = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.btnConectar = new System.Windows.Forms.Button();
+            this.lblConsultarConductores = new System.Windows.Forms.LinkLabel();
+            this.lblConsultarClientes = new System.Windows.Forms.LinkLabel();
+            this.lblConsultarProductos = new System.Windows.Forms.LinkLabel();
+            this.lblConsultarBarcos = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -162,7 +166,7 @@ namespace WSA
             // 
             this.txtCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCliente.BackColor = System.Drawing.Color.White;
-            this.txtCliente.Location = new System.Drawing.Point(177, 214);
+            this.txtCliente.Location = new System.Drawing.Point(177, 230);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.ReadOnly = true;
             this.txtCliente.Size = new System.Drawing.Size(215, 20);
@@ -171,7 +175,7 @@ namespace WSA
             // txtCodigoCliente
             // 
             this.txtCodigoCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodigoCliente.Location = new System.Drawing.Point(124, 214);
+            this.txtCodigoCliente.Location = new System.Drawing.Point(124, 230);
             this.txtCodigoCliente.Name = "txtCodigoCliente";
             this.txtCodigoCliente.Size = new System.Drawing.Size(47, 20);
             this.txtCodigoCliente.TabIndex = 11;
@@ -181,7 +185,7 @@ namespace WSA
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 217);
+            this.label6.Location = new System.Drawing.Point(18, 233);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 13);
             this.label6.TabIndex = 10;
@@ -191,7 +195,7 @@ namespace WSA
             // 
             this.txtProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProducto.BackColor = System.Drawing.Color.White;
-            this.txtProducto.Location = new System.Drawing.Point(177, 279);
+            this.txtProducto.Location = new System.Drawing.Point(177, 287);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.ReadOnly = true;
             this.txtProducto.Size = new System.Drawing.Size(215, 20);
@@ -200,7 +204,7 @@ namespace WSA
             // txtCodigoProducto
             // 
             this.txtCodigoProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodigoProducto.Location = new System.Drawing.Point(124, 279);
+            this.txtCodigoProducto.Location = new System.Drawing.Point(124, 287);
             this.txtCodigoProducto.Name = "txtCodigoProducto";
             this.txtCodigoProducto.Size = new System.Drawing.Size(47, 20);
             this.txtCodigoProducto.TabIndex = 14;
@@ -210,7 +214,7 @@ namespace WSA
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 282);
+            this.label7.Location = new System.Drawing.Point(12, 290);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 13);
             this.label7.TabIndex = 13;
@@ -393,11 +397,59 @@ namespace WSA
             this.btnConectar.UseVisualStyleBackColor = true;
             this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
             // 
+            // lblConsultarConductores
+            // 
+            this.lblConsultarConductores.AutoSize = true;
+            this.lblConsultarConductores.Location = new System.Drawing.Point(279, 47);
+            this.lblConsultarConductores.Name = "lblConsultarConductores";
+            this.lblConsultarConductores.Size = new System.Drawing.Size(113, 13);
+            this.lblConsultarConductores.TabIndex = 33;
+            this.lblConsultarConductores.TabStop = true;
+            this.lblConsultarConductores.Text = "Consultar conductores";
+            this.lblConsultarConductores.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblConsultarConductores_LinkClicked);
+            // 
+            // lblConsultarClientes
+            // 
+            this.lblConsultarClientes.AutoSize = true;
+            this.lblConsultarClientes.Location = new System.Drawing.Point(302, 214);
+            this.lblConsultarClientes.Name = "lblConsultarClientes";
+            this.lblConsultarClientes.Size = new System.Drawing.Size(90, 13);
+            this.lblConsultarClientes.TabIndex = 34;
+            this.lblConsultarClientes.TabStop = true;
+            this.lblConsultarClientes.Text = "Consultar clientes";
+            this.lblConsultarClientes.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblConsultarClientes_LinkClicked);
+            // 
+            // lblConsultarProductos
+            // 
+            this.lblConsultarProductos.AutoSize = true;
+            this.lblConsultarProductos.Location = new System.Drawing.Point(291, 271);
+            this.lblConsultarProductos.Name = "lblConsultarProductos";
+            this.lblConsultarProductos.Size = new System.Drawing.Size(101, 13);
+            this.lblConsultarProductos.TabIndex = 35;
+            this.lblConsultarProductos.TabStop = true;
+            this.lblConsultarProductos.Text = "Consultar productos";
+            this.lblConsultarProductos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblConsultarProductos_LinkClicked);
+            // 
+            // lblConsultarBarcos
+            // 
+            this.lblConsultarBarcos.AutoSize = true;
+            this.lblConsultarBarcos.Location = new System.Drawing.Point(306, 327);
+            this.lblConsultarBarcos.Name = "lblConsultarBarcos";
+            this.lblConsultarBarcos.Size = new System.Drawing.Size(86, 13);
+            this.lblConsultarBarcos.TabIndex = 36;
+            this.lblConsultarBarcos.TabStop = true;
+            this.lblConsultarBarcos.Text = "Consultar barcos";
+            this.lblConsultarBarcos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblConsultarBarcos_LinkClicked);
+            // 
             // FrmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 427);
+            this.Controls.Add(this.lblConsultarBarcos);
+            this.Controls.Add(this.lblConsultarProductos);
+            this.Controls.Add(this.lblConsultarClientes);
+            this.Controls.Add(this.lblConsultarConductores);
             this.Controls.Add(this.btnConectar);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.lblConexion);
@@ -475,5 +527,9 @@ namespace WSA
         private System.Windows.Forms.Label lblConexion;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnConectar;
+        private System.Windows.Forms.LinkLabel lblConsultarConductores;
+        private System.Windows.Forms.LinkLabel lblConsultarClientes;
+        private System.Windows.Forms.LinkLabel lblConsultarProductos;
+        private System.Windows.Forms.LinkLabel lblConsultarBarcos;
     }
 }

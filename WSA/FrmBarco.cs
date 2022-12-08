@@ -15,11 +15,14 @@ namespace WSA
     {
         Barco barco = new Barco();
         private bool seleccionado = false;
-        public FrmBarco()
+        public FrmBarco(bool esIngreso)
         {
             InitializeComponent();
             cargarDatos();
-
+            if (esIngreso)
+            {
+                btnSeleccionar.Visible = true;
+            }
 
         }
 
@@ -94,9 +97,30 @@ namespace WSA
 
                 barco.BarcoId = int.Parse(row.Cells[0].Value.ToString());
                 txtDescBarco.Text = row.Cells[1].Value.ToString();
+                barco.Descripcion = row.Cells[1].Value.ToString();
                 row.Selected = true;
                 seleccionado = true;
                 btnGuardar.Enabled = false;
+            }
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            if (seleccionado)
+            {
+                if (camposLlenos())
+                {
+                    VariablesGlobales.Barco = barco;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Debe llenar todos los campos", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione el barco", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

@@ -39,6 +39,7 @@ namespace WSA
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.numPrecio = new System.Windows.Forms.NumericUpDown();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +70,7 @@ namespace WSA
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBuscar.Location = new System.Drawing.Point(101, 343);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(430, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(302, 20);
             this.txtBuscar.TabIndex = 13;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -152,11 +153,24 @@ namespace WSA
             this.numPrecio.Size = new System.Drawing.Size(120, 20);
             this.numPrecio.TabIndex = 17;
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSeleccionar.Location = new System.Drawing.Point(505, 342);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(75, 23);
+            this.btnSeleccionar.TabIndex = 18;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Visible = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
             // FrmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.numPrecio);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnModificar);
@@ -168,6 +182,7 @@ namespace WSA
             this.Controls.Add(this.txtDescProducto);
             this.Controls.Add(this.label1);
             this.Name = "FrmProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).EndInit();
@@ -188,5 +203,6 @@ namespace WSA
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown numPrecio;
+        private System.Windows.Forms.Button btnSeleccionar;
     }
 }

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace WSA.Clases
 {
-    class Conductor
+    public class Conductor
     {
         Conexion conexion = new Conexion();
         Bitacora bitacora = new Bitacora();

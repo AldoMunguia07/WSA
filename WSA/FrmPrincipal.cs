@@ -132,28 +132,28 @@ namespace WSA
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmCliente frmCliente = new FrmCliente();
+            FrmCliente frmCliente = new FrmCliente(false);
             CerrarFormularios();
             CargarFormulario(frmCliente);
         }
 
         private void conductoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmConductor frmConductor = new FrmConductor();
+            FrmConductor frmConductor = new FrmConductor(false);
             CerrarFormularios();
             CargarFormulario(frmConductor);
         }
 
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmProducto frmProducto = new FrmProducto();
+            FrmProducto frmProducto = new FrmProducto(false);
             CerrarFormularios();
             CargarFormulario(frmProducto);
         }
 
         private void barcosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmBarco frmBarco = new FrmBarco();
+            FrmBarco frmBarco = new FrmBarco(false);
             CerrarFormularios();
             CargarFormulario(frmBarco);
         }

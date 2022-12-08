@@ -16,10 +16,14 @@ namespace WSA
         Conductor conductor = new Conductor();
         private bool seleccionado = false;
 
-        public FrmConductor()
+        public FrmConductor(bool esIngreso)
         {
             InitializeComponent();
             cargarDatos();
+            if(esIngreso)
+            {
+                btnSeleccionar.Visible = true;
+            }
         }
 
         private void getValues()
@@ -100,10 +104,32 @@ namespace WSA
 
                 conductor.ConductorId = int.Parse(row.Cells[0].Value.ToString());
                 txtDescConductor.Text = row.Cells[1].Value.ToString();
-
+                conductor.ConductorD = row.Cells[1].Value.ToString();
+                row.Selected = true;
                 seleccionado = true;
                 btnGuardar.Enabled = false;
             }
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            if (seleccionado)
+            {
+                if (camposLlenos())
+                {
+                    VariablesGlobales.Conductor = conductor;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Debe llenar todos los campos", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione el conductor", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            
         }
     }
 }

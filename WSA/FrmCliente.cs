@@ -15,10 +15,15 @@ namespace WSA
     {
         Cliente cliente = new Cliente();
         private bool seleccionado = false;
-        public FrmCliente()
+        public FrmCliente(bool esIngreso)
         {
             InitializeComponent();
             cargarDatos();
+
+            if (esIngreso)
+            {
+                btnSeleccionar.Visible = true;
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -98,9 +103,31 @@ namespace WSA
 
                 cliente.ClienteId = int.Parse(row.Cells[0].Value.ToString());
                 txtDescCliente.Text = row.Cells[1].Value.ToString();
-      
+                cliente.ClienteD = row.Cells[1].Value.ToString();
+
+                row.Selected = true;
                 seleccionado = true;
                 btnGuardar.Enabled = false;
+            }
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            if (seleccionado)
+            {
+                if (camposLlenos())
+                {
+                    VariablesGlobales.Cliente = cliente;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Debe llenar todos los campos", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione el cliente", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

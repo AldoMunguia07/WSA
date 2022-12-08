@@ -16,10 +16,14 @@ namespace WSA
         Producto producto = new Producto();
         private bool seleccionado = false;
 
-        public FrmProducto()
+        public FrmProducto(bool esIngreso)
         {
             InitializeComponent();
             cargarDatos();
+            if (esIngreso)
+            {
+                btnSeleccionar.Visible = true;
+            }
         }
 
         private void cargarDatos()
@@ -101,10 +105,31 @@ namespace WSA
                 producto.ProductoId = int.Parse(row.Cells[0].Value.ToString());
                 txtDescProducto.Text = row.Cells[1].Value.ToString();
                 numPrecio.Value = decimal.Parse(row.Cells[2].Value.ToString());
+                producto.Descripcion = row.Cells[1].Value.ToString();
 
-
+                row.Selected = true;
                 seleccionado = true;
                 btnGuardar.Enabled = false;
+            }
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            if (seleccionado)
+            {
+                if (camposLlenos())
+                {
+                    VariablesGlobales.Producto = producto;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Debe llenar todos los campos", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione el producto", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }
