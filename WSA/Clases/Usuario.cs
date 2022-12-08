@@ -13,6 +13,7 @@ namespace WSA.Clases
     public class Usuario
     {
         Conexion conexion = new Conexion();
+        Bitacora bitacora = new Bitacora();
 
         //PROPIEDADES
         public int UsuarioId { get; set; }
@@ -116,7 +117,7 @@ namespace WSA.Clases
                 sqlCommand.Parameters.AddWithValue("@Tipo_Usuario_Id", usuario.TipoUsuarioId);
                 sqlCommand.Parameters.AddWithValue("@Activo", usuario.Activo);
                 sqlCommand.Parameters.AddWithValue("@accion", "insertar");
-
+                bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
                 sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -147,7 +148,7 @@ namespace WSA.Clases
                 sqlCommand.Parameters.AddWithValue("@Tipo_Usuario_Id", usuario.TipoUsuarioId);
                 sqlCommand.Parameters.AddWithValue("@Activo", usuario.Activo);
                 sqlCommand.Parameters.AddWithValue("@accion", "modificar");
-
+                bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
                 sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)

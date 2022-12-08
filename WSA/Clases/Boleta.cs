@@ -13,6 +13,7 @@ namespace WSA.Clases
     class Boleta
     {
         Conexion conexion = new Conexion();
+        Bitacora bitacora = new Bitacora();
 
         //PROPIEDADES
         public int BoletaId { get; set; }
@@ -60,6 +61,7 @@ namespace WSA.Clases
                 sqlCommand.Parameters.AddWithValue("@Estado", boleta.Estado);
                 sqlCommand.Parameters.AddWithValue("@Observaciones", boleta.Observaciones);
                 sqlCommand.Parameters.AddWithValue("@accion", "insertarEntrada");
+                bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
                 sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -129,6 +131,7 @@ namespace WSA.Clases
                 sqlCommand.Parameters.AddWithValue("@Observaciones", boleta.Observaciones);
 
                 sqlCommand.Parameters.AddWithValue("@accion", "insertarSalida");
+                bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
                 sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)

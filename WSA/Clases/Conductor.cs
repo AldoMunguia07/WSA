@@ -14,7 +14,7 @@ namespace WSA.Clases
     class Conductor
     {
         Conexion conexion = new Conexion();
-
+        Bitacora bitacora = new Bitacora();
         //PROPIEDADES
         public int ConductorId { get; set; }
         public string ConductorD { get; set; }
@@ -108,7 +108,7 @@ namespace WSA.Clases
                 // Establecer los valores de los parámetros
                 sqlCommand.Parameters.AddWithValue("@Conductor", conductor.ConductorD);
                 sqlCommand.Parameters.AddWithValue("@accion", "insertar");
-
+                bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
                 sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -135,7 +135,7 @@ namespace WSA.Clases
                 sqlCommand.Parameters.AddWithValue("@Conductor_Id", conductor.ConductorId);
                 sqlCommand.Parameters.AddWithValue("@Conductor", conductor.ConductorD);
                 sqlCommand.Parameters.AddWithValue("@accion", "modificar");
-
+                bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
                 sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)

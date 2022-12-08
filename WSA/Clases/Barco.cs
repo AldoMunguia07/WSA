@@ -13,6 +13,7 @@ namespace WSA.Clases
     class Barco
     {
         Conexion conexion = new Conexion();
+        Bitacora bitacora = new Bitacora();
 
         //PROPIEDADES
         public int BarcoId { get; set; }
@@ -107,7 +108,7 @@ namespace WSA.Clases
                 // Establecer los valores de los parámetros
                 sqlCommand.Parameters.AddWithValue("@Descripcion", barco.Descripcion);
                 sqlCommand.Parameters.AddWithValue("@accion", "insertar");
-
+                bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
                 sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -137,7 +138,7 @@ namespace WSA.Clases
 
                 sqlCommand.Parameters.AddWithValue("@accion", "modificar");
 
-
+                bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
                 sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)

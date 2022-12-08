@@ -386,7 +386,7 @@ END
 GO
 
 
-ALTER PROCEDURE sp_Boleta
+CREATE PROCEDURE sp_Boleta
 	@Boleta_Id INT = NULL,
 	@Fecha_Entrada DATETIME = NULL,
 	@Fecha_Salida DATETIME = NULL,
@@ -647,12 +647,15 @@ BEGIN
 END
 GO
 
+CREATE PROCEDURE sp_Bitacora@value sql_variant = NULL,@key sysname = NULL,@buscado nvarchar(200) = NULL,@accion nvarchar(50)ASBEGIN
+IF @accion = 'Usuario_Id'	BEGIN	EXEC sp_set_session_context @key, @value	END
+
+END
+GO
+
 --PROCEDMIENTOS ALMACENADOS REPORTES
 CREATE PROCEDURE sp_Datos_Boleta
 	@Boleta_Id INT = NULL
-
-
-
 AS
 BEGIN
 	
@@ -666,21 +669,245 @@ BEGIN
 	JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
 	JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
 	WHERE b.Boleta_Id = @Boleta_Id
-			
-			
-		
-
 END
 GO
 
 CREATE PROCEDURE sp_Obtener_Encabezado_Boleta
-
-
-
 AS
 BEGIN
 	
 	SELECT TOP (1) * FROM Encabezado_Boleta
 			
+END
+GO
+
+
+
+--TRIGGERS PARA BITACORA
+
+
+
+-- TABLA DE BARCO
+
+CREATE TRIGGER Insertar_Barco
+ON Barco AFTER INSERT
+AS
+BEGIN
+declare @id sql_variant
+	set @id = (select SESSION_CONTEXT(N'user_id'));
+	INSERT INTO Bitacora
+	select cast(@id as int), 
+SYSTEM_USER,'Insertar',
+CONCAT('Inserción del barco ', Descripcion,  ' con código ', Barco_Id),
+GETDATE()
+from inserted
+END
+GO
+
+CREATE TRIGGER Modificar_Barco
+ON Barco AFTER UPDATE
+AS
+BEGIN
+declare @id sql_variant
+	set @id = (select SESSION_CONTEXT(N'user_id'));
+	INSERT INTO Bitacora
+select cast(@id as int), 
+SYSTEM_USER,'Modificar',
+CONCAT('Modificación del barco ', Descripcion,  ' con código ', Barco_Id),
+GETDATE()
+from inserted
+END
+GO
+
+
+-- TABLA DE CLIENTE
+
+CREATE TRIGGER Insertar_Cliente
+ON Cliente AFTER INSERT
+AS
+BEGIN
+declare @id sql_variant
+	set @id = (select SESSION_CONTEXT(N'user_id'));
+	INSERT INTO Bitacora
+	select cast(@id as int), 
+SYSTEM_USER,'Insertar',
+CONCAT('Inserción del cliente ', Cliente,  ' con código ', Cliente_Id),
+GETDATE()
+from inserted
+END
+GO
+
+CREATE TRIGGER Modificar_Cliente
+ON Cliente AFTER UPDATE
+AS
+BEGIN
+declare @id sql_variant
+	set @id = (select SESSION_CONTEXT(N'user_id'));
+	INSERT INTO Bitacora
+select cast(@id as int), 
+SYSTEM_USER,'Modificar',
+CONCAT('Modificación del cliente ', Cliente,  ' con código ', Cliente_Id),
+GETDATE()
+from inserted
+END
+GO
+
+-- TABLA DE BOLETA
+
+CREATE TRIGGER Insertar_Boleta
+ON Boleta AFTER INSERT
+AS
+BEGIN
+declare @id sql_variant
+	set @id = (select SESSION_CONTEXT(N'user_id'));
+	INSERT INTO Bitacora
+	select cast(@id as int), 
+SYSTEM_USER,'Insertar',
+CONCAT('Ingreso de vehículo con número de boleta ', Boleta_Id),
+GETDATE()
+from inserted
+END
+GO
+
+CREATE TRIGGER Modificar_Boleta
+ON Boleta AFTER UPDATE
+AS
+BEGIN
+declare @id sql_variant
+	set @id = (select SESSION_CONTEXT(N'user_id'));
+	INSERT INTO Bitacora
+select cast(@id as int), 
+SYSTEM_USER,'Modificar',
+CONCAT('Salida de vehículo con número de boleta ', Boleta_Id),
+GETDATE()
+from inserted
+END
+GO
+
+-- TABLA DE CONDUCTOR
+
+CREATE TRIGGER Insertar_Conductor
+ON Conductor AFTER INSERT
+AS
+BEGIN
+declare @id sql_variant
+	set @id = (select SESSION_CONTEXT(N'user_id'));
+	INSERT INTO Bitacora
+	select cast(@id as int), 
+SYSTEM_USER,'Insertar',
+CONCAT('Inserción del conductor ', Conductor,  ' con código ', Conductor_Id),
+GETDATE()
+from inserted
+END
+GO
+
+CREATE TRIGGER Modificar_Conductor
+ON Conductor AFTER UPDATE
+AS
+BEGIN
+declare @id sql_variant
+	set @id = (select SESSION_CONTEXT(N'user_id'));
+	INSERT INTO Bitacora
+select cast(@id as int), 
+SYSTEM_USER,'Modificar',
+CONCAT('Modificación del conductor ', Conductor,  ' con código ', Conductor_Id),
+GETDATE()
+from inserted
+END
+GO
+
+-- TABLA DE ENCABEZADO_BOLETA
+
+CREATE TRIGGER Insertar_Encabezado_Boleta
+ON Encabezado_Boleta AFTER INSERT
+AS
+BEGIN
+declare @id sql_variant
+	set @id = (select SESSION_CONTEXT(N'user_id'));
+	INSERT INTO Bitacora
+	select cast(@id as int), 
+SYSTEM_USER,'Insertar',
+CONCAT('Inserción de encabezado de boleta: Empresa - ', Empresa, ', Direccion - ', Direccion),
+GETDATE()
+from inserted
+END
+GO
+
+CREATE TRIGGER Modificar_Encabezado_Boleta
+ON Encabezado_Boleta AFTER UPDATE
+AS
+BEGIN
+declare @id sql_variant
+	set @id = (select SESSION_CONTEXT(N'user_id'));
+	INSERT INTO Bitacora
+select cast(@id as int), 
+SYSTEM_USER,'Modificar',
+CONCAT('Modificación de encabezado de boleta: Empresa - ', Empresa, ', Direccion - ', Direccion),
+GETDATE()
+from inserted
+END
+GO
+
+-- TABLA DE PRODUCTO
+
+CREATE TRIGGER Insertar_Producto
+ON Producto AFTER INSERT
+AS
+BEGIN
+declare @id sql_variant
+	set @id = (select SESSION_CONTEXT(N'user_id'));
+	INSERT INTO Bitacora
+	select cast(@id as int), 
+SYSTEM_USER,'Insertar',
+CONCAT('Inserción del producto ', Descripcion,  ' con código ', Producto_Id),
+GETDATE()
+from inserted
+END
+GO
+
+CREATE TRIGGER Modificar_Producto
+ON Producto AFTER UPDATE
+AS
+BEGIN
+declare @id sql_variant
+	set @id = (select SESSION_CONTEXT(N'user_id'));
+	INSERT INTO Bitacora
+select cast(@id as int), 
+SYSTEM_USER,'Modificar',
+CONCAT('Modificación del producto ', Descripcion,  ' con código ', Producto_Id),
+GETDATE()
+from inserted
+END
+GO
+
+-- TABLA DE USUARIO
+
+CREATE TRIGGER Insertar_Usuario
+ON Usuario AFTER INSERT
+AS
+BEGIN
+declare @id sql_variant
+	set @id = (select SESSION_CONTEXT(N'user_id'));
+	INSERT INTO Bitacora
+	select cast(@id as int), 
+SYSTEM_USER,'Insertar',
+CONCAT('Inserción del usuario ', Usuario,  ' con código ', Usuario_Id),
+GETDATE()
+from inserted
+END
+GO
+
+CREATE TRIGGER Modificar_Usuario
+ON Usuario AFTER UPDATE
+AS
+BEGIN
+declare @id sql_variant
+	set @id = (select SESSION_CONTEXT(N'user_id'));
+	INSERT INTO Bitacora
+select cast(@id as int), 
+SYSTEM_USER,'Modificar',
+CONCAT('Modificación del usuario ', Usuario,  ' con código ', Usuario_Id),
+GETDATE()
+from inserted
 END
 GO

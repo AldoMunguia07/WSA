@@ -14,6 +14,7 @@ namespace WSA.Clases
     class Producto
     {
         Conexion conexion = new Conexion();
+        Bitacora bitacora = new Bitacora();
 
         //PROPIEDADES
         public int ProductoId { get; set; }
@@ -111,7 +112,7 @@ namespace WSA.Clases
                 sqlCommand.Parameters.AddWithValue("@Precio", producto.Precio);
 
                 sqlCommand.Parameters.AddWithValue("@accion", "insertar");
-
+                bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
                 sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -142,7 +143,7 @@ namespace WSA.Clases
 
                 sqlCommand.Parameters.AddWithValue("@accion", "modificar");
 
-
+                bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
                 sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)

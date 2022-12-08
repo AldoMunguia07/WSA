@@ -34,10 +34,10 @@ namespace WSA
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.txtDescCliente = new System.Windows.Forms.TextBox();
+            this.dgvBarcos = new System.Windows.Forms.DataGridView();
+            this.txtDescBarco = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBarcos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnModificar
@@ -49,6 +49,7 @@ namespace WSA
             this.btnModificar.TabIndex = 15;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // label3
             // 
@@ -88,29 +89,31 @@ namespace WSA
             this.btnGuardar.TabIndex = 11;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // dgvClientes
+            // dgvBarcos
             // 
-            this.dgvClientes.AllowUserToAddRows = false;
-            this.dgvClientes.AllowUserToDeleteRows = false;
-            this.dgvClientes.AllowUserToOrderColumns = true;
-            this.dgvClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.GridColor = System.Drawing.Color.DimGray;
-            this.dgvClientes.Location = new System.Drawing.Point(64, 118);
-            this.dgvClientes.Name = "dgvClientes";
-            this.dgvClientes.ReadOnly = true;
-            this.dgvClientes.Size = new System.Drawing.Size(680, 196);
-            this.dgvClientes.TabIndex = 10;
+            this.dgvBarcos.AllowUserToAddRows = false;
+            this.dgvBarcos.AllowUserToDeleteRows = false;
+            this.dgvBarcos.AllowUserToOrderColumns = true;
+            this.dgvBarcos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvBarcos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBarcos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBarcos.GridColor = System.Drawing.Color.DimGray;
+            this.dgvBarcos.Location = new System.Drawing.Point(64, 118);
+            this.dgvBarcos.Name = "dgvBarcos";
+            this.dgvBarcos.ReadOnly = true;
+            this.dgvBarcos.Size = new System.Drawing.Size(680, 196);
+            this.dgvBarcos.TabIndex = 10;
+            this.dgvBarcos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBarcos_CellMouseClick);
             // 
-            // txtDescCliente
+            // txtDescBarco
             // 
-            this.txtDescCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDescCliente.Location = new System.Drawing.Point(158, 77);
-            this.txtDescCliente.Name = "txtDescCliente";
-            this.txtDescCliente.Size = new System.Drawing.Size(190, 20);
-            this.txtDescCliente.TabIndex = 9;
+            this.txtDescBarco.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDescBarco.Location = new System.Drawing.Point(158, 77);
+            this.txtDescBarco.Name = "txtDescBarco";
+            this.txtDescBarco.Size = new System.Drawing.Size(190, 20);
+            this.txtDescBarco.TabIndex = 9;
             // 
             // label1
             // 
@@ -132,12 +135,12 @@ namespace WSA
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.dgvClientes);
-            this.Controls.Add(this.txtDescCliente);
+            this.Controls.Add(this.dgvBarcos);
+            this.Controls.Add(this.txtDescBarco);
             this.Controls.Add(this.label1);
             this.Name = "FrmBarco";
             this.Text = "FrmBarco";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBarcos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,8 +153,8 @@ namespace WSA
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.DataGridView dgvClientes;
-        private System.Windows.Forms.TextBox txtDescCliente;
+        private System.Windows.Forms.DataGridView dgvBarcos;
+        private System.Windows.Forms.TextBox txtDescBarco;
         private System.Windows.Forms.Label label1;
     }
 }

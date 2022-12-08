@@ -18,7 +18,86 @@ namespace WSA
         public FrmBarco()
         {
             InitializeComponent();
-            barco.MostrarBarcos(dgvClientes);
+            cargarDatos();
+
+
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (camposLlenos())
+            {
+                getValues();
+                barco.AgregarBarco(barco);
+                MessageBox.Show("Barco agregado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                refresh();
+            }
+            else
+            {
+                MessageBox.Show("Debe llenar todos los campos", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void getValues()
+        {
+            barco.Descripcion = txtDescBarco.Text;
+        }
+
+        private void cargarDatos()
+        {
+            barco.MostrarBarcos(dgvBarcos);
+        }
+
+        private void refresh()
+        {
+            txtDescBarco.Clear();
+            seleccionado = false;
+            btnGuardar.Enabled = true;
+            cargarDatos();
+        }
+
+        private bool camposLlenos()
+        {
+            if (txtDescBarco.Text != "")
+                return true;
+            else
+                return false;
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (seleccionado)
+            {
+                if (camposLlenos())
+                {
+                    getValues();
+                    barco.ModificarCliente(barco);
+                    MessageBox.Show("Barco modificado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Debe llenar todos los campos", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione el cliente", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void dgvBarcos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvBarcos.Rows[e.RowIndex];
+
+                barco.BarcoId = int.Parse(row.Cells[0].Value.ToString());
+                txtDescBarco.Text = row.Cells[1].Value.ToString();
+                row.Selected = true;
+                seleccionado = true;
+                btnGuardar.Enabled = false;
+            }
         }
     }
 }
