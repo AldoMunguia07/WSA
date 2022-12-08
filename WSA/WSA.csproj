@@ -109,6 +109,12 @@
     <Compile Include="FrmBarco.Designer.cs">
       <DependentUpon>FrmBarco.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBitacora.Designer.cs">
+      <DependentUpon>FrmBitacora.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBoletas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </Compile>
     <EmbeddedResource Include="FrmBarco.resx">
       <DependentUpon>FrmBarco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBitacora.resx">
+      <DependentUpon>FrmBitacora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBoletas.resx">
       <DependentUpon>FrmBoletas.cs</DependentUpon>

@@ -47,6 +47,7 @@ namespace WSA
             this.procesoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vehículosEnTransitoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.boletasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entradasAnuladasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conductoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +56,7 @@ namespace WSA
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administracinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bitácoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.encabezadoBoletaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.respaldoDeBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
@@ -63,7 +64,6 @@ namespace WSA
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.entradasAnuladasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -207,6 +207,12 @@ namespace WSA
             this.boletasToolStripMenuItem.Text = "Boletas";
             this.boletasToolStripMenuItem.Click += new System.EventHandler(this.boletasToolStripMenuItem_Click);
             // 
+            // entradasAnuladasToolStripMenuItem
+            // 
+            this.entradasAnuladasToolStripMenuItem.Name = "entradasAnuladasToolStripMenuItem";
+            this.entradasAnuladasToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.entradasAnuladasToolStripMenuItem.Text = "Entradas anuladas";
+            // 
             // gestiónToolStripMenuItem
             // 
             this.gestiónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -263,18 +269,19 @@ namespace WSA
             // administracinToolStripMenuItem
             // 
             this.administracinToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bitácoraToolStripMenuItem,
+            this.bitacoraToolStripMenuItem,
             this.encabezadoBoletaToolStripMenuItem,
             this.respaldoDeBaseDeDatosToolStripMenuItem});
             this.administracinToolStripMenuItem.Name = "administracinToolStripMenuItem";
             this.administracinToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
             this.administracinToolStripMenuItem.Text = "Administración";
             // 
-            // bitácoraToolStripMenuItem
+            // bitacoraToolStripMenuItem
             // 
-            this.bitácoraToolStripMenuItem.Name = "bitácoraToolStripMenuItem";
-            this.bitácoraToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.bitácoraToolStripMenuItem.Text = "Bitácora";
+            this.bitacoraToolStripMenuItem.Name = "bitacoraToolStripMenuItem";
+            this.bitacoraToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.bitacoraToolStripMenuItem.Text = "Bitácora";
+            this.bitacoraToolStripMenuItem.Click += new System.EventHandler(this.bitacoraToolStripMenuItem_Click);
             // 
             // encabezadoBoletaToolStripMenuItem
             // 
@@ -322,12 +329,6 @@ namespace WSA
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
-            // 
-            // entradasAnuladasToolStripMenuItem
-            // 
-            this.entradasAnuladasToolStripMenuItem.Name = "entradasAnuladasToolStripMenuItem";
-            this.entradasAnuladasToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.entradasAnuladasToolStripMenuItem.Text = "Entradas anuladas";
             // 
             // FrmPrincipal
             // 
@@ -385,7 +386,7 @@ namespace WSA
         private System.Windows.Forms.ToolStripLabel tslbNombreUsuario;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administracinToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bitácoraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bitacoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem encabezadoBoletaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem respaldoDeBaseDeDatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem entradasAnuladasToolStripMenuItem;

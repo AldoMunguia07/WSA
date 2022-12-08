@@ -44,5 +44,46 @@ namespace WSA.Clases
                 conexion.sqlConnection.Close();
             }
         }
+
+        //METODOS
+        public void MostrarBitacora(DataGridView dataGrid, DateTimePicker dtpFechaInicio, DateTimePicker dtpFechaFinal, string valorBuscado)
+        {
+
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Bitacora", conexion.sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+               
+                // Establecer los valores de los parámetros
+                sqlCommand.Parameters.AddWithValue("@fechaInicio", dtpFechaInicio.Value.Date);
+                sqlCommand.Parameters.AddWithValue("@fechaFinal", dtpFechaFinal.Value.Date);
+                sqlCommand.Parameters.AddWithValue("@buscado", "");
+                sqlCommand.Parameters.AddWithValue("@accion", "mostrar");
+
+                using (sqlDataAdapter)
+                {
+                    DataTable dataTable = new DataTable();
+
+                    sqlDataAdapter.Fill(dataTable);
+
+                    dataGrid.DataSource = dataTable;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion.sqlConnection.Close();
+            }
+        }
     }
 }
