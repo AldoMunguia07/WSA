@@ -61,7 +61,7 @@ namespace WSA.Clases
                 // Establecer los valores de los parámetros
                 sqlCommand.Parameters.AddWithValue("@fechaInicio", dtpFechaInicio.Value.Date);
                 sqlCommand.Parameters.AddWithValue("@fechaFinal", dtpFechaFinal.Value.Date);
-                sqlCommand.Parameters.AddWithValue("@buscado", "");
+                sqlCommand.Parameters.AddWithValue("@buscado", valorBuscado);
                 sqlCommand.Parameters.AddWithValue("@accion", "mostrar");
 
                 using (sqlDataAdapter)

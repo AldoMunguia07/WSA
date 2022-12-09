@@ -35,5 +35,10 @@ namespace WSA
         {
             cargarBitacora();
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            cargarBitacora();
+        }
     }
 }

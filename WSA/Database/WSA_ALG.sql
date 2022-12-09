@@ -647,13 +647,13 @@ BEGIN
 END
 GO
 
-ALTER PROCEDURE sp_Bitacora@value SQL_VARIANT = NULL,@key SYSNAME = NULL,@buscado VARCHAR(80)  = NULL,@fechaInicio DATE = NULL,@fechaFinal DATE = NULL,@accion nvarchar(50)ASBEGIN
+CREATE PROCEDURE sp_Bitacora@value SQL_VARIANT = NULL,@key SYSNAME = NULL,@buscado VARCHAR(80)  = NULL,@fechaInicio DATETIME = NULL,@fechaFinal DATETIME = NULL,@accion nvarchar(50)ASBEGIN
 	IF @accion = 'Usuario_Id'		BEGIN		EXEC sp_set_session_context @key, @value		END
 	ELSE IF @accion = 'mostrar'		BEGIN
-			SELECT b.Bitacora_Id 'Código de registro', b.Fecha, CONVERT(VARCHAR, b.Fecha, 8) Hora, u.Usuario, B.Usuario_PC 'PC', b.Tipo_Accion 'Tipo', b.Accion
+			SELECT b.Bitacora_Id 'Código de registro', CONVERT(DATE, b.Fecha) Fecha, CONVERT(VARCHAR, b.Fecha, 8) Hora, u.Usuario, B.Usuario_PC 'PC', b.Tipo_Accion 'Tipo', b.Accion
 			FROM Bitacora b JOIN Usuario u
 			ON u.Usuario_Id = b.Usuario_Id
-		    WHERE fecha BETWEEN @fechaInicio and @fechaFinal and CONCAT(u.Usuario_Id, ' ', u.Usuario, ' ', b.Tipo_Accion,' ' ,b.accion) LIKE CONCAT('%',@buscado,'%')
+		    WHERE CONVERT(DATE, b.Fecha) BETWEEN @fechaInicio and @fechaFinal and CONCAT(u.Usuario_Id, ' ', u.Usuario, ' ', b.Tipo_Accion,' ' ,b.accion) LIKE CONCAT('%',@buscado,'%')
 			ORDER BY b.Bitacora_Id DESC
 		END
 
