@@ -92,7 +92,7 @@ namespace WSA
             this.dtpFechaFinal.Name = "dtpFechaFinal";
             this.dtpFechaFinal.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaFinal.TabIndex = 8;
-            this.dtpFechaFinal.MouseCaptureChanged += new System.EventHandler(this.dtpFechaFinal_MouseCaptureChanged);
+            this.dtpFechaFinal.ValueChanged += new System.EventHandler(this.dtpFechaFinal_ValueChanged);
             // 
             // label3
             // 

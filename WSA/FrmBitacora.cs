@@ -31,12 +31,13 @@ namespace WSA
             cargarBitacora();
         }
 
-        private void dtpFechaFinal_MouseCaptureChanged(object sender, EventArgs e)
+    
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             cargarBitacora();
         }
 
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        private void dtpFechaFinal_ValueChanged(object sender, EventArgs e)
         {
             cargarBitacora();
         }
