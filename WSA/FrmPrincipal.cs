@@ -192,5 +192,12 @@ namespace WSA
             CerrarFormularios();
             CargarFormulario(frmBitacora);
         }
+
+        private void miUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmMiUsuario frmMiUsuario = new FrmMiUsuario();
+            CerrarFormularios();
+            CargarFormulario(frmMiUsuario);
+        }
     }
 }

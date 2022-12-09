@@ -329,7 +329,7 @@ END
 GO
 
 
-CREATE PROCEDURE sp_Usuario
+ALTER PROCEDURE sp_Usuario
 @Usuario_Id INT = NULL,
 @Nombre_Usuario VARCHAR(80) = NULL,
 @Usuario VARCHAR(30) = NULL,
@@ -380,6 +380,13 @@ BEGIN
 		FROM Usuario u JOIN Tipo_Usuario tp
 		ON u.Tipo_Usuario_Id = tp.Tipo_Usuario_Id
 		WHERE Usuario = @Usuario
+	END
+	ELSE IF @accion = 'obtenerUsuarioPorId'
+	BEGIN
+		SELECT u.Usuario_Id, u.Nombre_Usuario, u.Usuario, CONVERT(VARCHAR,DECRYPTBYPASSPHRASE('WAS_ALG_ENCRYPT',u.Contrasena)) Contrasena, tp.Tipo_Usuario_Id,  tp.Tipo_Usuario, Activo
+		FROM Usuario u JOIN Tipo_Usuario tp
+		ON u.Tipo_Usuario_Id = tp.Tipo_Usuario_Id
+		WHERE Usuario_Id = @Usuario_Id
 	END
 
 END

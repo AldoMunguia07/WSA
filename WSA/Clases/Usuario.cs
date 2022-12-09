@@ -251,8 +251,54 @@ namespace WSA.Clases
                 sqlCommand.CommandType = CommandType.StoredProcedure;
 
                 // Establecer los valores de los parámetros
-                sqlCommand.Parameters.AddWithValue("@usuario", username.ToLower());
+                sqlCommand.Parameters.AddWithValue("@Usuario", username.ToLower());
                 sqlCommand.Parameters.AddWithValue("@accion", "obtenerUsuario");
+
+                using (SqlDataReader rdr = sqlCommand.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        // Obtener los valores del empleado si la consulta retorna valores
+                        usuario.UsuarioId = Convert.ToInt32(rdr["Usuario_Id"]);
+                        usuario.NombreUsuario = rdr["Nombre_Usuario"].ToString();
+                        usuario.UsuarioD = rdr["Usuario"].ToString();
+                        usuario.Contrasena = rdr["Contrasena"].ToString();
+                        usuario.TipoUsuarioId = Convert.ToInt32(rdr["Tipo_Usuario_Id"].ToString());
+                        usuario.TipoUsuario = rdr["Tipo_Usuario"].ToString();
+                        usuario.Activo = Convert.ToBoolean(rdr["Activo"]);
+                    }
+
+                }
+                // Retornar el usuario con los valores
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            }
+            finally
+            {
+                // Cerrar la conexión
+                conexion.sqlConnection.Close();
+            }
+        }
+
+        public void BuscarUsuarioPorId(int usuarioId, Usuario usuario)
+        {
+
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Usuario", conexion.sqlConnection);
+
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                // Establecer los valores de los parámetros
+                sqlCommand.Parameters.AddWithValue("@Usuario_Id", usuarioId);
+                sqlCommand.Parameters.AddWithValue("@accion", "obtenerUsuarioPorId");
 
                 using (SqlDataReader rdr = sqlCommand.ExecuteReader())
                 {
