@@ -139,6 +139,12 @@
     <Compile Include="FrmEncabezadoBoleta.Designer.cs">
       <DependentUpon>FrmEncabezadoBoleta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEntradasAnuladas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEntradasAnuladas.Designer.cs">
+      <DependentUpon>FrmEntradasAnuladas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmIngreso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,12 @@
     </Compile>
     <Compile Include="FrmMiUsuario.Designer.cs">
       <DependentUpon>FrmMiUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMotivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMotivo.Designer.cs">
+      <DependentUpon>FrmMotivo.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -237,6 +249,9 @@
     <EmbeddedResource Include="FrmEncabezadoBoleta.resx">
       <DependentUpon>FrmEncabezadoBoleta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEntradasAnuladas.resx">
+      <DependentUpon>FrmEntradasAnuladas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmIngreso.resx">
       <DependentUpon>FrmIngreso.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMiUsuario.resx">
       <DependentUpon>FrmMiUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMotivo.resx">
+      <DependentUpon>FrmMotivo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>

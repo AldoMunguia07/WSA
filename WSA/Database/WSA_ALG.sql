@@ -453,7 +453,25 @@ BEGIN
 			WHERE Boleta_Id = @Boleta_Id
 			
 		END
-	IF @accion = 'insertarSalida'
+	ELSE IF @accion = 'anularEntrada'
+		BEGIN
+			UPDATE Boleta SET  Estado = @Estado, Observaciones = @Observaciones WHERE Boleta_Id = @Boleta_Id
+		END
+	ELSE IF @accion = 'mostrarAnuladas'
+		BEGIN
+			SELECT b.Boleta_Id 'Código de boleta', b.Fecha_Entrada 'Fecha de entrada', b.Placa_Cabezal 'Placa del cabezal', b.Placa_Rastra 'Placa de la rastra', c.Conductor_Id 'Código del conductor', c.Conductor,
+			cl.Cliente, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) 'Peso de ingreso', b.Barco_Id 'Código del barco', bc.Descripcion 'Barco', b.Estado, u.Nombre_Usuario Usuario, b.Observaciones
+			FROM Boleta b JOIN Conductor c
+			ON b.Conductor_Id = c.Conductor_Id
+			JOIN Producto p ON b.Producto_Id = p.Producto_Id
+			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
+			JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
+			JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
+			WHERE Estado = 'A'
+			ORDER BY Boleta_Id DESC
+			
+		END
+	ELSE IF @accion = 'insertarSalida'
 		BEGIN
 			UPDATE Boleta SET Fecha_Salida = @Fecha_Salida, Peso_Salida = @Peso_Salida, Unidades_Peso_Salida = @Unidades_Peso_Salida, Estado = @Estado, Observaciones = @Observaciones WHERE Boleta_Id = @Boleta_Id
 		END

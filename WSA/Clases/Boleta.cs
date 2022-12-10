@@ -113,6 +113,73 @@ namespace WSA.Clases
             }
         }
 
+        public void AnularEntrada(Boleta boleta)
+        {
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Boleta", conexion.sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                // Establecer los valores de los parámetros
+                sqlCommand.Parameters.AddWithValue("@Boleta_Id", boleta.BoletaId);
+                sqlCommand.Parameters.AddWithValue("@Estado", boleta.Estado);
+                sqlCommand.Parameters.AddWithValue("@Observaciones", boleta.Observaciones);
+                
+                sqlCommand.Parameters.AddWithValue("@accion", "anularEntrada");
+                bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Cerrar la conexión
+                conexion.sqlConnection.Close();
+            }
+        }
+
+        public void MostrarEntradasAnuladas(DataGridView dataGrid)
+        {
+
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Boleta", conexion.sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+
+                // Establecer los valores de los parámetros
+
+                sqlCommand.Parameters.AddWithValue("@accion", "mostrarAnuladas");
+
+                using (sqlDataAdapter)
+                {
+                    DataTable dataTable = new DataTable();
+
+                    sqlDataAdapter.Fill(dataTable);
+
+                    dataGrid.DataSource = dataTable;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion.sqlConnection.Close();
+            }
+        }
+
         public void AgregarSalida(Boleta boleta)
         {
             try

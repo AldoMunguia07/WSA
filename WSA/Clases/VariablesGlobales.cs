@@ -13,6 +13,8 @@ namespace WSA.Clases
         private static Cliente cliente;
         private static Producto producto;
         private static Barco barco;
+        private static Boleta boleta;
+
 
 
         public static Usuario Usuario
@@ -43,6 +45,12 @@ namespace WSA.Clases
         {
             get { return barco; }
             set { barco = value; }
+        }
+
+        public static Boleta Boleta
+        {
+            get { return boleta; }
+            set { boleta = value; }
         }
     }
 }

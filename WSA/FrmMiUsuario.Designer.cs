@@ -233,7 +233,7 @@ namespace WSA
             this.Controls.Add(this.txtNombreUsuario);
             this.Controls.Add(this.label1);
             this.Name = "FrmMiUsuario";
-            this.Text = "FrmMiUsuario";
+            this.Text = "Mi información";
             this.ResumeLayout(false);
             this.PerformLayout();
 

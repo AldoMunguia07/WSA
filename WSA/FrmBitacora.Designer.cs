@@ -137,7 +137,7 @@ namespace WSA
             this.Controls.Add(this.dgvBitacora);
             this.Controls.Add(this.label2);
             this.Name = "FrmBitacora";
-            this.Text = "FrmBitacora";
+            this.Text = "Bitácora";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBitacora)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

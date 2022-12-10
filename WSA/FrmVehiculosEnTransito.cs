@@ -54,9 +54,36 @@ namespace WSA
                 DataGridViewRow row = dgvEntradas.Rows[e.RowIndex];
                 row.Selected = true;
                 idBoleta = int.Parse(row.Cells[0].Value.ToString());
+                boleta.BoletaId = int.Parse(row.Cells[0].Value.ToString());
+                boleta.Estado = 'A';
                 seleccionado = true;
             }
            
+        }
+
+        private void btnAnular_Click(object sender, EventArgs e)
+        {
+            if (seleccionado)
+            {
+              DialogResult dialogResult =  MessageBox.Show(String.Format("¿Está seguro de anular la entrada con código {0}?", boleta.BoletaId), "WAS", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if(dialogResult == DialogResult.Yes)
+                {
+                    VariablesGlobales.Boleta = boleta;
+                    FrmMotivo frmMotivo = new FrmMotivo();
+                    frmMotivo.ShowDialog();
+                    
+                    
+                }
+                VariablesGlobales.Boleta = null;
+                boleta.MostrarEntradas(dgvEntradas);
+                seleccionado = false;
+
+
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una entrada", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

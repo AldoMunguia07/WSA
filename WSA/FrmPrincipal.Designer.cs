@@ -43,6 +43,7 @@ namespace WSA
             this.printPreviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printSetupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.miUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vehículosEnTransitoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,7 +65,6 @@ namespace WSA
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.miUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -178,6 +178,13 @@ namespace WSA
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(203, 6);
             // 
+            // miUsuarioToolStripMenuItem
+            // 
+            this.miUsuarioToolStripMenuItem.Name = "miUsuarioToolStripMenuItem";
+            this.miUsuarioToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.miUsuarioToolStripMenuItem.Text = "Mi usuario";
+            this.miUsuarioToolStripMenuItem.Click += new System.EventHandler(this.miUsuarioToolStripMenuItem_Click);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
@@ -214,6 +221,7 @@ namespace WSA
             this.entradasAnuladasToolStripMenuItem.Name = "entradasAnuladasToolStripMenuItem";
             this.entradasAnuladasToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.entradasAnuladasToolStripMenuItem.Text = "Entradas anuladas";
+            this.entradasAnuladasToolStripMenuItem.Click += new System.EventHandler(this.entradasAnuladasToolStripMenuItem_Click);
             // 
             // gestiónToolStripMenuItem
             // 
@@ -230,35 +238,35 @@ namespace WSA
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.clienteToolStripMenuItem.Text = "Clientes";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // conductoresToolStripMenuItem
             // 
             this.conductoresToolStripMenuItem.Name = "conductoresToolStripMenuItem";
-            this.conductoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.conductoresToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.conductoresToolStripMenuItem.Text = "Conductores";
             this.conductoresToolStripMenuItem.Click += new System.EventHandler(this.conductoresToolStripMenuItem_Click);
             // 
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
             // barcosToolStripMenuItem
             // 
             this.barcosToolStripMenuItem.Name = "barcosToolStripMenuItem";
-            this.barcosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.barcosToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.barcosToolStripMenuItem.Text = "Barcos";
             this.barcosToolStripMenuItem.Click += new System.EventHandler(this.barcosToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
@@ -331,13 +339,6 @@ namespace WSA
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
-            // 
-            // miUsuarioToolStripMenuItem
-            // 
-            this.miUsuarioToolStripMenuItem.Name = "miUsuarioToolStripMenuItem";
-            this.miUsuarioToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.miUsuarioToolStripMenuItem.Text = "Mi usuario";
-            this.miUsuarioToolStripMenuItem.Click += new System.EventHandler(this.miUsuarioToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 

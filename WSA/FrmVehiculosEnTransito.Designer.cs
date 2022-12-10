@@ -33,6 +33,7 @@ namespace WSA
             this.dgvEntradas = new System.Windows.Forms.DataGridView();
             this.btnEntrada = new System.Windows.Forms.Button();
             this.btnSalida = new System.Windows.Forms.Button();
+            this.btnAnular = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,11 +86,23 @@ namespace WSA
             this.btnSalida.UseVisualStyleBackColor = true;
             this.btnSalida.Click += new System.EventHandler(this.btnSalida_Click);
             // 
+            // btnAnular
+            // 
+            this.btnAnular.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnAnular.Location = new System.Drawing.Point(271, 298);
+            this.btnAnular.Name = "btnAnular";
+            this.btnAnular.Size = new System.Drawing.Size(118, 27);
+            this.btnAnular.TabIndex = 14;
+            this.btnAnular.Text = "Anular entrada";
+            this.btnAnular.UseVisualStyleBackColor = true;
+            this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
+            // 
             // FrmVehiculosEnTransito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1216, 411);
+            this.Controls.Add(this.btnAnular);
             this.Controls.Add(this.btnSalida);
             this.Controls.Add(this.btnEntrada);
             this.Controls.Add(this.dgvEntradas);
@@ -109,5 +122,6 @@ namespace WSA
         private System.Windows.Forms.DataGridView dgvEntradas;
         private System.Windows.Forms.Button btnEntrada;
         private System.Windows.Forms.Button btnSalida;
+        private System.Windows.Forms.Button btnAnular;
     }
 }

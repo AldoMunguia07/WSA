@@ -199,5 +199,12 @@ namespace WSA
             CerrarFormularios();
             CargarFormulario(frmMiUsuario);
         }
+
+        private void entradasAnuladasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEntradasAnuladas frmEntradasAnuladas = new FrmEntradasAnuladas();
+            CerrarFormularios();
+            CargarFormulario(frmEntradasAnuladas);
+        }
     }
 }
