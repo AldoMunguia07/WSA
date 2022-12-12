@@ -39,7 +39,7 @@ namespace WSA
             this.vehículosEnTransitoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.boletasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entradasAnuladasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conductoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,7 +66,7 @@ namespace WSA
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenu,
             this.procesoToolStripMenuItem,
-            this.gestiónToolStripMenuItem,
+            this.gestionToolStripMenuItem,
             this.reportesToolStripMenuItem,
             this.administracinToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
@@ -90,19 +90,19 @@ namespace WSA
             // miUsuarioToolStripMenuItem
             // 
             this.miUsuarioToolStripMenuItem.Name = "miUsuarioToolStripMenuItem";
-            this.miUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.miUsuarioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.miUsuarioToolStripMenuItem.Text = "Mi usuario";
             this.miUsuarioToolStripMenuItem.Click += new System.EventHandler(this.miUsuarioToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(157, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.exitToolStripMenuItem.Text = "&Salir";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 
@@ -138,18 +138,18 @@ namespace WSA
             this.entradasAnuladasToolStripMenuItem.Text = "Entradas anuladas";
             this.entradasAnuladasToolStripMenuItem.Click += new System.EventHandler(this.entradasAnuladasToolStripMenuItem_Click);
             // 
-            // gestiónToolStripMenuItem
+            // gestionToolStripMenuItem
             // 
-            this.gestiónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gestionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clienteToolStripMenuItem,
             this.conductoresToolStripMenuItem,
             this.productosToolStripMenuItem,
             this.barcosToolStripMenuItem,
             this.usuariosToolStripMenuItem});
-            this.gestiónToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gestiónToolStripMenuItem.Name = "gestiónToolStripMenuItem";
-            this.gestiónToolStripMenuItem.Size = new System.Drawing.Size(83, 22);
-            this.gestiónToolStripMenuItem.Text = "Gestión";
+            this.gestionToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gestionToolStripMenuItem.Name = "gestionToolStripMenuItem";
+            this.gestionToolStripMenuItem.Size = new System.Drawing.Size(83, 22);
+            this.gestionToolStripMenuItem.Text = "Gestión";
             // 
             // clienteToolStripMenuItem
             // 
@@ -295,7 +295,7 @@ namespace WSA
         private System.Windows.Forms.ToolStripMenuItem fileMenu;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.ToolStripMenuItem gestiónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem conductoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;

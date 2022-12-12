@@ -23,7 +23,7 @@ namespace WSA
             tslbNombreUsuario.Text = String.Format("{0} - {1}", usuario.NombreUsuario, usuario.TipoUsuario);
             if (usuario.TipoUsuarioId == 2)
             {
-                usuariosToolStripMenuItem.Visible = false;
+                gestionToolStripMenuItem.Visible = false;
                 administracinToolStripMenuItem.Visible = false;
                 
             }

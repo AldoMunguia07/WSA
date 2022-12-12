@@ -128,5 +128,10 @@ namespace WSA
         {
             barco.BuscarBarco(dgvBarcos, txtBuscar.Text);
         }
+
+        private void btnCncelar_Click(object sender, EventArgs e)
+        {
+            refresh();
+        }
     }
 }

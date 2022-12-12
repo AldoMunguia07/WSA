@@ -118,9 +118,12 @@ namespace WSA
             this.txtPlacaCabezal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPlacaCabezal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPlacaCabezal.Location = new System.Drawing.Point(235, 260);
+            this.txtPlacaCabezal.MaxLength = 8;
             this.txtPlacaCabezal.Name = "txtPlacaCabezal";
             this.txtPlacaCabezal.Size = new System.Drawing.Size(128, 27);
             this.txtPlacaCabezal.TabIndex = 5;
+            this.txtPlacaCabezal.TextChanged += new System.EventHandler(this.txtPlacaCabezal_TextChanged);
+            this.txtPlacaCabezal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPlacaCabezal_KeyPress);
             // 
             // label3
             // 
@@ -138,9 +141,12 @@ namespace WSA
             this.txtPlacaRastra.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPlacaRastra.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPlacaRastra.Location = new System.Drawing.Point(487, 260);
+            this.txtPlacaRastra.MaxLength = 8;
             this.txtPlacaRastra.Name = "txtPlacaRastra";
             this.txtPlacaRastra.Size = new System.Drawing.Size(125, 27);
             this.txtPlacaRastra.TabIndex = 7;
+            this.txtPlacaRastra.TextChanged += new System.EventHandler(this.txtPlacaRastra_TextChanged);
+            this.txtPlacaRastra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPlacaRastra_KeyPress);
             // 
             // label4
             // 

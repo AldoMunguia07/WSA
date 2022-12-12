@@ -41,14 +41,24 @@ namespace WSA
 
         private void txtObtenerPeso_Click(object sender, EventArgs e)
         {
+            
+
             Match m = Regex.Match(txtPesoBascula.Text, "(\\d+).(\\d+)|(\\d+)");
             if (float.Parse(m.Value) > 0)
             {
-                txtPesoSalida.Text = m.Value;
+                if (float.Parse(m.Value) < float.Parse(configuracionBascula.Variable("MAX")))
+                {
+                    txtPesoSalida.Text = m.Value;
+                }
+                else
+                {
+                    MessageBox.Show(String.Format("El peso máximo es {0}", configuracionBascula.Variable("MAX")), "AWS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
             }
             else
             {
-                MessageBox.Show("El peso debe ser mayor a 0", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("El peso debe ser mayor a 0", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

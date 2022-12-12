@@ -130,5 +130,10 @@ namespace WSA
                 MessageBox.Show("Seleccione el cliente", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void btnCncelar_Click(object sender, EventArgs e)
+        {
+            refresh();
+        }
     }
 }

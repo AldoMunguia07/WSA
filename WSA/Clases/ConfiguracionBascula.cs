@@ -16,7 +16,7 @@ namespace WSA.Clases
     {
         public delegate void DelegadoAcceso(string accion, TextBox txtDatos);
 
-        SerialPort mySerialPort = new SerialPort(variable("PORT"), 9600, Parity.None, 8, StopBits.One);
+        SerialPort mySerialPort = new SerialPort(variable("PORT"), int.Parse(variable("BAUD_RATE")), Parity.None, 8, StopBits.One);
 
         public void Desconectar()
         {
@@ -61,12 +61,19 @@ namespace WSA.Clases
                 
                 try
                 {
-                    Thread.Sleep(500);
-                    string data = mySerialPort.ReadExisting();
-                    form.BeginInvoke(new DelegadoAcceso(si_DataReceived), new object[] { data, txtPeso });
+                    if(mySerialPort.IsOpen)
+                    {
+                        Thread.Sleep(500);
+                        string data = mySerialPort.ReadExisting();
+                        form.BeginInvoke(new DelegadoAcceso(si_DataReceived), new object[] { data, txtPeso });
+                    }
                     
                     
                  }
+                catch(InvalidOperationException inEx)
+                {
+
+                }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
@@ -78,6 +85,28 @@ namespace WSA.Clases
         private static string variable(string var)
         {
             
+            string[] lineas = File.ReadAllLines("c:/config/CONFIGURACION.txt");
+
+            string valor = "";
+
+
+            foreach (string val in lineas)
+            {
+                Match match = Regex.Match(val, string.Format("{0}", var));
+
+                if (match.Value == var)
+                {
+                    valor = val.Substring(match.Value.Length + 1);
+                }
+
+            }
+            return valor;
+
+        }
+
+        public string Variable(string var)
+        {
+
             string[] lineas = File.ReadAllLines("c:/config/CONFIGURACION.txt");
 
             string valor = "";

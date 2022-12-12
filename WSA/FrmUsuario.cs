@@ -178,6 +178,11 @@ namespace WSA
 
         }
 
+        private void btnCncelar_Click(object sender, EventArgs e)
+        {
+            refresh();
+        }
+
         private void dgvUsuarios_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex >= 0)

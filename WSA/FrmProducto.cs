@@ -48,7 +48,7 @@ namespace WSA
 
         private bool camposLlenos()
         {
-            if (txtDescProducto.Text != "" && numPrecio.Value.ToString() != "")
+            if (txtDescProducto.Text != "" && numPrecio.Text != "")
                 return true;
             else
                 return false;
@@ -65,12 +65,12 @@ namespace WSA
             {
                 getValues();
                 producto.AgregarProducto(producto);
-                MessageBox.Show("Producto agregado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Producto agregado", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refresh();
             }
             else
             {
-                MessageBox.Show("Debe llenar todos los campos", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe llenar todos los campos", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -104,6 +104,8 @@ namespace WSA
 
                 producto.ProductoId = int.Parse(row.Cells[0].Value.ToString());
                 txtDescProducto.Text = row.Cells[1].Value.ToString();
+                numPrecio.Text = row.Cells[2].Value.ToString();
+
                 numPrecio.Value = decimal.Parse(row.Cells[2].Value.ToString());
                 producto.Descripcion = row.Cells[1].Value.ToString();
 
@@ -131,6 +133,21 @@ namespace WSA
             {
                 MessageBox.Show("Seleccione el producto", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void btnCncelar_Click(object sender, EventArgs e)
+        {
+            refresh();
+        }
+
+        private void numPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            /*if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }*/
+
+
         }
     }
 }

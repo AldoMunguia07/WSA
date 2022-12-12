@@ -35,11 +35,19 @@ namespace WSA
             Match m = Regex.Match(txtPesoBascula.Text, "(\\d+).(\\d+)|(\\d+)");
             if(float.Parse(m.Value) > 0)
             {
-                txtPesoEntrada.Text = m.Value;
+                if(float.Parse(m.Value) < float.Parse(configuracionBascula.Variable("MAX")))
+                {
+                    txtPesoEntrada.Text = m.Value;
+                }
+                else
+                {
+                    MessageBox.Show(String.Format("El peso máximo es {0}", configuracionBascula.Variable("MAX")), "AWS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                
             }
             else
             {
-                MessageBox.Show("El peso debe ser mayor a 0", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El peso debe ser mayor a 0", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }
@@ -247,5 +255,35 @@ namespace WSA
             }
         }
 
+        private void txtPlacaCabezal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            
+        }
+
+        private void txtPlacaRastra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPlacaCabezal_TextChanged(object sender, EventArgs e)
+        {
+           
+            txtPlacaCabezal.CharacterCasing = CharacterCasing.Upper;
+        }
+
+        private void txtPlacaRastra_TextChanged(object sender, EventArgs e)
+        {
+           
+            txtPlacaRastra.CharacterCasing = CharacterCasing.Upper;
+
+        }
     }
 }
