@@ -92,6 +92,7 @@ namespace WSA
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(190, 27);
             this.txtUsuario.TabIndex = 4;
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // txtContrasena
             // 
@@ -102,6 +103,7 @@ namespace WSA
             this.txtContrasena.Size = new System.Drawing.Size(190, 27);
             this.txtContrasena.TabIndex = 5;
             this.txtContrasena.UseSystemPasswordChar = true;
+            this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
             // 
             // btnInicioSesion
             // 

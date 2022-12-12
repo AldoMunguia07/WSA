@@ -329,6 +329,61 @@ namespace WSA.Clases
                 // Cerrar la conexión
                 conexion.sqlConnection.Close();
             }
+
+        }
+
+        public void BitacoraInicioSesion(Usuario usuario)
+        {
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Usuario", conexion.sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                // Establecer los valores de los parámetros
+                sqlCommand.Parameters.AddWithValue("@Usuario_Id", usuario.UsuarioId);
+                sqlCommand.Parameters.AddWithValue("@Usuario", usuario.UsuarioD.ToUpper());
+                sqlCommand.Parameters.AddWithValue("@accion", "bitacoraInicioSesion");
+                
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Cerrar la conexión
+                conexion.sqlConnection.Close();
+            }
+        }
+
+        public void BitacoraCierreSesion(Usuario usuario)
+        {
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Usuario", conexion.sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                // Establecer los valores de los parámetros
+                sqlCommand.Parameters.AddWithValue("@Usuario_Id", usuario.UsuarioId);
+                sqlCommand.Parameters.AddWithValue("@Usuario", usuario.UsuarioD.ToUpper());
+                sqlCommand.Parameters.AddWithValue("@accion", "bitacoraCierreSesion");
+               
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Cerrar la conexión
+                conexion.sqlConnection.Close();
+            }
         }
     }
 }

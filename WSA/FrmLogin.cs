@@ -30,6 +30,7 @@ namespace WSA
                 {
                     MessageBox.Show(string.Format("¡Bienvenido {0}!", usuario.NombreUsuario), "AWS - Inicio sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     VariablesGlobales.Usuario = usuario;
+                    usuario.BitacoraInicioSesion(usuario);
                     FrmPrincipal frmPrincipal = new FrmPrincipal(usuario);
                     frmPrincipal.Show();
                     frmPrincipal.FormClosed += cerrarSesion;                    
@@ -48,9 +49,28 @@ namespace WSA
         }
         private void cerrarSesion(object sender, FormClosedEventArgs e)
         {
+            VariablesGlobales.Usuario = null;
+            usuario.BitacoraCierreSesion(usuario);
             txtUsuario.Text = "";
             txtContrasena.Text = "";
             this.Show();
+        }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                btnInicioSesion.PerformClick();
+
+            }
+        }
+
+        private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                btnInicioSesion.PerformClick();
+            }
         }
     }
 }

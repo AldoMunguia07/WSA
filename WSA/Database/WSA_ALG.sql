@@ -329,7 +329,7 @@ END
 GO
 
 
-ALTER PROCEDURE sp_Usuario
+CREATE PROCEDURE sp_Usuario
 @Usuario_Id INT = NULL,
 @Nombre_Usuario VARCHAR(80) = NULL,
 @Usuario VARCHAR(30) = NULL,
@@ -387,6 +387,14 @@ BEGIN
 		FROM Usuario u JOIN Tipo_Usuario tp
 		ON u.Tipo_Usuario_Id = tp.Tipo_Usuario_Id
 		WHERE Usuario_Id = @Usuario_Id
+	END
+	ELSE IF @accion = 'bitacoraInicioSesion'
+	BEGIN
+		INSERT INTO Bitacora VALUES(@Usuario_Id,SYSTEM_USER, 'Inicio de sesión',CONCAT('Inicio de sesión del usuario ', @Usuario,  ' con código ', @Usuario_Id),  GETDATE()); 
+	END
+	ELSE IF @accion = 'bitacoraCierreSesion'
+	BEGIN
+		INSERT INTO Bitacora VALUES(@Usuario_Id,SYSTEM_USER, 'Cierre de sesión',CONCAT('Cierre de sesión del usuario ', @Usuario,  ' con código ', @Usuario_Id),  GETDATE()); 
 	END
 
 END
