@@ -191,7 +191,7 @@ namespace WSA
                 cmbTipoUsuario.SelectedValue = int.Parse(row.Cells[6].Value.ToString());
                 txtContrasena.Text = row.Cells[5].Value.ToString();
                 txtConfirmarContrasena.Text = row.Cells[5].Value.ToString();
-
+                row.Selected = true;
                 activo = Convert.ToBoolean(row.Cells[4].Value);
                 if(activo)
                 {

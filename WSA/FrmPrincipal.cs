@@ -124,6 +124,7 @@ namespace WSA
 
         private void CerrarFormularios()
         {
+            tslbNombreUsuario.Text = tslbNombreUsuario.Text = String.Format("{0} - {1}", VariablesGlobales.Usuario.NombreUsuario, VariablesGlobales.Usuario.TipoUsuario);
             foreach (Form childForm in MdiChildren)
             {
                 childForm.Close();
@@ -205,6 +206,7 @@ namespace WSA
             FrmEntradasAnuladas frmEntradasAnuladas = new FrmEntradasAnuladas();
             CerrarFormularios();
             CargarFormulario(frmEntradasAnuladas);
+            
         }
     }
 }

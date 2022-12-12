@@ -14,6 +14,7 @@ namespace WSA
     public partial class FrmMiUsuario : Form
     {
         Usuario usuario = new Usuario();
+        private string username = "";
         public FrmMiUsuario()
         {
             InitializeComponent();
@@ -38,6 +39,7 @@ namespace WSA
                 btnActivo.BackColor = Color.Red;
                 btnActivo.Text = "Inactivo";
             }
+            username = VariablesGlobales.Usuario.UsuarioD;
 
         }
 
@@ -64,5 +66,66 @@ namespace WSA
                 txtConfirmarContrasena.UseSystemPasswordChar = true;
             }
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (camposLlenos())
+            {
+                if (txtContrasena.TextLength >= 8)
+                {
+                    if (txtContrasena.Text == txtConfirmarContrasena.Text)
+                    {
+                        if (!usuario.ExisteUsuario(txtUsuario.Text) || txtUsuario.Text == username)
+                        {
+                            getValues();
+                            usuario.ModificarUsuario(usuario);
+                            VariablesGlobales.Usuario = usuario;
+                            
+                            MessageBox.Show("Información actualizada", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("El usuario ya existe", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Las contraseñas no coinciden", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("La contraseña debe contener al menos 8 caracteres", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Debe llenar todos los campos", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+           
+        }
+
+        private void getValues()
+        {
+            usuario.NombreUsuario = txtNombreUsuario.Text;
+            usuario.UsuarioD = txtUsuario.Text;
+            usuario.Contrasena = txtContrasena.Text;
+            usuario.TipoUsuarioId = VariablesGlobales.Usuario.TipoUsuarioId;
+            usuario.Activo = VariablesGlobales.Usuario.Activo;
+
+
+        }
+
+        private bool camposLlenos()
+        {
+            if (txtNombreUsuario.Text != "" && txtUsuario.Text != "" && txtContrasena.Text != "" && txtConfirmarContrasena.Text != "")
+                return true;
+            else
+                return false;
+        }
+
     }
 }

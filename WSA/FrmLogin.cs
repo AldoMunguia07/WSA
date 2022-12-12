@@ -21,12 +21,12 @@ namespace WSA
 
         private void btnInicioSesion_Click(object sender, EventArgs e)
         {
-            usuario.BuscarUsuario(txtUsuario.Text.ToLower(), usuario);
+            usuario.BuscarUsuario(txtUsuario.Text.ToUpper(), usuario);
            
 
             if (usuario.UsuarioD != null)
             {
-                if (usuario.UsuarioD == txtUsuario.Text && usuario.Contrasena == txtContrasena.Text && usuario.Activo)
+                if (usuario.UsuarioD == txtUsuario.Text.ToUpper() && usuario.Contrasena == txtContrasena.Text && usuario.Activo)
                 {
                     MessageBox.Show(string.Format("¡Bienvenido {0}!", usuario.NombreUsuario), "AWS - Inicio sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     VariablesGlobales.Usuario = usuario;

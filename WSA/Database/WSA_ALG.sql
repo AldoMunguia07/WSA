@@ -807,12 +807,24 @@ AS
 BEGIN
 declare @id sql_variant
 	set @id = (select SESSION_CONTEXT(N'user_id'));
+	IF (Select Estado from inserted) = 'C'
+	BEGIN
 	INSERT INTO Bitacora
-select cast(@id as int), 
-SYSTEM_USER,'Modificar',
-CONCAT('Salida de vehículo con número de boleta ', Boleta_Id),
-GETDATE()
-from inserted
+		select cast(@id as int), 
+		SYSTEM_USER,'Modificar',
+		CONCAT('Salida de vehículo con número de boleta ', Boleta_Id),
+		GETDATE()
+		from inserted
+	END
+	ELSE IF (Select Estado from inserted) = 'A'
+	BEGIN
+	INSERT INTO Bitacora
+		select cast(@id as int), 
+		SYSTEM_USER,'Anular',
+		CONCAT('Anulación de boleta ', Boleta_Id),
+		GETDATE()
+		from inserted
+	END
 END
 GO
 

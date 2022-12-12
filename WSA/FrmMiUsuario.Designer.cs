@@ -216,6 +216,7 @@ namespace WSA
             this.btnGuardar.TabIndex = 41;
             this.btnGuardar.Text = "Guardar cambios";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // chbVerContraseña
             // 
