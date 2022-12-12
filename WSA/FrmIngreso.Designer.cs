@@ -57,7 +57,6 @@ namespace WSA
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblConexion = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -68,16 +67,17 @@ namespace WSA
             this.lblConsultarBarcos = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(359, 78);
+            this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(520, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 25);
+            this.label1.Size = new System.Drawing.Size(279, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ingreso de vehículo";
             // 
@@ -85,18 +85,20 @@ namespace WSA
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 153);
+            this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(84, 205);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 13);
+            this.label2.Size = new System.Drawing.Size(187, 18);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Código del conductor";
+            this.label2.Text = "Código del conductor:";
             // 
             // txtCodigoConductor
             // 
             this.txtCodigoConductor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodigoConductor.Location = new System.Drawing.Point(141, 150);
+            this.txtCodigoConductor.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoConductor.Location = new System.Drawing.Point(270, 202);
             this.txtCodigoConductor.Name = "txtCodigoConductor";
-            this.txtCodigoConductor.Size = new System.Drawing.Size(47, 20);
+            this.txtCodigoConductor.Size = new System.Drawing.Size(47, 27);
             this.txtCodigoConductor.TabIndex = 2;
             this.txtCodigoConductor.Leave += new System.EventHandler(this.txtCodigoConductor_Leave);
             // 
@@ -104,82 +106,91 @@ namespace WSA
             // 
             this.txtConductor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtConductor.BackColor = System.Drawing.Color.White;
-            this.txtConductor.Location = new System.Drawing.Point(194, 150);
+            this.txtConductor.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConductor.Location = new System.Drawing.Point(323, 202);
             this.txtConductor.Name = "txtConductor";
             this.txtConductor.ReadOnly = true;
-            this.txtConductor.Size = new System.Drawing.Size(215, 20);
+            this.txtConductor.Size = new System.Drawing.Size(289, 27);
             this.txtConductor.TabIndex = 3;
             // 
             // txtPlacaCabezal
             // 
             this.txtPlacaCabezal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPlacaCabezal.Location = new System.Drawing.Point(141, 203);
+            this.txtPlacaCabezal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlacaCabezal.Location = new System.Drawing.Point(235, 260);
             this.txtPlacaCabezal.Name = "txtPlacaCabezal";
-            this.txtPlacaCabezal.Size = new System.Drawing.Size(91, 20);
+            this.txtPlacaCabezal.Size = new System.Drawing.Size(128, 27);
             this.txtPlacaCabezal.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 207);
+            this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(101, 264);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 13);
+            this.label3.Size = new System.Drawing.Size(126, 18);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Placa cabezal";
+            this.label3.Text = "Placa cabezal:";
             // 
             // txtPlacaRastra
             // 
             this.txtPlacaRastra.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPlacaRastra.Location = new System.Drawing.Point(318, 203);
+            this.txtPlacaRastra.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlacaRastra.Location = new System.Drawing.Point(487, 260);
             this.txtPlacaRastra.Name = "txtPlacaRastra";
-            this.txtPlacaRastra.Size = new System.Drawing.Size(91, 20);
+            this.txtPlacaRastra.Size = new System.Drawing.Size(125, 27);
             this.txtPlacaRastra.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(249, 207);
+            this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(369, 264);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.Size = new System.Drawing.Size(112, 18);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Placa rastra";
+            this.label4.Text = "Placa rastra:";
             // 
             // txtCia
             // 
             this.txtCia.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCia.Location = new System.Drawing.Point(141, 251);
+            this.txtCia.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCia.Location = new System.Drawing.Point(288, 313);
             this.txtCia.Name = "txtCia";
-            this.txtCia.Size = new System.Drawing.Size(91, 20);
+            this.txtCia.Size = new System.Drawing.Size(91, 27);
             this.txtCia.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 255);
+            this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(81, 319);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 13);
+            this.label5.Size = new System.Drawing.Size(208, 18);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Compañia transportista";
+            this.label5.Text = "Compañia transportista:";
             // 
             // txtCliente
             // 
             this.txtCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCliente.BackColor = System.Drawing.Color.White;
-            this.txtCliente.Location = new System.Drawing.Point(194, 317);
+            this.txtCliente.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliente.Location = new System.Drawing.Point(315, 378);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.ReadOnly = true;
-            this.txtCliente.Size = new System.Drawing.Size(215, 20);
+            this.txtCliente.Size = new System.Drawing.Size(297, 27);
             this.txtCliente.TabIndex = 12;
             // 
             // txtCodigoCliente
             // 
             this.txtCodigoCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodigoCliente.Location = new System.Drawing.Point(141, 317);
+            this.txtCodigoCliente.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoCliente.Location = new System.Drawing.Point(262, 378);
             this.txtCodigoCliente.Name = "txtCodigoCliente";
-            this.txtCodigoCliente.Size = new System.Drawing.Size(47, 20);
+            this.txtCodigoCliente.Size = new System.Drawing.Size(47, 27);
             this.txtCodigoCliente.TabIndex = 11;
             this.txtCodigoCliente.Leave += new System.EventHandler(this.txtCodigoCliente_Leave);
             // 
@@ -187,28 +198,31 @@ namespace WSA
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(35, 320);
+            this.label6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(93, 381);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 13);
+            this.label6.Size = new System.Drawing.Size(163, 18);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Código del cliente";
+            this.label6.Text = "Código del cliente:";
             // 
             // txtProducto
             // 
             this.txtProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProducto.BackColor = System.Drawing.Color.White;
-            this.txtProducto.Location = new System.Drawing.Point(194, 374);
+            this.txtProducto.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProducto.Location = new System.Drawing.Point(315, 447);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.ReadOnly = true;
-            this.txtProducto.Size = new System.Drawing.Size(215, 20);
+            this.txtProducto.Size = new System.Drawing.Size(297, 27);
             this.txtProducto.TabIndex = 15;
             // 
             // txtCodigoProducto
             // 
             this.txtCodigoProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodigoProducto.Location = new System.Drawing.Point(141, 374);
+            this.txtCodigoProducto.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoProducto.Location = new System.Drawing.Point(262, 447);
             this.txtCodigoProducto.Name = "txtCodigoProducto";
-            this.txtCodigoProducto.Size = new System.Drawing.Size(47, 20);
+            this.txtCodigoProducto.Size = new System.Drawing.Size(47, 27);
             this.txtCodigoProducto.TabIndex = 14;
             this.txtCodigoProducto.Leave += new System.EventHandler(this.txtCodigoProducto_Leave);
             // 
@@ -216,28 +230,31 @@ namespace WSA
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(29, 377);
+            this.label7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(87, 450);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 13);
+            this.label7.Size = new System.Drawing.Size(179, 18);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Código del producto";
+            this.label7.Text = "Código del producto:";
             // 
             // txtBarco
             // 
             this.txtBarco.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBarco.BackColor = System.Drawing.Color.White;
-            this.txtBarco.Location = new System.Drawing.Point(194, 430);
+            this.txtBarco.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBarco.Location = new System.Drawing.Point(315, 524);
             this.txtBarco.Name = "txtBarco";
             this.txtBarco.ReadOnly = true;
-            this.txtBarco.Size = new System.Drawing.Size(215, 20);
+            this.txtBarco.Size = new System.Drawing.Size(297, 27);
             this.txtBarco.TabIndex = 18;
             // 
             // txtCodigoBarco
             // 
             this.txtCodigoBarco.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodigoBarco.Location = new System.Drawing.Point(141, 430);
+            this.txtCodigoBarco.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoBarco.Location = new System.Drawing.Point(262, 524);
             this.txtCodigoBarco.Name = "txtCodigoBarco";
-            this.txtCodigoBarco.Size = new System.Drawing.Size(47, 20);
+            this.txtCodigoBarco.Size = new System.Drawing.Size(47, 27);
             this.txtCodigoBarco.TabIndex = 17;
             this.txtCodigoBarco.Leave += new System.EventHandler(this.txtCodigoBarco_Leave);
             // 
@@ -245,27 +262,30 @@ namespace WSA
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(37, 433);
+            this.label8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(95, 527);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 13);
+            this.label8.Size = new System.Drawing.Size(152, 18);
             this.label8.TabIndex = 16;
-            this.label8.Text = "Código del barco";
+            this.label8.Text = "Código del barco:";
             // 
             // txtEnvioN
             // 
             this.txtEnvioN.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtEnvioN.Location = new System.Drawing.Point(318, 251);
+            this.txtEnvioN.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEnvioN.Location = new System.Drawing.Point(521, 310);
             this.txtEnvioN.Name = "txtEnvioN";
-            this.txtEnvioN.Size = new System.Drawing.Size(91, 20);
+            this.txtEnvioN.Size = new System.Drawing.Size(91, 27);
             this.txtEnvioN.TabIndex = 20;
             // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(236, 255);
+            this.label9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(386, 319);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 13);
+            this.label9.Size = new System.Drawing.Size(129, 18);
             this.label9.TabIndex = 19;
             this.label9.Text = "Contrato / OC:";
             // 
@@ -275,11 +295,11 @@ namespace WSA
             this.txtPesoBascula.BackColor = System.Drawing.Color.Black;
             this.txtPesoBascula.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesoBascula.ForeColor = System.Drawing.Color.White;
-            this.txtPesoBascula.Location = new System.Drawing.Point(566, 136);
+            this.txtPesoBascula.Location = new System.Drawing.Point(867, 188);
             this.txtPesoBascula.Multiline = true;
             this.txtPesoBascula.Name = "txtPesoBascula";
             this.txtPesoBascula.ReadOnly = true;
-            this.txtPesoBascula.Size = new System.Drawing.Size(343, 46);
+            this.txtPesoBascula.Size = new System.Drawing.Size(412, 46);
             this.txtPesoBascula.TabIndex = 21;
             this.txtPesoBascula.Text = "0.00 Kg";
             this.txtPesoBascula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -288,9 +308,10 @@ namespace WSA
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(490, 256);
+            this.label10.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(691, 308);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 13);
+            this.label10.Size = new System.Drawing.Size(123, 18);
             this.label10.TabIndex = 22;
             this.label10.Text = "Peso entrada:";
             // 
@@ -298,30 +319,36 @@ namespace WSA
             // 
             this.txtPesoEntrada.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPesoEntrada.BackColor = System.Drawing.Color.White;
-            this.txtPesoEntrada.Location = new System.Drawing.Point(566, 252);
+            this.txtPesoEntrada.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesoEntrada.Location = new System.Drawing.Point(835, 320);
             this.txtPesoEntrada.Name = "txtPesoEntrada";
             this.txtPesoEntrada.ReadOnly = true;
-            this.txtPesoEntrada.Size = new System.Drawing.Size(179, 20);
+            this.txtPesoEntrada.Size = new System.Drawing.Size(179, 27);
             this.txtPesoEntrada.TabIndex = 23;
             // 
             // btnObtenerPeso
             // 
             this.btnObtenerPeso.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnObtenerPeso.Location = new System.Drawing.Point(764, 250);
+            this.btnObtenerPeso.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnObtenerPeso.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnObtenerPeso.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnObtenerPeso.ForeColor = System.Drawing.Color.White;
+            this.btnObtenerPeso.Location = new System.Drawing.Point(1034, 320);
             this.btnObtenerPeso.Name = "btnObtenerPeso";
-            this.btnObtenerPeso.Size = new System.Drawing.Size(110, 23);
+            this.btnObtenerPeso.Size = new System.Drawing.Size(136, 28);
             this.btnObtenerPeso.TabIndex = 24;
             this.btnObtenerPeso.Text = "Obtener peso";
-            this.btnObtenerPeso.UseVisualStyleBackColor = true;
+            this.btnObtenerPeso.UseVisualStyleBackColor = false;
             this.btnObtenerPeso.Click += new System.EventHandler(this.txtObtenerPeso_Click);
             // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(459, 153);
+            this.label11.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(692, 205);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(101, 13);
+            this.label11.Size = new System.Drawing.Size(169, 18);
             this.label11.TabIndex = 25;
             this.label11.Text = "Lectura en báscula:";
             // 
@@ -329,52 +356,47 @@ namespace WSA
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(479, 304);
+            this.label12.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(680, 356);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(81, 13);
+            this.label12.Size = new System.Drawing.Size(134, 18);
             this.label12.TabIndex = 26;
             this.label12.Text = "Observaciones:";
             // 
             // txtObservaciones
             // 
             this.txtObservaciones.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtObservaciones.Location = new System.Drawing.Point(566, 304);
+            this.txtObservaciones.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservaciones.Location = new System.Drawing.Point(835, 372);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.Size = new System.Drawing.Size(308, 90);
+            this.txtObservaciones.Size = new System.Drawing.Size(412, 116);
             this.txtObservaciones.TabIndex = 27;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGuardar.Location = new System.Drawing.Point(566, 433);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(105, 27);
-            this.btnGuardar.TabIndex = 28;
-            this.btnGuardar.Text = "Guardar ingreso";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancelar.Location = new System.Drawing.Point(706, 433);
+            this.btnCancelar.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(1174, 524);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(105, 27);
             this.btnCancelar.TabIndex = 29;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblConexion
             // 
             this.lblConexion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblConexion.AutoSize = true;
-            this.lblConexion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConexion.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConexion.ForeColor = System.Drawing.Color.Red;
-            this.lblConexion.Location = new System.Drawing.Point(632, 205);
+            this.lblConexion.Location = new System.Drawing.Point(996, 260);
             this.lblConexion.Name = "lblConexion";
-            this.lblConexion.Size = new System.Drawing.Size(89, 13);
+            this.lblConexion.Size = new System.Drawing.Size(99, 14);
             this.lblConexion.TabIndex = 30;
             this.lblConexion.Text = "Desconectado";
             // 
@@ -382,30 +404,36 @@ namespace WSA
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(459, 205);
+            this.label13.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(692, 257);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(176, 13);
+            this.label13.Size = new System.Drawing.Size(298, 18);
             this.label13.TabIndex = 31;
             this.label13.Text = "Estado de conexión con la báscula:";
             // 
             // btnConectar
             // 
             this.btnConectar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnConectar.Location = new System.Drawing.Point(799, 200);
+            this.btnConectar.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnConectar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConectar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConectar.ForeColor = System.Drawing.Color.White;
+            this.btnConectar.Location = new System.Drawing.Point(1173, 252);
             this.btnConectar.Name = "btnConectar";
-            this.btnConectar.Size = new System.Drawing.Size(75, 23);
+            this.btnConectar.Size = new System.Drawing.Size(106, 28);
             this.btnConectar.TabIndex = 32;
             this.btnConectar.Text = "Conectar";
-            this.btnConectar.UseVisualStyleBackColor = true;
+            this.btnConectar.UseVisualStyleBackColor = false;
             this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
             // 
             // lblConsultarConductores
             // 
             this.lblConsultarConductores.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblConsultarConductores.AutoSize = true;
-            this.lblConsultarConductores.Location = new System.Drawing.Point(296, 134);
+            this.lblConsultarConductores.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsultarConductores.Location = new System.Drawing.Point(457, 183);
             this.lblConsultarConductores.Name = "lblConsultarConductores";
-            this.lblConsultarConductores.Size = new System.Drawing.Size(113, 13);
+            this.lblConsultarConductores.Size = new System.Drawing.Size(157, 16);
             this.lblConsultarConductores.TabIndex = 33;
             this.lblConsultarConductores.TabStop = true;
             this.lblConsultarConductores.Text = "Consultar conductores";
@@ -415,9 +443,10 @@ namespace WSA
             // 
             this.lblConsultarClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblConsultarClientes.AutoSize = true;
-            this.lblConsultarClientes.Location = new System.Drawing.Point(319, 301);
+            this.lblConsultarClientes.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsultarClientes.Location = new System.Drawing.Point(488, 359);
             this.lblConsultarClientes.Name = "lblConsultarClientes";
-            this.lblConsultarClientes.Size = new System.Drawing.Size(90, 13);
+            this.lblConsultarClientes.Size = new System.Drawing.Size(126, 16);
             this.lblConsultarClientes.TabIndex = 34;
             this.lblConsultarClientes.TabStop = true;
             this.lblConsultarClientes.Text = "Consultar clientes";
@@ -427,9 +456,10 @@ namespace WSA
             // 
             this.lblConsultarProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblConsultarProductos.AutoSize = true;
-            this.lblConsultarProductos.Location = new System.Drawing.Point(308, 358);
+            this.lblConsultarProductos.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsultarProductos.Location = new System.Drawing.Point(477, 428);
             this.lblConsultarProductos.Name = "lblConsultarProductos";
-            this.lblConsultarProductos.Size = new System.Drawing.Size(101, 13);
+            this.lblConsultarProductos.Size = new System.Drawing.Size(141, 16);
             this.lblConsultarProductos.TabIndex = 35;
             this.lblConsultarProductos.TabStop = true;
             this.lblConsultarProductos.Text = "Consultar productos";
@@ -439,9 +469,10 @@ namespace WSA
             // 
             this.lblConsultarBarcos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblConsultarBarcos.AutoSize = true;
-            this.lblConsultarBarcos.Location = new System.Drawing.Point(323, 414);
+            this.lblConsultarBarcos.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsultarBarcos.Location = new System.Drawing.Point(492, 505);
             this.lblConsultarBarcos.Name = "lblConsultarBarcos";
-            this.lblConsultarBarcos.Size = new System.Drawing.Size(86, 13);
+            this.lblConsultarBarcos.Size = new System.Drawing.Size(119, 16);
             this.lblConsultarBarcos.TabIndex = 36;
             this.lblConsultarBarcos.TabStop = true;
             this.lblConsultarBarcos.Text = "Consultar barcos";
@@ -452,9 +483,9 @@ namespace WSA
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel2.Location = new System.Drawing.Point(-1, 570);
+            this.panel2.Location = new System.Drawing.Point(-1, 636);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(939, 30);
+            this.panel2.Size = new System.Drawing.Size(1341, 30);
             this.panel2.TabIndex = 38;
             // 
             // panel1
@@ -464,15 +495,30 @@ namespace WSA
             this.panel1.BackColor = System.Drawing.Color.DarkBlue;
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(939, 30);
+            this.panel1.Size = new System.Drawing.Size(1341, 30);
             this.panel1.TabIndex = 37;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGuardar.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(1034, 524);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(105, 27);
+            this.btnGuardar.TabIndex = 28;
+            this.btnGuardar.Text = "Guardar ingreso";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // FrmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(939, 600);
+            this.ClientSize = new System.Drawing.Size(1341, 666);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblConsultarBarcos);
@@ -551,7 +597,6 @@ namespace WSA
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtObservaciones;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblConexion;
         private System.Windows.Forms.Label label13;
@@ -562,5 +607,6 @@ namespace WSA
         private System.Windows.Forms.LinkLabel lblConsultarBarcos;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

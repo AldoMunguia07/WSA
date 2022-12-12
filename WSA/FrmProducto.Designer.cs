@@ -49,33 +49,36 @@ namespace WSA
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnModificar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Location = new System.Drawing.Point(757, 393);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(93, 32);
             this.btnModificar.TabIndex = 15;
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(120, 393);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 20);
+            this.label3.Size = new System.Drawing.Size(69, 18);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Buscar";
+            this.label3.Text = "Buscar:";
             // 
             // txtBuscar
             // 
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(185, 390);
+            this.txtBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(189, 390);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(302, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(302, 27);
             this.txtBuscar.TabIndex = 13;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -83,23 +86,26 @@ namespace WSA
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(335, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(237, 25);
+            this.label2.Size = new System.Drawing.Size(297, 29);
             this.label2.TabIndex = 12;
             this.label2.Text = "Gestión de productos";
             // 
             // btnGuardar
             // 
             this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(648, 393);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(94, 32);
             this.btnGuardar.TabIndex = 11;
             this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // dgvProductos
@@ -122,58 +128,61 @@ namespace WSA
             // txtDescProducto
             // 
             this.txtDescProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDescProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescProducto.Location = new System.Drawing.Point(217, 134);
+            this.txtDescProducto.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescProducto.Location = new System.Drawing.Point(230, 134);
             this.txtDescProducto.Name = "txtDescProducto";
-            this.txtDescProducto.Size = new System.Drawing.Size(190, 26);
+            this.txtDescProducto.Size = new System.Drawing.Size(294, 27);
             this.txtDescProducto.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(120, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 20);
+            this.label1.Size = new System.Drawing.Size(108, 18);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Descripción";
+            this.label1.Text = "Descripción:";
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(439, 137);
+            this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(553, 137);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 20);
+            this.label4.Size = new System.Drawing.Size(64, 18);
             this.label4.TabIndex = 16;
-            this.label4.Text = "Precio";
+            this.label4.Text = "Precio:";
             // 
             // numPrecio
             // 
             this.numPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numPrecio.Location = new System.Drawing.Point(498, 134);
+            this.numPrecio.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numPrecio.Location = new System.Drawing.Point(612, 134);
             this.numPrecio.Maximum = new decimal(new int[] {
             999999,
             0,
             0,
             0});
             this.numPrecio.Name = "numPrecio";
-            this.numPrecio.Size = new System.Drawing.Size(120, 26);
+            this.numPrecio.Size = new System.Drawing.Size(120, 27);
             this.numPrecio.TabIndex = 17;
             // 
             // btnSeleccionar
             // 
             this.btnSeleccionar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.Location = new System.Drawing.Point(527, 393);
+            this.btnSeleccionar.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
+            this.btnSeleccionar.Location = new System.Drawing.Point(516, 393);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(106, 32);
+            this.btnSeleccionar.Size = new System.Drawing.Size(115, 32);
             this.btnSeleccionar.TabIndex = 18;
             this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.UseVisualStyleBackColor = false;
             this.btnSeleccionar.Visible = false;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 

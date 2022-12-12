@@ -58,35 +58,41 @@ namespace WSA
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(597, 133);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 25);
+            this.label1.Size = new System.Drawing.Size(112, 29);
             this.label1.TabIndex = 12;
             this.label1.Text = "Boletas";
             // 
             // btnVerBoleta
             // 
-            this.btnVerBoleta.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnVerBoleta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerBoleta.Location = new System.Drawing.Point(32, 416);
+            this.btnVerBoleta.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnVerBoleta.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnVerBoleta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVerBoleta.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerBoleta.ForeColor = System.Drawing.Color.White;
+            this.btnVerBoleta.Location = new System.Drawing.Point(1052, 422);
             this.btnVerBoleta.Name = "btnVerBoleta";
             this.btnVerBoleta.Size = new System.Drawing.Size(102, 26);
             this.btnVerBoleta.TabIndex = 14;
             this.btnVerBoleta.Text = "Ver boleta";
-            this.btnVerBoleta.UseVisualStyleBackColor = true;
+            this.btnVerBoleta.UseVisualStyleBackColor = false;
             this.btnVerBoleta.Click += new System.EventHandler(this.btnVerBoleta_Click);
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.Location = new System.Drawing.Point(154, 416);
+            this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnImprimir.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnImprimir.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.ForeColor = System.Drawing.Color.White;
+            this.btnImprimir.Location = new System.Drawing.Point(1174, 422);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(86, 26);
             this.btnImprimir.TabIndex = 15;
             this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.UseVisualStyleBackColor = false;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // panel2

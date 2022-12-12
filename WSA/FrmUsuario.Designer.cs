@@ -55,33 +55,36 @@ namespace WSA
             // btnModificar
             // 
             this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(913, 513);
+            this.btnModificar.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnModificar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(857, 514);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(86, 25);
+            this.btnModificar.Size = new System.Drawing.Size(95, 25);
             this.btnModificar.TabIndex = 15;
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(178, 515);
+            this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(131, 517);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 20);
+            this.label3.Size = new System.Drawing.Size(62, 18);
             this.label3.TabIndex = 14;
             this.label3.Text = "Buscar";
             // 
             // txtBuscar
             // 
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(243, 512);
+            this.txtBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(196, 514);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(430, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(430, 27);
             this.txtBuscar.TabIndex = 13;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -89,23 +92,26 @@ namespace WSA
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(450, 98);
+            this.label2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(464, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(223, 25);
+            this.label2.Size = new System.Drawing.Size(277, 29);
             this.label2.TabIndex = 12;
             this.label2.Text = "Gestión de usuarios";
             // 
             // btnGuardar
             // 
             this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(799, 513);
+            this.btnGuardar.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(743, 514);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(86, 25);
             this.btnGuardar.TabIndex = 11;
             this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // dgvUsuarios
@@ -118,60 +124,60 @@ namespace WSA
             this.dgvUsuarios.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.GridColor = System.Drawing.Color.DimGray;
-            this.dgvUsuarios.Location = new System.Drawing.Point(185, 298);
+            this.dgvUsuarios.Location = new System.Drawing.Point(73, 300);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
-            this.dgvUsuarios.Size = new System.Drawing.Size(814, 196);
+            this.dgvUsuarios.Size = new System.Drawing.Size(1040, 196);
             this.dgvUsuarios.TabIndex = 10;
             this.dgvUsuarios.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUsuarios_CellMouseClick);
             // 
             // txtNombreUsuario
             // 
             this.txtNombreUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreUsuario.Location = new System.Drawing.Point(255, 177);
+            this.txtNombreUsuario.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreUsuario.Location = new System.Drawing.Point(229, 183);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.Size = new System.Drawing.Size(110, 26);
+            this.txtNombreUsuario.Size = new System.Drawing.Size(175, 27);
             this.txtNombreUsuario.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(103, 180);
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(56, 187);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 20);
+            this.label1.Size = new System.Drawing.Size(175, 18);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Nombre del usuario";
+            this.label1.Text = "Nombre del usuario:";
             // 
             // txtUsuario
             // 
             this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(255, 233);
+            this.txtUsuario.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(229, 236);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(110, 26);
+            this.txtUsuario.Size = new System.Drawing.Size(175, 27);
             this.txtUsuario.TabIndex = 17;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(157, 236);
+            this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(142, 239);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 20);
+            this.label4.Size = new System.Drawing.Size(77, 18);
             this.label4.TabIndex = 16;
-            this.label4.Text = "Usuario";
+            this.label4.Text = "Usuario:";
             // 
             // txtContrasena
             // 
             this.txtContrasena.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena.Location = new System.Drawing.Point(577, 178);
+            this.txtContrasena.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasena.Location = new System.Drawing.Point(607, 183);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(110, 26);
+            this.txtContrasena.Size = new System.Drawing.Size(178, 27);
             this.txtContrasena.TabIndex = 19;
             this.txtContrasena.UseSystemPasswordChar = true;
             // 
@@ -179,20 +185,20 @@ namespace WSA
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(479, 181);
+            this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(480, 187);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 20);
+            this.label5.Size = new System.Drawing.Size(108, 18);
             this.label5.TabIndex = 18;
-            this.label5.Text = "Contraseña";
+            this.label5.Text = "Contraseña:";
             // 
             // txtConfirmarContrasena
             // 
             this.txtConfirmarContrasena.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtConfirmarContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmarContrasena.Location = new System.Drawing.Point(579, 234);
+            this.txtConfirmarContrasena.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmarContrasena.Location = new System.Drawing.Point(609, 239);
             this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
-            this.txtConfirmarContrasena.Size = new System.Drawing.Size(110, 26);
+            this.txtConfirmarContrasena.Size = new System.Drawing.Size(178, 27);
             this.txtConfirmarContrasena.TabIndex = 21;
             this.txtConfirmarContrasena.UseSystemPasswordChar = true;
             // 
@@ -200,21 +206,21 @@ namespace WSA
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(412, 237);
+            this.label6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(413, 242);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(162, 20);
+            this.label6.Size = new System.Drawing.Size(190, 18);
             this.label6.TabIndex = 20;
-            this.label6.Text = "Confirmar contraseña";
+            this.label6.Text = "Confirmar contraseña:";
             // 
             // btnActivo
             // 
             this.btnActivo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnActivo.BackColor = System.Drawing.Color.Green;
             this.btnActivo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActivo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActivo.ForeColor = System.Drawing.Color.White;
-            this.btnActivo.Location = new System.Drawing.Point(827, 234);
+            this.btnActivo.Location = new System.Drawing.Point(923, 235);
             this.btnActivo.Name = "btnActivo";
             this.btnActivo.Size = new System.Drawing.Size(88, 33);
             this.btnActivo.TabIndex = 22;
@@ -225,34 +231,34 @@ namespace WSA
             // cmbTipoUsuario
             // 
             this.cmbTipoUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTipoUsuario.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipoUsuario.FormattingEnabled = true;
-            this.cmbTipoUsuario.Location = new System.Drawing.Point(827, 182);
+            this.cmbTipoUsuario.Location = new System.Drawing.Point(961, 183);
             this.cmbTipoUsuario.Name = "cmbTipoUsuario";
-            this.cmbTipoUsuario.Size = new System.Drawing.Size(121, 28);
+            this.cmbTipoUsuario.Size = new System.Drawing.Size(152, 26);
             this.cmbTipoUsuario.TabIndex = 23;
             // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(708, 182);
+            this.label7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(810, 187);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 20);
+            this.label7.Size = new System.Drawing.Size(142, 18);
             this.label7.TabIndex = 24;
-            this.label7.Text = "Tipo de usuario";
+            this.label7.Text = "Tipo de usuario:";
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(751, 237);
+            this.label8.Location = new System.Drawing.Point(853, 242);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 20);
+            this.label8.Size = new System.Drawing.Size(64, 20);
             this.label8.TabIndex = 25;
-            this.label8.Text = "Estado";
+            this.label8.Text = "Estado:";
             // 
             // panel2
             // 
@@ -261,7 +267,7 @@ namespace WSA
             this.panel2.BackColor = System.Drawing.Color.DarkGreen;
             this.panel2.Location = new System.Drawing.Point(0, 633);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1120, 30);
+            this.panel2.Size = new System.Drawing.Size(1161, 30);
             this.panel2.TabIndex = 27;
             // 
             // panel1
@@ -271,7 +277,7 @@ namespace WSA
             this.panel1.BackColor = System.Drawing.Color.DarkBlue;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1120, 30);
+            this.panel1.Size = new System.Drawing.Size(1161, 30);
             this.panel1.TabIndex = 26;
             // 
             // FrmUsuario
@@ -279,7 +285,7 @@ namespace WSA
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1119, 663);
+            this.ClientSize = new System.Drawing.Size(1160, 663);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);

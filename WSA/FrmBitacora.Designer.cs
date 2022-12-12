@@ -46,10 +46,10 @@ namespace WSA
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(552, 112);
+            this.label2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(557, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(222, 25);
+            this.label2.Size = new System.Drawing.Size(279, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "Bitácora de eventos";
             // 
@@ -73,30 +73,30 @@ namespace WSA
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(290, 174);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 20);
+            this.label1.Size = new System.Drawing.Size(66, 18);
             this.label1.TabIndex = 5;
             this.label1.Text = "Desde:";
             // 
             // dtpFechaInicio
             // 
             this.dtpFechaInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaInicio.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaInicio.Location = new System.Drawing.Point(356, 171);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
-            this.dtpFechaInicio.Size = new System.Drawing.Size(303, 26);
+            this.dtpFechaInicio.Size = new System.Drawing.Size(330, 27);
             this.dtpFechaInicio.TabIndex = 6;
             this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechaInicio_ValueChanged);
             // 
             // dtpFechaFinal
             // 
             this.dtpFechaFinal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpFechaFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaFinal.Location = new System.Drawing.Point(745, 171);
+            this.dtpFechaFinal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaFinal.Location = new System.Drawing.Point(782, 171);
             this.dtpFechaFinal.Name = "dtpFechaFinal";
-            this.dtpFechaFinal.Size = new System.Drawing.Size(308, 26);
+            this.dtpFechaFinal.Size = new System.Drawing.Size(333, 27);
             this.dtpFechaFinal.TabIndex = 8;
             this.dtpFechaFinal.ValueChanged += new System.EventHandler(this.dtpFechaFinal_ValueChanged);
             // 
@@ -105,7 +105,7 @@ namespace WSA
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(683, 174);
+            this.label3.Location = new System.Drawing.Point(720, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 20);
             this.label3.TabIndex = 7;
@@ -115,20 +115,20 @@ namespace WSA
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(229, 231);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 20);
+            this.label4.Size = new System.Drawing.Size(62, 18);
             this.label4.TabIndex = 10;
             this.label4.Text = "Buscar";
             // 
             // txtBuscar
             // 
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(294, 228);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(309, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(309, 27);
             this.txtBuscar.TabIndex = 9;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 

@@ -45,83 +45,86 @@ namespace WSA
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(248, 141);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 20);
+            this.label1.Size = new System.Drawing.Size(85, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Empresa:";
             // 
             // txtEmpresa
             // 
             this.txtEmpresa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpresa.Location = new System.Drawing.Point(331, 138);
+            this.txtEmpresa.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpresa.Location = new System.Drawing.Point(337, 138);
             this.txtEmpresa.Name = "txtEmpresa";
-            this.txtEmpresa.Size = new System.Drawing.Size(315, 26);
+            this.txtEmpresa.Size = new System.Drawing.Size(315, 27);
             this.txtEmpresa.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(266, 56);
+            this.label2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(220, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(431, 25);
+            this.label2.Size = new System.Drawing.Size(539, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Configuración de encabezado de boleta";
             // 
             // txtDireccion
             // 
             this.txtDireccion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(331, 196);
+            this.txtDireccion.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Location = new System.Drawing.Point(337, 196);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(315, 26);
+            this.txtDireccion.Size = new System.Drawing.Size(315, 27);
             this.txtDireccion.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(248, 199);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 20);
+            this.label3.Size = new System.Drawing.Size(89, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "Dirección:";
             // 
             // txtTelefono
             // 
             this.txtTelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(331, 252);
+            this.txtTelefono.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(337, 252);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(315, 26);
+            this.txtTelefono.Size = new System.Drawing.Size(315, 27);
             this.txtTelefono.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(248, 255);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 20);
+            this.label4.Size = new System.Drawing.Size(84, 18);
             this.label4.TabIndex = 5;
             this.label4.Text = "Telefono:";
             // 
             // btnGuardar
             // 
             this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(401, 315);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(162, 38);
             this.btnGuardar.TabIndex = 7;
             this.btnGuardar.Text = "Guardar cambios";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // panel2

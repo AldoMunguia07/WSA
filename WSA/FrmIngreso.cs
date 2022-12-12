@@ -246,5 +246,6 @@ namespace WSA
                 VariablesGlobales.Barco = null;
             }
         }
+
     }
 }

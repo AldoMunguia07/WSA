@@ -43,10 +43,10 @@ namespace WSA
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(644, 114);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 29);
+            this.label1.Size = new System.Drawing.Size(261, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Vehículos en transito";
             // 
@@ -72,7 +72,7 @@ namespace WSA
             this.btnEntrada.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnEntrada.BackColor = System.Drawing.Color.DarkBlue;
             this.btnEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrada.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrada.ForeColor = System.Drawing.Color.White;
             this.btnEntrada.Location = new System.Drawing.Point(904, 410);
             this.btnEntrada.Name = "btnEntrada";
@@ -87,7 +87,7 @@ namespace WSA
             this.btnSalida.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnSalida.BackColor = System.Drawing.Color.DarkBlue;
             this.btnSalida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalida.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalida.ForeColor = System.Drawing.Color.White;
             this.btnSalida.Location = new System.Drawing.Point(1111, 410);
             this.btnSalida.Name = "btnSalida";
@@ -102,7 +102,7 @@ namespace WSA
             this.btnAnular.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnAnular.BackColor = System.Drawing.Color.DarkBlue;
             this.btnAnular.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAnular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnular.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnular.ForeColor = System.Drawing.Color.White;
             this.btnAnular.Location = new System.Drawing.Point(1301, 410);
             this.btnAnular.Name = "btnAnular";

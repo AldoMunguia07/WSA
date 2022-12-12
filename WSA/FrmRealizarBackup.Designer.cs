@@ -39,23 +39,26 @@ namespace WSA
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(196, 128);
+            this.label2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(137, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(522, 25);
+            this.label2.Size = new System.Drawing.Size(651, 29);
             this.label2.TabIndex = 5;
             this.label2.Text = "Realizar copia de seguridad de la base de datos";
             // 
             // btnBackup
             // 
             this.btnBackup.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBackup.Location = new System.Drawing.Point(333, 183);
+            this.btnBackup.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnBackup.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBackup.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackup.ForeColor = System.Drawing.Color.White;
+            this.btnBackup.Location = new System.Drawing.Point(318, 187);
             this.btnBackup.Name = "btnBackup";
-            this.btnBackup.Size = new System.Drawing.Size(235, 45);
+            this.btnBackup.Size = new System.Drawing.Size(255, 45);
             this.btnBackup.TabIndex = 6;
             this.btnBackup.Text = "Realizar copia de seguridad";
-            this.btnBackup.UseVisualStyleBackColor = true;
+            this.btnBackup.UseVisualStyleBackColor = false;
             this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
             // 
             // panel2

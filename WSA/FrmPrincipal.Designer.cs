@@ -32,8 +32,8 @@ namespace WSA
             this.components = new System.ComponentModel.Container();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.miUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vehículosEnTransitoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,7 +71,7 @@ namespace WSA
             this.administracinToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1147, 29);
+            this.menuStrip.Size = new System.Drawing.Size(1147, 26);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -81,28 +81,28 @@ namespace WSA
             this.miUsuarioToolStripMenuItem,
             this.toolStripSeparator5,
             this.exitToolStripMenuItem});
-            this.fileMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileMenu.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
             this.fileMenu.Name = "fileMenu";
-            this.fileMenu.Size = new System.Drawing.Size(87, 25);
+            this.fileMenu.Size = new System.Drawing.Size(95, 22);
             this.fileMenu.Text = "Opciones";
+            // 
+            // miUsuarioToolStripMenuItem
+            // 
+            this.miUsuarioToolStripMenuItem.Name = "miUsuarioToolStripMenuItem";
+            this.miUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.miUsuarioToolStripMenuItem.Text = "Mi usuario";
+            this.miUsuarioToolStripMenuItem.Click += new System.EventHandler(this.miUsuarioToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
             // 
-            // miUsuarioToolStripMenuItem
-            // 
-            this.miUsuarioToolStripMenuItem.Name = "miUsuarioToolStripMenuItem";
-            this.miUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.miUsuarioToolStripMenuItem.Text = "Mi usuario";
-            this.miUsuarioToolStripMenuItem.Click += new System.EventHandler(this.miUsuarioToolStripMenuItem_Click);
-            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "&Salir";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 
@@ -112,29 +112,29 @@ namespace WSA
             this.vehículosEnTransitoToolStripMenuItem,
             this.boletasToolStripMenuItem,
             this.entradasAnuladasToolStripMenuItem});
-            this.procesoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.procesoToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.procesoToolStripMenuItem.Name = "procesoToolStripMenuItem";
-            this.procesoToolStripMenuItem.Size = new System.Drawing.Size(65, 25);
+            this.procesoToolStripMenuItem.Size = new System.Drawing.Size(75, 22);
             this.procesoToolStripMenuItem.Text = "Pesaje";
             // 
             // vehículosEnTransitoToolStripMenuItem
             // 
             this.vehículosEnTransitoToolStripMenuItem.Name = "vehículosEnTransitoToolStripMenuItem";
-            this.vehículosEnTransitoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.vehículosEnTransitoToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.vehículosEnTransitoToolStripMenuItem.Text = "Vehículos en transito";
             this.vehículosEnTransitoToolStripMenuItem.Click += new System.EventHandler(this.vehículosEnTransitoToolStripMenuItem_Click);
             // 
             // boletasToolStripMenuItem
             // 
             this.boletasToolStripMenuItem.Name = "boletasToolStripMenuItem";
-            this.boletasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.boletasToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.boletasToolStripMenuItem.Text = "Boletas";
             this.boletasToolStripMenuItem.Click += new System.EventHandler(this.boletasToolStripMenuItem_Click);
             // 
             // entradasAnuladasToolStripMenuItem
             // 
             this.entradasAnuladasToolStripMenuItem.Name = "entradasAnuladasToolStripMenuItem";
-            this.entradasAnuladasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.entradasAnuladasToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.entradasAnuladasToolStripMenuItem.Text = "Entradas anuladas";
             this.entradasAnuladasToolStripMenuItem.Click += new System.EventHandler(this.entradasAnuladasToolStripMenuItem_Click);
             // 
@@ -146,51 +146,51 @@ namespace WSA
             this.productosToolStripMenuItem,
             this.barcosToolStripMenuItem,
             this.usuariosToolStripMenuItem});
-            this.gestiónToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gestiónToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gestiónToolStripMenuItem.Name = "gestiónToolStripMenuItem";
-            this.gestiónToolStripMenuItem.Size = new System.Drawing.Size(75, 25);
+            this.gestiónToolStripMenuItem.Size = new System.Drawing.Size(83, 22);
             this.gestiónToolStripMenuItem.Text = "Gestión";
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clienteToolStripMenuItem.Text = "Clientes";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // conductoresToolStripMenuItem
             // 
             this.conductoresToolStripMenuItem.Name = "conductoresToolStripMenuItem";
-            this.conductoresToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.conductoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.conductoresToolStripMenuItem.Text = "Conductores";
             this.conductoresToolStripMenuItem.Click += new System.EventHandler(this.conductoresToolStripMenuItem_Click);
             // 
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
             // barcosToolStripMenuItem
             // 
             this.barcosToolStripMenuItem.Name = "barcosToolStripMenuItem";
-            this.barcosToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.barcosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.barcosToolStripMenuItem.Text = "Barcos";
             this.barcosToolStripMenuItem.Click += new System.EventHandler(this.barcosToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
-            this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(84, 25);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // administracinToolStripMenuItem
@@ -199,29 +199,29 @@ namespace WSA
             this.bitacoraToolStripMenuItem,
             this.encabezadoBoletaToolStripMenuItem,
             this.respaldoDeBaseDeDatosToolStripMenuItem});
-            this.administracinToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.administracinToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.administracinToolStripMenuItem.Name = "administracinToolStripMenuItem";
-            this.administracinToolStripMenuItem.Size = new System.Drawing.Size(127, 25);
+            this.administracinToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.administracinToolStripMenuItem.Text = "Administración";
             // 
             // bitacoraToolStripMenuItem
             // 
             this.bitacoraToolStripMenuItem.Name = "bitacoraToolStripMenuItem";
-            this.bitacoraToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.bitacoraToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
             this.bitacoraToolStripMenuItem.Text = "Bitácora";
             this.bitacoraToolStripMenuItem.Click += new System.EventHandler(this.bitacoraToolStripMenuItem_Click);
             // 
             // encabezadoBoletaToolStripMenuItem
             // 
             this.encabezadoBoletaToolStripMenuItem.Name = "encabezadoBoletaToolStripMenuItem";
-            this.encabezadoBoletaToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.encabezadoBoletaToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
             this.encabezadoBoletaToolStripMenuItem.Text = "Encabezado boleta";
             this.encabezadoBoletaToolStripMenuItem.Click += new System.EventHandler(this.encabezadoBoletaToolStripMenuItem_Click);
             // 
             // respaldoDeBaseDeDatosToolStripMenuItem
             // 
             this.respaldoDeBaseDeDatosToolStripMenuItem.Name = "respaldoDeBaseDeDatosToolStripMenuItem";
-            this.respaldoDeBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.respaldoDeBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
             this.respaldoDeBaseDeDatosToolStripMenuItem.Text = "Respaldo de base de datos";
             this.respaldoDeBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.respaldoDeBaseDeDatosToolStripMenuItem_Click);
             // 
@@ -230,7 +230,7 @@ namespace WSA
             this.toolStrip.BackColor = System.Drawing.Color.White;
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tslbNombreUsuario});
-            this.toolStrip.Location = new System.Drawing.Point(0, 29);
+            this.toolStrip.Location = new System.Drawing.Point(0, 26);
             this.toolStrip.Name = "toolStrip";
             this.toolStrip.Size = new System.Drawing.Size(1147, 25);
             this.toolStrip.TabIndex = 1;
@@ -238,9 +238,9 @@ namespace WSA
             // 
             // tslbNombreUsuario
             // 
-            this.tslbNombreUsuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tslbNombreUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tslbNombreUsuario.Name = "tslbNombreUsuario";
-            this.tslbNombreUsuario.Size = new System.Drawing.Size(108, 22);
+            this.tslbNombreUsuario.Size = new System.Drawing.Size(103, 22);
             this.tslbNombreUsuario.Text = "Nombre usuario";
             // 
             // statusStrip
