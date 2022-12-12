@@ -35,7 +35,7 @@ namespace WSA
             }
             else
             {
-                MessageBox.Show(String.Format("Ya se ecnuentra conectado al puerto {0}", mySerialPort.PortName), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(String.Format("Ya se ecnuentra conectado al puerto {0}", configuracionBascula.Variable("PORT")), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

@@ -54,18 +54,15 @@ namespace WSA
 
         private void btnConectar_Click(object sender, EventArgs e)
         {
-            if(!conectado)
+            if (!conectado)
             {
                 conectado = configuracionBascula.LeerDatos(/*mySerialPort,*/ this, lblConexion, txtPesoBascula);
             }
             else
             {
-                MessageBox.Show(String.Format("Ya se ecnuentra conectado al puerto {0}", ""), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                
-            }
+                MessageBox.Show(String.Format("Ya se ecnuentra conectado al puerto {0}", configuracionBascula.Variable("PORT")), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                    
-            
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
