@@ -123,5 +123,10 @@ namespace WSA
                 MessageBox.Show("Seleccione el barco", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            barco.BuscarBarco(dgvBarcos, txtBuscar.Text);
+        }
     }
 }

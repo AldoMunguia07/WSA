@@ -61,6 +61,8 @@ namespace WSA
                     getValues();
                     boleta.AgregarSalida(boleta);
                     MessageBox.Show("Salida agregada", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FrmTicket frmTicket = new FrmTicket(boleta.UltimaBoleta());
+                    frmTicket.ShowDialog();
                     this.Close();
                 }
                 else

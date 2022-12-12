@@ -668,6 +668,11 @@ BEGIN
 			SELECT * FROM Barco WHERE Barco_Id = @Barco_Id
 			
 		END
+	ELSE IF @accion = 'ultimaBoleta'
+		BEGIN
+			SELECT MAX(Boleta_Id) Boleta_Id FROM Boleta
+			
+		END
 
 END
 GO
