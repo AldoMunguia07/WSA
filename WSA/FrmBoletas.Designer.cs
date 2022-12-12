@@ -33,6 +33,8 @@ namespace WSA
             this.label1 = new System.Windows.Forms.Label();
             this.btnVerBoleta = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBoletas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,10 +47,10 @@ namespace WSA
             this.dgvBoletas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBoletas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBoletas.GridColor = System.Drawing.Color.DimGray;
-            this.dgvBoletas.Location = new System.Drawing.Point(32, 95);
+            this.dgvBoletas.Location = new System.Drawing.Point(32, 199);
             this.dgvBoletas.Name = "dgvBoletas";
             this.dgvBoletas.ReadOnly = true;
-            this.dgvBoletas.Size = new System.Drawing.Size(1142, 196);
+            this.dgvBoletas.Size = new System.Drawing.Size(1228, 196);
             this.dgvBoletas.TabIndex = 13;
             this.dgvBoletas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBoletas_CellMouseClick);
             // 
@@ -57,7 +59,7 @@ namespace WSA
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(554, 29);
+            this.label1.Location = new System.Drawing.Point(597, 133);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 25);
             this.label1.TabIndex = 12;
@@ -66,9 +68,10 @@ namespace WSA
             // btnVerBoleta
             // 
             this.btnVerBoleta.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnVerBoleta.Location = new System.Drawing.Point(32, 312);
+            this.btnVerBoleta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerBoleta.Location = new System.Drawing.Point(32, 416);
             this.btnVerBoleta.Name = "btnVerBoleta";
-            this.btnVerBoleta.Size = new System.Drawing.Size(75, 23);
+            this.btnVerBoleta.Size = new System.Drawing.Size(102, 26);
             this.btnVerBoleta.TabIndex = 14;
             this.btnVerBoleta.Text = "Ver boleta";
             this.btnVerBoleta.UseVisualStyleBackColor = true;
@@ -77,19 +80,43 @@ namespace WSA
             // btnImprimir
             // 
             this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnImprimir.Location = new System.Drawing.Point(113, 312);
+            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.Location = new System.Drawing.Point(154, 416);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(75, 23);
+            this.btnImprimir.Size = new System.Drawing.Size(86, 26);
             this.btnImprimir.TabIndex = 15;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel2.Location = new System.Drawing.Point(-1, 562);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1288, 30);
+            this.panel2.TabIndex = 23;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1288, 30);
+            this.panel1.TabIndex = 22;
+            // 
             // FrmBoletas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1201, 385);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1287, 592);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnVerBoleta);
             this.Controls.Add(this.dgvBoletas);
@@ -108,5 +135,7 @@ namespace WSA
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnVerBoleta;
         private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

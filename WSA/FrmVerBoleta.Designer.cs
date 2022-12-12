@@ -67,6 +67,8 @@ namespace WSA
             this.label13 = new System.Windows.Forms.Label();
             this.txtPesoNeto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // dtpHoraEntrada
@@ -75,7 +77,7 @@ namespace WSA
             this.dtpHoraEntrada.CalendarMonthBackground = System.Drawing.Color.White;
             this.dtpHoraEntrada.Enabled = false;
             this.dtpHoraEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHoraEntrada.Location = new System.Drawing.Point(374, 119);
+            this.dtpHoraEntrada.Location = new System.Drawing.Point(360, 141);
             this.dtpHoraEntrada.Name = "dtpHoraEntrada";
             this.dtpHoraEntrada.Size = new System.Drawing.Size(83, 20);
             this.dtpHoraEntrada.TabIndex = 109;
@@ -84,7 +86,7 @@ namespace WSA
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(293, 123);
+            this.label16.Location = new System.Drawing.Point(279, 145);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(75, 13);
             this.label16.TabIndex = 108;
@@ -94,7 +96,7 @@ namespace WSA
             // 
             this.txtPesoEntrada.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPesoEntrada.BackColor = System.Drawing.Color.White;
-            this.txtPesoEntrada.Location = new System.Drawing.Point(589, 189);
+            this.txtPesoEntrada.Location = new System.Drawing.Point(575, 211);
             this.txtPesoEntrada.Name = "txtPesoEntrada";
             this.txtPesoEntrada.ReadOnly = true;
             this.txtPesoEntrada.Size = new System.Drawing.Size(179, 20);
@@ -104,7 +106,7 @@ namespace WSA
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(513, 193);
+            this.label15.Location = new System.Drawing.Point(499, 215);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(73, 13);
             this.label15.TabIndex = 106;
@@ -116,7 +118,7 @@ namespace WSA
             this.dtpFechaEntrada.CalendarMonthBackground = System.Drawing.Color.White;
             this.dtpFechaEntrada.Enabled = false;
             this.dtpFechaEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaEntrada.Location = new System.Drawing.Point(178, 119);
+            this.dtpFechaEntrada.Location = new System.Drawing.Point(164, 141);
             this.dtpFechaEntrada.Name = "dtpFechaEntrada";
             this.dtpFechaEntrada.Size = new System.Drawing.Size(109, 20);
             this.dtpFechaEntrada.TabIndex = 105;
@@ -125,7 +127,7 @@ namespace WSA
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(90, 123);
+            this.label14.Location = new System.Drawing.Point(76, 145);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(82, 13);
             this.label14.TabIndex = 104;
@@ -135,7 +137,7 @@ namespace WSA
             // 
             this.txtObservaciones.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtObservaciones.BackColor = System.Drawing.Color.White;
-            this.txtObservaciones.Location = new System.Drawing.Point(589, 338);
+            this.txtObservaciones.Location = new System.Drawing.Point(575, 360);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.ReadOnly = true;
@@ -146,7 +148,7 @@ namespace WSA
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(502, 338);
+            this.label12.Location = new System.Drawing.Point(488, 360);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(81, 13);
             this.label12.TabIndex = 99;
@@ -155,7 +157,7 @@ namespace WSA
             // btnImprimir
             // 
             this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnImprimir.Location = new System.Drawing.Point(760, 487);
+            this.btnImprimir.Location = new System.Drawing.Point(773, 481);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(110, 23);
             this.btnImprimir.TabIndex = 97;
@@ -167,7 +169,7 @@ namespace WSA
             // 
             this.txtPesoSalida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPesoSalida.BackColor = System.Drawing.Color.White;
-            this.txtPesoSalida.Location = new System.Drawing.Point(589, 240);
+            this.txtPesoSalida.Location = new System.Drawing.Point(575, 262);
             this.txtPesoSalida.Name = "txtPesoSalida";
             this.txtPesoSalida.ReadOnly = true;
             this.txtPesoSalida.Size = new System.Drawing.Size(179, 20);
@@ -177,7 +179,7 @@ namespace WSA
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(519, 244);
+            this.label10.Location = new System.Drawing.Point(505, 266);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 13);
             this.label10.TabIndex = 95;
@@ -187,7 +189,7 @@ namespace WSA
             // 
             this.txtEnvioN.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEnvioN.BackColor = System.Drawing.Color.White;
-            this.txtEnvioN.Location = new System.Drawing.Point(355, 256);
+            this.txtEnvioN.Location = new System.Drawing.Point(341, 278);
             this.txtEnvioN.Name = "txtEnvioN";
             this.txtEnvioN.ReadOnly = true;
             this.txtEnvioN.Size = new System.Drawing.Size(91, 20);
@@ -197,7 +199,7 @@ namespace WSA
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(273, 260);
+            this.label9.Location = new System.Drawing.Point(259, 282);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 13);
             this.label9.TabIndex = 92;
@@ -207,7 +209,7 @@ namespace WSA
             // 
             this.txtBarco.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBarco.BackColor = System.Drawing.Color.White;
-            this.txtBarco.Location = new System.Drawing.Point(231, 435);
+            this.txtBarco.Location = new System.Drawing.Point(217, 457);
             this.txtBarco.Name = "txtBarco";
             this.txtBarco.ReadOnly = true;
             this.txtBarco.Size = new System.Drawing.Size(215, 20);
@@ -217,7 +219,7 @@ namespace WSA
             // 
             this.txtCodigoBarco.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCodigoBarco.BackColor = System.Drawing.Color.White;
-            this.txtCodigoBarco.Location = new System.Drawing.Point(178, 435);
+            this.txtCodigoBarco.Location = new System.Drawing.Point(164, 457);
             this.txtCodigoBarco.Name = "txtCodigoBarco";
             this.txtCodigoBarco.ReadOnly = true;
             this.txtCodigoBarco.Size = new System.Drawing.Size(47, 20);
@@ -227,7 +229,7 @@ namespace WSA
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(74, 438);
+            this.label8.Location = new System.Drawing.Point(60, 460);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 13);
             this.label8.TabIndex = 89;
@@ -237,7 +239,7 @@ namespace WSA
             // 
             this.txtProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProducto.BackColor = System.Drawing.Color.White;
-            this.txtProducto.Location = new System.Drawing.Point(231, 371);
+            this.txtProducto.Location = new System.Drawing.Point(217, 393);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.ReadOnly = true;
             this.txtProducto.Size = new System.Drawing.Size(215, 20);
@@ -247,7 +249,7 @@ namespace WSA
             // 
             this.txtCodigoProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCodigoProducto.BackColor = System.Drawing.Color.White;
-            this.txtCodigoProducto.Location = new System.Drawing.Point(178, 371);
+            this.txtCodigoProducto.Location = new System.Drawing.Point(164, 393);
             this.txtCodigoProducto.Name = "txtCodigoProducto";
             this.txtCodigoProducto.ReadOnly = true;
             this.txtCodigoProducto.Size = new System.Drawing.Size(47, 20);
@@ -257,7 +259,7 @@ namespace WSA
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(66, 374);
+            this.label7.Location = new System.Drawing.Point(52, 396);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 13);
             this.label7.TabIndex = 86;
@@ -267,7 +269,7 @@ namespace WSA
             // 
             this.txtCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCliente.BackColor = System.Drawing.Color.White;
-            this.txtCliente.Location = new System.Drawing.Point(231, 306);
+            this.txtCliente.Location = new System.Drawing.Point(217, 328);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.ReadOnly = true;
             this.txtCliente.Size = new System.Drawing.Size(215, 20);
@@ -277,7 +279,7 @@ namespace WSA
             // 
             this.txtCodigoCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCodigoCliente.BackColor = System.Drawing.Color.White;
-            this.txtCodigoCliente.Location = new System.Drawing.Point(178, 306);
+            this.txtCodigoCliente.Location = new System.Drawing.Point(164, 328);
             this.txtCodigoCliente.Name = "txtCodigoCliente";
             this.txtCodigoCliente.ReadOnly = true;
             this.txtCodigoCliente.Size = new System.Drawing.Size(47, 20);
@@ -287,7 +289,7 @@ namespace WSA
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(72, 309);
+            this.label6.Location = new System.Drawing.Point(58, 331);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 13);
             this.label6.TabIndex = 83;
@@ -297,7 +299,7 @@ namespace WSA
             // 
             this.txtCia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCia.BackColor = System.Drawing.Color.White;
-            this.txtCia.Location = new System.Drawing.Point(178, 256);
+            this.txtCia.Location = new System.Drawing.Point(164, 278);
             this.txtCia.Name = "txtCia";
             this.txtCia.ReadOnly = true;
             this.txtCia.Size = new System.Drawing.Size(91, 20);
@@ -307,7 +309,7 @@ namespace WSA
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(60, 260);
+            this.label5.Location = new System.Drawing.Point(46, 282);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 13);
             this.label5.TabIndex = 81;
@@ -317,7 +319,7 @@ namespace WSA
             // 
             this.txtPlacaRastra.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPlacaRastra.BackColor = System.Drawing.Color.White;
-            this.txtPlacaRastra.Location = new System.Drawing.Point(355, 208);
+            this.txtPlacaRastra.Location = new System.Drawing.Point(341, 230);
             this.txtPlacaRastra.Name = "txtPlacaRastra";
             this.txtPlacaRastra.ReadOnly = true;
             this.txtPlacaRastra.Size = new System.Drawing.Size(91, 20);
@@ -327,7 +329,7 @@ namespace WSA
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(286, 212);
+            this.label4.Location = new System.Drawing.Point(272, 234);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 79;
@@ -337,7 +339,7 @@ namespace WSA
             // 
             this.txtPlacaCabezal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPlacaCabezal.BackColor = System.Drawing.Color.White;
-            this.txtPlacaCabezal.Location = new System.Drawing.Point(178, 208);
+            this.txtPlacaCabezal.Location = new System.Drawing.Point(164, 230);
             this.txtPlacaCabezal.Name = "txtPlacaCabezal";
             this.txtPlacaCabezal.ReadOnly = true;
             this.txtPlacaCabezal.Size = new System.Drawing.Size(91, 20);
@@ -347,7 +349,7 @@ namespace WSA
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(80, 212);
+            this.label3.Location = new System.Drawing.Point(66, 234);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 13);
             this.label3.TabIndex = 77;
@@ -357,7 +359,7 @@ namespace WSA
             // 
             this.txtConductor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtConductor.BackColor = System.Drawing.Color.White;
-            this.txtConductor.Location = new System.Drawing.Point(231, 155);
+            this.txtConductor.Location = new System.Drawing.Point(217, 177);
             this.txtConductor.Name = "txtConductor";
             this.txtConductor.ReadOnly = true;
             this.txtConductor.Size = new System.Drawing.Size(215, 20);
@@ -367,7 +369,7 @@ namespace WSA
             // 
             this.txtCodigoConductor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCodigoConductor.BackColor = System.Drawing.Color.White;
-            this.txtCodigoConductor.Location = new System.Drawing.Point(178, 155);
+            this.txtCodigoConductor.Location = new System.Drawing.Point(164, 177);
             this.txtCodigoConductor.Name = "txtCodigoConductor";
             this.txtCodigoConductor.ReadOnly = true;
             this.txtCodigoConductor.Size = new System.Drawing.Size(47, 20);
@@ -377,7 +379,7 @@ namespace WSA
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 158);
+            this.label2.Location = new System.Drawing.Point(49, 180);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 13);
             this.label2.TabIndex = 74;
@@ -388,7 +390,7 @@ namespace WSA
             this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(417, 42);
+            this.lblTitulo.Location = new System.Drawing.Point(403, 64);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(99, 25);
             this.lblTitulo.TabIndex = 73;
@@ -400,7 +402,7 @@ namespace WSA
             this.dtpHoraSalida.CalendarMonthBackground = System.Drawing.Color.White;
             this.dtpHoraSalida.Enabled = false;
             this.dtpHoraSalida.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHoraSalida.Location = new System.Drawing.Point(771, 119);
+            this.dtpHoraSalida.Location = new System.Drawing.Point(757, 141);
             this.dtpHoraSalida.Name = "dtpHoraSalida";
             this.dtpHoraSalida.Size = new System.Drawing.Size(83, 20);
             this.dtpHoraSalida.TabIndex = 113;
@@ -409,7 +411,7 @@ namespace WSA
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(690, 123);
+            this.label11.Location = new System.Drawing.Point(676, 145);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(60, 13);
             this.label11.TabIndex = 112;
@@ -421,7 +423,7 @@ namespace WSA
             this.dtpFechaSalida.CalendarMonthBackground = System.Drawing.Color.White;
             this.dtpFechaSalida.Enabled = false;
             this.dtpFechaSalida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaSalida.Location = new System.Drawing.Point(575, 119);
+            this.dtpFechaSalida.Location = new System.Drawing.Point(561, 141);
             this.dtpFechaSalida.Name = "dtpFechaSalida";
             this.dtpFechaSalida.Size = new System.Drawing.Size(109, 20);
             this.dtpFechaSalida.TabIndex = 111;
@@ -430,7 +432,7 @@ namespace WSA
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(487, 123);
+            this.label13.Location = new System.Drawing.Point(473, 145);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(70, 13);
             this.label13.TabIndex = 110;
@@ -440,7 +442,7 @@ namespace WSA
             // 
             this.txtPesoNeto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPesoNeto.BackColor = System.Drawing.Color.White;
-            this.txtPesoNeto.Location = new System.Drawing.Point(589, 290);
+            this.txtPesoNeto.Location = new System.Drawing.Point(575, 312);
             this.txtPesoNeto.Name = "txtPesoNeto";
             this.txtPesoNeto.ReadOnly = true;
             this.txtPesoNeto.Size = new System.Drawing.Size(179, 20);
@@ -450,17 +452,40 @@ namespace WSA
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(519, 294);
+            this.label1.Location = new System.Drawing.Point(505, 316);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 114;
             this.label1.Text = "Peso neto:";
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel2.Location = new System.Drawing.Point(-8, 536);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(950, 30);
+            this.panel2.TabIndex = 117;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel1.Location = new System.Drawing.Point(-8, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(950, 30);
+            this.panel1.TabIndex = 116;
+            // 
             // FrmVerBoleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 522);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(942, 566);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtPesoNeto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpHoraSalida);
@@ -547,5 +572,7 @@ namespace WSA
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtPesoNeto;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -66,14 +66,16 @@ namespace WSA
             this.lblConsultarClientes = new System.Windows.Forms.LinkLabel();
             this.lblConsultarProductos = new System.Windows.Forms.LinkLabel();
             this.lblConsultarBarcos = new System.Windows.Forms.LinkLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(325, 9);
+            this.label1.Location = new System.Drawing.Point(359, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 25);
             this.label1.TabIndex = 0;
@@ -83,7 +85,7 @@ namespace WSA
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 66);
+            this.label2.Location = new System.Drawing.Point(26, 153);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 13);
             this.label2.TabIndex = 1;
@@ -92,7 +94,7 @@ namespace WSA
             // txtCodigoConductor
             // 
             this.txtCodigoConductor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodigoConductor.Location = new System.Drawing.Point(124, 63);
+            this.txtCodigoConductor.Location = new System.Drawing.Point(141, 150);
             this.txtCodigoConductor.Name = "txtCodigoConductor";
             this.txtCodigoConductor.Size = new System.Drawing.Size(47, 20);
             this.txtCodigoConductor.TabIndex = 2;
@@ -102,7 +104,7 @@ namespace WSA
             // 
             this.txtConductor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtConductor.BackColor = System.Drawing.Color.White;
-            this.txtConductor.Location = new System.Drawing.Point(177, 63);
+            this.txtConductor.Location = new System.Drawing.Point(194, 150);
             this.txtConductor.Name = "txtConductor";
             this.txtConductor.ReadOnly = true;
             this.txtConductor.Size = new System.Drawing.Size(215, 20);
@@ -111,7 +113,7 @@ namespace WSA
             // txtPlacaCabezal
             // 
             this.txtPlacaCabezal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPlacaCabezal.Location = new System.Drawing.Point(124, 116);
+            this.txtPlacaCabezal.Location = new System.Drawing.Point(141, 203);
             this.txtPlacaCabezal.Name = "txtPlacaCabezal";
             this.txtPlacaCabezal.Size = new System.Drawing.Size(91, 20);
             this.txtPlacaCabezal.TabIndex = 5;
@@ -120,7 +122,7 @@ namespace WSA
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 120);
+            this.label3.Location = new System.Drawing.Point(43, 207);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 13);
             this.label3.TabIndex = 4;
@@ -129,7 +131,7 @@ namespace WSA
             // txtPlacaRastra
             // 
             this.txtPlacaRastra.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPlacaRastra.Location = new System.Drawing.Point(301, 116);
+            this.txtPlacaRastra.Location = new System.Drawing.Point(318, 203);
             this.txtPlacaRastra.Name = "txtPlacaRastra";
             this.txtPlacaRastra.Size = new System.Drawing.Size(91, 20);
             this.txtPlacaRastra.TabIndex = 7;
@@ -138,7 +140,7 @@ namespace WSA
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(232, 120);
+            this.label4.Location = new System.Drawing.Point(249, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 6;
@@ -147,7 +149,7 @@ namespace WSA
             // txtCia
             // 
             this.txtCia.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCia.Location = new System.Drawing.Point(124, 164);
+            this.txtCia.Location = new System.Drawing.Point(141, 251);
             this.txtCia.Name = "txtCia";
             this.txtCia.Size = new System.Drawing.Size(91, 20);
             this.txtCia.TabIndex = 9;
@@ -156,7 +158,7 @@ namespace WSA
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 168);
+            this.label5.Location = new System.Drawing.Point(23, 255);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 13);
             this.label5.TabIndex = 8;
@@ -166,7 +168,7 @@ namespace WSA
             // 
             this.txtCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCliente.BackColor = System.Drawing.Color.White;
-            this.txtCliente.Location = new System.Drawing.Point(177, 230);
+            this.txtCliente.Location = new System.Drawing.Point(194, 317);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.ReadOnly = true;
             this.txtCliente.Size = new System.Drawing.Size(215, 20);
@@ -175,7 +177,7 @@ namespace WSA
             // txtCodigoCliente
             // 
             this.txtCodigoCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodigoCliente.Location = new System.Drawing.Point(124, 230);
+            this.txtCodigoCliente.Location = new System.Drawing.Point(141, 317);
             this.txtCodigoCliente.Name = "txtCodigoCliente";
             this.txtCodigoCliente.Size = new System.Drawing.Size(47, 20);
             this.txtCodigoCliente.TabIndex = 11;
@@ -185,7 +187,7 @@ namespace WSA
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 233);
+            this.label6.Location = new System.Drawing.Point(35, 320);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 13);
             this.label6.TabIndex = 10;
@@ -195,7 +197,7 @@ namespace WSA
             // 
             this.txtProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProducto.BackColor = System.Drawing.Color.White;
-            this.txtProducto.Location = new System.Drawing.Point(177, 287);
+            this.txtProducto.Location = new System.Drawing.Point(194, 374);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.ReadOnly = true;
             this.txtProducto.Size = new System.Drawing.Size(215, 20);
@@ -204,7 +206,7 @@ namespace WSA
             // txtCodigoProducto
             // 
             this.txtCodigoProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodigoProducto.Location = new System.Drawing.Point(124, 287);
+            this.txtCodigoProducto.Location = new System.Drawing.Point(141, 374);
             this.txtCodigoProducto.Name = "txtCodigoProducto";
             this.txtCodigoProducto.Size = new System.Drawing.Size(47, 20);
             this.txtCodigoProducto.TabIndex = 14;
@@ -214,7 +216,7 @@ namespace WSA
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 290);
+            this.label7.Location = new System.Drawing.Point(29, 377);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 13);
             this.label7.TabIndex = 13;
@@ -224,7 +226,7 @@ namespace WSA
             // 
             this.txtBarco.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBarco.BackColor = System.Drawing.Color.White;
-            this.txtBarco.Location = new System.Drawing.Point(177, 343);
+            this.txtBarco.Location = new System.Drawing.Point(194, 430);
             this.txtBarco.Name = "txtBarco";
             this.txtBarco.ReadOnly = true;
             this.txtBarco.Size = new System.Drawing.Size(215, 20);
@@ -233,7 +235,7 @@ namespace WSA
             // txtCodigoBarco
             // 
             this.txtCodigoBarco.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodigoBarco.Location = new System.Drawing.Point(124, 343);
+            this.txtCodigoBarco.Location = new System.Drawing.Point(141, 430);
             this.txtCodigoBarco.Name = "txtCodigoBarco";
             this.txtCodigoBarco.Size = new System.Drawing.Size(47, 20);
             this.txtCodigoBarco.TabIndex = 17;
@@ -243,7 +245,7 @@ namespace WSA
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(20, 346);
+            this.label8.Location = new System.Drawing.Point(37, 433);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 13);
             this.label8.TabIndex = 16;
@@ -252,7 +254,7 @@ namespace WSA
             // txtEnvioN
             // 
             this.txtEnvioN.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtEnvioN.Location = new System.Drawing.Point(301, 164);
+            this.txtEnvioN.Location = new System.Drawing.Point(318, 251);
             this.txtEnvioN.Name = "txtEnvioN";
             this.txtEnvioN.Size = new System.Drawing.Size(91, 20);
             this.txtEnvioN.TabIndex = 20;
@@ -261,7 +263,7 @@ namespace WSA
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(219, 168);
+            this.label9.Location = new System.Drawing.Point(236, 255);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 13);
             this.label9.TabIndex = 19;
@@ -271,13 +273,13 @@ namespace WSA
             // 
             this.txtPesoBascula.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPesoBascula.BackColor = System.Drawing.Color.Black;
-            this.txtPesoBascula.Font = new System.Drawing.Font("Consolas", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesoBascula.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesoBascula.ForeColor = System.Drawing.Color.White;
-            this.txtPesoBascula.Location = new System.Drawing.Point(549, 49);
+            this.txtPesoBascula.Location = new System.Drawing.Point(566, 136);
             this.txtPesoBascula.Multiline = true;
             this.txtPesoBascula.Name = "txtPesoBascula";
             this.txtPesoBascula.ReadOnly = true;
-            this.txtPesoBascula.Size = new System.Drawing.Size(308, 46);
+            this.txtPesoBascula.Size = new System.Drawing.Size(343, 46);
             this.txtPesoBascula.TabIndex = 21;
             this.txtPesoBascula.Text = "0.00 Kg";
             this.txtPesoBascula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -286,7 +288,7 @@ namespace WSA
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(473, 169);
+            this.label10.Location = new System.Drawing.Point(490, 256);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 13);
             this.label10.TabIndex = 22;
@@ -296,7 +298,7 @@ namespace WSA
             // 
             this.txtPesoEntrada.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPesoEntrada.BackColor = System.Drawing.Color.White;
-            this.txtPesoEntrada.Location = new System.Drawing.Point(549, 165);
+            this.txtPesoEntrada.Location = new System.Drawing.Point(566, 252);
             this.txtPesoEntrada.Name = "txtPesoEntrada";
             this.txtPesoEntrada.ReadOnly = true;
             this.txtPesoEntrada.Size = new System.Drawing.Size(179, 20);
@@ -305,7 +307,7 @@ namespace WSA
             // btnObtenerPeso
             // 
             this.btnObtenerPeso.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnObtenerPeso.Location = new System.Drawing.Point(747, 163);
+            this.btnObtenerPeso.Location = new System.Drawing.Point(764, 250);
             this.btnObtenerPeso.Name = "btnObtenerPeso";
             this.btnObtenerPeso.Size = new System.Drawing.Size(110, 23);
             this.btnObtenerPeso.TabIndex = 24;
@@ -317,7 +319,7 @@ namespace WSA
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(442, 66);
+            this.label11.Location = new System.Drawing.Point(459, 153);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(101, 13);
             this.label11.TabIndex = 25;
@@ -327,7 +329,7 @@ namespace WSA
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(462, 217);
+            this.label12.Location = new System.Drawing.Point(479, 304);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(81, 13);
             this.label12.TabIndex = 26;
@@ -336,7 +338,7 @@ namespace WSA
             // txtObservaciones
             // 
             this.txtObservaciones.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtObservaciones.Location = new System.Drawing.Point(549, 217);
+            this.txtObservaciones.Location = new System.Drawing.Point(566, 304);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(308, 90);
@@ -345,7 +347,7 @@ namespace WSA
             // btnGuardar
             // 
             this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGuardar.Location = new System.Drawing.Point(549, 346);
+            this.btnGuardar.Location = new System.Drawing.Point(566, 433);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(105, 27);
             this.btnGuardar.TabIndex = 28;
@@ -356,7 +358,7 @@ namespace WSA
             // btnCancelar
             // 
             this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancelar.Location = new System.Drawing.Point(689, 346);
+            this.btnCancelar.Location = new System.Drawing.Point(706, 433);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(105, 27);
             this.btnCancelar.TabIndex = 29;
@@ -370,7 +372,7 @@ namespace WSA
             this.lblConexion.AutoSize = true;
             this.lblConexion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConexion.ForeColor = System.Drawing.Color.Red;
-            this.lblConexion.Location = new System.Drawing.Point(615, 118);
+            this.lblConexion.Location = new System.Drawing.Point(632, 205);
             this.lblConexion.Name = "lblConexion";
             this.lblConexion.Size = new System.Drawing.Size(89, 13);
             this.lblConexion.TabIndex = 30;
@@ -380,7 +382,7 @@ namespace WSA
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(442, 118);
+            this.label13.Location = new System.Drawing.Point(459, 205);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(176, 13);
             this.label13.TabIndex = 31;
@@ -389,7 +391,7 @@ namespace WSA
             // btnConectar
             // 
             this.btnConectar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnConectar.Location = new System.Drawing.Point(782, 113);
+            this.btnConectar.Location = new System.Drawing.Point(799, 200);
             this.btnConectar.Name = "btnConectar";
             this.btnConectar.Size = new System.Drawing.Size(75, 23);
             this.btnConectar.TabIndex = 32;
@@ -399,8 +401,9 @@ namespace WSA
             // 
             // lblConsultarConductores
             // 
+            this.lblConsultarConductores.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblConsultarConductores.AutoSize = true;
-            this.lblConsultarConductores.Location = new System.Drawing.Point(279, 47);
+            this.lblConsultarConductores.Location = new System.Drawing.Point(296, 134);
             this.lblConsultarConductores.Name = "lblConsultarConductores";
             this.lblConsultarConductores.Size = new System.Drawing.Size(113, 13);
             this.lblConsultarConductores.TabIndex = 33;
@@ -410,8 +413,9 @@ namespace WSA
             // 
             // lblConsultarClientes
             // 
+            this.lblConsultarClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblConsultarClientes.AutoSize = true;
-            this.lblConsultarClientes.Location = new System.Drawing.Point(302, 214);
+            this.lblConsultarClientes.Location = new System.Drawing.Point(319, 301);
             this.lblConsultarClientes.Name = "lblConsultarClientes";
             this.lblConsultarClientes.Size = new System.Drawing.Size(90, 13);
             this.lblConsultarClientes.TabIndex = 34;
@@ -421,8 +425,9 @@ namespace WSA
             // 
             // lblConsultarProductos
             // 
+            this.lblConsultarProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblConsultarProductos.AutoSize = true;
-            this.lblConsultarProductos.Location = new System.Drawing.Point(291, 271);
+            this.lblConsultarProductos.Location = new System.Drawing.Point(308, 358);
             this.lblConsultarProductos.Name = "lblConsultarProductos";
             this.lblConsultarProductos.Size = new System.Drawing.Size(101, 13);
             this.lblConsultarProductos.TabIndex = 35;
@@ -432,8 +437,9 @@ namespace WSA
             // 
             // lblConsultarBarcos
             // 
+            this.lblConsultarBarcos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblConsultarBarcos.AutoSize = true;
-            this.lblConsultarBarcos.Location = new System.Drawing.Point(306, 327);
+            this.lblConsultarBarcos.Location = new System.Drawing.Point(323, 414);
             this.lblConsultarBarcos.Name = "lblConsultarBarcos";
             this.lblConsultarBarcos.Size = new System.Drawing.Size(86, 13);
             this.lblConsultarBarcos.TabIndex = 36;
@@ -441,11 +447,34 @@ namespace WSA
             this.lblConsultarBarcos.Text = "Consultar barcos";
             this.lblConsultarBarcos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblConsultarBarcos_LinkClicked);
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel2.Location = new System.Drawing.Point(-1, 570);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(939, 30);
+            this.panel2.TabIndex = 38;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(939, 30);
+            this.panel1.TabIndex = 37;
+            // 
             // FrmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 427);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(939, 600);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblConsultarBarcos);
             this.Controls.Add(this.lblConsultarProductos);
             this.Controls.Add(this.lblConsultarClientes);
@@ -531,5 +560,7 @@ namespace WSA
         private System.Windows.Forms.LinkLabel lblConsultarClientes;
         private System.Windows.Forms.LinkLabel lblConsultarProductos;
         private System.Windows.Forms.LinkLabel lblConsultarBarcos;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
