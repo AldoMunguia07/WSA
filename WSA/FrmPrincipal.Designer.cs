@@ -55,6 +55,7 @@ namespace WSA
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.configuraciónIndicadorDeBásculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -154,35 +155,35 @@ namespace WSA
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.clienteToolStripMenuItem.Text = "Clientes";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // conductoresToolStripMenuItem
             // 
             this.conductoresToolStripMenuItem.Name = "conductoresToolStripMenuItem";
-            this.conductoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.conductoresToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.conductoresToolStripMenuItem.Text = "Conductores";
             this.conductoresToolStripMenuItem.Click += new System.EventHandler(this.conductoresToolStripMenuItem_Click);
             // 
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
             // barcosToolStripMenuItem
             // 
             this.barcosToolStripMenuItem.Name = "barcosToolStripMenuItem";
-            this.barcosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.barcosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.barcosToolStripMenuItem.Text = "Barcos";
             this.barcosToolStripMenuItem.Click += new System.EventHandler(this.barcosToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
@@ -198,7 +199,8 @@ namespace WSA
             this.administracinToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bitacoraToolStripMenuItem,
             this.encabezadoBoletaToolStripMenuItem,
-            this.respaldoDeBaseDeDatosToolStripMenuItem});
+            this.respaldoDeBaseDeDatosToolStripMenuItem,
+            this.configuraciónIndicadorDeBásculaToolStripMenuItem});
             this.administracinToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.administracinToolStripMenuItem.Name = "administracinToolStripMenuItem";
             this.administracinToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
@@ -207,21 +209,21 @@ namespace WSA
             // bitacoraToolStripMenuItem
             // 
             this.bitacoraToolStripMenuItem.Name = "bitacoraToolStripMenuItem";
-            this.bitacoraToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
+            this.bitacoraToolStripMenuItem.Size = new System.Drawing.Size(361, 22);
             this.bitacoraToolStripMenuItem.Text = "Bitácora";
             this.bitacoraToolStripMenuItem.Click += new System.EventHandler(this.bitacoraToolStripMenuItem_Click);
             // 
             // encabezadoBoletaToolStripMenuItem
             // 
             this.encabezadoBoletaToolStripMenuItem.Name = "encabezadoBoletaToolStripMenuItem";
-            this.encabezadoBoletaToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
+            this.encabezadoBoletaToolStripMenuItem.Size = new System.Drawing.Size(361, 22);
             this.encabezadoBoletaToolStripMenuItem.Text = "Encabezado boleta";
             this.encabezadoBoletaToolStripMenuItem.Click += new System.EventHandler(this.encabezadoBoletaToolStripMenuItem_Click);
             // 
             // respaldoDeBaseDeDatosToolStripMenuItem
             // 
             this.respaldoDeBaseDeDatosToolStripMenuItem.Name = "respaldoDeBaseDeDatosToolStripMenuItem";
-            this.respaldoDeBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(300, 22);
+            this.respaldoDeBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(361, 22);
             this.respaldoDeBaseDeDatosToolStripMenuItem.Text = "Respaldo de base de datos";
             this.respaldoDeBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.respaldoDeBaseDeDatosToolStripMenuItem_Click);
             // 
@@ -259,6 +261,13 @@ namespace WSA
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
+            // 
+            // configuraciónIndicadorDeBásculaToolStripMenuItem
+            // 
+            this.configuraciónIndicadorDeBásculaToolStripMenuItem.Name = "configuraciónIndicadorDeBásculaToolStripMenuItem";
+            this.configuraciónIndicadorDeBásculaToolStripMenuItem.Size = new System.Drawing.Size(361, 22);
+            this.configuraciónIndicadorDeBásculaToolStripMenuItem.Text = "Configuración indicador de báscula";
+            this.configuraciónIndicadorDeBásculaToolStripMenuItem.Click += new System.EventHandler(this.configuraciónIndicadorDeBásculaToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -312,6 +321,7 @@ namespace WSA
         private System.Windows.Forms.ToolStripMenuItem respaldoDeBaseDeDatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem entradasAnuladasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem miUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configuraciónIndicadorDeBásculaToolStripMenuItem;
     }
 }
 

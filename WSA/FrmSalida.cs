@@ -15,7 +15,7 @@ namespace WSA
     public partial class FrmSalida : Form
     {
         Boleta boleta = new Boleta();
-        ConfiguracionBascula configuracionBascula = new ConfiguracionBascula();
+        Indicador configuracionBascula = new Indicador();
         private bool conectado = false;
         private int idBoleta = 0;
         public FrmSalida(int boletaId)
@@ -35,7 +35,7 @@ namespace WSA
             }
             else
             {
-                MessageBox.Show(String.Format("Ya se ecnuentra conectado al puerto {0}", configuracionBascula.Variable("PORT")), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Ya se ecnuentra conectado", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

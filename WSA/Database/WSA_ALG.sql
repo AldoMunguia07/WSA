@@ -167,6 +167,24 @@ CREATE TABLE Encabezado_Boleta
 );
 GO
 
+CREATE TABLE Indicador
+(
+	Indicador_Id INT NOT NULL IDENTITY,
+	Port_Name VARCHAR(70) NOT NULL,
+	Baud_Rate INT NOT NULL,
+	Data_Bits INT NOT NULL,
+	Parity VARCHAR(40) NOT NULL,	
+	Stop_Bit VARCHAR(40) NOT NULL
+
+
+
+
+	CONSTRAINT PK_Indicador_Indicador_Id
+		PRIMARY KEY CLUSTERED (Indicador_Id)
+
+);
+GO
+
 
 --INSERTS
 INSERT INTO Tipo_Usuario VALUES('Administrador');
@@ -572,6 +590,33 @@ BEGIN
 	ELSE IF @accion = 'obtenerEncabezado'
 	BEGIN
 		SELECT TOP (1) * FROM Encabezado_Boleta
+	END
+
+END
+GO
+
+ALTER PROCEDURE sp_Indicador
+@Indicador_Id INT = NULL,
+@Port_Name VARCHAR(40) = NULL,
+@Baud_Rate INT = NULL,
+@Data_Bits INT = NULL,
+@Parity VARCHAR(40) = NULL,
+@Stop_Bit VARCHAR(40) = NULL,
+@accion VARCHAR(50)
+
+AS
+BEGIN
+	IF @accion = 'insertar'
+	BEGIN
+		INSERT INTO Indicador VALUES (@Port_Name, @Baud_Rate, @Data_Bits, @Parity, @Stop_Bit)
+	END
+	ELSE IF @accion = 'modificar'
+	BEGIN
+		UPDATE Indicador SET Port_Name = @Port_Name, Baud_Rate = @Baud_Rate, Data_Bits = @Data_Bits, Parity = @Parity, Stop_Bit = @Stop_Bit  WHERE  Indicador_Id = @Indicador_Id
+	END
+	ELSE IF @accion = 'obtenerIndicador'
+	BEGIN
+		SELECT TOP (1) * FROM Indicador
 	END
 
 END

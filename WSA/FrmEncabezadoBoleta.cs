@@ -33,7 +33,7 @@ namespace WSA
                 {
                     encabezadoBoleta.ModificarEncabezadoBoleta(encabezadoBoleta);
                 }
-                MessageBox.Show("Cambios guardados", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cambios guardados", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 encabezadoBoleta.CargarFormularioEncabezadoBoleta(txtEmpresa, txtDireccion, txtTelefono);
 
             }

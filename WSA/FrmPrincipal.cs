@@ -208,5 +208,12 @@ namespace WSA
             CargarFormulario(frmEntradasAnuladas);
             
         }
+
+        private void configuraciónIndicadorDeBásculaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmIndicadorBascula frmIndicadorBascula = new FrmIndicadorBascula();
+            CerrarFormularios();
+            CargarFormulario(frmIndicadorBascula);
+        }
     }
 }

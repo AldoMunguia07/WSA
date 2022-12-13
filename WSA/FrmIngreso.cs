@@ -15,7 +15,7 @@ namespace WSA
 {
     public partial class FrmIngreso : Form
     {
-        ConfiguracionBascula configuracionBascula = new ConfiguracionBascula();
+        Indicador indicador = new Indicador();
         Boleta boleta = new Boleta();
         Conductor conductor = new Conductor();
         private bool conectado = false;
@@ -23,7 +23,7 @@ namespace WSA
         {
             InitializeComponent();
             
-            conectado = configuracionBascula.LeerDatos(/*mySerialPort,*/ this, lblConexion, txtPesoBascula);
+            conectado = indicador.LeerDatos(/*mySerialPort,*/ this, lblConexion, txtPesoBascula);
             
 
 
@@ -35,13 +35,13 @@ namespace WSA
             Match m = Regex.Match(txtPesoBascula.Text, "(\\d+).(\\d+)|(\\d+)");
             if(float.Parse(m.Value) > 0)
             {
-                if(float.Parse(m.Value) < float.Parse(configuracionBascula.Variable("MAX")))
+                if(float.Parse(m.Value) < float.Parse(indicador.Variable("MAX")))
                 {
                     txtPesoEntrada.Text = m.Value;
                 }
                 else
                 {
-                    MessageBox.Show(String.Format("El peso máximo es {0}", configuracionBascula.Variable("MAX")), "AWS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(String.Format("El peso máximo es {0}", indicador.Variable("MAX")), "AWS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 
             }
@@ -56,11 +56,11 @@ namespace WSA
         {
             if (!conectado)
             {
-                conectado = configuracionBascula.LeerDatos(/*mySerialPort,*/ this, lblConexion, txtPesoBascula);
+                conectado = indicador.LeerDatos(/*mySerialPort,*/ this, lblConexion, txtPesoBascula);
             }
             else
             {
-                MessageBox.Show(String.Format("Ya se ecnuentra conectado al puerto {0}", configuracionBascula.Variable("PORT")), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ya se ecnuentra conectado", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }
@@ -193,7 +193,7 @@ namespace WSA
         private void FrmIngreso_FormClosed(object sender, FormClosedEventArgs e)
         {
 
-            configuracionBascula.Desconectar();
+            indicador.Desconectar();
 
 
 
