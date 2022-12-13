@@ -242,7 +242,7 @@ namespace WSA
             this.Controls.Add(this.cmbParidad);
             this.Name = "FrmIndicadorBascula";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmIndicadorBascula";
+            this.Text = "Indicador de la báscula";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -33,22 +33,26 @@ namespace WSA
         {
 
             Match m = Regex.Match(txtPesoBascula.Text, "(\\d+).(\\d+)|(\\d+)");
-            if(float.Parse(m.Value) > 0)
+            if(m.Success)
             {
-                if(float.Parse(m.Value) < float.Parse(indicador.Variable("MAX")))
+                if (float.Parse(m.Value) > 0)
                 {
-                    txtPesoEntrada.Text = m.Value;
+                    if (float.Parse(m.Value) < float.Parse(indicador.Variable("MAX")))
+                    {
+                        txtPesoEntrada.Text = m.Value;
+                    }
+                    else
+                    {
+                        MessageBox.Show(String.Format("El peso máximo es {0}", indicador.Variable("MAX")), "AWS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show(String.Format("El peso máximo es {0}", indicador.Variable("MAX")), "AWS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("El peso debe ser mayor a 0", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                
             }
-            else
-            {
-                MessageBox.Show("El peso debe ser mayor a 0", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            
             
         }
 

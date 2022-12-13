@@ -39,17 +39,27 @@ namespace WSA
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            getValues();
-            if(!indicador.ExisteIndicador(indicador))
+           
+            if(cmbPuertos.Items.Count > 0)
             {
-                indicador.AgregarIndicador(indicador);
+                getValues();
+                if (!indicador.ExisteIndicador(indicador))
+                {
+                    indicador.AgregarIndicador(indicador);
+                }
+                else
+                {
+                    indicador.ModificarIndicador(indicador);
+                }
+                MessageBox.Show("Cambios guardados", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                indicador.CargarFormuarioIndicador(cmbPuertos, cmbVelocidad, cmbDataBits, cmbParidad, cmbStopBit);
+
             }
             else
             {
-                indicador.ModificarIndicador(indicador);
+                MessageBox.Show("No se ha detectado ningún puerto, conecte el cable serial", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            MessageBox.Show("Cambios guardados", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            indicador.CargarFormuarioIndicador(cmbPuertos, cmbVelocidad, cmbDataBits, cmbParidad, cmbStopBit);
+            
 
         }
 
