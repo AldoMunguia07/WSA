@@ -99,20 +99,20 @@ namespace WSA
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(330, 143);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 18);
+            this.label1.Size = new System.Drawing.Size(68, 18);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Puertos";
+            this.label1.Text = "Puerto:";
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(324, 196);
+            this.label2.Location = new System.Drawing.Point(321, 196);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 18);
+            this.label2.Size = new System.Drawing.Size(93, 18);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Velocidad";
+            this.label2.Text = "Velocidad:";
             // 
             // label3
             // 
@@ -121,9 +121,9 @@ namespace WSA
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(330, 304);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 18);
+            this.label3.Size = new System.Drawing.Size(76, 18);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Paridad";
+            this.label3.Text = "Paridad:";
             // 
             // label4
             // 
@@ -132,9 +132,9 @@ namespace WSA
             this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(329, 354);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 18);
+            this.label4.Size = new System.Drawing.Size(81, 18);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Stop Bit";
+            this.label4.Text = "Stop Bit:";
             // 
             // label5
             // 
@@ -143,9 +143,9 @@ namespace WSA
             this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(326, 254);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 18);
+            this.label5.Size = new System.Drawing.Size(92, 18);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Data Bits";
+            this.label5.Text = "Data Bits:";
             // 
             // cmbDataBits
             // 
