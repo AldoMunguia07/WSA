@@ -132,7 +132,7 @@ namespace WSA.Clases
                 sqlCommand.Parameters.AddWithValue("@Parity", indicador.Parity);
                 sqlCommand.Parameters.AddWithValue("@Stop_Bit", indicador.StopBit);
                 sqlCommand.Parameters.AddWithValue("@accion", "insertar");
-                //bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
+                bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
                 sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -163,7 +163,7 @@ namespace WSA.Clases
                 sqlCommand.Parameters.AddWithValue("@Parity", indicador.Parity);
                 sqlCommand.Parameters.AddWithValue("@Stop_Bit", indicador.StopBit);
                 sqlCommand.Parameters.AddWithValue("@accion", "modificar");
-                //bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
+                bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
                 sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)

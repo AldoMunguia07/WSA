@@ -968,6 +968,38 @@ from inserted
 END
 GO
 
+-- TABLA DE INDICADOR
+
+CREATE TRIGGER Insertar_Idicador
+ON Indicador AFTER INSERT
+AS
+BEGIN
+declare @id sql_variant
+	set @id = (select SESSION_CONTEXT(N'user_id'));
+	INSERT INTO Bitacora
+	select cast(@id as int), 
+SYSTEM_USER,'Indicador',
+CONCAT('Inserción de configuración de indicador con puerto ', Port_Name),
+GETDATE()
+from inserted
+END
+GO
+
+CREATE TRIGGER Modificar_Indicador
+ON Indicador AFTER UPDATE
+AS
+BEGIN
+declare @id sql_variant
+	set @id = (select SESSION_CONTEXT(N'user_id'));
+	INSERT INTO Bitacora
+select cast(@id as int), 
+SYSTEM_USER,'Modificar',
+CONCAT('Modificación de configuración de indicador con puerto ', Port_Name),
+GETDATE()
+from inserted
+END
+GO
+
 -- TABLA DE PRODUCTO
 
 CREATE TRIGGER Insertar_Producto

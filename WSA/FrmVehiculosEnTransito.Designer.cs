@@ -165,7 +165,7 @@ namespace WSA
             this.Controls.Add(this.label1);
             this.Name = "FrmVehiculosEnTransito";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "0";
+            this.Text = "Vehículos en transito";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
