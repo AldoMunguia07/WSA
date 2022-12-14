@@ -18,5 +18,15 @@ namespace WSA
             InitializeComponent();
             boleta.MostrarEntradasAnuladas(dgvEntradasAnuladas);
         }
+
+        private void dgvEntradasAnuladas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvEntradasAnuladas.Rows[e.RowIndex];
+                row.Selected = true;
+
+            }
+        }
     }
 }

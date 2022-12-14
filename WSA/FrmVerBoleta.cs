@@ -29,5 +29,7 @@ namespace WSA
             FrmTicket frmTicket = new FrmTicket(idBoleta);
             frmTicket.ShowDialog();
         }
+
+      
     }
 }

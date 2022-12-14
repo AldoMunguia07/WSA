@@ -69,6 +69,7 @@ namespace WSA
             this.dgvEntradasAnuladas.ReadOnly = true;
             this.dgvEntradasAnuladas.Size = new System.Drawing.Size(934, 193);
             this.dgvEntradasAnuladas.TabIndex = 12;
+            this.dgvEntradasAnuladas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvEntradasAnuladas_CellMouseClick);
             // 
             // label1
             // 

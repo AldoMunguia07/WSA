@@ -60,7 +60,7 @@ namespace WSA
             this.dgvBitacora.AllowUserToAddRows = false;
             this.dgvBitacora.AllowUserToDeleteRows = false;
             this.dgvBitacora.AllowUserToOrderColumns = true;
-            this.dgvBitacora.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvBitacora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvBitacora.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBitacora.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
@@ -85,7 +85,8 @@ namespace WSA
             this.dgvBitacora.Name = "dgvBitacora";
             this.dgvBitacora.ReadOnly = true;
             this.dgvBitacora.Size = new System.Drawing.Size(1313, 196);
-            this.dgvBitacora.TabIndex = 4;
+            this.dgvBitacora.TabIndex = 3;
+            this.dgvBitacora.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBitacora_CellMouseClick);
             // 
             // label1
             // 
@@ -105,7 +106,7 @@ namespace WSA
             this.dtpFechaInicio.Location = new System.Drawing.Point(356, 171);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(330, 27);
-            this.dtpFechaInicio.TabIndex = 6;
+            this.dtpFechaInicio.TabIndex = 0;
             this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechaInicio_ValueChanged);
             // 
             // dtpFechaFinal
@@ -115,7 +116,7 @@ namespace WSA
             this.dtpFechaFinal.Location = new System.Drawing.Point(782, 171);
             this.dtpFechaFinal.Name = "dtpFechaFinal";
             this.dtpFechaFinal.Size = new System.Drawing.Size(333, 27);
-            this.dtpFechaFinal.TabIndex = 8;
+            this.dtpFechaFinal.TabIndex = 1;
             this.dtpFechaFinal.ValueChanged += new System.EventHandler(this.dtpFechaFinal_ValueChanged);
             // 
             // label3
@@ -147,7 +148,7 @@ namespace WSA
             this.txtBuscar.Location = new System.Drawing.Point(294, 228);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(309, 27);
-            this.txtBuscar.TabIndex = 9;
+            this.txtBuscar.TabIndex = 2;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // panel2
@@ -197,7 +198,6 @@ namespace WSA
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvBitacora;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpFechaInicio;
         private System.Windows.Forms.DateTimePicker dtpFechaFinal;
@@ -206,5 +206,6 @@ namespace WSA
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dgvBitacora;
     }
 }

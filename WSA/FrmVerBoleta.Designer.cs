@@ -81,7 +81,7 @@ namespace WSA
             this.dtpHoraEntrada.Location = new System.Drawing.Point(472, 149);
             this.dtpHoraEntrada.Name = "dtpHoraEntrada";
             this.dtpHoraEntrada.Size = new System.Drawing.Size(104, 27);
-            this.dtpHoraEntrada.TabIndex = 109;
+            this.dtpHoraEntrada.TabIndex = 1;
             // 
             // label16
             // 
@@ -103,7 +103,7 @@ namespace WSA
             this.txtPesoEntrada.Name = "txtPesoEntrada";
             this.txtPesoEntrada.ReadOnly = true;
             this.txtPesoEntrada.Size = new System.Drawing.Size(179, 27);
-            this.txtPesoEntrada.TabIndex = 107;
+            this.txtPesoEntrada.TabIndex = 17;
             // 
             // label15
             // 
@@ -126,7 +126,7 @@ namespace WSA
             this.dtpFechaEntrada.Location = new System.Drawing.Point(188, 149);
             this.dtpFechaEntrada.Name = "dtpFechaEntrada";
             this.dtpFechaEntrada.Size = new System.Drawing.Size(143, 27);
-            this.dtpFechaEntrada.TabIndex = 105;
+            this.dtpFechaEntrada.TabIndex = 0;
             // 
             // label14
             // 
@@ -149,7 +149,7 @@ namespace WSA
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.ReadOnly = true;
             this.txtObservaciones.Size = new System.Drawing.Size(308, 90);
-            this.txtObservaciones.TabIndex = 100;
+            this.txtObservaciones.TabIndex = 20;
             // 
             // label12
             // 
@@ -172,7 +172,7 @@ namespace WSA
             this.btnImprimir.Location = new System.Drawing.Point(1046, 497);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(112, 27);
-            this.btnImprimir.TabIndex = 97;
+            this.btnImprimir.TabIndex = 21;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = false;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
@@ -186,7 +186,7 @@ namespace WSA
             this.txtPesoSalida.Name = "txtPesoSalida";
             this.txtPesoSalida.ReadOnly = true;
             this.txtPesoSalida.Size = new System.Drawing.Size(179, 27);
-            this.txtPesoSalida.TabIndex = 96;
+            this.txtPesoSalida.TabIndex = 18;
             // 
             // label10
             // 
@@ -208,7 +208,7 @@ namespace WSA
             this.txtEnvioN.Name = "txtEnvioN";
             this.txtEnvioN.ReadOnly = true;
             this.txtEnvioN.Size = new System.Drawing.Size(122, 27);
-            this.txtEnvioN.TabIndex = 93;
+            this.txtEnvioN.TabIndex = 7;
             // 
             // label9
             // 
@@ -230,7 +230,7 @@ namespace WSA
             this.txtBarco.Name = "txtBarco";
             this.txtBarco.ReadOnly = true;
             this.txtBarco.Size = new System.Drawing.Size(357, 27);
-            this.txtBarco.TabIndex = 91;
+            this.txtBarco.TabIndex = 14;
             // 
             // txtCodigoBarco
             // 
@@ -241,7 +241,7 @@ namespace WSA
             this.txtCodigoBarco.Name = "txtCodigoBarco";
             this.txtCodigoBarco.ReadOnly = true;
             this.txtCodigoBarco.Size = new System.Drawing.Size(47, 27);
-            this.txtCodigoBarco.TabIndex = 90;
+            this.txtCodigoBarco.TabIndex = 13;
             // 
             // label8
             // 
@@ -263,7 +263,7 @@ namespace WSA
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.ReadOnly = true;
             this.txtProducto.Size = new System.Drawing.Size(357, 27);
-            this.txtProducto.TabIndex = 88;
+            this.txtProducto.TabIndex = 12;
             // 
             // txtCodigoProducto
             // 
@@ -274,7 +274,7 @@ namespace WSA
             this.txtCodigoProducto.Name = "txtCodigoProducto";
             this.txtCodigoProducto.ReadOnly = true;
             this.txtCodigoProducto.Size = new System.Drawing.Size(47, 27);
-            this.txtCodigoProducto.TabIndex = 87;
+            this.txtCodigoProducto.TabIndex = 11;
             // 
             // label7
             // 
@@ -296,7 +296,7 @@ namespace WSA
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.ReadOnly = true;
             this.txtCliente.Size = new System.Drawing.Size(357, 27);
-            this.txtCliente.TabIndex = 85;
+            this.txtCliente.TabIndex = 9;
             // 
             // txtCodigoCliente
             // 
@@ -307,7 +307,7 @@ namespace WSA
             this.txtCodigoCliente.Name = "txtCodigoCliente";
             this.txtCodigoCliente.ReadOnly = true;
             this.txtCodigoCliente.Size = new System.Drawing.Size(47, 27);
-            this.txtCodigoCliente.TabIndex = 84;
+            this.txtCodigoCliente.TabIndex = 8;
             // 
             // label6
             // 
@@ -329,7 +329,7 @@ namespace WSA
             this.txtCia.Name = "txtCia";
             this.txtCia.ReadOnly = true;
             this.txtCia.Size = new System.Drawing.Size(130, 27);
-            this.txtCia.TabIndex = 82;
+            this.txtCia.TabIndex = 6;
             // 
             // label5
             // 
@@ -351,7 +351,7 @@ namespace WSA
             this.txtPlacaRastra.Name = "txtPlacaRastra";
             this.txtPlacaRastra.ReadOnly = true;
             this.txtPlacaRastra.Size = new System.Drawing.Size(139, 27);
-            this.txtPlacaRastra.TabIndex = 80;
+            this.txtPlacaRastra.TabIndex = 5;
             // 
             // label4
             // 
@@ -373,7 +373,7 @@ namespace WSA
             this.txtPlacaCabezal.Name = "txtPlacaCabezal";
             this.txtPlacaCabezal.ReadOnly = true;
             this.txtPlacaCabezal.Size = new System.Drawing.Size(131, 27);
-            this.txtPlacaCabezal.TabIndex = 78;
+            this.txtPlacaCabezal.TabIndex = 4;
             // 
             // label3
             // 
@@ -395,7 +395,7 @@ namespace WSA
             this.txtConductor.Name = "txtConductor";
             this.txtConductor.ReadOnly = true;
             this.txtConductor.Size = new System.Drawing.Size(357, 27);
-            this.txtConductor.TabIndex = 76;
+            this.txtConductor.TabIndex = 3;
             // 
             // txtCodigoConductor
             // 
@@ -406,7 +406,7 @@ namespace WSA
             this.txtCodigoConductor.Name = "txtCodigoConductor";
             this.txtCodigoConductor.ReadOnly = true;
             this.txtCodigoConductor.Size = new System.Drawing.Size(47, 27);
-            this.txtCodigoConductor.TabIndex = 75;
+            this.txtCodigoConductor.TabIndex = 2;
             // 
             // label2
             // 
@@ -440,7 +440,7 @@ namespace WSA
             this.dtpHoraSalida.Location = new System.Drawing.Point(963, 149);
             this.dtpHoraSalida.Name = "dtpHoraSalida";
             this.dtpHoraSalida.Size = new System.Drawing.Size(98, 27);
-            this.dtpHoraSalida.TabIndex = 113;
+            this.dtpHoraSalida.TabIndex = 16;
             // 
             // label11
             // 
@@ -463,7 +463,7 @@ namespace WSA
             this.dtpFechaSalida.Location = new System.Drawing.Point(717, 149);
             this.dtpFechaSalida.Name = "dtpFechaSalida";
             this.dtpFechaSalida.Size = new System.Drawing.Size(120, 27);
-            this.dtpFechaSalida.TabIndex = 111;
+            this.dtpFechaSalida.TabIndex = 15;
             // 
             // label13
             // 
@@ -485,7 +485,7 @@ namespace WSA
             this.txtPesoNeto.Name = "txtPesoNeto";
             this.txtPesoNeto.ReadOnly = true;
             this.txtPesoNeto.Size = new System.Drawing.Size(179, 27);
-            this.txtPesoNeto.TabIndex = 115;
+            this.txtPesoNeto.TabIndex = 19;
             // 
             // label1
             // 

@@ -99,7 +99,7 @@ namespace WSA
             this.txtCodigoConductor.Location = new System.Drawing.Point(270, 202);
             this.txtCodigoConductor.Name = "txtCodigoConductor";
             this.txtCodigoConductor.Size = new System.Drawing.Size(47, 27);
-            this.txtCodigoConductor.TabIndex = 2;
+            this.txtCodigoConductor.TabIndex = 0;
             this.txtCodigoConductor.Leave += new System.EventHandler(this.txtCodigoConductor_Leave);
             // 
             // txtConductor
@@ -111,7 +111,7 @@ namespace WSA
             this.txtConductor.Name = "txtConductor";
             this.txtConductor.ReadOnly = true;
             this.txtConductor.Size = new System.Drawing.Size(289, 27);
-            this.txtConductor.TabIndex = 3;
+            this.txtConductor.TabIndex = 1;
             // 
             // txtPlacaCabezal
             // 
@@ -121,7 +121,7 @@ namespace WSA
             this.txtPlacaCabezal.MaxLength = 8;
             this.txtPlacaCabezal.Name = "txtPlacaCabezal";
             this.txtPlacaCabezal.Size = new System.Drawing.Size(128, 27);
-            this.txtPlacaCabezal.TabIndex = 5;
+            this.txtPlacaCabezal.TabIndex = 3;
             this.txtPlacaCabezal.TextChanged += new System.EventHandler(this.txtPlacaCabezal_TextChanged);
             this.txtPlacaCabezal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPlacaCabezal_KeyPress);
             // 
@@ -144,7 +144,7 @@ namespace WSA
             this.txtPlacaRastra.MaxLength = 8;
             this.txtPlacaRastra.Name = "txtPlacaRastra";
             this.txtPlacaRastra.Size = new System.Drawing.Size(125, 27);
-            this.txtPlacaRastra.TabIndex = 7;
+            this.txtPlacaRastra.TabIndex = 4;
             this.txtPlacaRastra.TextChanged += new System.EventHandler(this.txtPlacaRastra_TextChanged);
             this.txtPlacaRastra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPlacaRastra_KeyPress);
             // 
@@ -166,7 +166,7 @@ namespace WSA
             this.txtCia.Location = new System.Drawing.Point(288, 313);
             this.txtCia.Name = "txtCia";
             this.txtCia.Size = new System.Drawing.Size(91, 27);
-            this.txtCia.TabIndex = 9;
+            this.txtCia.TabIndex = 5;
             // 
             // label5
             // 
@@ -188,7 +188,7 @@ namespace WSA
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.ReadOnly = true;
             this.txtCliente.Size = new System.Drawing.Size(297, 27);
-            this.txtCliente.TabIndex = 12;
+            this.txtCliente.TabIndex = 8;
             // 
             // txtCodigoCliente
             // 
@@ -197,7 +197,7 @@ namespace WSA
             this.txtCodigoCliente.Location = new System.Drawing.Point(262, 378);
             this.txtCodigoCliente.Name = "txtCodigoCliente";
             this.txtCodigoCliente.Size = new System.Drawing.Size(47, 27);
-            this.txtCodigoCliente.TabIndex = 11;
+            this.txtCodigoCliente.TabIndex = 7;
             this.txtCodigoCliente.Leave += new System.EventHandler(this.txtCodigoCliente_Leave);
             // 
             // label6
@@ -220,7 +220,7 @@ namespace WSA
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.ReadOnly = true;
             this.txtProducto.Size = new System.Drawing.Size(297, 27);
-            this.txtProducto.TabIndex = 15;
+            this.txtProducto.TabIndex = 11;
             // 
             // txtCodigoProducto
             // 
@@ -229,7 +229,7 @@ namespace WSA
             this.txtCodigoProducto.Location = new System.Drawing.Point(262, 447);
             this.txtCodigoProducto.Name = "txtCodigoProducto";
             this.txtCodigoProducto.Size = new System.Drawing.Size(47, 27);
-            this.txtCodigoProducto.TabIndex = 14;
+            this.txtCodigoProducto.TabIndex = 10;
             this.txtCodigoProducto.Leave += new System.EventHandler(this.txtCodigoProducto_Leave);
             // 
             // label7
@@ -252,7 +252,7 @@ namespace WSA
             this.txtBarco.Name = "txtBarco";
             this.txtBarco.ReadOnly = true;
             this.txtBarco.Size = new System.Drawing.Size(297, 27);
-            this.txtBarco.TabIndex = 18;
+            this.txtBarco.TabIndex = 14;
             // 
             // txtCodigoBarco
             // 
@@ -261,7 +261,7 @@ namespace WSA
             this.txtCodigoBarco.Location = new System.Drawing.Point(262, 524);
             this.txtCodigoBarco.Name = "txtCodigoBarco";
             this.txtCodigoBarco.Size = new System.Drawing.Size(47, 27);
-            this.txtCodigoBarco.TabIndex = 17;
+            this.txtCodigoBarco.TabIndex = 13;
             this.txtCodigoBarco.Leave += new System.EventHandler(this.txtCodigoBarco_Leave);
             // 
             // label8
@@ -282,7 +282,7 @@ namespace WSA
             this.txtEnvioN.Location = new System.Drawing.Point(521, 310);
             this.txtEnvioN.Name = "txtEnvioN";
             this.txtEnvioN.Size = new System.Drawing.Size(91, 27);
-            this.txtEnvioN.TabIndex = 20;
+            this.txtEnvioN.TabIndex = 6;
             // 
             // label9
             // 
@@ -306,7 +306,7 @@ namespace WSA
             this.txtPesoBascula.Name = "txtPesoBascula";
             this.txtPesoBascula.ReadOnly = true;
             this.txtPesoBascula.Size = new System.Drawing.Size(412, 46);
-            this.txtPesoBascula.TabIndex = 21;
+            this.txtPesoBascula.TabIndex = 16;
             this.txtPesoBascula.Text = "0.00 Kg";
             this.txtPesoBascula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -315,7 +315,7 @@ namespace WSA
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(691, 308);
+            this.label10.Location = new System.Drawing.Point(691, 309);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(123, 18);
             this.label10.TabIndex = 22;
@@ -326,11 +326,11 @@ namespace WSA
             this.txtPesoEntrada.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPesoEntrada.BackColor = System.Drawing.Color.White;
             this.txtPesoEntrada.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesoEntrada.Location = new System.Drawing.Point(835, 320);
+            this.txtPesoEntrada.Location = new System.Drawing.Point(835, 305);
             this.txtPesoEntrada.Name = "txtPesoEntrada";
             this.txtPesoEntrada.ReadOnly = true;
             this.txtPesoEntrada.Size = new System.Drawing.Size(179, 27);
-            this.txtPesoEntrada.TabIndex = 23;
+            this.txtPesoEntrada.TabIndex = 18;
             // 
             // btnObtenerPeso
             // 
@@ -339,10 +339,10 @@ namespace WSA
             this.btnObtenerPeso.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnObtenerPeso.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnObtenerPeso.ForeColor = System.Drawing.Color.White;
-            this.btnObtenerPeso.Location = new System.Drawing.Point(1034, 320);
+            this.btnObtenerPeso.Location = new System.Drawing.Point(1034, 304);
             this.btnObtenerPeso.Name = "btnObtenerPeso";
             this.btnObtenerPeso.Size = new System.Drawing.Size(136, 28);
-            this.btnObtenerPeso.TabIndex = 24;
+            this.btnObtenerPeso.TabIndex = 19;
             this.btnObtenerPeso.Text = "Obtener peso";
             this.btnObtenerPeso.UseVisualStyleBackColor = false;
             this.btnObtenerPeso.Click += new System.EventHandler(this.txtObtenerPeso_Click);
@@ -377,7 +377,7 @@ namespace WSA
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(412, 116);
-            this.txtObservaciones.TabIndex = 27;
+            this.txtObservaciones.TabIndex = 20;
             // 
             // btnCancelar
             // 
@@ -389,7 +389,7 @@ namespace WSA
             this.btnCancelar.Location = new System.Drawing.Point(1174, 524);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(105, 27);
-            this.btnCancelar.TabIndex = 29;
+            this.btnCancelar.TabIndex = 22;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -427,7 +427,7 @@ namespace WSA
             this.btnConectar.Location = new System.Drawing.Point(1173, 252);
             this.btnConectar.Name = "btnConectar";
             this.btnConectar.Size = new System.Drawing.Size(106, 28);
-            this.btnConectar.TabIndex = 32;
+            this.btnConectar.TabIndex = 17;
             this.btnConectar.Text = "Conectar";
             this.btnConectar.UseVisualStyleBackColor = false;
             this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
@@ -440,7 +440,7 @@ namespace WSA
             this.lblConsultarConductores.Location = new System.Drawing.Point(457, 183);
             this.lblConsultarConductores.Name = "lblConsultarConductores";
             this.lblConsultarConductores.Size = new System.Drawing.Size(157, 16);
-            this.lblConsultarConductores.TabIndex = 33;
+            this.lblConsultarConductores.TabIndex = 2;
             this.lblConsultarConductores.TabStop = true;
             this.lblConsultarConductores.Text = "Consultar conductores";
             this.lblConsultarConductores.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblConsultarConductores_LinkClicked);
@@ -453,7 +453,7 @@ namespace WSA
             this.lblConsultarClientes.Location = new System.Drawing.Point(488, 359);
             this.lblConsultarClientes.Name = "lblConsultarClientes";
             this.lblConsultarClientes.Size = new System.Drawing.Size(126, 16);
-            this.lblConsultarClientes.TabIndex = 34;
+            this.lblConsultarClientes.TabIndex = 9;
             this.lblConsultarClientes.TabStop = true;
             this.lblConsultarClientes.Text = "Consultar clientes";
             this.lblConsultarClientes.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblConsultarClientes_LinkClicked);
@@ -466,7 +466,7 @@ namespace WSA
             this.lblConsultarProductos.Location = new System.Drawing.Point(477, 428);
             this.lblConsultarProductos.Name = "lblConsultarProductos";
             this.lblConsultarProductos.Size = new System.Drawing.Size(141, 16);
-            this.lblConsultarProductos.TabIndex = 35;
+            this.lblConsultarProductos.TabIndex = 12;
             this.lblConsultarProductos.TabStop = true;
             this.lblConsultarProductos.Text = "Consultar productos";
             this.lblConsultarProductos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblConsultarProductos_LinkClicked);
@@ -479,7 +479,7 @@ namespace WSA
             this.lblConsultarBarcos.Location = new System.Drawing.Point(492, 505);
             this.lblConsultarBarcos.Name = "lblConsultarBarcos";
             this.lblConsultarBarcos.Size = new System.Drawing.Size(119, 16);
-            this.lblConsultarBarcos.TabIndex = 36;
+            this.lblConsultarBarcos.TabIndex = 15;
             this.lblConsultarBarcos.TabStop = true;
             this.lblConsultarBarcos.Text = "Consultar barcos";
             this.lblConsultarBarcos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblConsultarBarcos_LinkClicked);
@@ -514,7 +514,7 @@ namespace WSA
             this.btnGuardar.Location = new System.Drawing.Point(1034, 524);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(105, 27);
-            this.btnGuardar.TabIndex = 28;
+            this.btnGuardar.TabIndex = 21;
             this.btnGuardar.Text = "Guardar ingreso";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);

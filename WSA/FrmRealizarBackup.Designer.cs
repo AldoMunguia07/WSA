@@ -56,7 +56,7 @@ namespace WSA
             this.btnBackup.Location = new System.Drawing.Point(318, 187);
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Size = new System.Drawing.Size(255, 45);
-            this.btnBackup.TabIndex = 6;
+            this.btnBackup.TabIndex = 0;
             this.btnBackup.Text = "Realizar copia de seguridad";
             this.btnBackup.UseVisualStyleBackColor = false;
             this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);

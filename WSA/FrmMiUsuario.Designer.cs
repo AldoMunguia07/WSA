@@ -54,7 +54,7 @@ namespace WSA
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(955, 295);
+            this.label8.Location = new System.Drawing.Point(975, 295);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 18);
             this.label8.TabIndex = 38;
@@ -65,7 +65,7 @@ namespace WSA
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(488, 300);
+            this.label7.Location = new System.Drawing.Point(902, 213);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(142, 18);
             this.label7.TabIndex = 37;
@@ -79,10 +79,10 @@ namespace WSA
             this.btnActivo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActivo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActivo.ForeColor = System.Drawing.Color.White;
-            this.btnActivo.Location = new System.Drawing.Point(1021, 293);
+            this.btnActivo.Location = new System.Drawing.Point(1041, 293);
             this.btnActivo.Name = "btnActivo";
             this.btnActivo.Size = new System.Drawing.Size(88, 25);
-            this.btnActivo.TabIndex = 35;
+            this.btnActivo.TabIndex = 7;
             this.btnActivo.Text = "Activo";
             this.btnActivo.UseVisualStyleBackColor = false;
             // 
@@ -90,10 +90,10 @@ namespace WSA
             // 
             this.txtConfirmarContrasena.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtConfirmarContrasena.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmarContrasena.Location = new System.Drawing.Point(1012, 209);
+            this.txtConfirmarContrasena.Location = new System.Drawing.Point(679, 291);
             this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
             this.txtConfirmarContrasena.Size = new System.Drawing.Size(177, 27);
-            this.txtConfirmarContrasena.TabIndex = 34;
+            this.txtConfirmarContrasena.TabIndex = 4;
             this.txtConfirmarContrasena.UseSystemPasswordChar = true;
             // 
             // label6
@@ -101,7 +101,7 @@ namespace WSA
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(816, 213);
+            this.label6.Location = new System.Drawing.Point(483, 295);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(190, 18);
             this.label6.TabIndex = 33;
@@ -111,10 +111,10 @@ namespace WSA
             // 
             this.txtContrasena.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtContrasena.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena.Location = new System.Drawing.Point(619, 210);
+            this.txtContrasena.Location = new System.Drawing.Point(679, 210);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(168, 27);
-            this.txtContrasena.TabIndex = 32;
+            this.txtContrasena.TabIndex = 2;
             this.txtContrasena.UseSystemPasswordChar = true;
             // 
             // label5
@@ -122,7 +122,7 @@ namespace WSA
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(512, 214);
+            this.label5.Location = new System.Drawing.Point(572, 214);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 18);
             this.label5.TabIndex = 31;
@@ -135,7 +135,7 @@ namespace WSA
             this.txtUsuario.Location = new System.Drawing.Point(280, 293);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(175, 27);
-            this.txtUsuario.TabIndex = 30;
+            this.txtUsuario.TabIndex = 1;
             // 
             // label4
             // 
@@ -153,7 +153,7 @@ namespace WSA
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(525, 121);
+            this.label2.Location = new System.Drawing.Point(570, 123);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(211, 29);
             this.label2.TabIndex = 28;
@@ -166,7 +166,7 @@ namespace WSA
             this.txtNombreUsuario.Location = new System.Drawing.Point(280, 210);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(175, 27);
-            this.txtNombreUsuario.TabIndex = 27;
+            this.txtNombreUsuario.TabIndex = 0;
             // 
             // label1
             // 
@@ -184,21 +184,21 @@ namespace WSA
             this.txtTipoUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTipoUsuario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtTipoUsuario.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoUsuario.Location = new System.Drawing.Point(627, 297);
+            this.txtTipoUsuario.Location = new System.Drawing.Point(1041, 210);
             this.txtTipoUsuario.Name = "txtTipoUsuario";
             this.txtTipoUsuario.ReadOnly = true;
             this.txtTipoUsuario.Size = new System.Drawing.Size(160, 27);
-            this.txtTipoUsuario.TabIndex = 39;
+            this.txtTipoUsuario.TabIndex = 6;
             // 
             // chbVerCContraseña
             // 
             this.chbVerCContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chbVerCContraseña.AutoSize = true;
             this.chbVerCContraseña.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbVerCContraseña.Location = new System.Drawing.Point(1012, 238);
+            this.chbVerCContraseña.Location = new System.Drawing.Point(679, 320);
             this.chbVerCContraseña.Name = "chbVerCContraseña";
             this.chbVerCContraseña.Size = new System.Drawing.Size(127, 20);
-            this.chbVerCContraseña.TabIndex = 40;
+            this.chbVerCContraseña.TabIndex = 5;
             this.chbVerCContraseña.Text = "Ver contraseña";
             this.chbVerCContraseña.UseVisualStyleBackColor = true;
             this.chbVerCContraseña.CheckedChanged += new System.EventHandler(this.chbVerCContraseña_CheckedChanged);
@@ -210,7 +210,7 @@ namespace WSA
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(530, 386);
+            this.btnGuardar.Location = new System.Drawing.Point(593, 416);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(161, 36);
             this.btnGuardar.TabIndex = 41;
@@ -223,10 +223,10 @@ namespace WSA
             this.chbVerContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chbVerContraseña.AutoSize = true;
             this.chbVerContraseña.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbVerContraseña.Location = new System.Drawing.Point(614, 239);
+            this.chbVerContraseña.Location = new System.Drawing.Point(674, 239);
             this.chbVerContraseña.Name = "chbVerContraseña";
             this.chbVerContraseña.Size = new System.Drawing.Size(127, 20);
-            this.chbVerContraseña.TabIndex = 42;
+            this.chbVerContraseña.TabIndex = 3;
             this.chbVerContraseña.Text = "Ver contraseña";
             this.chbVerContraseña.UseVisualStyleBackColor = true;
             this.chbVerContraseña.CheckedChanged += new System.EventHandler(this.chbVerContraseña_CheckedChanged);

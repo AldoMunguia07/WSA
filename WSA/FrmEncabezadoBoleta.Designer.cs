@@ -59,7 +59,7 @@ namespace WSA
             this.txtEmpresa.Location = new System.Drawing.Point(337, 138);
             this.txtEmpresa.Name = "txtEmpresa";
             this.txtEmpresa.Size = new System.Drawing.Size(315, 27);
-            this.txtEmpresa.TabIndex = 1;
+            this.txtEmpresa.TabIndex = 0;
             // 
             // label2
             // 
@@ -79,7 +79,7 @@ namespace WSA
             this.txtDireccion.Location = new System.Drawing.Point(337, 196);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(315, 27);
-            this.txtDireccion.TabIndex = 4;
+            this.txtDireccion.TabIndex = 1;
             // 
             // label3
             // 
@@ -99,7 +99,7 @@ namespace WSA
             this.txtTelefono.Location = new System.Drawing.Point(337, 252);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(315, 27);
-            this.txtTelefono.TabIndex = 6;
+            this.txtTelefono.TabIndex = 2;
             // 
             // label4
             // 
@@ -122,7 +122,7 @@ namespace WSA
             this.btnGuardar.Location = new System.Drawing.Point(401, 315);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(162, 38);
-            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.TabIndex = 3;
             this.btnGuardar.Text = "Guardar cambios";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);

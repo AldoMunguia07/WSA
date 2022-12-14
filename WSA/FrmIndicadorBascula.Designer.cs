@@ -57,7 +57,7 @@ namespace WSA
             this.cmbParidad.Location = new System.Drawing.Point(416, 300);
             this.cmbParidad.Name = "cmbParidad";
             this.cmbParidad.Size = new System.Drawing.Size(121, 26);
-            this.cmbParidad.TabIndex = 0;
+            this.cmbParidad.TabIndex = 3;
             // 
             // cmbPuertos
             // 
@@ -68,7 +68,7 @@ namespace WSA
             this.cmbPuertos.Location = new System.Drawing.Point(416, 140);
             this.cmbPuertos.Name = "cmbPuertos";
             this.cmbPuertos.Size = new System.Drawing.Size(121, 26);
-            this.cmbPuertos.TabIndex = 1;
+            this.cmbPuertos.TabIndex = 0;
             // 
             // cmbStopBit
             // 
@@ -79,7 +79,7 @@ namespace WSA
             this.cmbStopBit.Location = new System.Drawing.Point(416, 350);
             this.cmbStopBit.Name = "cmbStopBit";
             this.cmbStopBit.Size = new System.Drawing.Size(121, 26);
-            this.cmbStopBit.TabIndex = 2;
+            this.cmbStopBit.TabIndex = 4;
             // 
             // cmbVelocidad
             // 
@@ -90,7 +90,7 @@ namespace WSA
             this.cmbVelocidad.Location = new System.Drawing.Point(416, 192);
             this.cmbVelocidad.Name = "cmbVelocidad";
             this.cmbVelocidad.Size = new System.Drawing.Size(121, 26);
-            this.cmbVelocidad.TabIndex = 3;
+            this.cmbVelocidad.TabIndex = 1;
             // 
             // label1
             // 
@@ -156,7 +156,7 @@ namespace WSA
             this.cmbDataBits.Location = new System.Drawing.Point(416, 250);
             this.cmbDataBits.Name = "cmbDataBits";
             this.cmbDataBits.Size = new System.Drawing.Size(121, 26);
-            this.cmbDataBits.TabIndex = 9;
+            this.cmbDataBits.TabIndex = 2;
             // 
             // label6
             // 
@@ -179,7 +179,7 @@ namespace WSA
             this.btnGuardar.Location = new System.Drawing.Point(292, 410);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(162, 38);
-            this.btnGuardar.TabIndex = 11;
+            this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar cambios";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -194,7 +194,7 @@ namespace WSA
             this.btnProbarConexion.Location = new System.Drawing.Point(475, 410);
             this.btnProbarConexion.Name = "btnProbarConexion";
             this.btnProbarConexion.Size = new System.Drawing.Size(162, 38);
-            this.btnProbarConexion.TabIndex = 12;
+            this.btnProbarConexion.TabIndex = 6;
             this.btnProbarConexion.Text = "Probar conexión";
             this.btnProbarConexion.UseVisualStyleBackColor = false;
             this.btnProbarConexion.Click += new System.EventHandler(this.btnProbarConexion_Click);

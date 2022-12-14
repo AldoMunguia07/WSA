@@ -45,10 +45,10 @@ namespace WSA
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(644, 114);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 29);
+            this.label1.Size = new System.Drawing.Size(295, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Vehículos en transito";
             // 
@@ -95,7 +95,7 @@ namespace WSA
             this.btnEntrada.Location = new System.Drawing.Point(904, 410);
             this.btnEntrada.Name = "btnEntrada";
             this.btnEntrada.Size = new System.Drawing.Size(183, 31);
-            this.btnEntrada.TabIndex = 12;
+            this.btnEntrada.TabIndex = 1;
             this.btnEntrada.Text = "Registrar entrada";
             this.btnEntrada.UseVisualStyleBackColor = false;
             this.btnEntrada.Click += new System.EventHandler(this.btnEntrada_Click);
@@ -110,7 +110,7 @@ namespace WSA
             this.btnSalida.Location = new System.Drawing.Point(1111, 410);
             this.btnSalida.Name = "btnSalida";
             this.btnSalida.Size = new System.Drawing.Size(170, 31);
-            this.btnSalida.TabIndex = 13;
+            this.btnSalida.TabIndex = 2;
             this.btnSalida.Text = "Registrar salida";
             this.btnSalida.UseVisualStyleBackColor = false;
             this.btnSalida.Click += new System.EventHandler(this.btnSalida_Click);
@@ -125,7 +125,7 @@ namespace WSA
             this.btnAnular.Location = new System.Drawing.Point(1301, 410);
             this.btnAnular.Name = "btnAnular";
             this.btnAnular.Size = new System.Drawing.Size(148, 31);
-            this.btnAnular.TabIndex = 14;
+            this.btnAnular.TabIndex = 3;
             this.btnAnular.Text = "Anular entrada";
             this.btnAnular.UseVisualStyleBackColor = false;
             this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
@@ -165,7 +165,7 @@ namespace WSA
             this.Controls.Add(this.label1);
             this.Name = "FrmVehiculosEnTransito";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vehículos en transito";
+            this.Text = "0";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

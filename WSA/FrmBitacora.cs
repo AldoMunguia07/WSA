@@ -41,5 +41,15 @@ namespace WSA
         {
             cargarBitacora();
         }
+
+        private void dgvBitacora_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvBitacora.Rows[e.RowIndex];
+                row.Selected = true;
+                
+            }
+        }
     }
 }

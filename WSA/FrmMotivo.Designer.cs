@@ -56,7 +56,7 @@ namespace WSA
             this.txtMotivo.Multiline = true;
             this.txtMotivo.Name = "txtMotivo";
             this.txtMotivo.Size = new System.Drawing.Size(488, 137);
-            this.txtMotivo.TabIndex = 3;
+            this.txtMotivo.TabIndex = 0;
             // 
             // btnAnular
             // 
@@ -68,7 +68,7 @@ namespace WSA
             this.btnAnular.Location = new System.Drawing.Point(381, 257);
             this.btnAnular.Name = "btnAnular";
             this.btnAnular.Size = new System.Drawing.Size(82, 30);
-            this.btnAnular.TabIndex = 4;
+            this.btnAnular.TabIndex = 1;
             this.btnAnular.Text = "Anular";
             this.btnAnular.UseVisualStyleBackColor = false;
             this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
@@ -83,7 +83,7 @@ namespace WSA
             this.btnCancelar.Location = new System.Drawing.Point(483, 257);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(90, 30);
-            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);

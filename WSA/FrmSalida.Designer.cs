@@ -84,7 +84,7 @@ namespace WSA
             this.btnConectar.Location = new System.Drawing.Point(1200, 203);
             this.btnConectar.Name = "btnConectar";
             this.btnConectar.Size = new System.Drawing.Size(88, 28);
-            this.btnConectar.TabIndex = 65;
+            this.btnConectar.TabIndex = 16;
             this.btnConectar.Text = "Conectar";
             this.btnConectar.UseVisualStyleBackColor = false;
             this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
@@ -122,7 +122,7 @@ namespace WSA
             this.btnCancelar.Location = new System.Drawing.Point(1191, 547);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(105, 27);
-            this.btnCancelar.TabIndex = 62;
+            this.btnCancelar.TabIndex = 22;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -137,7 +137,7 @@ namespace WSA
             this.btnGuardar.Location = new System.Drawing.Point(1070, 547);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(105, 27);
-            this.btnGuardar.TabIndex = 61;
+            this.btnGuardar.TabIndex = 21;
             this.btnGuardar.Text = "Guardar salida";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -150,7 +150,7 @@ namespace WSA
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(401, 142);
-            this.txtObservaciones.TabIndex = 60;
+            this.txtObservaciones.TabIndex = 20;
             // 
             // label12
             // 
@@ -184,7 +184,7 @@ namespace WSA
             this.btnObtenerPeso.Location = new System.Drawing.Point(1017, 306);
             this.btnObtenerPeso.Name = "btnObtenerPeso";
             this.btnObtenerPeso.Size = new System.Drawing.Size(133, 28);
-            this.btnObtenerPeso.TabIndex = 57;
+            this.btnObtenerPeso.TabIndex = 19;
             this.btnObtenerPeso.Text = "Obtener peso";
             this.btnObtenerPeso.UseVisualStyleBackColor = false;
             this.btnObtenerPeso.Click += new System.EventHandler(this.txtObtenerPeso_Click);
@@ -198,7 +198,7 @@ namespace WSA
             this.txtPesoSalida.Name = "txtPesoSalida";
             this.txtPesoSalida.ReadOnly = true;
             this.txtPesoSalida.Size = new System.Drawing.Size(179, 27);
-            this.txtPesoSalida.TabIndex = 56;
+            this.txtPesoSalida.TabIndex = 18;
             // 
             // label10
             // 
@@ -220,7 +220,7 @@ namespace WSA
             this.txtEnvioN.Name = "txtEnvioN";
             this.txtEnvioN.ReadOnly = true;
             this.txtEnvioN.Size = new System.Drawing.Size(91, 27);
-            this.txtEnvioN.TabIndex = 53;
+            this.txtEnvioN.TabIndex = 8;
             // 
             // label9
             // 
@@ -242,7 +242,7 @@ namespace WSA
             this.txtBarco.Name = "txtBarco";
             this.txtBarco.ReadOnly = true;
             this.txtBarco.Size = new System.Drawing.Size(293, 27);
-            this.txtBarco.TabIndex = 51;
+            this.txtBarco.TabIndex = 14;
             // 
             // txtCodigoBarco
             // 
@@ -253,7 +253,7 @@ namespace WSA
             this.txtCodigoBarco.Name = "txtCodigoBarco";
             this.txtCodigoBarco.ReadOnly = true;
             this.txtCodigoBarco.Size = new System.Drawing.Size(47, 27);
-            this.txtCodigoBarco.TabIndex = 50;
+            this.txtCodigoBarco.TabIndex = 13;
             // 
             // label8
             // 
@@ -275,7 +275,7 @@ namespace WSA
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.ReadOnly = true;
             this.txtProducto.Size = new System.Drawing.Size(293, 27);
-            this.txtProducto.TabIndex = 48;
+            this.txtProducto.TabIndex = 12;
             // 
             // txtCodigoProducto
             // 
@@ -286,7 +286,7 @@ namespace WSA
             this.txtCodigoProducto.Name = "txtCodigoProducto";
             this.txtCodigoProducto.ReadOnly = true;
             this.txtCodigoProducto.Size = new System.Drawing.Size(47, 27);
-            this.txtCodigoProducto.TabIndex = 47;
+            this.txtCodigoProducto.TabIndex = 11;
             // 
             // label7
             // 
@@ -308,7 +308,7 @@ namespace WSA
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.ReadOnly = true;
             this.txtCliente.Size = new System.Drawing.Size(293, 27);
-            this.txtCliente.TabIndex = 45;
+            this.txtCliente.TabIndex = 10;
             // 
             // txtCodigoCliente
             // 
@@ -319,7 +319,7 @@ namespace WSA
             this.txtCodigoCliente.Name = "txtCodigoCliente";
             this.txtCodigoCliente.ReadOnly = true;
             this.txtCodigoCliente.Size = new System.Drawing.Size(47, 27);
-            this.txtCodigoCliente.TabIndex = 44;
+            this.txtCodigoCliente.TabIndex = 9;
             // 
             // label6
             // 
@@ -341,7 +341,7 @@ namespace WSA
             this.txtCia.Name = "txtCia";
             this.txtCia.ReadOnly = true;
             this.txtCia.Size = new System.Drawing.Size(91, 27);
-            this.txtCia.TabIndex = 42;
+            this.txtCia.TabIndex = 7;
             // 
             // label5
             // 
@@ -363,7 +363,7 @@ namespace WSA
             this.txtPlacaRastra.Name = "txtPlacaRastra";
             this.txtPlacaRastra.ReadOnly = true;
             this.txtPlacaRastra.Size = new System.Drawing.Size(128, 27);
-            this.txtPlacaRastra.TabIndex = 40;
+            this.txtPlacaRastra.TabIndex = 6;
             // 
             // label4
             // 
@@ -385,7 +385,7 @@ namespace WSA
             this.txtPlacaCabezal.Name = "txtPlacaCabezal";
             this.txtPlacaCabezal.ReadOnly = true;
             this.txtPlacaCabezal.Size = new System.Drawing.Size(137, 27);
-            this.txtPlacaCabezal.TabIndex = 38;
+            this.txtPlacaCabezal.TabIndex = 5;
             // 
             // label3
             // 
@@ -407,7 +407,7 @@ namespace WSA
             this.txtConductor.Name = "txtConductor";
             this.txtConductor.ReadOnly = true;
             this.txtConductor.Size = new System.Drawing.Size(293, 27);
-            this.txtConductor.TabIndex = 36;
+            this.txtConductor.TabIndex = 4;
             // 
             // txtCodigoConductor
             // 
@@ -418,7 +418,7 @@ namespace WSA
             this.txtCodigoConductor.Name = "txtCodigoConductor";
             this.txtCodigoConductor.ReadOnly = true;
             this.txtCodigoConductor.Size = new System.Drawing.Size(47, 27);
-            this.txtCodigoConductor.TabIndex = 35;
+            this.txtCodigoConductor.TabIndex = 3;
             // 
             // label2
             // 
@@ -463,7 +463,7 @@ namespace WSA
             this.dtpFechaEntrada.Location = new System.Drawing.Point(258, 146);
             this.dtpFechaEntrada.Name = "dtpFechaEntrada";
             this.dtpFechaEntrada.Size = new System.Drawing.Size(115, 27);
-            this.dtpFechaEntrada.TabIndex = 68;
+            this.dtpFechaEntrada.TabIndex = 0;
             // 
             // txtPesoEntrada
             // 
@@ -474,7 +474,7 @@ namespace WSA
             this.txtPesoEntrada.Name = "txtPesoEntrada";
             this.txtPesoEntrada.ReadOnly = true;
             this.txtPesoEntrada.Size = new System.Drawing.Size(179, 27);
-            this.txtPesoEntrada.TabIndex = 70;
+            this.txtPesoEntrada.TabIndex = 17;
             // 
             // label15
             // 
@@ -508,7 +508,7 @@ namespace WSA
             this.dtpHoraEntrada.Location = new System.Drawing.Point(520, 146);
             this.dtpHoraEntrada.Name = "dtpHoraEntrada";
             this.dtpHoraEntrada.Size = new System.Drawing.Size(102, 27);
-            this.dtpHoraEntrada.TabIndex = 72;
+            this.dtpHoraEntrada.TabIndex = 2;
             // 
             // panel2
             // 
@@ -541,7 +541,7 @@ namespace WSA
             this.txtPesoBascula.Name = "txtPesoBascula";
             this.txtPesoBascula.ReadOnly = true;
             this.txtPesoBascula.Size = new System.Drawing.Size(412, 46);
-            this.txtPesoBascula.TabIndex = 22;
+            this.txtPesoBascula.TabIndex = 15;
             this.txtPesoBascula.Text = "0.00 Kg";
             this.txtPesoBascula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 

@@ -91,7 +91,7 @@ namespace WSA
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(190, 27);
-            this.txtUsuario.TabIndex = 4;
+            this.txtUsuario.TabIndex = 0;
             this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // txtContrasena
@@ -101,7 +101,7 @@ namespace WSA
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(190, 27);
-            this.txtContrasena.TabIndex = 5;
+            this.txtContrasena.TabIndex = 1;
             this.txtContrasena.UseSystemPasswordChar = true;
             this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
             // 
@@ -115,7 +115,7 @@ namespace WSA
             this.btnInicioSesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInicioSesion.Name = "btnInicioSesion";
             this.btnInicioSesion.Size = new System.Drawing.Size(150, 32);
-            this.btnInicioSesion.TabIndex = 6;
+            this.btnInicioSesion.TabIndex = 2;
             this.btnInicioSesion.Text = "Iniciar sesión";
             this.btnInicioSesion.UseVisualStyleBackColor = false;
             this.btnInicioSesion.Click += new System.EventHandler(this.btnInicioSesion_Click);

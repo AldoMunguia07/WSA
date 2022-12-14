@@ -59,7 +59,7 @@ namespace WSA
             this.btnModificar.Location = new System.Drawing.Point(832, 399);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(93, 27);
-            this.btnModificar.TabIndex = 15;
+            this.btnModificar.TabIndex = 6;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -82,7 +82,7 @@ namespace WSA
             this.txtBuscar.Location = new System.Drawing.Point(198, 399);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(358, 27);
-            this.txtBuscar.TabIndex = 13;
+            this.txtBuscar.TabIndex = 3;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label2
@@ -106,7 +106,7 @@ namespace WSA
             this.btnGuardar.Location = new System.Drawing.Point(723, 399);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(94, 27);
-            this.btnGuardar.TabIndex = 11;
+            this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -141,7 +141,7 @@ namespace WSA
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.Size = new System.Drawing.Size(912, 196);
-            this.dgvProductos.TabIndex = 10;
+            this.dgvProductos.TabIndex = 2;
             this.dgvProductos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProductos_CellMouseClick);
             // 
             // txtDescProducto
@@ -151,7 +151,7 @@ namespace WSA
             this.txtDescProducto.Location = new System.Drawing.Point(317, 134);
             this.txtDescProducto.Name = "txtDescProducto";
             this.txtDescProducto.Size = new System.Drawing.Size(294, 27);
-            this.txtDescProducto.TabIndex = 9;
+            this.txtDescProducto.TabIndex = 0;
             // 
             // label1
             // 
@@ -187,7 +187,7 @@ namespace WSA
             0});
             this.numPrecio.Name = "numPrecio";
             this.numPrecio.Size = new System.Drawing.Size(120, 27);
-            this.numPrecio.TabIndex = 17;
+            this.numPrecio.TabIndex = 1;
             this.numPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numPrecio_KeyPress);
             // 
             // btnSeleccionar
@@ -200,7 +200,7 @@ namespace WSA
             this.btnSeleccionar.Location = new System.Drawing.Point(591, 399);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(115, 27);
-            this.btnSeleccionar.TabIndex = 18;
+            this.btnSeleccionar.TabIndex = 4;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = false;
             this.btnSeleccionar.Visible = false;
@@ -236,7 +236,7 @@ namespace WSA
             this.btnCncelar.Location = new System.Drawing.Point(943, 399);
             this.btnCncelar.Name = "btnCncelar";
             this.btnCncelar.Size = new System.Drawing.Size(101, 27);
-            this.btnCncelar.TabIndex = 26;
+            this.btnCncelar.TabIndex = 7;
             this.btnCncelar.Text = "Cancelar";
             this.btnCncelar.UseVisualStyleBackColor = false;
             this.btnCncelar.Click += new System.EventHandler(this.btnCncelar_Click);
