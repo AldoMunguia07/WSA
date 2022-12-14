@@ -215,5 +215,12 @@ namespace WSA
             CerrarFormularios();
             CargarFormulario(frmIndicadorBascula);
         }
+
+        private void boletasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            rFrmBoletas rFrmBoletas = new rFrmBoletas();
+            CerrarFormularios();
+            CargarFormulario(rFrmBoletas);
+        }
     }
 }

@@ -50,12 +50,13 @@ namespace WSA
             this.bitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.encabezadoBoletaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.respaldoDeBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configuraciónIndicadorDeBásculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.tslbNombreUsuario = new System.Windows.Forms.ToolStripLabel();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.configuraciónIndicadorDeBásculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.boletasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -189,6 +190,8 @@ namespace WSA
             // 
             // reportesToolStripMenuItem
             // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.boletasToolStripMenuItem1});
             this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
@@ -227,6 +230,13 @@ namespace WSA
             this.respaldoDeBaseDeDatosToolStripMenuItem.Text = "Respaldo de base de datos";
             this.respaldoDeBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.respaldoDeBaseDeDatosToolStripMenuItem_Click);
             // 
+            // configuraciónIndicadorDeBásculaToolStripMenuItem
+            // 
+            this.configuraciónIndicadorDeBásculaToolStripMenuItem.Name = "configuraciónIndicadorDeBásculaToolStripMenuItem";
+            this.configuraciónIndicadorDeBásculaToolStripMenuItem.Size = new System.Drawing.Size(361, 22);
+            this.configuraciónIndicadorDeBásculaToolStripMenuItem.Text = "Configuración indicador de báscula";
+            this.configuraciónIndicadorDeBásculaToolStripMenuItem.Click += new System.EventHandler(this.configuraciónIndicadorDeBásculaToolStripMenuItem_Click);
+            // 
             // toolStrip
             // 
             this.toolStrip.BackColor = System.Drawing.Color.White;
@@ -262,12 +272,12 @@ namespace WSA
             this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // configuraciónIndicadorDeBásculaToolStripMenuItem
+            // boletasToolStripMenuItem1
             // 
-            this.configuraciónIndicadorDeBásculaToolStripMenuItem.Name = "configuraciónIndicadorDeBásculaToolStripMenuItem";
-            this.configuraciónIndicadorDeBásculaToolStripMenuItem.Size = new System.Drawing.Size(361, 22);
-            this.configuraciónIndicadorDeBásculaToolStripMenuItem.Text = "Configuración indicador de báscula";
-            this.configuraciónIndicadorDeBásculaToolStripMenuItem.Click += new System.EventHandler(this.configuraciónIndicadorDeBásculaToolStripMenuItem_Click);
+            this.boletasToolStripMenuItem1.Name = "boletasToolStripMenuItem1";
+            this.boletasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.boletasToolStripMenuItem1.Text = "Boletas";
+            this.boletasToolStripMenuItem1.Click += new System.EventHandler(this.boletasToolStripMenuItem1_Click);
             // 
             // FrmPrincipal
             // 
@@ -322,6 +332,7 @@ namespace WSA
         private System.Windows.Forms.ToolStripMenuItem entradasAnuladasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem miUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuraciónIndicadorDeBásculaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem boletasToolStripMenuItem1;
     }
 }
 

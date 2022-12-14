@@ -83,6 +83,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AWS_DATA_SET.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AWS_DATA_SET.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Barco.cs" />
     <Compile Include="Clases\Bitacora.cs" />
     <Compile Include="Clases\Boleta.cs" />
@@ -225,6 +230,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rFrmBoletas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rFrmBoletas.Designer.cs">
+      <DependentUpon>rFrmBoletas.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="WSA_ALGDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -304,6 +315,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Reportes\rptBoleta.rdlc" />
+    <EmbeddedResource Include="Reportes\rptBoletas.rdlc" />
+    <EmbeddedResource Include="rFrmBoletas.resx">
+      <DependentUpon>rFrmBoletas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AWS_DATA_SET.xsc">
+      <DependentUpon>AWS_DATA_SET.xsd</DependentUpon>
+    </None>
+    <None Include="AWS_DATA_SET.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AWS_DATA_SET.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AWS_DATA_SET.xss">
+      <DependentUpon>AWS_DATA_SET.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
