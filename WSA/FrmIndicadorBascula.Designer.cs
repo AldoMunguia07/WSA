@@ -29,9 +29,7 @@ namespace WSA
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.cmbParidad = new System.Windows.Forms.ComboBox();
-            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.cmbPuertos = new System.Windows.Forms.ComboBox();
             this.cmbStopBit = new System.Windows.Forms.ComboBox();
             this.cmbVelocidad = new System.Windows.Forms.ComboBox();
@@ -251,7 +249,6 @@ namespace WSA
         #endregion
 
         private System.Windows.Forms.ComboBox cmbParidad;
-        private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.ComboBox cmbPuertos;
         private System.Windows.Forms.ComboBox cmbStopBit;
         private System.Windows.Forms.ComboBox cmbVelocidad;

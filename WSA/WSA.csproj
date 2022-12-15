@@ -231,6 +231,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rFrmBitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rFrmBitacora.Designer.cs">
+      <DependentUpon>rFrmBitacora.cs</DependentUpon>
+    </Compile>
     <Compile Include="rFrmBoletas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,8 +321,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reportes\rptBitacora.rdlc" />
     <EmbeddedResource Include="Reportes\rptBoleta.rdlc" />
     <EmbeddedResource Include="Reportes\rptBoletas.rdlc" />
+    <EmbeddedResource Include="rFrmBitacora.resx">
+      <DependentUpon>rFrmBitacora.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rFrmBoletas.resx">
       <DependentUpon>rFrmBoletas.cs</DependentUpon>
     </EmbeddedResource>

@@ -22,7 +22,7 @@ namespace WSA
         private void rFrmBoletas_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'AWS_DATA_SET.sp_Reporte_Mostrar_Salidas' Puede moverla o quitarla según sea necesario.
-            this.sp_Reporte_Mostrar_BoletasTableAdapter.Fill(this.AWS_DATA_SET.sp_Reporte_Mostrar_Boletas, txtBuscar.Text, dtpFechaInicio.Value, dtpFechaFinal.Value, cmbEstado.SelectedValue.ToString());
+            this.sp_Reporte_Mostrar_BoletasTableAdapter.Fill(this.AWS_DATA_SET.sp_Reporte_Mostrar_Boletas, txtBuscar.Text, dtpFechaInicio.Value.Date, dtpFechaFinal.Value.Date, cmbEstado.SelectedValue.ToString());
 
             this.reportViewer1.RefreshReport();
         }
@@ -30,7 +30,7 @@ namespace WSA
         private void btnCargarReporte_Click(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'AWS_DATA_SET.sp_Reporte_Mostrar_Salidas' Puede moverla o quitarla según sea necesario.
-            this.sp_Reporte_Mostrar_BoletasTableAdapter.Fill(this.AWS_DATA_SET.sp_Reporte_Mostrar_Boletas, txtBuscar.Text, dtpFechaInicio.Value, dtpFechaFinal.Value, cmbEstado.SelectedValue.ToString());
+            this.sp_Reporte_Mostrar_BoletasTableAdapter.Fill(this.AWS_DATA_SET.sp_Reporte_Mostrar_Boletas, txtBuscar.Text, dtpFechaInicio.Value.Date, dtpFechaFinal.Value.Date, cmbEstado.SelectedValue.ToString());
 
             this.reportViewer1.RefreshReport();
         }

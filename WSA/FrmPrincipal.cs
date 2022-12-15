@@ -222,5 +222,12 @@ namespace WSA
             CerrarFormularios();
             CargarFormulario(rFrmBoletas);
         }
+
+        private void bitácoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rFrmBitacora rFrmBitacora = new rFrmBitacora();
+            CerrarFormularios();
+            CargarFormulario(rFrmBitacora);
+        }
     }
 }

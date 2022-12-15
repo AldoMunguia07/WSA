@@ -595,7 +595,7 @@ BEGIN
 END
 GO
 
-ALTER PROCEDURE sp_Indicador
+CREATE PROCEDURE sp_Indicador
 @Indicador_Id INT = NULL,
 @Port_Name VARCHAR(40) = NULL,
 @Baud_Rate INT = NULL,
@@ -622,7 +622,7 @@ BEGIN
 END
 GO
 
-ALTER PROCEDURE sp_Boleta
+CREATE PROCEDURE sp_Boleta
 	@Boleta_Id INT = NULL,
 	@Fecha_Entrada DATETIME = NULL,
 	@Fecha_Salida DATETIME = NULL,
@@ -761,7 +761,7 @@ CREATE PROCEDURE sp_Bitacora@value SQL_VARIANT = NULL,@key SYSNAME = NULL,@bu
 END
 GO
 
-ALTER PROCEDURE sp_ComboBox@accion nvarchar(50)ASBEGIN
+CREATE PROCEDURE sp_ComboBox@accion nvarchar(50)ASBEGIN
 	IF @accion = 'ComboBoxEstadoBoleta'	BEGIN		SELECT '%' Identificador, 'TODAS LAS BOLETAS' Estado		UNION		SELECT 'A' Identificador, 'ANULADAS' Estado		UNION		SELECT 'C' Identificador, 'CERRADAS' Estado		UNION		SELECT 'P' Identificador, 'EN PROCESO' Estado	END
 
 END
@@ -803,7 +803,7 @@ BEGIN
 	
 	SELECT b.Boleta_Id, b.Fecha_Entrada, b.Fecha_Salida, b.Placa_Cabezal, b.Placa_Rastra, c.Conductor,
 			cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) Peso_Ingreso, CONCAT(b.Peso_Salida,' ',b.Unidades_Peso_Salida) Peso_Salida, CONCAT(((b.Peso_Ingreso - b.Peso_Salida) * -1), ' ',b.Unidades_Peso_Salida) Peso_Neto, 
-			bc.Descripcion Barco, b.Estado, u.Nombre_Usuario Usuario, b.Observaciones--, @fechaInicio fechaInicio, @fechaFinal fechaFinal
+			bc.Descripcion Barco, b.Estado, u.Nombre_Usuario Usuario, b.Observaciones, @fechaInicio fechaInicio, @fechaFinal fechaFinal
 			FROM Boleta b JOIN Conductor c
 			ON b.Conductor_Id = c.Conductor_Id
 			JOIN Producto p ON b.Producto_Id = p.Producto_Id
@@ -817,21 +817,17 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE sp_Reporte_Mostrar_Anuladas
+CREATE PROCEDURE sp_Reporte_Bitacora
 	@buscado VARCHAR(80)  = NULL,	@fechaInicio DATETIME = NULL,	@fechaFinal DATETIME = NULL
 AS
 BEGIN
 	
-	SELECT b.Boleta_Id 'Código de boleta', b.Fecha_Entrada 'Fecha de entrada', b.Placa_Cabezal 'Placa del cabezal', b.Placa_Rastra 'Placa de la rastra', c.Conductor_Id 'Código del conductor', c.Conductor,
-			cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) 'Peso de ingreso', b.Barco_Id 'Código del barco', bc.Descripcion 'Barco', b.Estado, u.Nombre_Usuario Usuario, b.Observaciones
-			FROM Boleta b JOIN Conductor c
-			ON b.Conductor_Id = c.Conductor_Id
-			JOIN Producto p ON b.Producto_Id = p.Producto_Id
-			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
-			JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
-			JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
-			WHERE Estado = 'A' AND CONVERT(DATE, B.Fecha_Entrada) BETWEEN @fechaInicio and @fechaFinal AND CONCAT(b.Boleta_Id, ' ', b.Conductor_Id, ' ', b.Placa_Rastra,' ' ,b.Placa_Rastra,' ' ,c.Conductor_Id,' ' ,c.Conductor,' ' ,Cliente,' ',p.Descripcion, ' ',bc.Barco_Id ,' ',bc.Descripcion, ' ', u.Nombre_Usuario, ' ', u.Usuario) LIKE CONCAT('%',@buscado,'%')
-			ORDER BY Boleta_Id DESC
+	SELECT b.Bitacora_Id , CONVERT(DATE, b.Fecha) Fecha, CONVERT(VARCHAR, b.Fecha, 8) Hora, u.Usuario, B.Usuario_PC 'PC', b.Tipo_Accion 'Tipo', b.Accion,
+			@fechaInicio fechaInicio, @fechaFinal fechaFinal
+			FROM Bitacora b JOIN Usuario u
+			ON u.Usuario_Id = b.Usuario_Id
+		    WHERE CONVERT(DATE, b.Fecha) BETWEEN @fechaInicio and @fechaFinal and CONCAT(u.Usuario_Id, ' ', u.Usuario, ' ', b.Tipo_Accion,' ' ,b.accion) LIKE CONCAT('%',@buscado,'%')
+			ORDER BY b.Bitacora_Id DESC
 			
 END
 GO

@@ -46,6 +46,7 @@ namespace WSA
             this.barcosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.boletasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.administracinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.encabezadoBoletaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,7 +57,7 @@ namespace WSA
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.boletasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bitácoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -191,11 +192,19 @@ namespace WSA
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.boletasToolStripMenuItem1});
+            this.boletasToolStripMenuItem1,
+            this.bitácoraToolStripMenuItem});
             this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // boletasToolStripMenuItem1
+            // 
+            this.boletasToolStripMenuItem1.Name = "boletasToolStripMenuItem1";
+            this.boletasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.boletasToolStripMenuItem1.Text = "Boletas";
+            this.boletasToolStripMenuItem1.Click += new System.EventHandler(this.boletasToolStripMenuItem1_Click);
             // 
             // administracinToolStripMenuItem
             // 
@@ -272,12 +281,12 @@ namespace WSA
             this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // boletasToolStripMenuItem1
+            // bitácoraToolStripMenuItem
             // 
-            this.boletasToolStripMenuItem1.Name = "boletasToolStripMenuItem1";
-            this.boletasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.boletasToolStripMenuItem1.Text = "Boletas";
-            this.boletasToolStripMenuItem1.Click += new System.EventHandler(this.boletasToolStripMenuItem1_Click);
+            this.bitácoraToolStripMenuItem.Name = "bitácoraToolStripMenuItem";
+            this.bitácoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bitácoraToolStripMenuItem.Text = "Bitácora";
+            this.bitácoraToolStripMenuItem.Click += new System.EventHandler(this.bitácoraToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -333,6 +342,7 @@ namespace WSA
         private System.Windows.Forms.ToolStripMenuItem miUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuraciónIndicadorDeBásculaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem boletasToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem bitácoraToolStripMenuItem;
     }
 }
 

@@ -46,7 +46,7 @@ namespace WSA {
         
         private sp_ProveedorDataTable tablesp_Proveedor;
         
-        private sp_Reporte_Mostrar_AnuladasDataTable tablesp_Reporte_Mostrar_Anuladas;
+        private sp_Reporte_BitacoraDataTable tablesp_Reporte_Bitacora;
         
         private sp_Reporte_Mostrar_BoletasDataTable tablesp_Reporte_Mostrar_Boletas;
         
@@ -113,8 +113,8 @@ namespace WSA {
                 if ((ds.Tables["sp_Proveedor"] != null)) {
                     base.Tables.Add(new sp_ProveedorDataTable(ds.Tables["sp_Proveedor"]));
                 }
-                if ((ds.Tables["sp_Reporte_Mostrar_Anuladas"] != null)) {
-                    base.Tables.Add(new sp_Reporte_Mostrar_AnuladasDataTable(ds.Tables["sp_Reporte_Mostrar_Anuladas"]));
+                if ((ds.Tables["sp_Reporte_Bitacora"] != null)) {
+                    base.Tables.Add(new sp_Reporte_BitacoraDataTable(ds.Tables["sp_Reporte_Bitacora"]));
                 }
                 if ((ds.Tables["sp_Reporte_Mostrar_Boletas"] != null)) {
                     base.Tables.Add(new sp_Reporte_Mostrar_BoletasDataTable(ds.Tables["sp_Reporte_Mostrar_Boletas"]));
@@ -254,9 +254,9 @@ namespace WSA {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public sp_Reporte_Mostrar_AnuladasDataTable sp_Reporte_Mostrar_Anuladas {
+        public sp_Reporte_BitacoraDataTable sp_Reporte_Bitacora {
             get {
-                return this.tablesp_Reporte_Mostrar_Anuladas;
+                return this.tablesp_Reporte_Bitacora;
             }
         }
         
@@ -380,8 +380,8 @@ namespace WSA {
                 if ((ds.Tables["sp_Proveedor"] != null)) {
                     base.Tables.Add(new sp_ProveedorDataTable(ds.Tables["sp_Proveedor"]));
                 }
-                if ((ds.Tables["sp_Reporte_Mostrar_Anuladas"] != null)) {
-                    base.Tables.Add(new sp_Reporte_Mostrar_AnuladasDataTable(ds.Tables["sp_Reporte_Mostrar_Anuladas"]));
+                if ((ds.Tables["sp_Reporte_Bitacora"] != null)) {
+                    base.Tables.Add(new sp_Reporte_BitacoraDataTable(ds.Tables["sp_Reporte_Bitacora"]));
                 }
                 if ((ds.Tables["sp_Reporte_Mostrar_Boletas"] != null)) {
                     base.Tables.Add(new sp_Reporte_Mostrar_BoletasDataTable(ds.Tables["sp_Reporte_Mostrar_Boletas"]));
@@ -488,10 +488,10 @@ namespace WSA {
                     this.tablesp_Proveedor.InitVars();
                 }
             }
-            this.tablesp_Reporte_Mostrar_Anuladas = ((sp_Reporte_Mostrar_AnuladasDataTable)(base.Tables["sp_Reporte_Mostrar_Anuladas"]));
+            this.tablesp_Reporte_Bitacora = ((sp_Reporte_BitacoraDataTable)(base.Tables["sp_Reporte_Bitacora"]));
             if ((initTable == true)) {
-                if ((this.tablesp_Reporte_Mostrar_Anuladas != null)) {
-                    this.tablesp_Reporte_Mostrar_Anuladas.InitVars();
+                if ((this.tablesp_Reporte_Bitacora != null)) {
+                    this.tablesp_Reporte_Bitacora.InitVars();
                 }
             }
             this.tablesp_Reporte_Mostrar_Boletas = ((sp_Reporte_Mostrar_BoletasDataTable)(base.Tables["sp_Reporte_Mostrar_Boletas"]));
@@ -538,8 +538,8 @@ namespace WSA {
             base.Tables.Add(this.tablesp_Producto);
             this.tablesp_Proveedor = new sp_ProveedorDataTable();
             base.Tables.Add(this.tablesp_Proveedor);
-            this.tablesp_Reporte_Mostrar_Anuladas = new sp_Reporte_Mostrar_AnuladasDataTable();
-            base.Tables.Add(this.tablesp_Reporte_Mostrar_Anuladas);
+            this.tablesp_Reporte_Bitacora = new sp_Reporte_BitacoraDataTable();
+            base.Tables.Add(this.tablesp_Reporte_Bitacora);
             this.tablesp_Reporte_Mostrar_Boletas = new sp_Reporte_Mostrar_BoletasDataTable();
             base.Tables.Add(this.tablesp_Reporte_Mostrar_Boletas);
             this.tablesp_Usuario = new sp_UsuarioDataTable();
@@ -614,7 +614,7 @@ namespace WSA {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializesp_Reporte_Mostrar_Anuladas() {
+        private bool ShouldSerializesp_Reporte_Bitacora() {
             return false;
         }
         
@@ -719,7 +719,7 @@ namespace WSA {
         public delegate void sp_ProveedorRowChangeEventHandler(object sender, sp_ProveedorRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void sp_Reporte_Mostrar_AnuladasRowChangeEventHandler(object sender, sp_Reporte_Mostrar_AnuladasRowChangeEvent e);
+        public delegate void sp_Reporte_BitacoraRowChangeEventHandler(object sender, sp_Reporte_BitacoraRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void sp_Reporte_Mostrar_BoletasRowChangeEventHandler(object sender, sp_Reporte_Mostrar_BoletasRowChangeEvent e);
@@ -4388,40 +4388,30 @@ namespace WSA {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class sp_Reporte_Mostrar_AnuladasDataTable : global::System.Data.TypedTableBase<sp_Reporte_Mostrar_AnuladasRow> {
-            
-            private global::System.Data.DataColumn columnCódigo_de_boleta;
-            
-            private global::System.Data.DataColumn columnFecha_de_entrada;
-            
-            private global::System.Data.DataColumn columnPlaca_del_cabezal;
-            
-            private global::System.Data.DataColumn columnPlaca_de_la_rastra;
-            
-            private global::System.Data.DataColumn columnCódigo_del_conductor;
-            
-            private global::System.Data.DataColumn columnConductor;
-            
-            private global::System.Data.DataColumn columnCliente;
-            
-            private global::System.Data.DataColumn columnProducto;
-            
-            private global::System.Data.DataColumn columnPeso_de_ingreso;
-            
-            private global::System.Data.DataColumn columnCódigo_del_barco;
-            
-            private global::System.Data.DataColumn columnBarco;
-            
-            private global::System.Data.DataColumn columnEstado;
+        public partial class sp_Reporte_BitacoraDataTable : global::System.Data.TypedTableBase<sp_Reporte_BitacoraRow> {
             
             private global::System.Data.DataColumn columnUsuario;
             
-            private global::System.Data.DataColumn columnObservaciones;
+            private global::System.Data.DataColumn columnBitacora_Id;
+            
+            private global::System.Data.DataColumn columnFecha;
+            
+            private global::System.Data.DataColumn columnHora;
+            
+            private global::System.Data.DataColumn columnPC;
+            
+            private global::System.Data.DataColumn columnTipo;
+            
+            private global::System.Data.DataColumn columnAccion;
+            
+            private global::System.Data.DataColumn columnfechaInicio;
+            
+            private global::System.Data.DataColumn columnfechaFinal;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public sp_Reporte_Mostrar_AnuladasDataTable() {
-                this.TableName = "sp_Reporte_Mostrar_Anuladas";
+            public sp_Reporte_BitacoraDataTable() {
+                this.TableName = "sp_Reporte_Bitacora";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -4429,7 +4419,7 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal sp_Reporte_Mostrar_AnuladasDataTable(global::System.Data.DataTable table) {
+            internal sp_Reporte_BitacoraDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -4446,105 +4436,9 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected sp_Reporte_Mostrar_AnuladasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected sp_Reporte_BitacoraDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Código_de_boletaColumn {
-                get {
-                    return this.columnCódigo_de_boleta;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Fecha_de_entradaColumn {
-                get {
-                    return this.columnFecha_de_entrada;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Placa_del_cabezalColumn {
-                get {
-                    return this.columnPlaca_del_cabezal;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Placa_de_la_rastraColumn {
-                get {
-                    return this.columnPlaca_de_la_rastra;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Código_del_conductorColumn {
-                get {
-                    return this.columnCódigo_del_conductor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ConductorColumn {
-                get {
-                    return this.columnConductor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ClienteColumn {
-                get {
-                    return this.columnCliente;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ProductoColumn {
-                get {
-                    return this.columnProducto;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Peso_de_ingresoColumn {
-                get {
-                    return this.columnPeso_de_ingreso;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Código_del_barcoColumn {
-                get {
-                    return this.columnCódigo_del_barco;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BarcoColumn {
-                get {
-                    return this.columnBarco;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn EstadoColumn {
-                get {
-                    return this.columnEstado;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4557,9 +4451,65 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ObservacionesColumn {
+            public global::System.Data.DataColumn Bitacora_IdColumn {
                 get {
-                    return this.columnObservaciones;
+                    return this.columnBitacora_Id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FechaColumn {
+                get {
+                    return this.columnFecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn HoraColumn {
+                get {
+                    return this.columnHora;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PCColumn {
+                get {
+                    return this.columnPC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TipoColumn {
+                get {
+                    return this.columnTipo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn AccionColumn {
+                get {
+                    return this.columnAccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn fechaInicioColumn {
+                get {
+                    return this.columnfechaInicio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn fechaFinalColumn {
+                get {
+                    return this.columnfechaFinal;
                 }
             }
             
@@ -4574,58 +4524,60 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public sp_Reporte_Mostrar_AnuladasRow this[int index] {
+            public sp_Reporte_BitacoraRow this[int index] {
                 get {
-                    return ((sp_Reporte_Mostrar_AnuladasRow)(this.Rows[index]));
+                    return ((sp_Reporte_BitacoraRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event sp_Reporte_Mostrar_AnuladasRowChangeEventHandler sp_Reporte_Mostrar_AnuladasRowChanging;
+            public event sp_Reporte_BitacoraRowChangeEventHandler sp_Reporte_BitacoraRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event sp_Reporte_Mostrar_AnuladasRowChangeEventHandler sp_Reporte_Mostrar_AnuladasRowChanged;
+            public event sp_Reporte_BitacoraRowChangeEventHandler sp_Reporte_BitacoraRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event sp_Reporte_Mostrar_AnuladasRowChangeEventHandler sp_Reporte_Mostrar_AnuladasRowDeleting;
+            public event sp_Reporte_BitacoraRowChangeEventHandler sp_Reporte_BitacoraRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event sp_Reporte_Mostrar_AnuladasRowChangeEventHandler sp_Reporte_Mostrar_AnuladasRowDeleted;
+            public event sp_Reporte_BitacoraRowChangeEventHandler sp_Reporte_BitacoraRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Addsp_Reporte_Mostrar_AnuladasRow(sp_Reporte_Mostrar_AnuladasRow row) {
+            public void Addsp_Reporte_BitacoraRow(sp_Reporte_BitacoraRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public sp_Reporte_Mostrar_AnuladasRow Addsp_Reporte_Mostrar_AnuladasRow(System.DateTime Fecha_de_entrada, string Placa_del_cabezal, string Placa_de_la_rastra, string Conductor, string Cliente, string Producto, string Peso_de_ingreso, int Código_del_barco, string Barco, string Estado, string Usuario, string Observaciones) {
-                sp_Reporte_Mostrar_AnuladasRow rowsp_Reporte_Mostrar_AnuladasRow = ((sp_Reporte_Mostrar_AnuladasRow)(this.NewRow()));
+            public sp_Reporte_BitacoraRow Addsp_Reporte_BitacoraRow(string Usuario, System.DateTime Fecha, string Hora, string PC, string Tipo, string Accion, System.DateTime fechaInicio, System.DateTime fechaFinal) {
+                sp_Reporte_BitacoraRow rowsp_Reporte_BitacoraRow = ((sp_Reporte_BitacoraRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        Fecha_de_entrada,
-                        Placa_del_cabezal,
-                        Placa_de_la_rastra,
-                        null,
-                        Conductor,
-                        Cliente,
-                        Producto,
-                        Peso_de_ingreso,
-                        Código_del_barco,
-                        Barco,
-                        Estado,
                         Usuario,
-                        Observaciones};
-                rowsp_Reporte_Mostrar_AnuladasRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowsp_Reporte_Mostrar_AnuladasRow);
-                return rowsp_Reporte_Mostrar_AnuladasRow;
+                        null,
+                        Fecha,
+                        Hora,
+                        PC,
+                        Tipo,
+                        Accion,
+                        fechaInicio,
+                        fechaFinal};
+                rowsp_Reporte_BitacoraRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsp_Reporte_BitacoraRow);
+                return rowsp_Reporte_BitacoraRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Reporte_BitacoraRow FindByBitacora_Id(int Bitacora_Id) {
+                return ((sp_Reporte_BitacoraRow)(this.Rows.Find(new object[] {
+                            Bitacora_Id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                sp_Reporte_Mostrar_AnuladasDataTable cln = ((sp_Reporte_Mostrar_AnuladasDataTable)(base.Clone()));
+                sp_Reporte_BitacoraDataTable cln = ((sp_Reporte_BitacoraDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -4633,110 +4585,91 @@ namespace WSA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new sp_Reporte_Mostrar_AnuladasDataTable();
+                return new sp_Reporte_BitacoraDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnCódigo_de_boleta = base.Columns["Código de boleta"];
-                this.columnFecha_de_entrada = base.Columns["Fecha de entrada"];
-                this.columnPlaca_del_cabezal = base.Columns["Placa del cabezal"];
-                this.columnPlaca_de_la_rastra = base.Columns["Placa de la rastra"];
-                this.columnCódigo_del_conductor = base.Columns["Código del conductor"];
-                this.columnConductor = base.Columns["Conductor"];
-                this.columnCliente = base.Columns["Cliente"];
-                this.columnProducto = base.Columns["Producto"];
-                this.columnPeso_de_ingreso = base.Columns["Peso de ingreso"];
-                this.columnCódigo_del_barco = base.Columns["Código del barco"];
-                this.columnBarco = base.Columns["Barco"];
-                this.columnEstado = base.Columns["Estado"];
                 this.columnUsuario = base.Columns["Usuario"];
-                this.columnObservaciones = base.Columns["Observaciones"];
+                this.columnBitacora_Id = base.Columns["Bitacora_Id"];
+                this.columnFecha = base.Columns["Fecha"];
+                this.columnHora = base.Columns["Hora"];
+                this.columnPC = base.Columns["PC"];
+                this.columnTipo = base.Columns["Tipo"];
+                this.columnAccion = base.Columns["Accion"];
+                this.columnfechaInicio = base.Columns["fechaInicio"];
+                this.columnfechaFinal = base.Columns["fechaFinal"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnCódigo_de_boleta = new global::System.Data.DataColumn("Código de boleta", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCódigo_de_boleta);
-                this.columnFecha_de_entrada = new global::System.Data.DataColumn("Fecha de entrada", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFecha_de_entrada);
-                this.columnPlaca_del_cabezal = new global::System.Data.DataColumn("Placa del cabezal", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPlaca_del_cabezal);
-                this.columnPlaca_de_la_rastra = new global::System.Data.DataColumn("Placa de la rastra", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPlaca_de_la_rastra);
-                this.columnCódigo_del_conductor = new global::System.Data.DataColumn("Código del conductor", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCódigo_del_conductor);
-                this.columnConductor = new global::System.Data.DataColumn("Conductor", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnConductor);
-                this.columnCliente = new global::System.Data.DataColumn("Cliente", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCliente);
-                this.columnProducto = new global::System.Data.DataColumn("Producto", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProducto);
-                this.columnPeso_de_ingreso = new global::System.Data.DataColumn("Peso de ingreso", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPeso_de_ingreso);
-                this.columnCódigo_del_barco = new global::System.Data.DataColumn("Código del barco", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCódigo_del_barco);
-                this.columnBarco = new global::System.Data.DataColumn("Barco", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBarco);
-                this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEstado);
                 this.columnUsuario = new global::System.Data.DataColumn("Usuario", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUsuario);
-                this.columnObservaciones = new global::System.Data.DataColumn("Observaciones", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnObservaciones);
-                this.columnCódigo_de_boleta.AutoIncrement = true;
-                this.columnCódigo_de_boleta.AllowDBNull = false;
-                this.columnCódigo_de_boleta.ReadOnly = true;
-                this.columnFecha_de_entrada.AllowDBNull = false;
-                this.columnPlaca_del_cabezal.MaxLength = 10;
-                this.columnPlaca_de_la_rastra.MaxLength = 10;
-                this.columnCódigo_del_conductor.AutoIncrement = true;
-                this.columnCódigo_del_conductor.AllowDBNull = false;
-                this.columnCódigo_del_conductor.ReadOnly = true;
-                this.columnConductor.AllowDBNull = false;
-                this.columnConductor.MaxLength = 70;
-                this.columnCliente.AllowDBNull = false;
-                this.columnCliente.MaxLength = 70;
-                this.columnProducto.AllowDBNull = false;
-                this.columnProducto.MaxLength = 80;
-                this.columnPeso_de_ingreso.ReadOnly = true;
-                this.columnPeso_de_ingreso.MaxLength = 28;
-                this.columnCódigo_del_barco.AllowDBNull = false;
-                this.columnBarco.AllowDBNull = false;
-                this.columnBarco.MaxLength = 70;
-                this.columnEstado.AllowDBNull = false;
-                this.columnEstado.MaxLength = 1;
+                this.columnBitacora_Id = new global::System.Data.DataColumn("Bitacora_Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBitacora_Id);
+                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha);
+                this.columnHora = new global::System.Data.DataColumn("Hora", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHora);
+                this.columnPC = new global::System.Data.DataColumn("PC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPC);
+                this.columnTipo = new global::System.Data.DataColumn("Tipo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipo);
+                this.columnAccion = new global::System.Data.DataColumn("Accion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAccion);
+                this.columnfechaInicio = new global::System.Data.DataColumn("fechaInicio", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfechaInicio);
+                this.columnfechaFinal = new global::System.Data.DataColumn("fechaFinal", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfechaFinal);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnBitacora_Id}, true));
                 this.columnUsuario.AllowDBNull = false;
                 this.columnUsuario.MaxLength = 80;
-                this.columnObservaciones.MaxLength = 200;
+                this.columnBitacora_Id.AutoIncrement = true;
+                this.columnBitacora_Id.AutoIncrementSeed = -1;
+                this.columnBitacora_Id.AutoIncrementStep = -1;
+                this.columnBitacora_Id.AllowDBNull = false;
+                this.columnBitacora_Id.ReadOnly = true;
+                this.columnBitacora_Id.Unique = true;
+                this.columnFecha.ReadOnly = true;
+                this.columnHora.ReadOnly = true;
+                this.columnHora.MaxLength = 30;
+                this.columnPC.AllowDBNull = false;
+                this.columnPC.MaxLength = 70;
+                this.columnTipo.AllowDBNull = false;
+                this.columnTipo.MaxLength = 25;
+                this.columnAccion.AllowDBNull = false;
+                this.columnAccion.MaxLength = 200;
+                this.columnfechaInicio.ReadOnly = true;
+                this.columnfechaFinal.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public sp_Reporte_Mostrar_AnuladasRow Newsp_Reporte_Mostrar_AnuladasRow() {
-                return ((sp_Reporte_Mostrar_AnuladasRow)(this.NewRow()));
+            public sp_Reporte_BitacoraRow Newsp_Reporte_BitacoraRow() {
+                return ((sp_Reporte_BitacoraRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new sp_Reporte_Mostrar_AnuladasRow(builder);
+                return new sp_Reporte_BitacoraRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(sp_Reporte_Mostrar_AnuladasRow);
+                return typeof(sp_Reporte_BitacoraRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.sp_Reporte_Mostrar_AnuladasRowChanged != null)) {
-                    this.sp_Reporte_Mostrar_AnuladasRowChanged(this, new sp_Reporte_Mostrar_AnuladasRowChangeEvent(((sp_Reporte_Mostrar_AnuladasRow)(e.Row)), e.Action));
+                if ((this.sp_Reporte_BitacoraRowChanged != null)) {
+                    this.sp_Reporte_BitacoraRowChanged(this, new sp_Reporte_BitacoraRowChangeEvent(((sp_Reporte_BitacoraRow)(e.Row)), e.Action));
                 }
             }
             
@@ -4744,8 +4677,8 @@ namespace WSA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.sp_Reporte_Mostrar_AnuladasRowChanging != null)) {
-                    this.sp_Reporte_Mostrar_AnuladasRowChanging(this, new sp_Reporte_Mostrar_AnuladasRowChangeEvent(((sp_Reporte_Mostrar_AnuladasRow)(e.Row)), e.Action));
+                if ((this.sp_Reporte_BitacoraRowChanging != null)) {
+                    this.sp_Reporte_BitacoraRowChanging(this, new sp_Reporte_BitacoraRowChangeEvent(((sp_Reporte_BitacoraRow)(e.Row)), e.Action));
                 }
             }
             
@@ -4753,8 +4686,8 @@ namespace WSA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.sp_Reporte_Mostrar_AnuladasRowDeleted != null)) {
-                    this.sp_Reporte_Mostrar_AnuladasRowDeleted(this, new sp_Reporte_Mostrar_AnuladasRowChangeEvent(((sp_Reporte_Mostrar_AnuladasRow)(e.Row)), e.Action));
+                if ((this.sp_Reporte_BitacoraRowDeleted != null)) {
+                    this.sp_Reporte_BitacoraRowDeleted(this, new sp_Reporte_BitacoraRowChangeEvent(((sp_Reporte_BitacoraRow)(e.Row)), e.Action));
                 }
             }
             
@@ -4762,14 +4695,14 @@ namespace WSA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.sp_Reporte_Mostrar_AnuladasRowDeleting != null)) {
-                    this.sp_Reporte_Mostrar_AnuladasRowDeleting(this, new sp_Reporte_Mostrar_AnuladasRowChangeEvent(((sp_Reporte_Mostrar_AnuladasRow)(e.Row)), e.Action));
+                if ((this.sp_Reporte_BitacoraRowDeleting != null)) {
+                    this.sp_Reporte_BitacoraRowDeleting(this, new sp_Reporte_BitacoraRowChangeEvent(((sp_Reporte_BitacoraRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Removesp_Reporte_Mostrar_AnuladasRow(sp_Reporte_Mostrar_AnuladasRow row) {
+            public void Removesp_Reporte_BitacoraRow(sp_Reporte_BitacoraRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -4796,7 +4729,7 @@ namespace WSA {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "sp_Reporte_Mostrar_AnuladasDataTable";
+                attribute2.FixedValue = "sp_Reporte_BitacoraDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -6832,241 +6765,183 @@ namespace WSA {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class sp_Reporte_Mostrar_AnuladasRow : global::System.Data.DataRow {
+        public partial class sp_Reporte_BitacoraRow : global::System.Data.DataRow {
             
-            private sp_Reporte_Mostrar_AnuladasDataTable tablesp_Reporte_Mostrar_Anuladas;
+            private sp_Reporte_BitacoraDataTable tablesp_Reporte_Bitacora;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal sp_Reporte_Mostrar_AnuladasRow(global::System.Data.DataRowBuilder rb) : 
+            internal sp_Reporte_BitacoraRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablesp_Reporte_Mostrar_Anuladas = ((sp_Reporte_Mostrar_AnuladasDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Código_de_boleta {
-                get {
-                    return ((int)(this[this.tablesp_Reporte_Mostrar_Anuladas.Código_de_boletaColumn]));
-                }
-                set {
-                    this[this.tablesp_Reporte_Mostrar_Anuladas.Código_de_boletaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Fecha_de_entrada {
-                get {
-                    return ((global::System.DateTime)(this[this.tablesp_Reporte_Mostrar_Anuladas.Fecha_de_entradaColumn]));
-                }
-                set {
-                    this[this.tablesp_Reporte_Mostrar_Anuladas.Fecha_de_entradaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Placa_del_cabezal {
-                get {
-                    try {
-                        return ((string)(this[this.tablesp_Reporte_Mostrar_Anuladas.Placa_del_cabezalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Placa del cabezal\' de la tabla \'sp_Reporte_Mostrar_Anulad" +
-                                "as\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesp_Reporte_Mostrar_Anuladas.Placa_del_cabezalColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Placa_de_la_rastra {
-                get {
-                    try {
-                        return ((string)(this[this.tablesp_Reporte_Mostrar_Anuladas.Placa_de_la_rastraColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Placa de la rastra\' de la tabla \'sp_Reporte_Mostrar_Anula" +
-                                "das\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesp_Reporte_Mostrar_Anuladas.Placa_de_la_rastraColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Código_del_conductor {
-                get {
-                    return ((int)(this[this.tablesp_Reporte_Mostrar_Anuladas.Código_del_conductorColumn]));
-                }
-                set {
-                    this[this.tablesp_Reporte_Mostrar_Anuladas.Código_del_conductorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Conductor {
-                get {
-                    return ((string)(this[this.tablesp_Reporte_Mostrar_Anuladas.ConductorColumn]));
-                }
-                set {
-                    this[this.tablesp_Reporte_Mostrar_Anuladas.ConductorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Cliente {
-                get {
-                    return ((string)(this[this.tablesp_Reporte_Mostrar_Anuladas.ClienteColumn]));
-                }
-                set {
-                    this[this.tablesp_Reporte_Mostrar_Anuladas.ClienteColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Producto {
-                get {
-                    return ((string)(this[this.tablesp_Reporte_Mostrar_Anuladas.ProductoColumn]));
-                }
-                set {
-                    this[this.tablesp_Reporte_Mostrar_Anuladas.ProductoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Peso_de_ingreso {
-                get {
-                    try {
-                        return ((string)(this[this.tablesp_Reporte_Mostrar_Anuladas.Peso_de_ingresoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Peso de ingreso\' de la tabla \'sp_Reporte_Mostrar_Anuladas" +
-                                "\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesp_Reporte_Mostrar_Anuladas.Peso_de_ingresoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Código_del_barco {
-                get {
-                    return ((int)(this[this.tablesp_Reporte_Mostrar_Anuladas.Código_del_barcoColumn]));
-                }
-                set {
-                    this[this.tablesp_Reporte_Mostrar_Anuladas.Código_del_barcoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Barco {
-                get {
-                    return ((string)(this[this.tablesp_Reporte_Mostrar_Anuladas.BarcoColumn]));
-                }
-                set {
-                    this[this.tablesp_Reporte_Mostrar_Anuladas.BarcoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Estado {
-                get {
-                    return ((string)(this[this.tablesp_Reporte_Mostrar_Anuladas.EstadoColumn]));
-                }
-                set {
-                    this[this.tablesp_Reporte_Mostrar_Anuladas.EstadoColumn] = value;
-                }
+                this.tablesp_Reporte_Bitacora = ((sp_Reporte_BitacoraDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Usuario {
                 get {
-                    return ((string)(this[this.tablesp_Reporte_Mostrar_Anuladas.UsuarioColumn]));
+                    return ((string)(this[this.tablesp_Reporte_Bitacora.UsuarioColumn]));
                 }
                 set {
-                    this[this.tablesp_Reporte_Mostrar_Anuladas.UsuarioColumn] = value;
+                    this[this.tablesp_Reporte_Bitacora.UsuarioColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Observaciones {
+            public int Bitacora_Id {
+                get {
+                    return ((int)(this[this.tablesp_Reporte_Bitacora.Bitacora_IdColumn]));
+                }
+                set {
+                    this[this.tablesp_Reporte_Bitacora.Bitacora_IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Fecha {
                 get {
                     try {
-                        return ((string)(this[this.tablesp_Reporte_Mostrar_Anuladas.ObservacionesColumn]));
+                        return ((global::System.DateTime)(this[this.tablesp_Reporte_Bitacora.FechaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Observaciones\' de la tabla \'sp_Reporte_Mostrar_Anuladas\' " +
-                                "es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Fecha\' de la tabla \'sp_Reporte_Bitacora\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablesp_Reporte_Mostrar_Anuladas.ObservacionesColumn] = value;
+                    this[this.tablesp_Reporte_Bitacora.FechaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPlaca_del_cabezalNull() {
-                return this.IsNull(this.tablesp_Reporte_Mostrar_Anuladas.Placa_del_cabezalColumn);
+            public string Hora {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Reporte_Bitacora.HoraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Hora\' de la tabla \'sp_Reporte_Bitacora\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Reporte_Bitacora.HoraColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPlaca_del_cabezalNull() {
-                this[this.tablesp_Reporte_Mostrar_Anuladas.Placa_del_cabezalColumn] = global::System.Convert.DBNull;
+            public string PC {
+                get {
+                    return ((string)(this[this.tablesp_Reporte_Bitacora.PCColumn]));
+                }
+                set {
+                    this[this.tablesp_Reporte_Bitacora.PCColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPlaca_de_la_rastraNull() {
-                return this.IsNull(this.tablesp_Reporte_Mostrar_Anuladas.Placa_de_la_rastraColumn);
+            public string Tipo {
+                get {
+                    return ((string)(this[this.tablesp_Reporte_Bitacora.TipoColumn]));
+                }
+                set {
+                    this[this.tablesp_Reporte_Bitacora.TipoColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPlaca_de_la_rastraNull() {
-                this[this.tablesp_Reporte_Mostrar_Anuladas.Placa_de_la_rastraColumn] = global::System.Convert.DBNull;
+            public string Accion {
+                get {
+                    return ((string)(this[this.tablesp_Reporte_Bitacora.AccionColumn]));
+                }
+                set {
+                    this[this.tablesp_Reporte_Bitacora.AccionColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPeso_de_ingresoNull() {
-                return this.IsNull(this.tablesp_Reporte_Mostrar_Anuladas.Peso_de_ingresoColumn);
+            public System.DateTime fechaInicio {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablesp_Reporte_Bitacora.fechaInicioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fechaInicio\' de la tabla \'sp_Reporte_Bitacora\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Reporte_Bitacora.fechaInicioColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPeso_de_ingresoNull() {
-                this[this.tablesp_Reporte_Mostrar_Anuladas.Peso_de_ingresoColumn] = global::System.Convert.DBNull;
+            public System.DateTime fechaFinal {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablesp_Reporte_Bitacora.fechaFinalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fechaFinal\' de la tabla \'sp_Reporte_Bitacora\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Reporte_Bitacora.fechaFinalColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsObservacionesNull() {
-                return this.IsNull(this.tablesp_Reporte_Mostrar_Anuladas.ObservacionesColumn);
+            public bool IsFechaNull() {
+                return this.IsNull(this.tablesp_Reporte_Bitacora.FechaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetObservacionesNull() {
-                this[this.tablesp_Reporte_Mostrar_Anuladas.ObservacionesColumn] = global::System.Convert.DBNull;
+            public void SetFechaNull() {
+                this[this.tablesp_Reporte_Bitacora.FechaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsHoraNull() {
+                return this.IsNull(this.tablesp_Reporte_Bitacora.HoraColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetHoraNull() {
+                this[this.tablesp_Reporte_Bitacora.HoraColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsfechaInicioNull() {
+                return this.IsNull(this.tablesp_Reporte_Bitacora.fechaInicioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetfechaInicioNull() {
+                this[this.tablesp_Reporte_Bitacora.fechaInicioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsfechaFinalNull() {
+                return this.IsNull(this.tablesp_Reporte_Bitacora.fechaFinalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetfechaFinalNull() {
+                this[this.tablesp_Reporte_Bitacora.fechaFinalColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -7921,22 +7796,22 @@ namespace WSA {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class sp_Reporte_Mostrar_AnuladasRowChangeEvent : global::System.EventArgs {
+        public class sp_Reporte_BitacoraRowChangeEvent : global::System.EventArgs {
             
-            private sp_Reporte_Mostrar_AnuladasRow eventRow;
+            private sp_Reporte_BitacoraRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public sp_Reporte_Mostrar_AnuladasRowChangeEvent(sp_Reporte_Mostrar_AnuladasRow row, global::System.Data.DataRowAction action) {
+            public sp_Reporte_BitacoraRowChangeEvent(sp_Reporte_BitacoraRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public sp_Reporte_Mostrar_AnuladasRow Row {
+            public sp_Reporte_BitacoraRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -10768,7 +10643,7 @@ namespace WSA.AWS_DATA_SETTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class sp_Reporte_Mostrar_AnuladasTableAdapter : global::System.ComponentModel.Component {
+    public partial class sp_Reporte_BitacoraTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -10782,7 +10657,7 @@ namespace WSA.AWS_DATA_SETTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public sp_Reporte_Mostrar_AnuladasTableAdapter() {
+        public sp_Reporte_BitacoraTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -10879,21 +10754,16 @@ namespace WSA.AWS_DATA_SETTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "sp_Reporte_Mostrar_Anuladas";
-            tableMapping.ColumnMappings.Add("Código de boleta", "Código de boleta");
-            tableMapping.ColumnMappings.Add("Fecha de entrada", "Fecha de entrada");
-            tableMapping.ColumnMappings.Add("Placa del cabezal", "Placa del cabezal");
-            tableMapping.ColumnMappings.Add("Placa de la rastra", "Placa de la rastra");
-            tableMapping.ColumnMappings.Add("Código del conductor", "Código del conductor");
-            tableMapping.ColumnMappings.Add("Conductor", "Conductor");
-            tableMapping.ColumnMappings.Add("Cliente", "Cliente");
-            tableMapping.ColumnMappings.Add("Producto", "Producto");
-            tableMapping.ColumnMappings.Add("Peso de ingreso", "Peso de ingreso");
-            tableMapping.ColumnMappings.Add("Código del barco", "Código del barco");
-            tableMapping.ColumnMappings.Add("Barco", "Barco");
-            tableMapping.ColumnMappings.Add("Estado", "Estado");
+            tableMapping.DataSetTable = "sp_Reporte_Bitacora";
             tableMapping.ColumnMappings.Add("Usuario", "Usuario");
-            tableMapping.ColumnMappings.Add("Observaciones", "Observaciones");
+            tableMapping.ColumnMappings.Add("Bitacora_Id", "Bitacora_Id");
+            tableMapping.ColumnMappings.Add("Fecha", "Fecha");
+            tableMapping.ColumnMappings.Add("Hora", "Hora");
+            tableMapping.ColumnMappings.Add("PC", "PC");
+            tableMapping.ColumnMappings.Add("Tipo", "Tipo");
+            tableMapping.ColumnMappings.Add("Accion", "Accion");
+            tableMapping.ColumnMappings.Add("fechaInicio", "fechaInicio");
+            tableMapping.ColumnMappings.Add("fechaFinal", "fechaFinal");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -10910,7 +10780,7 @@ namespace WSA.AWS_DATA_SETTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.sp_Reporte_Mostrar_Anuladas";
+            this._commandCollection[0].CommandText = "dbo.sp_Reporte_Bitacora";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@buscado", global::System.Data.SqlDbType.VarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10922,7 +10792,7 @@ namespace WSA.AWS_DATA_SETTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(AWS_DATA_SET.sp_Reporte_Mostrar_AnuladasDataTable dataTable, string buscado, global::System.Nullable<global::System.DateTime> fechaInicio, global::System.Nullable<global::System.DateTime> fechaFinal) {
+        public virtual int Fill(AWS_DATA_SET.sp_Reporte_BitacoraDataTable dataTable, string buscado, global::System.Nullable<global::System.DateTime> fechaInicio, global::System.Nullable<global::System.DateTime> fechaFinal) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((buscado == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -10953,7 +10823,7 @@ namespace WSA.AWS_DATA_SETTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual AWS_DATA_SET.sp_Reporte_Mostrar_AnuladasDataTable GetData(string buscado, global::System.Nullable<global::System.DateTime> fechaInicio, global::System.Nullable<global::System.DateTime> fechaFinal) {
+        public virtual AWS_DATA_SET.sp_Reporte_BitacoraDataTable GetData(string buscado, global::System.Nullable<global::System.DateTime> fechaInicio, global::System.Nullable<global::System.DateTime> fechaFinal) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((buscado == null)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -10973,7 +10843,7 @@ namespace WSA.AWS_DATA_SETTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            AWS_DATA_SET.sp_Reporte_Mostrar_AnuladasDataTable dataTable = new AWS_DATA_SET.sp_Reporte_Mostrar_AnuladasDataTable();
+            AWS_DATA_SET.sp_Reporte_BitacoraDataTable dataTable = new AWS_DATA_SET.sp_Reporte_BitacoraDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

@@ -52,8 +52,9 @@ namespace WSA
             VariablesGlobales.Usuario = null;
             usuario.BitacoraCierreSesion(usuario);
             txtUsuario.Text = "";
-            txtContrasena.Text = "";
+            txtContrasena.Text = "";            
             this.Show();
+            txtUsuario.Focus();
         }
 
         private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
