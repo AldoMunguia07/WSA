@@ -610,7 +610,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Boleta_Id.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -642,7 +644,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Fecha_Entrada.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -674,7 +678,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Fecha_Salida.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -706,7 +712,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Placa_Cabezal.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -738,7 +746,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Placa_Rastra.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -770,7 +780,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Conductor.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -802,7 +814,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Cliente.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -834,7 +848,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Producto.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -866,7 +882,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Peso_Ingreso.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -898,7 +916,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Peso_Salida.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -930,7 +950,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Peso_Neto.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -962,7 +984,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Barco.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -994,7 +1018,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Estado.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -1026,7 +1052,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Usuario.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -1058,7 +1086,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Observaciones.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
