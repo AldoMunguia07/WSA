@@ -180,6 +180,44 @@ namespace WSA.Clases
             }
         }
 
+        public void BuscarAnuladas(DataGridView dataGrid, DateTimePicker dtpFechaInicio, DateTimePicker dtpFechaFinal, string valorBuscado)
+        {
+
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Boleta", conexion.sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+
+                // Establecer los valores de los parámetros
+                sqlCommand.Parameters.AddWithValue("@fechaInicio", dtpFechaInicio.Value.Date);
+                sqlCommand.Parameters.AddWithValue("@fechaFinal", dtpFechaFinal.Value.Date);
+                sqlCommand.Parameters.AddWithValue("@valorBuscado", valorBuscado);
+                sqlCommand.Parameters.AddWithValue("@accion", "buscarAnuladas");
+
+                using (sqlDataAdapter)
+                {
+                    DataTable dataTable = new DataTable();
+                    sqlDataAdapter.Fill(dataTable);
+                    dataGrid.DataSource = dataTable;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion.sqlConnection.Close();
+            }
+        }
+
         public void AgregarSalida(Boleta boleta)
         {
             try
@@ -234,6 +272,44 @@ namespace WSA.Clases
 
                     sqlDataAdapter.Fill(dataTable);
 
+                    dataGrid.DataSource = dataTable;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion.sqlConnection.Close();
+            }
+        }
+
+        public void BuscarBoletas(DataGridView dataGrid, DateTimePicker dtpFechaInicio, DateTimePicker dtpFechaFinal, string valorBuscado)
+        {
+
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Boleta", conexion.sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+
+                // Establecer los valores de los parámetros
+                sqlCommand.Parameters.AddWithValue("@fechaInicio", dtpFechaInicio.Value.Date);
+                sqlCommand.Parameters.AddWithValue("@fechaFinal", dtpFechaFinal.Value.Date);
+                sqlCommand.Parameters.AddWithValue("@valorBuscado", valorBuscado);
+                sqlCommand.Parameters.AddWithValue("@accion", "buscarSalidas");
+
+                using (sqlDataAdapter)
+                {
+                    DataTable dataTable = new DataTable();
+                    sqlDataAdapter.Fill(dataTable);
                     dataGrid.DataSource = dataTable;
 
                 }

@@ -16,7 +16,7 @@ namespace WSA
         public FrmEntradasAnuladas()
         {
             InitializeComponent();
-            boleta.MostrarEntradasAnuladas(dgvEntradasAnuladas);
+            boleta.BuscarAnuladas(dgvEntradasAnuladas, dtpFechaInicio, dtpFechaFinal, txtBuscar.Text);
         }
 
         private void dgvEntradasAnuladas_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -27,6 +27,21 @@ namespace WSA
                 row.Selected = true;
 
             }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            boleta.BuscarAnuladas(dgvEntradasAnuladas, dtpFechaInicio, dtpFechaFinal, txtBuscar.Text);
+        }
+
+        private void dtpFechaInicio_ValueChanged(object sender, EventArgs e)
+        {
+            boleta.BuscarAnuladas(dgvEntradasAnuladas, dtpFechaInicio, dtpFechaFinal, txtBuscar.Text);
+        }
+
+        private void dtpFechaFinal_ValueChanged(object sender, EventArgs e)
+        {
+            boleta.BuscarAnuladas(dgvEntradasAnuladas, dtpFechaInicio, dtpFechaFinal, txtBuscar.Text);
         }
     }
 }

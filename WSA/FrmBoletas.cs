@@ -19,7 +19,7 @@ namespace WSA
         public FrmBoletas()
         {
             InitializeComponent();
-            boleta.MostrarBoletas(dgvBoletas);
+            boleta.BuscarBoletas(dgvBoletas, dtpFechaInicio, dtpFechaFinal, txtBuscar.Text);
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace WSA
             {
                 FrmTicket frmTicket = new FrmTicket(idBoleta);
                 frmTicket.ShowDialog();
-                boleta.MostrarBoletas(dgvBoletas);
+                boleta.BuscarBoletas(dgvBoletas, dtpFechaInicio, dtpFechaFinal, txtBuscar.Text);
                 seleccionado = false;
             }
             else
@@ -44,7 +44,7 @@ namespace WSA
             {
                 FrmVerBoleta frmVerBoleta = new FrmVerBoleta(idBoleta);
                 frmVerBoleta.ShowDialog();
-                boleta.MostrarBoletas(dgvBoletas);
+                boleta.BuscarBoletas(dgvBoletas, dtpFechaInicio, dtpFechaFinal, txtBuscar.Text);
                 seleccionado = false;
             }
             else
@@ -62,6 +62,21 @@ namespace WSA
                 idBoleta = int.Parse(row.Cells[0].Value.ToString());
                 seleccionado = true;
             }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            boleta.BuscarBoletas(dgvBoletas, dtpFechaInicio, dtpFechaFinal, txtBuscar.Text);
+        }
+
+        private void dtpFechaInicio_ValueChanged(object sender, EventArgs e)
+        {
+            boleta.BuscarBoletas(dgvBoletas, dtpFechaInicio, dtpFechaFinal, txtBuscar.Text);
+        }
+
+        private void dtpFechaFinal_ValueChanged(object sender, EventArgs e)
+        {
+            boleta.BuscarBoletas(dgvBoletas, dtpFechaInicio, dtpFechaFinal, txtBuscar.Text);
         }
     }
 }

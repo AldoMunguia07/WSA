@@ -53,6 +53,6 @@ namespace WSA.Clases
             set { boleta = value; }
         }
 
-        public static String TitleMessageBox = "AWS";
+        public static String TitleMessageBox = "AWS - Advanced Weighing System";
     }
 }

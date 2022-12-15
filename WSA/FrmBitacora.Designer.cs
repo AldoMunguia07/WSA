@@ -135,7 +135,7 @@ namespace WSA
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(229, 231);
+            this.label4.Location = new System.Drawing.Point(291, 231);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 18);
             this.label4.TabIndex = 10;
@@ -145,9 +145,9 @@ namespace WSA
             // 
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(294, 228);
+            this.txtBuscar.Location = new System.Drawing.Point(356, 228);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(309, 27);
+            this.txtBuscar.Size = new System.Drawing.Size(330, 27);
             this.txtBuscar.TabIndex = 2;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
