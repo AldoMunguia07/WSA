@@ -65,12 +65,12 @@ namespace WSA
             {
                 getValues();
                 producto.AgregarProducto(producto);
-                MessageBox.Show("Producto agregado", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Producto agregado", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refresh();
             }
             else
             {
-                MessageBox.Show("Debe llenar todos los campos", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe llenar todos los campos", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -82,17 +82,17 @@ namespace WSA
                 {
                     getValues();
                     producto.ModificarProducto(producto);
-                    MessageBox.Show("Producto modificado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Producto modificado", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     refresh();
                 }
                 else
                 {
-                    MessageBox.Show("Debe llenar todos los campos", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe llenar todos los campos", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("Seleccione el cliente", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione el cliente", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -126,12 +126,12 @@ namespace WSA
                 }
                 else
                 {
-                    MessageBox.Show("Debe llenar todos los campos", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe llenar todos los campos", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("Seleccione el producto", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione el producto", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

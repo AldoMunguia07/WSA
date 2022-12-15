@@ -32,12 +32,12 @@ namespace WSA
             {
                 getValues();
                 barco.AgregarBarco(barco);
-                MessageBox.Show("Barco agregado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Barco agregado", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refresh();
             }
             else
             {
-                MessageBox.Show("Debe llenar todos los campos", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe llenar todos los campos", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -75,17 +75,17 @@ namespace WSA
                 {
                     getValues();
                     barco.ModificarBarco(barco);
-                    MessageBox.Show("Barco modificado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Barco modificado", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     refresh();
                 }
                 else
                 {
-                    MessageBox.Show("Debe llenar todos los campos", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe llenar todos los campos", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("Seleccione el cliente", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione el cliente", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -115,12 +115,12 @@ namespace WSA
                 }
                 else
                 {
-                    MessageBox.Show("Debe llenar todos los campos", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe llenar todos los campos", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("Seleccione el barco", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione el barco", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

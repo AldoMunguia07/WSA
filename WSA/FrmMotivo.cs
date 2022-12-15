@@ -23,7 +23,7 @@ namespace WSA
         {
             boleta.Observaciones = txtMotivo.Text;
             boleta.AnularEntrada(boleta);
-            MessageBox.Show(String.Format("Entrada {0} anulada", boleta.BoletaId), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show(String.Format("Entrada {0} anulada", boleta.BoletaId), VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             this.Close();
         }
 

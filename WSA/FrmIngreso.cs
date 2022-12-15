@@ -43,13 +43,13 @@ namespace WSA
                     }
                     else
                     {
-                        MessageBox.Show(String.Format("El peso máximo es {0}", indicador.Variable("MAX")), "AWS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(String.Format("El peso máximo es {0}", indicador.Variable("MAX")), VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("El peso debe ser mayor a 0", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("El peso debe ser mayor a 0", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             
@@ -64,7 +64,7 @@ namespace WSA
             }
             else
             {
-                MessageBox.Show("Ya se ecnuentra conectado", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ya se ecnuentra conectado", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }
@@ -75,7 +75,7 @@ namespace WSA
             {
                 getValues();
                 boleta.AgregarEntrada(boleta);
-                MessageBox.Show("Entrada agregada", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Entrada agregada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
                 this.Close();
             }
@@ -157,37 +157,37 @@ namespace WSA
                                     }
                                     else
                                     {
-                                        MessageBox.Show("Obtenga el peso de la báscula", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        MessageBox.Show("Obtenga el peso de la báscula", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                     }
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Ingrese el código del barco", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    MessageBox.Show("Ingrese el código del barco", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                 }
                             }
                             else
                             {
-                                MessageBox.Show("Ingrese el código del producto", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("Ingrese el código del producto", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Ingrese el código del cliente", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("Ingrese el código del cliente", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Ingrese la placa de la rastra", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Ingrese la placa de la rastra", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Ingrese la placa del cabezal", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Ingrese la placa del cabezal", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("Ingrese el código del conductor", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Ingrese el código del conductor", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             return false;

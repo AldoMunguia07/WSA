@@ -33,7 +33,7 @@ namespace WSA
                 {
                     encabezadoBoleta.ModificarEncabezadoBoleta(encabezadoBoleta);
                 }
-                MessageBox.Show("Cambios guardados", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cambios guardados", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 encabezadoBoleta.CargarFormularioEncabezadoBoleta(txtEmpresa, txtDireccion, txtTelefono);
 
             }
@@ -59,12 +59,12 @@ namespace WSA
                 }
                 else
                 {
-                    MessageBox.Show("Ingrese la dirección de la empresa", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Ingrese la dirección de la empresa", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("Ingrese el nombre de la empresa", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Ingrese el nombre de la empresa", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             return false;
         }

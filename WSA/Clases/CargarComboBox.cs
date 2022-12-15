@@ -39,9 +39,9 @@ namespace WSA.Clases
 
                 conexion.sqlConnection.Close();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

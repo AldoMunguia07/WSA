@@ -52,5 +52,7 @@ namespace WSA.Clases
             get { return boleta; }
             set { boleta = value; }
         }
+
+        public static String TitleMessageBox = "AWS";
     }
 }

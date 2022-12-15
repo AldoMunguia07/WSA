@@ -38,7 +38,7 @@ namespace WSA.Clases
 
                 sqlCommand.ExecuteNonQuery();
 
-                MessageBox.Show(String.Format("Copia de seguridad creada: {0}", nombreBackup), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(String.Format("Copia de seguridad creada: {0}", nombreBackup), VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

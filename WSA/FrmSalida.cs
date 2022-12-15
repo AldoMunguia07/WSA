@@ -35,7 +35,7 @@ namespace WSA
             }
             else
             {
-                MessageBox.Show("Ya se ecnuentra conectado", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Ya se ecnuentra conectado", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -55,13 +55,13 @@ namespace WSA
                     }
                     else
                     {
-                        MessageBox.Show(String.Format("El peso máximo es {0}", configuracionBascula.Variable("MAX")), "AWS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(String.Format("El peso máximo es {0}", configuracionBascula.Variable("MAX")), VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("El peso debe ser mayor a 0", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("El peso debe ser mayor a 0", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             
@@ -82,13 +82,13 @@ namespace WSA
                 }
                 else
                 {
-                    MessageBox.Show("El peso de salida debe ser mayor al peso de entrada", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("El peso de salida debe ser mayor al peso de entrada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
             }
             else
             {
-                MessageBox.Show("Obtenga el peso de la báscula", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Obtenga el peso de la báscula", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             
         }

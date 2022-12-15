@@ -51,13 +51,13 @@ namespace WSA
                 {
                     indicador.ModificarIndicador(indicador);
                 }
-                MessageBox.Show("Cambios guardados", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cambios guardados", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 indicador.CargarFormuarioIndicador(cmbPuertos, cmbVelocidad, cmbDataBits, cmbParidad, cmbStopBit);
 
             }
             else
             {
-                MessageBox.Show("No se ha detectado ningún puerto, conecte el cable serial", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No se ha detectado ningún puerto, conecte el cable serial", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             
 

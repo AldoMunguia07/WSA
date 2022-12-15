@@ -81,29 +81,29 @@ namespace WSA
                             usuario.ModificarUsuario(usuario);
                             VariablesGlobales.Usuario = usuario;
                             
-                            MessageBox.Show("Información actualizada", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Información actualizada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         }
                         else
                         {
-                            MessageBox.Show("El usuario ya existe", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("El usuario ya existe", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Las contraseñas no coinciden", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Las contraseñas no coinciden", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                     }
                 }
                 else
                 {
-                    MessageBox.Show("La contraseña debe contener al menos 8 caracteres", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("La contraseña debe contener al menos 8 caracteres", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
             }
             else
             {
-                MessageBox.Show("Debe llenar todos los campos", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe llenar todos los campos", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
            
         }

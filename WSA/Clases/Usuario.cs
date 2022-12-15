@@ -187,9 +187,9 @@ namespace WSA.Clases
 
                 conexion.sqlConnection.Close();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -227,9 +227,10 @@ namespace WSA.Clases
                     return false;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                return false;
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -274,7 +275,7 @@ namespace WSA.Clases
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
             }
@@ -320,7 +321,7 @@ namespace WSA.Clases
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
             }

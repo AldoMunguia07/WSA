@@ -28,7 +28,7 @@ namespace WSA
             {
                 if (usuario.UsuarioD == txtUsuario.Text.ToUpper() && usuario.Contrasena == txtContrasena.Text && usuario.Activo)
                 {
-                    MessageBox.Show(string.Format("¡Bienvenido {0}!", usuario.NombreUsuario), "AWS - Inicio sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(string.Format("¡Bienvenido {0}!", usuario.NombreUsuario), VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     VariablesGlobales.Usuario = usuario;
                     usuario.BitacoraInicioSesion(usuario);
                     FrmPrincipal frmPrincipal = new FrmPrincipal(usuario);
@@ -38,13 +38,13 @@ namespace WSA
                 }
                 else
                 {
-                    MessageBox.Show("El usuario y/o la contraseña no es correcta o el usuario está inactivo. Favor verificar.", "AWS - Inicio sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("El usuario y/o la contraseña no es correcta o el usuario está inactivo. Favor verificar.", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
 
             else
             {
-                MessageBox.Show("El usuario y/o la contraseña no es correcta o el usuario está inactivo. Favor verificar.", "AWS - Inicio sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El usuario y/o la contraseña no es correcta o el usuario está inactivo. Favor verificar.", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void cerrarSesion(object sender, FormClosedEventArgs e)

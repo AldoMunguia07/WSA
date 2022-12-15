@@ -34,7 +34,7 @@ namespace WSA
             }
             else
             {
-                MessageBox.Show("Seleccione una boleta", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione una boleta", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -49,7 +49,7 @@ namespace WSA
             }
             else
             {
-                MessageBox.Show("Seleccione una boleta", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione una boleta", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

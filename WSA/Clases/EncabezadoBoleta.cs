@@ -55,7 +55,7 @@ namespace WSA.Clases
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message.ToString(), "WAS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -93,9 +93,10 @@ namespace WSA.Clases
                     return false;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             finally
             {

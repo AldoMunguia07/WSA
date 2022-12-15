@@ -58,12 +58,12 @@ namespace WSA
             {
                 getValues();
                 conductor.AgregarConductor(conductor);
-                MessageBox.Show("Conductor agregado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Conductor agregado", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refresh();
             }
             else
             {
-                MessageBox.Show("Debe llenar todos los campos", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe llenar todos los campos", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }
@@ -76,17 +76,17 @@ namespace WSA
                 {
                     getValues();
                     conductor.ModificarConductor(conductor);
-                    MessageBox.Show("Conductor modificado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Conductor modificado", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     refresh();
                 }
                 else
                 {
-                    MessageBox.Show("Debe llenar todos los campos", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe llenar todos los campos", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("Seleccione el conductor", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione el conductor", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }
@@ -122,12 +122,12 @@ namespace WSA
                 }
                 else
                 {
-                    MessageBox.Show("Debe llenar todos los campos", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe llenar todos los campos", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("Seleccione el conductor", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione el conductor", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             
         }

@@ -42,7 +42,7 @@ namespace WSA
             }
             else
             {
-                MessageBox.Show("Seleccione una entrada", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione una entrada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }
@@ -65,7 +65,7 @@ namespace WSA
         {
             if (seleccionado)
             {
-              DialogResult dialogResult =  MessageBox.Show(String.Format("¿Está seguro de anular la entrada con código {0}?", boleta.BoletaId), "WAS", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+              DialogResult dialogResult =  MessageBox.Show(String.Format("¿Está seguro de anular la entrada con código {0}?", boleta.BoletaId), VariablesGlobales.TitleMessageBox, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if(dialogResult == DialogResult.Yes)
                 {
                     VariablesGlobales.Boleta = boleta;
@@ -82,7 +82,7 @@ namespace WSA
             }
             else
             {
-                MessageBox.Show("Seleccione una entrada", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione una entrada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }
