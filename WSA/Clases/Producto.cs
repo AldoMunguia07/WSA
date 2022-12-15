@@ -108,7 +108,7 @@ namespace WSA.Clases
                 sqlCommand.CommandType = CommandType.StoredProcedure;
 
                 // Establecer los valores de los parámetros
-                sqlCommand.Parameters.AddWithValue("@Descripcion", producto.Descripcion);
+                sqlCommand.Parameters.AddWithValue("@Descripcion", producto.Descripcion.ToUpper());
                 sqlCommand.Parameters.AddWithValue("@Precio", producto.Precio);
 
                 sqlCommand.Parameters.AddWithValue("@accion", "insertar");
@@ -137,7 +137,7 @@ namespace WSA.Clases
 
                 // Establecer los valores de los parámetros
                 sqlCommand.Parameters.AddWithValue("@Producto_Id", producto.ProductoId);
-                sqlCommand.Parameters.AddWithValue("@Descripcion", producto.Descripcion);
+                sqlCommand.Parameters.AddWithValue("@Descripcion", producto.Descripcion.ToUpper());
                 sqlCommand.Parameters.AddWithValue("@Precio", producto.Precio);
 
 

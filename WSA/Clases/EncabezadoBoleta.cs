@@ -115,9 +115,9 @@ namespace WSA.Clases
                 sqlCommand.CommandType = CommandType.StoredProcedure;
 
                 // Establecer los valores de los parámetros
-                sqlCommand.Parameters.AddWithValue("@Empresa", encabezadoBoleta.Empresa);
-                sqlCommand.Parameters.AddWithValue("@Direccion", encabezadoBoleta.Direccion);
-                sqlCommand.Parameters.AddWithValue("@Telefono", encabezadoBoleta.Telefono);
+                sqlCommand.Parameters.AddWithValue("@Empresa", encabezadoBoleta.Empresa.ToUpper());
+                sqlCommand.Parameters.AddWithValue("@Direccion", encabezadoBoleta.Direccion.ToUpper());
+                sqlCommand.Parameters.AddWithValue("@Telefono", encabezadoBoleta.Telefono.ToUpper());
 
                 sqlCommand.Parameters.AddWithValue("@accion", "insertar");
                 bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
@@ -145,9 +145,9 @@ namespace WSA.Clases
 
                 // Establecer los valores de los parámetros
                 sqlCommand.Parameters.AddWithValue("@Encabezado_Boleta_Id", encabezadoBoleta.EncabezadoBoletaId);
-                sqlCommand.Parameters.AddWithValue("@Empresa", encabezadoBoleta.Empresa);
-                sqlCommand.Parameters.AddWithValue("@Direccion", encabezadoBoleta.Direccion);
-                sqlCommand.Parameters.AddWithValue("@Telefono", encabezadoBoleta.Telefono);
+                sqlCommand.Parameters.AddWithValue("@Empresa", encabezadoBoleta.Empresa.ToUpper());
+                sqlCommand.Parameters.AddWithValue("@Direccion", encabezadoBoleta.Direccion.ToUpper());
+                sqlCommand.Parameters.AddWithValue("@Telefono", encabezadoBoleta.Telefono.ToUpper());
 
                 sqlCommand.Parameters.AddWithValue("@accion", "modificar");
                 bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);

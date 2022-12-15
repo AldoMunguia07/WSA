@@ -107,7 +107,7 @@ namespace WSA.Clases
                 sqlCommand.CommandType = CommandType.StoredProcedure;
 
                 // Establecer los valores de los parámetros
-                sqlCommand.Parameters.AddWithValue("@Cliente", cliente.ClienteD);
+                sqlCommand.Parameters.AddWithValue("@Cliente", cliente.ClienteD.ToUpper());
                 sqlCommand.Parameters.AddWithValue("@accion", "insertar");
 
                 bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
@@ -136,7 +136,7 @@ namespace WSA.Clases
 
                 // Establecer los valores de los parámetros
                 sqlCommand.Parameters.AddWithValue("@Cliente_Id", cliente.ClienteId);
-                sqlCommand.Parameters.AddWithValue("@Cliente", cliente.ClienteD);
+                sqlCommand.Parameters.AddWithValue("@Cliente", cliente.ClienteD.ToUpper());
                 
 
                 sqlCommand.Parameters.AddWithValue("@accion", "modificar");

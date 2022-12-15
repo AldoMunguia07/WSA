@@ -105,7 +105,7 @@ namespace WSA.Clases
 
                 // Establecer los valores de los parámetros
                 sqlCommand.Parameters.AddWithValue("@Proveedor_Id", proveedor.ProveedorId);
-                sqlCommand.Parameters.AddWithValue("@Proveedor", proveedor.ProveedorD);
+                sqlCommand.Parameters.AddWithValue("@Proveedor", proveedor.ProveedorD.ToUpper());
                 sqlCommand.Parameters.AddWithValue("@accion", "insertar");
 
                 sqlCommand.ExecuteNonQuery();
@@ -132,7 +132,7 @@ namespace WSA.Clases
 
                 // Establecer los valores de los parámetros
                 sqlCommand.Parameters.AddWithValue("@Proveedor_Id", proveedor.ProveedorId);
-                sqlCommand.Parameters.AddWithValue("@Proveedor", proveedor.ProveedorD);
+                sqlCommand.Parameters.AddWithValue("@Proveedor", proveedor.ProveedorD.ToUpper());
                 sqlCommand.Parameters.AddWithValue("@accion", "modificar");
 
                 sqlCommand.ExecuteNonQuery();

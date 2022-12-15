@@ -111,7 +111,7 @@ namespace WSA.Clases
                 sqlCommand.CommandType = CommandType.StoredProcedure;
 
                 // Establecer los valores de los parámetros
-                sqlCommand.Parameters.AddWithValue("@Nombre_Usuario", usuario.NombreUsuario);
+                sqlCommand.Parameters.AddWithValue("@Nombre_Usuario", usuario.NombreUsuario.ToUpper());
                 sqlCommand.Parameters.AddWithValue("@Usuario", usuario.UsuarioD.ToUpper());
                 sqlCommand.Parameters.AddWithValue("@Contrasena", usuario.Contrasena);
                 sqlCommand.Parameters.AddWithValue("@Tipo_Usuario_Id", usuario.TipoUsuarioId);
@@ -142,7 +142,7 @@ namespace WSA.Clases
 
                 // Establecer los valores de los parámetros
                 sqlCommand.Parameters.AddWithValue("@Usuario_Id", usuario.UsuarioId);
-                sqlCommand.Parameters.AddWithValue("@Nombre_Usuario", usuario.NombreUsuario);
+                sqlCommand.Parameters.AddWithValue("@Nombre_Usuario", usuario.NombreUsuario.ToUpper());
                 sqlCommand.Parameters.AddWithValue("@Usuario", usuario.UsuarioD.ToUpper());
                 sqlCommand.Parameters.AddWithValue("@Contrasena", usuario.Contrasena);
                 sqlCommand.Parameters.AddWithValue("@Tipo_Usuario_Id", usuario.TipoUsuarioId);
