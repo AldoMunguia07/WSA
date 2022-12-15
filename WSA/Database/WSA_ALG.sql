@@ -187,11 +187,11 @@ GO
 
 
 --INSERTS
-INSERT INTO Tipo_Usuario VALUES('Administrador');
-INSERT INTO Tipo_Usuario VALUES('Operador');
+INSERT INTO Tipo_Usuario VALUES('ADMINISTRADOR');
+INSERT INTO Tipo_Usuario VALUES('OPERADOR');
 
 
-INSERT INTO Usuario VALUES('Admin', 'Admin', ENCRYPTBYPASSPHRASE('WAS_ALG_ENCRYPT','admin1234'), 1, 1);
+INSERT INTO Usuario VALUES('ADMIN', 'ADMIN', ENCRYPTBYPASSPHRASE('WAS_ALG_ENCRYPT','ADMIN1234'), 1, 1);
 GO
 
 --PROCEDMIENTOS ALMACENADOS
@@ -761,6 +761,12 @@ CREATE PROCEDURE sp_Bitacora@value SQL_VARIANT = NULL,@key SYSNAME = NULL,@bu
 END
 GO
 
+ALTER PROCEDURE sp_ComboBox@accion nvarchar(50)ASBEGIN
+	IF @accion = 'ComboBoxEstadoBoleta'	BEGIN		SELECT '%' Identificador, 'TODAS LAS BOLETAS' Estado		UNION		SELECT 'A' Identificador, 'ANULADAS' Estado		UNION		SELECT 'C' Identificador, 'CERRADAS' Estado		UNION		SELECT 'P' Identificador, 'EN PROCESO' Estado	END
+
+END
+GO
+
 --PROCEDMIENTOS ALMACENADOS REPORTES
 CREATE PROCEDURE sp_Datos_Boleta
 	@Boleta_Id INT = NULL
@@ -789,21 +795,22 @@ BEGIN
 END
 GO
 
-ALTER PROCEDURE sp_Reporte_Mostrar_Salidas
-	@buscado VARCHAR(80)  = NULL,	@fechaInicio DATETIME = NULL,	@fechaFinal DATETIME = NULL
+CREATE PROCEDURE sp_Reporte_Mostrar_Boletas
+	@buscado VARCHAR(80)  = NULL,	@fechaInicio DATETIME = NULL,	@fechaFinal DATETIME = NULL,
+	@estado VARCHAR(10) = NULL
 AS
 BEGIN
 	
-	SELECT b.Boleta_Id, b.Fecha_Entrada, b.Fecha_Salida, b.Placa_Cabezal, b.Placa_Rastra, c.Conductor_Id, c.Conductor,
+	SELECT b.Boleta_Id, b.Fecha_Entrada, b.Fecha_Salida, b.Placa_Cabezal, b.Placa_Rastra, c.Conductor,
 			cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) Peso_Ingreso, CONCAT(b.Peso_Salida,' ',b.Unidades_Peso_Salida) Peso_Salida, CONCAT(((b.Peso_Ingreso - b.Peso_Salida) * -1), ' ',b.Unidades_Peso_Salida) Peso_Neto, 
-			b.Barco_Id, bc.Descripcion Barco, b.Estado, u.Nombre_Usuario Usuario, b.Observaciones, @fechaInicio fechaInicio, @fechaFinal fechaFinal
+			bc.Descripcion Barco, b.Estado, u.Nombre_Usuario Usuario, b.Observaciones--, @fechaInicio fechaInicio, @fechaFinal fechaFinal
 			FROM Boleta b JOIN Conductor c
 			ON b.Conductor_Id = c.Conductor_Id
 			JOIN Producto p ON b.Producto_Id = p.Producto_Id
 			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
 			JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
 			JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
-			WHERE b.Estado = 'C' AND CONVERT(DATE, B.Fecha_Salida) BETWEEN @fechaInicio and @fechaFinal AND 
+			WHERE b.Estado LIKE CONCAT('%',@estado,'%')  AND CONVERT(DATE, B.Fecha_Entrada) BETWEEN @fechaInicio and @fechaFinal AND 
 			CONCAT(b.Boleta_Id, ' ', b.Conductor_Id, ' ', b.Placa_Rastra,' ' ,b.Placa_Cabezal,' ' ,c.Conductor_Id,' ' ,c.Conductor,' ' ,Cliente,' ',p.Descripcion, ' ',bc.Barco_Id ,' ',bc.Descripcion, ' ', u.Nombre_Usuario, ' ', u.Usuario) LIKE CONCAT('%',@buscado,'%')
 			ORDER BY Boleta_Id DESC
 			

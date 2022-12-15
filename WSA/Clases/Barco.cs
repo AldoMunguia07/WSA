@@ -122,7 +122,7 @@ namespace WSA.Clases
             }
         }
 
-        public void ModificarCliente(Barco barco)
+        public void ModificarBarco(Barco barco)
         {
             try
             {
@@ -133,7 +133,7 @@ namespace WSA.Clases
 
                 // Establecer los valores de los parámetros
                 sqlCommand.Parameters.AddWithValue("@Barco_Id", barco.BarcoId);
-                sqlCommand.Parameters.AddWithValue("@Descripcion", barco.Descripcion);
+                sqlCommand.Parameters.AddWithValue("@Descripcion", barco.Descripcion.ToUpper());
 
 
                 sqlCommand.Parameters.AddWithValue("@accion", "modificar");

@@ -30,7 +30,9 @@ namespace WSA
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.sp_Reporte_Mostrar_SalidasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AWS_DATA_SET = new WSA.AWS_DATA_SET();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dtpFechaFinal = new System.Windows.Forms.DateTimePicker();
@@ -40,19 +42,29 @@ namespace WSA
             this.label2 = new System.Windows.Forms.Label();
             this.btnCargarReporte = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.AWS_DATA_SET = new WSA.AWS_DATA_SET();
-            this.sp_Reporte_Mostrar_SalidasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sp_Reporte_Mostrar_SalidasTableAdapter = new WSA.AWS_DATA_SETTableAdapters.sp_Reporte_Mostrar_SalidasTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.AWS_DATA_SET)).BeginInit();
+            this.sp_Reporte_Mostrar_BoletasTableAdapter = new WSA.AWS_DATA_SETTableAdapters.sp_Reporte_Mostrar_BoletasTableAdapter();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.sp_Reporte_Mostrar_SalidasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AWS_DATA_SET)).BeginInit();
             this.SuspendLayout();
+            // 
+            // sp_Reporte_Mostrar_SalidasBindingSource
+            // 
+            this.sp_Reporte_Mostrar_SalidasBindingSource.DataMember = "sp_Reporte_Mostrar_Boletas";
+            this.sp_Reporte_Mostrar_SalidasBindingSource.DataSource = this.AWS_DATA_SET;
+            // 
+            // AWS_DATA_SET
+            // 
+            this.AWS_DATA_SET.DataSetName = "AWS_DATA_SET";
+            this.AWS_DATA_SET.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(116, 174);
+            this.label4.Location = new System.Drawing.Point(174, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 18);
             this.label4.TabIndex = 17;
@@ -62,9 +74,9 @@ namespace WSA
             // 
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(181, 170);
+            this.txtBuscar.Location = new System.Drawing.Point(243, 171);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(309, 27);
+            this.txtBuscar.Size = new System.Drawing.Size(330, 27);
             this.txtBuscar.TabIndex = 13;
             // 
             // dtpFechaFinal
@@ -125,9 +137,9 @@ namespace WSA
             this.btnCargarReporte.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCargarReporte.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargarReporte.ForeColor = System.Drawing.Color.White;
-            this.btnCargarReporte.Location = new System.Drawing.Point(611, 167);
+            this.btnCargarReporte.Location = new System.Drawing.Point(863, 168);
             this.btnCargarReporte.Name = "btnCargarReporte";
-            this.btnCargarReporte.Size = new System.Drawing.Size(162, 32);
+            this.btnCargarReporte.Size = new System.Drawing.Size(139, 32);
             this.btnCargarReporte.TabIndex = 18;
             this.btnCargarReporte.Text = "Cargar reporte";
             this.btnCargarReporte.UseVisualStyleBackColor = false;
@@ -138,9 +150,9 @@ namespace WSA
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource1.Name = "Boletas";
-            reportDataSource1.Value = this.sp_Reporte_Mostrar_SalidasBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource4.Name = "Boletas";
+            reportDataSource4.Value = this.sp_Reporte_Mostrar_SalidasBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "WSA.Reportes.rptBoletas.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(8, 219);
             this.reportViewer1.Name = "reportViewer1";
@@ -149,19 +161,30 @@ namespace WSA
             this.reportViewer1.TabIndex = 19;
             this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
-            // AWS_DATA_SET
+            // sp_Reporte_Mostrar_BoletasTableAdapter
             // 
-            this.AWS_DATA_SET.DataSetName = "AWS_DATA_SET";
-            this.AWS_DATA_SET.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.sp_Reporte_Mostrar_BoletasTableAdapter.ClearBeforeFill = true;
             // 
-            // sp_Reporte_Mostrar_SalidasBindingSource
+            // label5
             // 
-            this.sp_Reporte_Mostrar_SalidasBindingSource.DataMember = "sp_Reporte_Mostrar_Salidas";
-            this.sp_Reporte_Mostrar_SalidasBindingSource.DataSource = this.AWS_DATA_SET;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(608, 175);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 18);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Estado";
             // 
-            // sp_Reporte_Mostrar_SalidasTableAdapter
+            // cmbEstado
             // 
-            this.sp_Reporte_Mostrar_SalidasTableAdapter.ClearBeforeFill = true;
+            this.cmbEstado.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Location = new System.Drawing.Point(678, 174);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(156, 21);
+            this.cmbEstado.TabIndex = 21;
             // 
             // rFrmBoletas
             // 
@@ -169,6 +192,8 @@ namespace WSA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1146, 637);
+            this.Controls.Add(this.cmbEstado);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnCargarReporte);
             this.Controls.Add(this.label4);
@@ -179,10 +204,10 @@ namespace WSA
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Name = "rFrmBoletas";
-            this.Text = "rFrmBoletas";
+            this.Text = "Reporte de boletas";
             this.Load += new System.EventHandler(this.rFrmBoletas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.AWS_DATA_SET)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_Reporte_Mostrar_SalidasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AWS_DATA_SET)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,6 +226,8 @@ namespace WSA
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource sp_Reporte_Mostrar_SalidasBindingSource;
         private AWS_DATA_SET AWS_DATA_SET;
-        private AWS_DATA_SETTableAdapters.sp_Reporte_Mostrar_SalidasTableAdapter sp_Reporte_Mostrar_SalidasTableAdapter;
+        private AWS_DATA_SETTableAdapters.sp_Reporte_Mostrar_BoletasTableAdapter sp_Reporte_Mostrar_BoletasTableAdapter;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbEstado;
     }
 }

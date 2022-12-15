@@ -74,7 +74,7 @@ namespace WSA
                 if (camposLlenos())
                 {
                     getValues();
-                    barco.ModificarCliente(barco);
+                    barco.ModificarBarco(barco);
                     MessageBox.Show("Barco modificado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     refresh();
                 }

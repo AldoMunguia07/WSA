@@ -91,6 +91,7 @@
     <Compile Include="Clases\Barco.cs" />
     <Compile Include="Clases\Bitacora.cs" />
     <Compile Include="Clases\Boleta.cs" />
+    <Compile Include="Clases\CargarComboBox.cs" />
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Conductor.cs" />
     <Compile Include="Clases\Conexion.cs" />
