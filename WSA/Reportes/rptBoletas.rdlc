@@ -6,49 +6,49 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.77cm</Width>
+              <Width>1.82263cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.06104cm</Width>
+              <Width>2.29289cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.77cm</Width>
+              <Width>2.23206cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.47896cm</Width>
+              <Width>1.78535cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.18792cm</Width>
+              <Width>1.64221cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>1.83517cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.53729cm</Width>
+              <Width>1.85542cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.08533cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.02917cm</Width>
+              <Width>1.45744cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.26729cm</Width>
+              <Width>1.60064cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>1.47741cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>1.5281cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>1.39581cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>1.62101cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.94979cm</Width>
+              <Width>2.3483cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -66,6 +66,7 @@
                             <TextRun>
                               <Value>Código de boleta</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -79,7 +80,6 @@
                       <rd:DefaultName>Textbox1</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Navy</BackgroundColor>
@@ -102,6 +102,7 @@
                             <TextRun>
                               <Value>Fecha de entrada</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -115,7 +116,6 @@
                       <rd:DefaultName>Textbox3</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Navy</BackgroundColor>
@@ -138,6 +138,7 @@
                             <TextRun>
                               <Value>Fecha de salida</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -151,7 +152,6 @@
                       <rd:DefaultName>Textbox5</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Navy</BackgroundColor>
@@ -174,6 +174,7 @@
                             <TextRun>
                               <Value>Placa del cabezal</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -187,7 +188,6 @@
                       <rd:DefaultName>Textbox7</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Navy</BackgroundColor>
@@ -210,6 +210,7 @@
                             <TextRun>
                               <Value>Placa de la rastra</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -223,7 +224,6 @@
                       <rd:DefaultName>Textbox9</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Navy</BackgroundColor>
@@ -246,6 +246,7 @@
                             <TextRun>
                               <Value>Conductor</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -259,7 +260,6 @@
                       <rd:DefaultName>Textbox13</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Navy</BackgroundColor>
@@ -282,6 +282,7 @@
                             <TextRun>
                               <Value>Cliente</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -295,7 +296,6 @@
                       <rd:DefaultName>Textbox15</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Navy</BackgroundColor>
@@ -318,6 +318,7 @@
                             <TextRun>
                               <Value>Producto</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -331,7 +332,6 @@
                       <rd:DefaultName>Textbox17</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Navy</BackgroundColor>
@@ -354,6 +354,7 @@
                             <TextRun>
                               <Value>Peso de ingreso</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -367,7 +368,6 @@
                       <rd:DefaultName>Textbox19</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Navy</BackgroundColor>
@@ -390,6 +390,7 @@
                             <TextRun>
                               <Value>Peso de salida</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -403,7 +404,6 @@
                       <rd:DefaultName>Textbox21</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Navy</BackgroundColor>
@@ -426,6 +426,7 @@
                             <TextRun>
                               <Value>Peso neto</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -439,7 +440,6 @@
                       <rd:DefaultName>Textbox23</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Navy</BackgroundColor>
@@ -462,6 +462,7 @@
                             <TextRun>
                               <Value>Barco</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -475,7 +476,6 @@
                       <rd:DefaultName>Textbox27</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Navy</BackgroundColor>
@@ -498,6 +498,7 @@
                             <TextRun>
                               <Value>Estado</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -511,7 +512,6 @@
                       <rd:DefaultName>Textbox29</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Navy</BackgroundColor>
@@ -534,6 +534,7 @@
                             <TextRun>
                               <Value>Usuario</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -547,7 +548,6 @@
                       <rd:DefaultName>Textbox31</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Navy</BackgroundColor>
@@ -570,6 +570,7 @@
                             <TextRun>
                               <Value>Observaciones</Value>
                               <Style>
+                                <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -583,7 +584,6 @@
                       <rd:DefaultName>Textbox33</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>Navy</BackgroundColor>
@@ -611,7 +611,7 @@
                             <TextRun>
                               <Value>=Fields!Boleta_Id.Value</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -623,7 +623,6 @@
                       <rd:DefaultName>Boleta_Id</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -645,7 +644,7 @@
                             <TextRun>
                               <Value>=Fields!Fecha_Entrada.Value</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -657,7 +656,6 @@
                       <rd:DefaultName>Fecha_Entrada</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -679,7 +677,7 @@
                             <TextRun>
                               <Value>=Fields!Fecha_Salida.Value</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -691,7 +689,6 @@
                       <rd:DefaultName>Fecha_Salida</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -713,7 +710,7 @@
                             <TextRun>
                               <Value>=Fields!Placa_Cabezal.Value</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -725,7 +722,6 @@
                       <rd:DefaultName>Placa_Cabezal</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -747,7 +743,7 @@
                             <TextRun>
                               <Value>=Fields!Placa_Rastra.Value</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -759,7 +755,6 @@
                       <rd:DefaultName>Placa_Rastra</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -781,7 +776,7 @@
                             <TextRun>
                               <Value>=Fields!Conductor.Value</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -793,7 +788,6 @@
                       <rd:DefaultName>Conductor</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -815,7 +809,7 @@
                             <TextRun>
                               <Value>=Fields!Cliente.Value</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -827,7 +821,6 @@
                       <rd:DefaultName>Cliente</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -849,7 +842,7 @@
                             <TextRun>
                               <Value>=Fields!Producto.Value</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -861,7 +854,6 @@
                       <rd:DefaultName>Producto</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -883,7 +875,7 @@
                             <TextRun>
                               <Value>=Fields!Peso_Ingreso.Value</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -895,7 +887,6 @@
                       <rd:DefaultName>Peso_Ingreso</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -917,7 +908,7 @@
                             <TextRun>
                               <Value>=Fields!Peso_Salida.Value</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -929,7 +920,6 @@
                       <rd:DefaultName>Peso_Salida</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -951,7 +941,7 @@
                             <TextRun>
                               <Value>=Fields!Peso_Neto.Value</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -963,7 +953,6 @@
                       <rd:DefaultName>Peso_Neto</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -985,7 +974,7 @@
                             <TextRun>
                               <Value>=Fields!Barco.Value</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -997,7 +986,6 @@
                       <rd:DefaultName>Barco</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1019,7 +1007,7 @@
                             <TextRun>
                               <Value>=Fields!Estado.Value</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1031,7 +1019,6 @@
                       <rd:DefaultName>Estado</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1053,7 +1040,7 @@
                             <TextRun>
                               <Value>=Fields!Usuario.Value</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1065,7 +1052,6 @@
                       <rd:DefaultName>Usuario</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1087,7 +1073,7 @@
                             <TextRun>
                               <Value>=Fields!Observaciones.Value</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1099,7 +1085,6 @@
                       <rd:DefaultName>Observaciones</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1145,9 +1130,9 @@
         </TablixRowHierarchy>
         <DataSetName>Boletas</DataSetName>
         <Top>1.84891cm</Top>
-        <Left>0.57891cm</Left>
+        <Left>0.49954cm</Left>
         <Height>1.2cm</Height>
-        <Width>47.05146cm</Width>
+        <Width>26.97975cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1163,6 +1148,7 @@
               <TextRun>
                 <Value>C: Cerradas </Value>
                 <Style>
+                  <FontSize>8pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -1174,6 +1160,7 @@
               <TextRun>
                 <Value>A: Anuladas</Value>
                 <Style>
+                  <FontSize>8pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -1185,6 +1172,7 @@
               <TextRun>
                 <Value>P: En proceso</Value>
                 <Style>
+                  <FontSize>8pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -1193,10 +1181,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.17639cm</Top>
-        <Left>39.92309cm</Left>
-        <Height>1.49613cm</Height>
-        <Width>2.65437cm</Width>
+        <Top>0.10583cm</Top>
+        <Left>20.58606cm</Left>
+        <Height>1.36384cm</Height>
+        <Width>2.28395cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -1209,10 +1197,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>2.08333in</Height>
+    <Height>3.96875cm</Height>
     <Style />
   </Body>
-  <Width>18.97062in</Width>
+  <Width>27.94cm</Width>
   <Page>
     <PageHeader>
       <Height>4.33155cm</Height>
@@ -1228,7 +1216,7 @@
                 <TextRun>
                   <Value>Reporte de boletas</Value>
                   <Style>
-                    <FontSize>24pt</FontSize>
+                    <FontSize>22pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
@@ -1239,10 +1227,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox35</rd:DefaultName>
-          <Top>0.63182cm</Top>
-          <Left>21.00474cm</Left>
-          <Height>1.31438cm</Height>
-          <Width>8.90292cm</Width>
+          <Top>1.26682cm</Top>
+          <Left>10.28785cm</Left>
+          <Height>1.0498cm</Height>
+          <Width>7.15667cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1270,8 +1258,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>fechaInicio</rd:DefaultName>
-          <Top>2.37808cm</Top>
-          <Left>22.18183cm</Left>
+          <Top>3.01308cm</Top>
+          <Left>10.19494cm</Left>
           <Height>0.6cm</Height>
           <Width>3.32021cm</Width>
           <ZIndex>1</ZIndex>
@@ -1302,8 +1290,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>fechaFinal</rd:DefaultName>
-          <Top>2.37808cm</Top>
-          <Left>26.85203cm</Left>
+          <Top>3.01308cm</Top>
+          <Left>14.86514cm</Left>
           <Height>0.6cm</Height>
           <Width>4.03458cm</Width>
           <ZIndex>2</ZIndex>
@@ -1334,8 +1322,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox40</rd:DefaultName>
-          <Top>2.37808cm</Top>
-          <Left>20.84599cm</Left>
+          <Top>3.01308cm</Top>
+          <Left>8.8591cm</Left>
           <Height>0.6cm</Height>
           <Width>1.33583cm</Width>
           <ZIndex>3</ZIndex>
@@ -1366,8 +1354,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox40</rd:DefaultName>
-          <Top>2.37808cm</Top>
-          <Left>25.64727cm</Left>
+          <Top>3.01308cm</Top>
+          <Left>13.66038cm</Left>
           <Height>0.6cm</Height>
           <Width>1.33583cm</Width>
           <ZIndex>4</ZIndex>
@@ -1399,8 +1387,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox45</rd:DefaultName>
-          <Top>2.37808cm</Top>
-          <Left>41.16225cm</Left>
+          <Top>3.28648cm</Top>
+          <Left>20.09035cm</Left>
           <Height>0.6cm</Height>
           <Width>1.41521cm</Width>
           <ZIndex>5</ZIndex>
@@ -1431,10 +1419,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>2.37808cm</Top>
-          <Left>42.64802cm</Left>
+          <Top>3.28648cm</Top>
+          <Left>21.57612cm</Left>
           <Height>0.6cm</Height>
-          <Width>5.46333cm</Width>
+          <Width>5.07527cm</Width>
           <ZIndex>6</ZIndex>
           <Style>
             <Border>
@@ -1451,9 +1439,9 @@
           <Value>lagrecia</Value>
           <Sizing>FitProportional</Sizing>
           <Top>0.42898cm</Top>
-          <Left>0.64474cm</Left>
-          <Height>2.84896cm</Height>
-          <Width>7.76521cm</Width>
+          <Left>0.635cm</Left>
+          <Height>1.88764cm</Height>
+          <Width>6.33995cm</Width>
           <ZIndex>7</ZIndex>
           <Style>
             <Border>
@@ -1469,7 +1457,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.2225cm</Height>
+      <Height>1.77271cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1490,8 +1478,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>1.00182cm</Top>
-          <Left>22.40516cm</Left>
+          <Top>0.68432cm</Top>
+          <Left>11.4908cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>
@@ -1521,8 +1509,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox45</rd:DefaultName>
-          <Top>1.00182cm</Top>
-          <Left>25.01099cm</Left>
+          <Top>0.68432cm</Top>
+          <Left>14.09663cm</Left>
           <Height>0.6cm</Height>
           <Width>0.64792cm</Width>
           <ZIndex>1</ZIndex>
@@ -1555,8 +1543,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>TotalPages</rd:DefaultName>
-          <Top>1.00182cm</Top>
-          <Left>25.65891cm</Left>
+          <Top>0.68432cm</Top>
+          <Left>14.74455cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <ZIndex>2</ZIndex>
@@ -1577,12 +1565,12 @@
         </Border>
       </Style>
     </PageFooter>
-    <PageHeight>30in</PageHeight>
-    <PageWidth>24in</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
-    <RightMargin>2cm</RightMargin>
-    <TopMargin>2cm</TopMargin>
-    <BottomMargin>2cm</BottomMargin>
+    <PageHeight>21.59cm</PageHeight>
+    <PageWidth>27.94cm</PageWidth>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>0cm</RightMargin>
+    <TopMargin>0cm</TopMargin>
+    <BottomMargin>0cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>
