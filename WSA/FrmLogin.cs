@@ -73,5 +73,17 @@ namespace WSA
                 btnInicioSesion.PerformClick();
             }
         }
+
+        private void chbVerContraseña_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbVerContraseña.Checked)
+            {
+                txtContrasena.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtContrasena.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

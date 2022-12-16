@@ -234,10 +234,10 @@ namespace WSA.Clases
         
         public void probarConexion()
         {
-            ConfigurarPuertoSerial();
+            
             try
             {
-               
+                ConfigurarPuertoSerial();
                 if (!mySerialPort.IsOpen)
                 {
                     //mySerialPort = new SerialPort(variable("PORT"), 9600, Parity.None, 8, StopBits.One);
@@ -266,16 +266,24 @@ namespace WSA.Clases
         }
         public void Desconectar()
         {
-            mySerialPort.Close();
+            try
+            {
+                mySerialPort.Close();
+            } 
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            
         }
 
         public bool LeerDatos(/*SerialPort mySerialPort,*/ Form form, Label lblConexion, TextBox txtPeso)
         {
-            ConfigurarPuertoSerial();
-
-
+            
             try
             {
+                ConfigurarPuertoSerial();
                 if (!mySerialPort.IsOpen)
                 {
                     //mySerialPort = new SerialPort(variable("PORT"), 9600, Parity.None, 8, StopBits.One);
@@ -332,84 +340,108 @@ namespace WSA.Clases
 
         private static string variable(string var)
         {
-            
-            string[] lineas = File.ReadAllLines("c:/config/CONFIGURACION.txt");
-
-            string valor = "";
-
-
-            foreach (string val in lineas)
+            try
             {
-                Match match = Regex.Match(val, string.Format("{0}", var));
+                string[] lineas = File.ReadAllLines("c:/config/CONFIGURACION.txt");
 
-                if (match.Value == var)
+                string valor = "";
+
+
+                foreach (string val in lineas)
                 {
-                    valor = val.Substring(match.Value.Length + 1);
-                }
+                    Match match = Regex.Match(val, string.Format("{0}", var));
 
+                    if (match.Value == var)
+                    {
+                        valor = val.Substring(match.Value.Length + 1);
+                    }
+
+                }
+                return valor;
             }
-            return valor;
+            catch(Exception ex)
+            {
+                
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return "";
+            }
+            
+            
 
         }
 
         public string Variable(string var)
         {
-
-            string[] lineas = File.ReadAllLines("c:/config/CONFIGURACION.txt");
-
-            string valor = "";
-
-
-            foreach (string val in lineas)
+            try
             {
-                Match match = Regex.Match(val, string.Format("{0}", var));
+                string[] lineas = File.ReadAllLines("c:/config/CONFIGURACION.txt");
 
-                if (match.Value == var)
+                string valor = "";
+
+
+                foreach (string val in lineas)
                 {
-                    valor = val.Substring(match.Value.Length + 1);
+                    Match match = Regex.Match(val, string.Format("{0}", var));
+
+                    if (match.Value == var)
+                    {
+                        valor = val.Substring(match.Value.Length + 1);
+                    }
+
                 }
-
+                return valor;
             }
-            return valor;
-
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return "";
+            }
         }
 
 
 
         private void si_DataReceived(string accion, TextBox txtDatos)
         {
-            txtDatos.Text = accion;
-            Match m = Regex.Match(accion, "(\\d+).(\\d+)|(\\d+)");
-
-            if (m.Success)
+            try
             {
-                if (accion.Substring(int.Parse(variable("POSICION_SIGNO_MAS")) - 1, 1) == "+")
+                txtDatos.Text = accion;
+                Match m = Regex.Match(accion, "(\\d+).(\\d+)|(\\d+)");
+
+                if (m.Success)
                 {
-                    if (float.Parse(m.Value) <= float.Parse(variable("MAX")))
+                    if (accion.Substring(int.Parse(variable("POSICION_SIGNO_MAS")) - 1, 1) == "+")
                     {
-                        if (float.Parse(m.Value) >= float.Parse(variable("MIN")))
+                        if (float.Parse(m.Value) <= float.Parse(variable("MAX")))
                         {
-                            txtDatos.Text = string.Format("{0:n} Kg", float.Parse(m.Value));
+                            if (float.Parse(m.Value) >= float.Parse(variable("MIN")))
+                            {
+                                txtDatos.Text = string.Format("{0:n} Kg", float.Parse(m.Value));
+                            }
+                            else
+                            {
+                                txtDatos.Text = String.Format("Mínimo - {0} Kg", variable("MIN"));
+                            }
                         }
                         else
                         {
-                            txtDatos.Text = String.Format("Mínimo - {0} Kg", variable("MIN"));
+                            txtDatos.Text = String.Format("Máximo - {0} Kg", variable("MAX"));
                         }
                     }
                     else
                     {
-                        txtDatos.Text = String.Format("Máximo - {0} Kg", variable("MAX"));
+                        txtDatos.Text = "No valores negativos";
                     }
                 }
                 else
                 {
-                    txtDatos.Text = "No valores negativos";
+                    txtDatos.Text = "Sin valores numéricos";
                 }
             }
-            else
+            catch(Exception ex)
             {
-                txtDatos.Text = "Sin valores numéricos";
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
     }
 }

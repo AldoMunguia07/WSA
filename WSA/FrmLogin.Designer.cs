@@ -36,6 +36,7 @@ namespace WSA
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.btnInicioSesion = new System.Windows.Forms.Button();
+            this.chbVerContraseña = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -115,10 +116,23 @@ namespace WSA
             this.btnInicioSesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInicioSesion.Name = "btnInicioSesion";
             this.btnInicioSesion.Size = new System.Drawing.Size(150, 32);
-            this.btnInicioSesion.TabIndex = 2;
+            this.btnInicioSesion.TabIndex = 3;
             this.btnInicioSesion.Text = "Iniciar sesión";
             this.btnInicioSesion.UseVisualStyleBackColor = false;
             this.btnInicioSesion.Click += new System.EventHandler(this.btnInicioSesion_Click);
+            // 
+            // chbVerContraseña
+            // 
+            this.chbVerContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chbVerContraseña.AutoSize = true;
+            this.chbVerContraseña.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbVerContraseña.Location = new System.Drawing.Point(129, 259);
+            this.chbVerContraseña.Name = "chbVerContraseña";
+            this.chbVerContraseña.Size = new System.Drawing.Size(127, 20);
+            this.chbVerContraseña.TabIndex = 2;
+            this.chbVerContraseña.Text = "Ver contraseña";
+            this.chbVerContraseña.UseVisualStyleBackColor = true;
+            this.chbVerContraseña.CheckedChanged += new System.EventHandler(this.chbVerContraseña_CheckedChanged);
             // 
             // FrmLogin
             // 
@@ -127,6 +141,7 @@ namespace WSA
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(353, 426);
+            this.Controls.Add(this.chbVerContraseña);
             this.Controls.Add(this.btnInicioSesion);
             this.Controls.Add(this.txtContrasena);
             this.Controls.Add(this.txtUsuario);
@@ -155,5 +170,6 @@ namespace WSA
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Button btnInicioSesion;
+        private System.Windows.Forms.CheckBox chbVerContraseña;
     }
 }

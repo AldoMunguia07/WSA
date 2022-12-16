@@ -19,13 +19,14 @@ namespace WSA
         {
             InitializeComponent();
             cargarDatos();
+            usuario.CargarComboBoxEstado(cmbTipoUsuario);
 
         }
 
         private void cargarDatos()
         {
             usuario.MostrarUsuario(dgvUsuarios);
-            usuario.CargarComboBoxEstado(cmbTipoUsuario);
+            
             dgvUsuarios.Columns[5].Visible = false;
             dgvUsuarios.Columns[6].Visible = false;
 
@@ -181,6 +182,30 @@ namespace WSA
         private void btnCncelar_Click(object sender, EventArgs e)
         {
             refresh();
+        }
+
+        private void chbVerContraseña_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbVerContraseña.Checked)
+            {
+                txtContrasena.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtContrasena.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void chbVerCContraseña_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbVerCContraseña.Checked)
+            {
+                txtConfirmarContrasena.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtConfirmarContrasena.UseSystemPasswordChar = true;
+            }
         }
 
         private void dgvUsuarios_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

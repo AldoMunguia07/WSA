@@ -229,8 +229,9 @@ namespace WSA.Clases
             }
             catch (Exception ex)
             {
-                return false;
                 MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+                
             }
             finally
             {
