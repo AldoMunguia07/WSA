@@ -276,7 +276,7 @@ namespace WSA.Clases
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
             }
@@ -322,7 +322,7 @@ namespace WSA.Clases
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
             }
