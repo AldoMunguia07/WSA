@@ -30,6 +30,7 @@ namespace WSA
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSalida));
             this.btnConectar = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.lblConexion = new System.Windows.Forms.Label();
@@ -592,6 +593,7 @@ namespace WSA
             this.Controls.Add(this.txtCodigoConductor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmSalida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Salida de vehículo";

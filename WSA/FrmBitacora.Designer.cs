@@ -31,6 +31,7 @@ namespace WSA
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBitacora));
             this.label2 = new System.Windows.Forms.Label();
             this.dgvBitacora = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -187,6 +188,7 @@ namespace WSA
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvBitacora);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmBitacora";
             this.Text = "Bitácora";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBitacora)).EndInit();

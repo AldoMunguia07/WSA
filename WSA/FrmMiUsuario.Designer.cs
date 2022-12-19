@@ -29,6 +29,7 @@ namespace WSA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMiUsuario));
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnActivo = new System.Windows.Forms.Button();
@@ -275,6 +276,7 @@ namespace WSA
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNombreUsuario);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMiUsuario";
             this.Text = "Mi información";
             this.ResumeLayout(false);

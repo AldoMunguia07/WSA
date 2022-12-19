@@ -29,6 +29,7 @@ namespace WSA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIndicadorBascula));
             this.cmbParidad = new System.Windows.Forms.ComboBox();
             this.cmbPuertos = new System.Windows.Forms.ComboBox();
             this.cmbStopBit = new System.Windows.Forms.ComboBox();
@@ -238,6 +239,7 @@ namespace WSA
             this.Controls.Add(this.cmbStopBit);
             this.Controls.Add(this.cmbPuertos);
             this.Controls.Add(this.cmbParidad);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmIndicadorBascula";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Indicador de la báscula";

@@ -29,6 +29,7 @@ namespace WSA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRealizarBackup));
             this.label2 = new System.Windows.Forms.Label();
             this.btnBackup = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -91,6 +92,7 @@ namespace WSA
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBackup);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmRealizarBackup";
             this.Text = "Copia de seguridad";
             this.ResumeLayout(false);

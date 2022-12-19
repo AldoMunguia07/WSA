@@ -30,7 +30,8 @@ namespace WSA
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rFrmBoletas));
             this.sp_Reporte_Mostrar_SalidasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.AWS_DATA_SET = new WSA.AWS_DATA_SET();
             this.label4 = new System.Windows.Forms.Label();
@@ -150,9 +151,9 @@ namespace WSA
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource4.Name = "Boletas";
-            reportDataSource4.Value = this.sp_Reporte_Mostrar_SalidasBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource1.Name = "Boletas";
+            reportDataSource1.Value = this.sp_Reporte_Mostrar_SalidasBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "WSA.Reportes.rptBoletas.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(8, 219);
             this.reportViewer1.Name = "reportViewer1";
@@ -203,6 +204,7 @@ namespace WSA
             this.Controls.Add(this.dtpFechaInicio);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "rFrmBoletas";
             this.Text = "Reporte de boletas";
             this.Load += new System.EventHandler(this.rFrmBoletas_Load);

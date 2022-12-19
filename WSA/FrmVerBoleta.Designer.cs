@@ -29,6 +29,7 @@ namespace WSA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVerBoleta));
             this.dtpHoraEntrada = new System.Windows.Forms.DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
             this.txtPesoEntrada = new System.Windows.Forms.TextBox();
@@ -564,6 +565,7 @@ namespace WSA
             this.Controls.Add(this.txtCodigoConductor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTitulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmVerBoleta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Boleta";
