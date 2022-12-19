@@ -320,6 +320,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reportes\rptBitacora.rdlc" />
     <EmbeddedResource Include="Reportes\rptBoleta.rdlc" />
@@ -368,6 +369,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\WSA_ALG.sql" />
+    <None Include="Resources\Logo AWS.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
