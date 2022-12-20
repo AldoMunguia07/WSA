@@ -125,7 +125,7 @@ namespace WSA.Clases
                 // Establecer los valores de los parámetros
                 sqlCommand.Parameters.AddWithValue("@Boleta_Id", boleta.BoletaId);
                 sqlCommand.Parameters.AddWithValue("@Estado", boleta.Estado);
-                sqlCommand.Parameters.AddWithValue("@Observaciones", boleta.Observaciones);
+                sqlCommand.Parameters.AddWithValue("@Observaciones", boleta.Observaciones.ToUpper());
                 
                 sqlCommand.Parameters.AddWithValue("@accion", "anularEntrada");
                 bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
@@ -218,7 +218,7 @@ namespace WSA.Clases
             }
         }
 
-        public void AgregarSalida(Boleta boleta)
+        public bool AgregarSalida(Boleta boleta)
         {
             try
             {
@@ -238,10 +238,12 @@ namespace WSA.Clases
                 sqlCommand.Parameters.AddWithValue("@accion", "insertarSalida");
                 bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
                 sqlCommand.ExecuteNonQuery();
+                return true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             finally
             {

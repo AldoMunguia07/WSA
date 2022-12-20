@@ -1,13 +1,13 @@
 USE tempdb
 GO
 
---DROP DATABASE WSA_ALG
+--DROP DATABASE AWS_DB
 -- Crear la base de datos
 
-CREATE DATABASE WSA_ALG
+CREATE DATABASE AWS_DB
 GO
 
-USE WSA_ALG
+USE AWS_DB
 GO
 
 --TABLAS
@@ -419,7 +419,7 @@ END
 GO
 
 
-CREATE PROCEDURE sp_Boleta
+/*CREATE PROCEDURE sp_Boleta
 	@Boleta_Id INT = NULL,
 	@Fecha_Entrada DATETIME = NULL,
 	@Fecha_Salida DATETIME = NULL,
@@ -553,7 +553,7 @@ BEGIN
 		END
 
 END
-GO
+GO*/
 
 CREATE PROCEDURE sp_Database
 @Ruta VARCHAR(70) = NULL,

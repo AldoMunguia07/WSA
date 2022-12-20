@@ -74,10 +74,18 @@ namespace WSA
                 if(float.Parse(txtPesoSalida.Text) > float.Parse(txtPesoEntrada.Text))
                 {
                     getValues();
-                    boleta.AgregarSalida(boleta);
-                    MessageBox.Show("Salida agregada", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    FrmTicket frmTicket = new FrmTicket(boleta.UltimaBoleta());
-                    frmTicket.ShowDialog();
+                    if(boleta.AgregarSalida(boleta))
+                    {
+                        MessageBox.Show("Salida agregada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FrmTicket frmTicket = new FrmTicket(boleta.UltimaBoleta());
+                        frmTicket.ShowDialog();
+                    }
+                    else
+                    {
+                       MessageBox.Show("Error al agregar salida", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+
                     this.Close();
                 }
                 else
