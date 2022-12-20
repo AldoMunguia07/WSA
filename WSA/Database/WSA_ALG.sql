@@ -563,7 +563,7 @@ AS
 BEGIN
 	IF @accion = 'realizarBackup'
 	BEGIN
-		BACKUP DATABASE WSA_ALG TO DISK=@Ruta 
+		BACKUP DATABASE AWS_DB TO DISK=@Ruta 
 	END
 
 

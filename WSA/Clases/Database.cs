@@ -19,8 +19,8 @@ namespace WSA.Clases
 
             try
             {
-                string nombreBackup = String.Format("{0}_{1}.bak","AWS_ALG", DateTime.Now.ToString().Replace("/", "").Replace(":", "").Replace(" ", ""));
-                string path = @"c:\Backups_WSA_Database";
+                string nombreBackup = String.Format("{0}_{1}.bak","AWS_DB", DateTime.Now.ToString().Replace("/", "").Replace(":", "").Replace(" ", ""));
+                string path = @"c:\Backups_AWS_Database";
 
                 if (!Directory.Exists(path))
                 {
