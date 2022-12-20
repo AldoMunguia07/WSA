@@ -43,8 +43,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>DATOS BÁSCULA</Value>
+                <Value>DATOS DE PESAJE</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -55,7 +56,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>10.85219cm</Top>
+        <Top>10.21719cm</Top>
         <Left>2.15195cm</Left>
         <Height>0.6cm</Height>
         <Width>3.69472cm</Width>
@@ -89,7 +90,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>11.90886cm</Top>
+        <Top>11.27386cm</Top>
         <Left>0.4457cm</Left>
         <Height>0.6cm</Height>
         <Width>3.06445cm</Width>
@@ -123,7 +124,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>12.68525cm</Top>
+        <Top>12.05025cm</Top>
         <Left>0.4457cm</Left>
         <Height>0.6cm</Height>
         <Width>2.95861cm</Width>
@@ -157,7 +158,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>13.46164cm</Top>
+        <Top>12.82664cm</Top>
         <Left>0.4457cm</Left>
         <Height>0.6cm</Height>
         <Width>2.34125cm</Width>
@@ -436,7 +437,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>14.23803cm</Top>
+        <Top>13.60303cm</Top>
         <Left>0.4457cm</Left>
         <Height>0.6cm</Height>
         <Width>3.32903cm</Width>
@@ -470,7 +471,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>15.01442cm</Top>
+        <Top>14.37942cm</Top>
         <Left>0.4457cm</Left>
         <Height>0.6cm</Height>
         <Width>3.11736cm</Width>
@@ -494,6 +495,7 @@
               <TextRun>
                 <Value>INFORMACIÓN DE TRANSPORTE</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -538,7 +540,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>16.81523cm</Top>
+        <Top>16.49773cm</Top>
         <Left>1.65806cm</Left>
         <Height>0.6cm</Height>
         <Width>1.88673cm</Width>
@@ -573,9 +575,9 @@
         </Paragraphs>
         <rd:DefaultName>Boleta_Id</rd:DefaultName>
         <Top>3.59516cm</Top>
-        <Left>3.52778cm</Left>
+        <Left>3.42195cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.90909cm</Width>
+        <Width>2.01492cm</Width>
         <ZIndex>16</ZIndex>
         <Style>
           <Border>
@@ -596,6 +598,7 @@
               <TextRun>
                 <Value>=First(Fields!Empresa.Value, "DatosEncabezado")</Value>
                 <Style>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                   <TextDecoration>Underline</TextDecoration>
                 </Style>
@@ -610,7 +613,7 @@
         <Top>0.18451cm</Top>
         <Left>0.23308cm</Left>
         <Height>0.6cm</Height>
-        <Width>7.36455cm</Width>
+        <Width>7.13526cm</Width>
         <ZIndex>17</ZIndex>
         <Style>
           <Border>
@@ -630,7 +633,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!Direccion.Value, "DatosEncabezado")</Value>
-                <Style />
+                <Style>
+                  <FontSize>9pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -642,7 +647,7 @@
         <Top>0.81979cm</Top>
         <Left>0.23308cm</Left>
         <Height>0.6cm</Height>
-        <Width>7.36455cm</Width>
+        <Width>7.13526cm</Width>
         <ZIndex>18</ZIndex>
         <Style>
           <Border>
@@ -879,7 +884,7 @@
         </Style>
       </Textbox>
       <Line Name="Line4">
-        <Top>16.63884cm</Top>
+        <Top>16.32134cm</Top>
         <Left>1.53837cm</Left>
         <Height>0cm</Height>
         <Width>4.90391cm</Width>
@@ -907,7 +912,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Usuario</rd:DefaultName>
-        <Top>16.81523cm</Top>
+        <Top>16.49773cm</Top>
         <Left>3.52778cm</Left>
         <Height>0.6cm</Height>
         <Width>3.27673cm</Width>
@@ -939,7 +944,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Peso_Ingreso</rd:DefaultName>
-        <Top>11.90886cm</Top>
+        <Top>11.27386cm</Top>
         <Left>3.42195cm</Left>
         <Height>0.6cm</Height>
         <Width>4.17568cm</Width>
@@ -971,7 +976,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Peso_Salida</rd:DefaultName>
-        <Top>12.68525cm</Top>
+        <Top>12.05025cm</Top>
         <Left>3.22792cm</Left>
         <Height>0.6cm</Height>
         <Width>4.36971cm</Width>
@@ -1003,7 +1008,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Peso_Neto</rd:DefaultName>
-        <Top>13.46164cm</Top>
+        <Top>12.82664cm</Top>
         <Left>2.36361cm</Left>
         <Height>0.6cm</Height>
         <Width>4.81069cm</Width>
@@ -1037,10 +1042,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Fecha_Entrada</rd:DefaultName>
-        <Top>14.23803cm</Top>
-        <Left>3.51015cm</Left>
+        <Top>13.60303cm</Top>
+        <Left>3.77473cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.85819cm</Width>
+        <Width>3.64652cm</Width>
         <ZIndex>31</ZIndex>
         <Style>
           <Border>
@@ -1071,7 +1076,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Fecha_Salida</rd:DefaultName>
-        <Top>15.01442cm</Top>
+        <Top>14.37942cm</Top>
         <Left>3.42195cm</Left>
         <Height>0.6cm</Height>
         <Width>4.26389cm</Width>
@@ -1103,7 +1108,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>17.59162cm</Top>
+        <Top>17.27412cm</Top>
         <Left>0.32129cm</Left>
         <Height>0.6cm</Height>
         <Width>7.36455cm</Width>
@@ -1126,7 +1131,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!Telefono.Value, "DatosEncabezado")</Value>
-                <Style />
+                <Style>
+                  <FontSize>9pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -1138,7 +1145,7 @@
         <Top>1.59618cm</Top>
         <Left>0.23308cm</Left>
         <Height>0.6cm</Height>
-        <Width>7.36455cm</Width>
+        <Width>7.13526cm</Width>
         <ZIndex>34</ZIndex>
         <Style>
           <Border>
