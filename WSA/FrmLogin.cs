@@ -52,7 +52,8 @@ namespace WSA
             VariablesGlobales.Usuario = null;
             usuario.BitacoraCierreSesion(usuario);
             txtUsuario.Text = "";
-            txtContrasena.Text = "";            
+            txtContrasena.Text = "";
+            chbVerContraseña.Checked = false;
             this.Show();
             txtUsuario.Focus();
         }

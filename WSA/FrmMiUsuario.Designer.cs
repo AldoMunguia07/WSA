@@ -224,7 +224,7 @@ namespace WSA
             this.chbVerContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chbVerContraseña.AutoSize = true;
             this.chbVerContraseña.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbVerContraseña.Location = new System.Drawing.Point(679, 235);
+            this.chbVerContraseña.Location = new System.Drawing.Point(679, 243);
             this.chbVerContraseña.Name = "chbVerContraseña";
             this.chbVerContraseña.Size = new System.Drawing.Size(127, 20);
             this.chbVerContraseña.TabIndex = 3;

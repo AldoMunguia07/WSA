@@ -89,7 +89,7 @@ namespace WSA
             this.btnInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnInicioSesion.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicioSesion.ForeColor = System.Drawing.Color.White;
-            this.btnInicioSesion.Location = new System.Drawing.Point(105, 502);
+            this.btnInicioSesion.Location = new System.Drawing.Point(117, 502);
             this.btnInicioSesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInicioSesion.Name = "btnInicioSesion";
             this.btnInicioSesion.Size = new System.Drawing.Size(150, 32);
@@ -113,9 +113,9 @@ namespace WSA
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WSA.Properties.Resources.Logo_AWS;
-            this.pictureBox1.Location = new System.Drawing.Point(47, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(64, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(274, 331);
+            this.pictureBox1.Size = new System.Drawing.Size(255, 331);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
