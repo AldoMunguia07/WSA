@@ -15,11 +15,12 @@ namespace WSA
     {
         Cliente cliente = new Cliente();
         private bool seleccionado = false;
+        private bool isIncome = false;
         public FrmCliente(bool esIngreso)
         {
             InitializeComponent();
             cargarDatos();
-
+            isIncome = esIngreso;
             if (esIngreso)
             {
                 btnSeleccionar.Visible = true;
@@ -133,7 +134,16 @@ namespace WSA
 
         private void btnCncelar_Click(object sender, EventArgs e)
         {
-            refresh();
+            if(isIncome)
+            {
+                VariablesGlobales.Cliente = null;
+                this.Close();
+            }
+            else
+            {
+                refresh();
+            }
+            
         }
     }
 }

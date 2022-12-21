@@ -15,10 +15,12 @@ namespace WSA
     {
         Barco barco = new Barco();
         private bool seleccionado = false;
+        private bool isIncome = false;
         public FrmBarco(bool esIngreso)
         {
             InitializeComponent();
             cargarDatos();
+            isIncome = esIngreso;
             if (esIngreso)
             {
                 btnSeleccionar.Visible = true;
@@ -131,7 +133,15 @@ namespace WSA
 
         private void btnCncelar_Click(object sender, EventArgs e)
         {
-            refresh();
+            if (isIncome)
+            {
+                VariablesGlobales.Barco = null;
+                this.Close();
+            }
+            else
+            {
+                refresh();
+            }
         }
     }
 }

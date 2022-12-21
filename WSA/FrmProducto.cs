@@ -15,11 +15,12 @@ namespace WSA
     {
         Producto producto = new Producto();
         private bool seleccionado = false;
-
+        private bool isIncome = false;
         public FrmProducto(bool esIngreso)
         {
             InitializeComponent();
             cargarDatos();
+            isIncome = esIngreso;
             if (esIngreso)
             {
                 btnSeleccionar.Visible = true;
@@ -137,7 +138,15 @@ namespace WSA
 
         private void btnCncelar_Click(object sender, EventArgs e)
         {
-            refresh();
+            if (isIncome)
+            {
+                VariablesGlobales.Producto = null;
+                this.Close();
+            }
+            else
+            {
+                refresh();
+            }
         }
 
         private void numPrecio_KeyPress(object sender, KeyPressEventArgs e)

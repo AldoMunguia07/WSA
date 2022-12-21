@@ -43,7 +43,7 @@ namespace WSA
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCncelar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -198,20 +198,20 @@ namespace WSA
             this.panel1.Size = new System.Drawing.Size(1118, 30);
             this.panel1.TabIndex = 22;
             // 
-            // btnCncelar
+            // btnCancelar
             // 
-            this.btnCncelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCncelar.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnCncelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCncelar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCncelar.ForeColor = System.Drawing.Color.White;
-            this.btnCncelar.Location = new System.Drawing.Point(916, 379);
-            this.btnCncelar.Name = "btnCncelar";
-            this.btnCncelar.Size = new System.Drawing.Size(101, 27);
-            this.btnCncelar.TabIndex = 6;
-            this.btnCncelar.Text = "Cancelar";
-            this.btnCncelar.UseVisualStyleBackColor = false;
-            this.btnCncelar.Click += new System.EventHandler(this.btnCncelar_Click);
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCancelar.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(916, 379);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(101, 27);
+            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCncelar_Click);
             // 
             // FrmCliente
             // 
@@ -219,7 +219,7 @@ namespace WSA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1112, 557);
-            this.Controls.Add(this.btnCncelar);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSeleccionar);
@@ -254,6 +254,6 @@ namespace WSA
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnCncelar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

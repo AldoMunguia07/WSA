@@ -15,12 +15,13 @@ namespace WSA
     {
         Conductor conductor = new Conductor();
         private bool seleccionado = false;
-
+        private bool isIncome = false;
         public FrmConductor(bool esIngreso)
         {
             InitializeComponent();
             cargarDatos();
-            if(esIngreso)
+            isIncome = esIngreso;
+            if (esIngreso)
             {
                 btnSeleccionar.Visible = true;
             }
@@ -134,7 +135,15 @@ namespace WSA
 
         private void btnCncelar_Click(object sender, EventArgs e)
         {
-            refresh();
+            if (isIncome)
+            {
+                VariablesGlobales.Conductor = null;
+                this.Close();
+            }
+            else
+            {
+                refresh();
+            }
         }
     }
 }
