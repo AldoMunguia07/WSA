@@ -141,9 +141,9 @@ namespace WSA
         {
             if (txtCodigoConductor.Text != "")
             {
-                if(/*txtPlacaCabezal.Text != ""*/true)
+                if(txtPlacaCabezal.Text != "")
                 {
-                    if(/*txtPlacaRastra.Text != ""*/true)
+                    if(txtPlacaRastra.Text != "")
                     {
                         if(txtCodigoCliente.Text != "")
                         {

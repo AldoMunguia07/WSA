@@ -42,6 +42,21 @@ namespace WSA
             this.btnObtenerPeso = new System.Windows.Forms.Button();
             this.txtPesoSalida = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dtpFechaEntrada = new System.Windows.Forms.DateTimePicker();
+            this.txtPesoEntrada = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.mySerialPort = new System.IO.Ports.SerialPort(this.components);
+            this.label16 = new System.Windows.Forms.Label();
+            this.dtpHoraEntrada = new System.Windows.Forms.DateTimePicker();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtPesoBascula = new System.Windows.Forms.TextBox();
+            this.lblConsultarBarcos = new System.Windows.Forms.LinkLabel();
+            this.lblConsultarProductos = new System.Windows.Forms.LinkLabel();
+            this.lblConsultarClientes = new System.Windows.Forms.LinkLabel();
+            this.lblConsultarConductores = new System.Windows.Forms.LinkLabel();
             this.txtEnvioN = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtBarco = new System.Windows.Forms.TextBox();
@@ -62,17 +77,6 @@ namespace WSA
             this.txtConductor = new System.Windows.Forms.TextBox();
             this.txtCodigoConductor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.dtpFechaEntrada = new System.Windows.Forms.DateTimePicker();
-            this.txtPesoEntrada = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.mySerialPort = new System.IO.Ports.SerialPort(this.components);
-            this.label16 = new System.Windows.Forms.Label();
-            this.dtpHoraEntrada = new System.Windows.Forms.DateTimePicker();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtPesoBascula = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnConectar
@@ -147,7 +151,7 @@ namespace WSA
             // 
             this.txtObservaciones.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtObservaciones.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservaciones.Location = new System.Drawing.Point(895, 366);
+            this.txtObservaciones.Location = new System.Drawing.Point(819, 362);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(401, 142);
@@ -158,7 +162,7 @@ namespace WSA
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(755, 369);
+            this.label12.Location = new System.Drawing.Point(679, 365);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(134, 18);
             this.label12.TabIndex = 59;
@@ -211,226 +215,6 @@ namespace WSA
             this.label10.Size = new System.Drawing.Size(109, 18);
             this.label10.TabIndex = 55;
             this.label10.Text = "Peso salida:";
-            // 
-            // txtEnvioN
-            // 
-            this.txtEnvioN.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtEnvioN.BackColor = System.Drawing.Color.White;
-            this.txtEnvioN.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEnvioN.Location = new System.Drawing.Point(531, 308);
-            this.txtEnvioN.Name = "txtEnvioN";
-            this.txtEnvioN.ReadOnly = true;
-            this.txtEnvioN.Size = new System.Drawing.Size(91, 27);
-            this.txtEnvioN.TabIndex = 8;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(390, 312);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(129, 18);
-            this.label9.TabIndex = 52;
-            this.label9.Text = "Contrato / OC:";
-            // 
-            // txtBarco
-            // 
-            this.txtBarco.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBarco.BackColor = System.Drawing.Color.White;
-            this.txtBarco.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBarco.Location = new System.Drawing.Point(329, 513);
-            this.txtBarco.Name = "txtBarco";
-            this.txtBarco.ReadOnly = true;
-            this.txtBarco.Size = new System.Drawing.Size(293, 27);
-            this.txtBarco.TabIndex = 14;
-            // 
-            // txtCodigoBarco
-            // 
-            this.txtCodigoBarco.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodigoBarco.BackColor = System.Drawing.Color.White;
-            this.txtCodigoBarco.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoBarco.Location = new System.Drawing.Point(276, 513);
-            this.txtCodigoBarco.Name = "txtCodigoBarco";
-            this.txtCodigoBarco.ReadOnly = true;
-            this.txtCodigoBarco.Size = new System.Drawing.Size(47, 27);
-            this.txtCodigoBarco.TabIndex = 13;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(105, 516);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(152, 18);
-            this.label8.TabIndex = 49;
-            this.label8.Text = "Código del barco:";
-            // 
-            // txtProducto
-            // 
-            this.txtProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtProducto.BackColor = System.Drawing.Color.White;
-            this.txtProducto.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProducto.Location = new System.Drawing.Point(329, 438);
-            this.txtProducto.Name = "txtProducto";
-            this.txtProducto.ReadOnly = true;
-            this.txtProducto.Size = new System.Drawing.Size(293, 27);
-            this.txtProducto.TabIndex = 12;
-            // 
-            // txtCodigoProducto
-            // 
-            this.txtCodigoProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodigoProducto.BackColor = System.Drawing.Color.White;
-            this.txtCodigoProducto.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoProducto.Location = new System.Drawing.Point(276, 438);
-            this.txtCodigoProducto.Name = "txtCodigoProducto";
-            this.txtCodigoProducto.ReadOnly = true;
-            this.txtCodigoProducto.Size = new System.Drawing.Size(47, 27);
-            this.txtCodigoProducto.TabIndex = 11;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(97, 441);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(179, 18);
-            this.label7.TabIndex = 46;
-            this.label7.Text = "Código del producto:";
-            // 
-            // txtCliente
-            // 
-            this.txtCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCliente.BackColor = System.Drawing.Color.White;
-            this.txtCliente.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCliente.Location = new System.Drawing.Point(329, 363);
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.ReadOnly = true;
-            this.txtCliente.Size = new System.Drawing.Size(293, 27);
-            this.txtCliente.TabIndex = 10;
-            // 
-            // txtCodigoCliente
-            // 
-            this.txtCodigoCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodigoCliente.BackColor = System.Drawing.Color.White;
-            this.txtCodigoCliente.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoCliente.Location = new System.Drawing.Point(276, 363);
-            this.txtCodigoCliente.Name = "txtCodigoCliente";
-            this.txtCodigoCliente.ReadOnly = true;
-            this.txtCodigoCliente.Size = new System.Drawing.Size(47, 27);
-            this.txtCodigoCliente.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(103, 366);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 18);
-            this.label6.TabIndex = 43;
-            this.label6.Text = "Código del cliente:";
-            // 
-            // txtCia
-            // 
-            this.txtCia.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCia.BackColor = System.Drawing.Color.White;
-            this.txtCia.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCia.Location = new System.Drawing.Point(295, 308);
-            this.txtCia.Name = "txtCia";
-            this.txtCia.ReadOnly = true;
-            this.txtCia.Size = new System.Drawing.Size(91, 27);
-            this.txtCia.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(91, 312);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(208, 18);
-            this.label5.TabIndex = 41;
-            this.label5.Text = "Compañia transportista:";
-            // 
-            // txtPlacaRastra
-            // 
-            this.txtPlacaRastra.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPlacaRastra.BackColor = System.Drawing.Color.White;
-            this.txtPlacaRastra.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlacaRastra.Location = new System.Drawing.Point(494, 252);
-            this.txtPlacaRastra.Name = "txtPlacaRastra";
-            this.txtPlacaRastra.ReadOnly = true;
-            this.txtPlacaRastra.Size = new System.Drawing.Size(128, 27);
-            this.txtPlacaRastra.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(383, 256);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 18);
-            this.label4.TabIndex = 39;
-            this.label4.Text = "Placa rastra:";
-            // 
-            // txtPlacaCabezal
-            // 
-            this.txtPlacaCabezal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPlacaCabezal.BackColor = System.Drawing.Color.White;
-            this.txtPlacaCabezal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlacaCabezal.Location = new System.Drawing.Point(236, 252);
-            this.txtPlacaCabezal.Name = "txtPlacaCabezal";
-            this.txtPlacaCabezal.ReadOnly = true;
-            this.txtPlacaCabezal.Size = new System.Drawing.Size(137, 27);
-            this.txtPlacaCabezal.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(111, 256);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 18);
-            this.label3.TabIndex = 37;
-            this.label3.Text = "Placa cabezal:";
-            // 
-            // txtConductor
-            // 
-            this.txtConductor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtConductor.BackColor = System.Drawing.Color.White;
-            this.txtConductor.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConductor.Location = new System.Drawing.Point(329, 199);
-            this.txtConductor.Name = "txtConductor";
-            this.txtConductor.ReadOnly = true;
-            this.txtConductor.Size = new System.Drawing.Size(293, 27);
-            this.txtConductor.TabIndex = 4;
-            // 
-            // txtCodigoConductor
-            // 
-            this.txtCodigoConductor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodigoConductor.BackColor = System.Drawing.Color.White;
-            this.txtCodigoConductor.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoConductor.Location = new System.Drawing.Point(276, 199);
-            this.txtCodigoConductor.Name = "txtCodigoConductor";
-            this.txtCodigoConductor.ReadOnly = true;
-            this.txtCodigoConductor.Size = new System.Drawing.Size(47, 27);
-            this.txtCodigoConductor.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(94, 202);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 18);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Código del conductor:";
             // 
             // label1
             // 
@@ -546,32 +330,278 @@ namespace WSA
             this.txtPesoBascula.Text = "0.00 Kg";
             this.txtPesoBascula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // lblConsultarBarcos
+            // 
+            this.lblConsultarBarcos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblConsultarBarcos.AutoSize = true;
+            this.lblConsultarBarcos.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsultarBarcos.Location = new System.Drawing.Point(502, 508);
+            this.lblConsultarBarcos.Name = "lblConsultarBarcos";
+            this.lblConsultarBarcos.Size = new System.Drawing.Size(119, 16);
+            this.lblConsultarBarcos.TabIndex = 96;
+            this.lblConsultarBarcos.TabStop = true;
+            this.lblConsultarBarcos.Text = "Consultar barcos";
+            this.lblConsultarBarcos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblConsultarBarcos_LinkClicked);
+            // 
+            // lblConsultarProductos
+            // 
+            this.lblConsultarProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblConsultarProductos.AutoSize = true;
+            this.lblConsultarProductos.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsultarProductos.Location = new System.Drawing.Point(487, 431);
+            this.lblConsultarProductos.Name = "lblConsultarProductos";
+            this.lblConsultarProductos.Size = new System.Drawing.Size(141, 16);
+            this.lblConsultarProductos.TabIndex = 92;
+            this.lblConsultarProductos.TabStop = true;
+            this.lblConsultarProductos.Text = "Consultar productos";
+            this.lblConsultarProductos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblConsultarProductos_LinkClicked);
+            // 
+            // lblConsultarClientes
+            // 
+            this.lblConsultarClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblConsultarClientes.AutoSize = true;
+            this.lblConsultarClientes.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsultarClientes.Location = new System.Drawing.Point(498, 362);
+            this.lblConsultarClientes.Name = "lblConsultarClientes";
+            this.lblConsultarClientes.Size = new System.Drawing.Size(126, 16);
+            this.lblConsultarClientes.TabIndex = 88;
+            this.lblConsultarClientes.TabStop = true;
+            this.lblConsultarClientes.Text = "Consultar clientes";
+            this.lblConsultarClientes.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblConsultarClientes_LinkClicked);
+            // 
+            // lblConsultarConductores
+            // 
+            this.lblConsultarConductores.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblConsultarConductores.AutoSize = true;
+            this.lblConsultarConductores.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsultarConductores.Location = new System.Drawing.Point(467, 186);
+            this.lblConsultarConductores.Name = "lblConsultarConductores";
+            this.lblConsultarConductores.Size = new System.Drawing.Size(157, 16);
+            this.lblConsultarConductores.TabIndex = 78;
+            this.lblConsultarConductores.TabStop = true;
+            this.lblConsultarConductores.Text = "Consultar conductores";
+            this.lblConsultarConductores.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblConsultarConductores_LinkClicked);
+            // 
+            // txtEnvioN
+            // 
+            this.txtEnvioN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtEnvioN.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEnvioN.Location = new System.Drawing.Point(531, 313);
+            this.txtEnvioN.Name = "txtEnvioN";
+            this.txtEnvioN.Size = new System.Drawing.Size(91, 27);
+            this.txtEnvioN.TabIndex = 83;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(396, 322);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(129, 18);
+            this.label9.TabIndex = 98;
+            this.label9.Text = "Contrato / OC:";
+            // 
+            // txtBarco
+            // 
+            this.txtBarco.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBarco.BackColor = System.Drawing.Color.White;
+            this.txtBarco.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBarco.Location = new System.Drawing.Point(325, 527);
+            this.txtBarco.Name = "txtBarco";
+            this.txtBarco.ReadOnly = true;
+            this.txtBarco.Size = new System.Drawing.Size(297, 27);
+            this.txtBarco.TabIndex = 95;
+            // 
+            // txtCodigoBarco
+            // 
+            this.txtCodigoBarco.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCodigoBarco.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoBarco.Location = new System.Drawing.Point(272, 527);
+            this.txtCodigoBarco.Name = "txtCodigoBarco";
+            this.txtCodigoBarco.Size = new System.Drawing.Size(47, 27);
+            this.txtCodigoBarco.TabIndex = 94;
+            this.txtCodigoBarco.Leave += new System.EventHandler(this.txtCodigoBarco_Leave);
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(105, 530);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(152, 18);
+            this.label8.TabIndex = 97;
+            this.label8.Text = "Código del barco:";
+            // 
+            // txtProducto
+            // 
+            this.txtProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtProducto.BackColor = System.Drawing.Color.White;
+            this.txtProducto.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProducto.Location = new System.Drawing.Point(325, 450);
+            this.txtProducto.Name = "txtProducto";
+            this.txtProducto.ReadOnly = true;
+            this.txtProducto.Size = new System.Drawing.Size(297, 27);
+            this.txtProducto.TabIndex = 91;
+            // 
+            // txtCodigoProducto
+            // 
+            this.txtCodigoProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCodigoProducto.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoProducto.Location = new System.Drawing.Point(272, 450);
+            this.txtCodigoProducto.Name = "txtCodigoProducto";
+            this.txtCodigoProducto.Size = new System.Drawing.Size(47, 27);
+            this.txtCodigoProducto.TabIndex = 89;
+            this.txtCodigoProducto.Leave += new System.EventHandler(this.txtCodigoProducto_Leave);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(97, 453);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(179, 18);
+            this.label7.TabIndex = 93;
+            this.label7.Text = "Código del producto:";
+            // 
+            // txtCliente
+            // 
+            this.txtCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCliente.BackColor = System.Drawing.Color.White;
+            this.txtCliente.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCliente.Location = new System.Drawing.Point(325, 381);
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.ReadOnly = true;
+            this.txtCliente.Size = new System.Drawing.Size(297, 27);
+            this.txtCliente.TabIndex = 87;
+            // 
+            // txtCodigoCliente
+            // 
+            this.txtCodigoCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCodigoCliente.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoCliente.Location = new System.Drawing.Point(272, 381);
+            this.txtCodigoCliente.Name = "txtCodigoCliente";
+            this.txtCodigoCliente.Size = new System.Drawing.Size(47, 27);
+            this.txtCodigoCliente.TabIndex = 85;
+            this.txtCodigoCliente.Leave += new System.EventHandler(this.txtCodigoCliente_Leave);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(103, 384);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(163, 18);
+            this.label6.TabIndex = 90;
+            this.label6.Text = "Código del cliente:";
+            // 
+            // txtCia
+            // 
+            this.txtCia.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCia.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCia.Location = new System.Drawing.Point(298, 316);
+            this.txtCia.Name = "txtCia";
+            this.txtCia.Size = new System.Drawing.Size(91, 27);
+            this.txtCia.TabIndex = 82;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(91, 322);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(208, 18);
+            this.label5.TabIndex = 86;
+            this.label5.Text = "Compañia transportista:";
+            // 
+            // txtPlacaRastra
+            // 
+            this.txtPlacaRastra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPlacaRastra.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlacaRastra.Location = new System.Drawing.Point(497, 263);
+            this.txtPlacaRastra.MaxLength = 7;
+            this.txtPlacaRastra.Name = "txtPlacaRastra";
+            this.txtPlacaRastra.Size = new System.Drawing.Size(125, 27);
+            this.txtPlacaRastra.TabIndex = 81;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(379, 267);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 18);
+            this.label4.TabIndex = 84;
+            this.label4.Text = "Placa rastra:";
+            // 
+            // txtPlacaCabezal
+            // 
+            this.txtPlacaCabezal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPlacaCabezal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlacaCabezal.Location = new System.Drawing.Point(245, 263);
+            this.txtPlacaCabezal.MaxLength = 7;
+            this.txtPlacaCabezal.Name = "txtPlacaCabezal";
+            this.txtPlacaCabezal.Size = new System.Drawing.Size(128, 27);
+            this.txtPlacaCabezal.TabIndex = 79;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(111, 267);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(126, 18);
+            this.label3.TabIndex = 80;
+            this.label3.Text = "Placa cabezal:";
+            // 
+            // txtConductor
+            // 
+            this.txtConductor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtConductor.BackColor = System.Drawing.Color.White;
+            this.txtConductor.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConductor.Location = new System.Drawing.Point(333, 205);
+            this.txtConductor.Name = "txtConductor";
+            this.txtConductor.ReadOnly = true;
+            this.txtConductor.Size = new System.Drawing.Size(289, 27);
+            this.txtConductor.TabIndex = 77;
+            // 
+            // txtCodigoConductor
+            // 
+            this.txtCodigoConductor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCodigoConductor.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoConductor.Location = new System.Drawing.Point(280, 205);
+            this.txtCodigoConductor.Name = "txtCodigoConductor";
+            this.txtCodigoConductor.Size = new System.Drawing.Size(47, 27);
+            this.txtCodigoConductor.TabIndex = 75;
+            this.txtCodigoConductor.Leave += new System.EventHandler(this.txtCodigoConductor_Leave);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(94, 208);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(187, 18);
+            this.label2.TabIndex = 76;
+            this.label2.Text = "Código del conductor:";
+            // 
             // FrmSalida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1367, 647);
-            this.Controls.Add(this.txtPesoBascula);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dtpHoraEntrada);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.txtPesoEntrada);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.dtpFechaEntrada);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.btnConectar);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.lblConexion);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.txtObservaciones);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.btnObtenerPeso);
-            this.Controls.Add(this.txtPesoSalida);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblConsultarBarcos);
+            this.Controls.Add(this.lblConsultarProductos);
+            this.Controls.Add(this.lblConsultarClientes);
+            this.Controls.Add(this.lblConsultarConductores);
             this.Controls.Add(this.txtEnvioN);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtBarco);
@@ -592,6 +622,26 @@ namespace WSA
             this.Controls.Add(this.txtConductor);
             this.Controls.Add(this.txtCodigoConductor);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtPesoBascula);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dtpHoraEntrada);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.txtPesoEntrada);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.dtpFechaEntrada);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.btnConectar);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.lblConexion);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.txtObservaciones);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.btnObtenerPeso);
+            this.Controls.Add(this.txtPesoSalida);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmSalida";
@@ -616,6 +666,21 @@ namespace WSA
         private System.Windows.Forms.Button btnObtenerPeso;
         private System.Windows.Forms.TextBox txtPesoSalida;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DateTimePicker dtpFechaEntrada;
+        private System.Windows.Forms.TextBox txtPesoEntrada;
+        private System.Windows.Forms.Label label15;
+        private System.IO.Ports.SerialPort mySerialPort;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.DateTimePicker dtpHoraEntrada;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtPesoBascula;
+        private System.Windows.Forms.LinkLabel lblConsultarBarcos;
+        private System.Windows.Forms.LinkLabel lblConsultarProductos;
+        private System.Windows.Forms.LinkLabel lblConsultarClientes;
+        private System.Windows.Forms.LinkLabel lblConsultarConductores;
         private System.Windows.Forms.TextBox txtEnvioN;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtBarco;
@@ -636,16 +701,5 @@ namespace WSA
         private System.Windows.Forms.TextBox txtConductor;
         private System.Windows.Forms.TextBox txtCodigoConductor;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dtpFechaEntrada;
-        private System.Windows.Forms.TextBox txtPesoEntrada;
-        private System.Windows.Forms.Label label15;
-        private System.IO.Ports.SerialPort mySerialPort;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DateTimePicker dtpHoraEntrada;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtPesoBascula;
     }
 }

@@ -122,5 +122,85 @@ namespace WSA
         {
             this.Close();
         }
+
+        private void lblConsultarConductores_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmConductor frmConductor = new FrmConductor(true);
+            frmConductor.ShowDialog();
+            if (VariablesGlobales.Conductor != null)
+            {
+                txtCodigoConductor.Text = VariablesGlobales.Conductor.ConductorId.ToString();
+                txtConductor.Text = VariablesGlobales.Conductor.ConductorD;
+                VariablesGlobales.Conductor = null;
+            }
+        }
+
+        private void lblConsultarClientes_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmCliente frmCliente = new FrmCliente(true);
+            frmCliente.ShowDialog();
+            if (VariablesGlobales.Cliente != null)
+            {
+                txtCodigoCliente.Text = VariablesGlobales.Cliente.ClienteId.ToString();
+                txtCliente.Text = VariablesGlobales.Cliente.ClienteD;
+                VariablesGlobales.Cliente = null;
+            }
+        }
+
+        private void lblConsultarProductos_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmProducto frmProducto = new FrmProducto(true);
+            frmProducto.ShowDialog();
+            if (VariablesGlobales.Producto != null)
+            {
+                txtCodigoProducto.Text = VariablesGlobales.Producto.ProductoId.ToString();
+                txtProducto.Text = VariablesGlobales.Producto.Descripcion;
+                VariablesGlobales.Producto = null;
+            }
+        }
+
+        private void lblConsultarBarcos_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmBarco frmBarco = new FrmBarco(true);
+            frmBarco.ShowDialog();
+            if (VariablesGlobales.Barco != null)
+            {
+                txtCodigoBarco.Text = VariablesGlobales.Barco.BarcoId.ToString();
+                txtBarco.Text = VariablesGlobales.Barco.Descripcion;
+                VariablesGlobales.Barco = null;
+            }
+        }
+
+        private void txtCodigoConductor_Leave(object sender, EventArgs e)
+        {
+            if (txtCodigoConductor.Text != "")
+            {
+                boleta.BuscarConductor(txtCodigoConductor, txtConductor);
+            }
+        }
+
+        private void txtCodigoCliente_Leave(object sender, EventArgs e)
+        {
+            if (txtCodigoCliente.Text != "")
+            {
+                boleta.BuscarCliente(txtCodigoCliente, txtCliente);
+            }
+        }
+
+        private void txtCodigoProducto_Leave(object sender, EventArgs e)
+        {
+            if (txtCodigoProducto.Text != "")
+            {
+                boleta.BuscarProducto(txtCodigoProducto, txtProducto);
+            }
+        }
+
+        private void txtCodigoBarco_Leave(object sender, EventArgs e)
+        {
+            if (txtCodigoBarco.Text != "")
+            {
+                boleta.BuscarBarco(txtCodigoBarco, txtBarco);
+            }
+        }
     }
 }
