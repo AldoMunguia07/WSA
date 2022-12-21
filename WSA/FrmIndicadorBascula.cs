@@ -32,7 +32,7 @@ namespace WSA
             cmbParidad.DataSource = parities;            
             cmbStopBit.DataSource = stopBits;
            // MessageBox.Show(((int)Enum.Parse(typeof(StopBits), "One")).ToString());
-            indicador.CargarFormuarioIndicador(cmbPuertos, cmbVelocidad, cmbDataBits, cmbParidad, cmbStopBit);
+            indicador.CargarFormuarioIndicador(cmbPuertos, cmbVelocidad, cmbDataBits, cmbParidad, cmbStopBit, numMaximo, numMinimo, numPosicion);
             
         
         }
@@ -52,7 +52,7 @@ namespace WSA
                     indicador.ModificarIndicador(indicador);
                 }
                 MessageBox.Show("Cambios guardados", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                indicador.CargarFormuarioIndicador(cmbPuertos, cmbVelocidad, cmbDataBits, cmbParidad, cmbStopBit);
+                indicador.CargarFormuarioIndicador(cmbPuertos, cmbVelocidad, cmbDataBits, cmbParidad, cmbStopBit, numMaximo, numMinimo, numPosicion);
 
             }
             else
@@ -70,6 +70,9 @@ namespace WSA
             indicador.DataBits = Convert.ToInt32(cmbDataBits.SelectedValue);
             indicador.Parity = cmbParidad.SelectedValue.ToString();
             indicador.StopBit = cmbStopBit.SelectedValue.ToString();
+            indicador.Maximo = int.Parse(numMaximo.Value.ToString());
+            indicador.Minimo = int.Parse(numMinimo.Value.ToString());
+            indicador.PosicionSignoMas = int.Parse(numPosicion.Value.ToString());
 
         }
 

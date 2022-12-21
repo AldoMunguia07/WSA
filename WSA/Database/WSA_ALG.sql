@@ -174,7 +174,10 @@ CREATE TABLE Indicador
 	Baud_Rate INT NOT NULL,
 	Data_Bits INT NOT NULL,
 	Parity VARCHAR(40) NOT NULL,	
-	Stop_Bit VARCHAR(40) NOT NULL
+	Stop_Bit VARCHAR(40) NOT NULL,
+	Maximo INT NOT NULL,
+	Minimo INT NOT NULL,
+	Posicion_Signo_Mas INT NOT NULL
 
 
 
@@ -602,17 +605,22 @@ CREATE PROCEDURE sp_Indicador
 @Data_Bits INT = NULL,
 @Parity VARCHAR(40) = NULL,
 @Stop_Bit VARCHAR(40) = NULL,
+@Maximo INT = NULL,
+@Minimo INT = NULL,
+@Posicion_Signo_Mas INT = NULL,
 @accion VARCHAR(50)
 
 AS
 BEGIN
 	IF @accion = 'insertar'
 	BEGIN
-		INSERT INTO Indicador VALUES (@Port_Name, @Baud_Rate, @Data_Bits, @Parity, @Stop_Bit)
+		INSERT INTO Indicador VALUES (@Port_Name, @Baud_Rate, @Data_Bits, @Parity, @Stop_Bit, @Maximo, @Minimo, @Posicion_Signo_Mas)
 	END
 	ELSE IF @accion = 'modificar'
 	BEGIN
-		UPDATE Indicador SET Port_Name = @Port_Name, Baud_Rate = @Baud_Rate, Data_Bits = @Data_Bits, Parity = @Parity, Stop_Bit = @Stop_Bit  WHERE  Indicador_Id = @Indicador_Id
+		UPDATE Indicador SET Port_Name = @Port_Name, Baud_Rate = @Baud_Rate, Data_Bits = @Data_Bits, Parity = @Parity, Stop_Bit = @Stop_Bit, Maximo = @Maximo,
+		Minimo = @Minimo, Posicion_Signo_Mas = @Posicion_Signo_Mas
+		WHERE  Indicador_Id = @Indicador_Id
 	END
 	ELSE IF @accion = 'obtenerIndicador'
 	BEGIN
@@ -806,6 +814,24 @@ BEGIN
 	
 	SELECT b.Boleta_Id, b.Fecha_Entrada, b.Fecha_Salida, b.Placa_Cabezal, b.Placa_Rastra, c.Conductor_Id, c.Conductor, cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) Peso_Ingreso, 
 	CONCAT(b.Peso_Salida,' ',b.Unidades_Peso_Salida) Peso_Salida, CONCAT(((b.Peso_Ingreso - b.Peso_Salida) * -1), ' ',b.Unidades_Peso_Salida) Peso_Neto, b.Barco_Id, bc.Descripcion Barco , b.Estado, u.Nombre_Usuario Usuario, 
+	b.Observaciones
+	FROM Boleta b JOIN Conductor c
+	ON b.Conductor_Id = c.Conductor_Id
+	JOIN Producto p ON b.Producto_Id = p.Producto_Id
+	JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
+	JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
+	JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
+	WHERE b.Boleta_Id = @Boleta_Id
+END
+GO
+
+CREATE PROCEDURE sp_Datos_Boleta_Entrada
+	@Boleta_Id INT = NULL
+AS
+BEGIN
+	
+	SELECT b.Boleta_Id, b.Fecha_Entrada, b.Placa_Cabezal, b.Placa_Rastra, c.Conductor_Id, c.Conductor, cl.Cliente, p.Descripcion Producto, 
+	CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) Peso_Ingreso, b.Barco_Id, bc.Descripcion Barco , b.Estado, u.Nombre_Usuario Usuario, 
 	b.Observaciones
 	FROM Boleta b JOIN Conductor c
 	ON b.Conductor_Id = c.Conductor_Id

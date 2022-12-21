@@ -28,12 +28,16 @@ namespace WSA.Clases
         public int DataBits { get; set; }
         public string Parity { get; set; }
         public string StopBit { get; set; }
+        public int Maximo { get; set; }
+        public int Minimo { get; set; }
+        public int PosicionSignoMas { get; set; }
 
         SerialPort mySerialPort = new SerialPort() ;
 
 
         //METODOS
-        public void CargarFormuarioIndicador(ComboBox cmbPuertos, ComboBox cmbVelocidad, ComboBox cmbDataBits, ComboBox cmbParidad, ComboBox cmbStopBit)
+        public void CargarFormuarioIndicador(ComboBox cmbPuertos, ComboBox cmbVelocidad, ComboBox cmbDataBits, ComboBox cmbParidad, ComboBox cmbStopBit, NumericUpDown numMaximo,
+            NumericUpDown numMinimo, NumericUpDown numPosicion)
         {
 
             try
@@ -58,6 +62,9 @@ namespace WSA.Clases
                         cmbDataBits.SelectedItem = int.Parse(rdr["Data_Bits"].ToString());
                         cmbParidad.SelectedItem = rdr["Parity"].ToString();
                         cmbStopBit.SelectedItem = rdr["Stop_Bit"].ToString();
+                        numMaximo.Value = int.Parse(rdr["Maximo"].ToString());
+                        numMinimo.Value = int.Parse(rdr["Minimo"].ToString());
+                        numPosicion.Value = int.Parse(rdr["Posicion_Signo_Mas"].ToString());
 
                     }
 
@@ -131,6 +138,9 @@ namespace WSA.Clases
                 sqlCommand.Parameters.AddWithValue("@Data_Bits", indicador.DataBits);
                 sqlCommand.Parameters.AddWithValue("@Parity", indicador.Parity);
                 sqlCommand.Parameters.AddWithValue("@Stop_Bit", indicador.StopBit);
+                sqlCommand.Parameters.AddWithValue("@Maximo", indicador.Maximo);
+                sqlCommand.Parameters.AddWithValue("@Minimo", indicador.Minimo);
+                sqlCommand.Parameters.AddWithValue("@Posicion_Signo_Mas", indicador.PosicionSignoMas);
                 sqlCommand.Parameters.AddWithValue("@accion", "insertar");
                 bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
                 sqlCommand.ExecuteNonQuery();
@@ -162,6 +172,9 @@ namespace WSA.Clases
                 sqlCommand.Parameters.AddWithValue("@Data_Bits", indicador.DataBits);
                 sqlCommand.Parameters.AddWithValue("@Parity", indicador.Parity);
                 sqlCommand.Parameters.AddWithValue("@Stop_Bit", indicador.StopBit);
+                sqlCommand.Parameters.AddWithValue("@Maximo", indicador.Maximo);
+                sqlCommand.Parameters.AddWithValue("@Minimo", indicador.Minimo);
+                sqlCommand.Parameters.AddWithValue("@Posicion_Signo_Mas", indicador.PosicionSignoMas);
                 sqlCommand.Parameters.AddWithValue("@accion", "modificar");
                 bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
                 sqlCommand.ExecuteNonQuery();
