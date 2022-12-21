@@ -85,5 +85,20 @@ namespace WSA
                 MessageBox.Show("Seleccione una entrada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            if (seleccionado)
+            {
+                FrmTicketEntrada frmTicketEntrada = new FrmTicketEntrada(idBoleta);
+                frmTicketEntrada.ShowDialog();
+                boleta.MostrarEntradas(dgvEntradas);
+                seleccionado = false;
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una entrada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace WSA.Clases
         public string Observaciones { get; set; }
 
         ///METODOS
-        public void AgregarEntrada(Boleta boleta)
+        public bool AgregarEntrada(Boleta boleta)
         {
             try
             {
@@ -63,10 +63,12 @@ namespace WSA.Clases
                 sqlCommand.Parameters.AddWithValue("@accion", "insertarEntrada");
                 bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
                 sqlCommand.ExecuteNonQuery();
+                return true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             finally
             {

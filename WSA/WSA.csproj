@@ -226,6 +226,12 @@
     <Compile Include="FrmTicket.Designer.cs">
       <DependentUpon>FrmTicket.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTicketEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTicketEntrada.Designer.cs">
+      <DependentUpon>FrmTicketEntrada.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -318,6 +324,9 @@
     <EmbeddedResource Include="FrmTicket.resx">
       <DependentUpon>FrmTicket.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTicketEntrada.resx">
+      <DependentUpon>FrmTicketEntrada.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -340,6 +349,7 @@
     <EmbeddedResource Include="Reportes\rptBitacora.rdlc" />
     <EmbeddedResource Include="Reportes\rptBoleta.rdlc" />
     <EmbeddedResource Include="Reportes\rptBoletas.rdlc" />
+    <EmbeddedResource Include="Reportes\rptTicketEntrada.rdlc" />
     <EmbeddedResource Include="rFrmBitacora.resx">
       <DependentUpon>rFrmBitacora.cs</DependentUpon>
     </EmbeddedResource>

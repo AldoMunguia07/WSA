@@ -74,8 +74,19 @@ namespace WSA
             if(camposLlenos())
             {
                 getValues();
-                boleta.AgregarEntrada(boleta);
-                MessageBox.Show("Entrada agregada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (boleta.AgregarEntrada(boleta))
+                {
+                    MessageBox.Show("Entrada agregada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FrmTicketEntrada frmTicketEntrada = new FrmTicketEntrada(boleta.UltimaBoleta());
+                    frmTicketEntrada.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Error al agregar entrada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+               
+                
                 
                 this.Close();
             }
