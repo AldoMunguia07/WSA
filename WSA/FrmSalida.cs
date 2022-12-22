@@ -15,7 +15,7 @@ namespace WSA
     public partial class FrmSalida : Form
     {
         Boleta boleta = new Boleta();
-        Indicador configuracionBascula = new Indicador();
+        Indicador indicador = new Indicador();
         private bool conectado = false;
         private int idBoleta = 0;
         public FrmSalida(int boletaId)
@@ -24,14 +24,14 @@ namespace WSA
             idBoleta = boletaId;
             boleta.CargarFormularioSalida(idBoleta, dtpFechaEntrada, dtpHoraEntrada, txtCodigoConductor, txtConductor, txtPlacaCabezal, txtPlacaRastra, txtCia, txtEnvioN, txtCodigoCliente, 
                 txtCliente, txtCodigoProducto, txtProducto, txtCodigoBarco, txtBarco, txtPesoEntrada, txtObservaciones);
-            conectado = configuracionBascula.LeerDatos(/*mySerialPort,*/ this, lblConexion, txtPesoBascula);
+            conectado = indicador.LeerDatos(/*mySerialPort,*/ this, lblConexion, txtPesoBascula);
         }
 
         private void btnConectar_Click(object sender, EventArgs e)
         {
             if (!conectado)
             {
-                conectado = configuracionBascula.LeerDatos(/*mySerialPort,*/ this, lblConexion, txtPesoBascula);
+                conectado = indicador.LeerDatos(/*mySerialPort,*/ this, lblConexion, txtPesoBascula);
             }
             else
             {
@@ -44,25 +44,43 @@ namespace WSA
             
 
             Match m = Regex.Match(txtPesoBascula.Text, "(\\d+).(\\d+)|(\\d+)");
+            Match maximo = Regex.Match(txtPesoBascula.Text, "Máximo");
+            Match minimo = Regex.Match(txtPesoBascula.Text, "Mínimo");
+            DataTable data = indicador.indicadorTable();
 
-            if(m.Success)
+            
+            if (m.Success)
             {
                 if (float.Parse(m.Value) > 0)
                 {
-                    if (float.Parse(m.Value) < float.Parse(configuracionBascula.Variable("MAX")))
+                    if (!maximo.Success)
                     {
-                        txtPesoSalida.Text = m.Value;
+                        if (!minimo.Success)
+                        {
+                            txtPesoSalida.Text = String.Format("{0:n}", float.Parse(m.Value));
+                        }
+                        else
+                        {
+                            MessageBox.Show(String.Format("El peso mínimo es {0:n} Kg", float.Parse(data.Rows[0]["Minimo"].ToString())), VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show(String.Format("El peso máximo es {0}", configuracionBascula.Variable("MAX")), VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(String.Format("El peso máximo es {0:n} Kg", float.Parse(data.Rows[0]["Maximo"].ToString())), VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
+
+                    
+
 
                 }
                 else
                 {
                     MessageBox.Show("El peso debe ser mayor a 0", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+            }
+            else
+            {
+                txtPesoSalida.Clear();
             }
             
         }
@@ -115,7 +133,7 @@ namespace WSA
 
         private void FrmSalida_FormClosed(object sender, FormClosedEventArgs e)
         {
-            configuracionBascula.Desconectar();
+            indicador.Desconectar();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

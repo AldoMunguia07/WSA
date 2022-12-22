@@ -231,7 +231,7 @@ namespace WSA.Clases
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message.ToString(), "AWS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -268,7 +268,7 @@ namespace WSA.Clases
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message, "AWS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             finally
@@ -411,11 +411,122 @@ namespace WSA.Clases
             }
         }
 
+        public DataTable indicadorTable()
+        {
+            try
+            {
+
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Indicador", conexion.sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+
+                using (sqlDataAdapter)
+                {
+
+                    sqlCommand.Parameters.AddWithValue("@accion", "obtenerIndicador");
+
+                    DataTable dataTable = new DataTable();
+
+                    sqlDataAdapter.Fill(dataTable);
+
+                    if (dataTable.Rows.Count == 1)
+                    {
+                        return dataTable;
+                    }
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                return null;
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion.sqlConnection.Close();
+            }
+        }
+
 
 
         private void si_DataReceived(string accion, TextBox txtDatos)
         {
             try
+            {
+
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Indicador", conexion.sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+
+                using (sqlDataAdapter)
+                {
+
+                    sqlCommand.Parameters.AddWithValue("@accion", "obtenerIndicador");
+
+                    DataTable dataTable = new DataTable();
+
+                    sqlDataAdapter.Fill(dataTable);
+
+                    if (dataTable.Rows.Count == 1) 
+                    {
+                        txtDatos.Text = accion;
+                        Match m = Regex.Match(accion, "(\\d+).(\\d+)|(\\d+)");
+
+                        if (m.Success)
+                        {
+                            if (accion.Substring(int.Parse(dataTable.Rows[0]["Posicion_Signo_Mas"].ToString()) - 1, 1) == "+")
+                            {
+                                if (float.Parse(m.Value) <= float.Parse(dataTable.Rows[0]["Maximo"].ToString()))
+                                {
+                                    if (float.Parse(m.Value) >= float.Parse(dataTable.Rows[0]["Minimo"].ToString()))
+                                    {
+                                        txtDatos.Text = string.Format("{0:n} Kg", float.Parse(m.Value));
+                                    }
+                                    else
+                                    {
+                                        txtDatos.Text = String.Format("Mínimo - {0:n} Kg", dataTable.Rows[0]["Minimo"].ToString());
+                                    }
+                                }
+                                else
+                                {
+                                    txtDatos.Text = String.Format("Máximo - {0:n} Kg", dataTable.Rows[0]["Maximo"].ToString());
+                                }
+                            }
+                            else
+                            {
+                                txtDatos.Text = "No valores negativos";
+                            }
+                        }
+                        else
+                        {
+                            txtDatos.Text = "Sin valores numéricos";
+                        }
+                    }
+                    
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                txtDatos.Text = "Error";
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            }
+            finally
+            {
+                conexion.sqlConnection.Close();
+            }
+
+            /*try
             {
                 txtDatos.Text = accion;
                 Match m = Regex.Match(accion, "(\\d+).(\\d+)|(\\d+)");
@@ -453,8 +564,10 @@ namespace WSA.Clases
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
+
             
+
         }
     }
 }

@@ -33,27 +33,41 @@ namespace WSA
         {
 
             Match m = Regex.Match(txtPesoBascula.Text, "(\\d+).(\\d+)|(\\d+)");
-            if(m.Success)
+            Match maximo = Regex.Match(txtPesoBascula.Text, "Máximo");
+            Match minimo = Regex.Match(txtPesoBascula.Text, "Mínimo");
+           
+            DataTable data = indicador.indicadorTable();
+            if (m.Success)
             {
                 if (float.Parse(m.Value) > 0)
                 {
-                    if (float.Parse(m.Value) < float.Parse(indicador.Variable("MAX")))
+                    if(!maximo.Success)
                     {
-                        txtPesoEntrada.Text = m.Value;
+                        if (!minimo.Success)
+                        {
+                            txtPesoEntrada.Text = String.Format("{0:n}", float.Parse(m.Value));
+                        }
+                        else
+                        {
+                            MessageBox.Show(String.Format("El peso mínimo es {0:n} Kg", float.Parse(data.Rows[0]["Minimo"].ToString())), VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show(String.Format("El peso máximo es {0}", indicador.Variable("MAX")), VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(String.Format("El peso máximo es {0:n} Kg", float.Parse(data.Rows[0]["Maximo"].ToString())), VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-
                 }
                 else
                 {
                     MessageBox.Show("El peso debe ser mayor a 0", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            
-            
+            else
+            {
+                txtPesoEntrada.Clear();
+            }
+
+
         }
 
         private void btnConectar_Click(object sender, EventArgs e)

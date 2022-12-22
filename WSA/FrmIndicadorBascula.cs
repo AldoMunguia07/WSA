@@ -42,18 +42,24 @@ namespace WSA
            
             if(cmbPuertos.Items.Count > 0)
             {
-                getValues();
-                if (!indicador.ExisteIndicador(indicador))
+                if(camposLlenos())
                 {
-                    indicador.AgregarIndicador(indicador);
+                    getValues();
+                    if (!indicador.ExisteIndicador(indicador))
+                    {
+                        indicador.AgregarIndicador(indicador);
+                    }
+                    else
+                    {
+                        indicador.ModificarIndicador(indicador);
+                    }
+                    MessageBox.Show("Cambios guardados", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    indicador.CargarFormuarioIndicador(cmbPuertos, cmbVelocidad, cmbDataBits, cmbParidad, cmbStopBit, numMaximo, numMinimo, numPosicion);
                 }
                 else
                 {
-                    indicador.ModificarIndicador(indicador);
+                    MessageBox.Show("Debe llenar todos los campos", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-                MessageBox.Show("Cambios guardados", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                indicador.CargarFormuarioIndicador(cmbPuertos, cmbVelocidad, cmbDataBits, cmbParidad, cmbStopBit, numMaximo, numMinimo, numPosicion);
-
             }
             else
             {
@@ -79,6 +85,14 @@ namespace WSA
         private void btnProbarConexion_Click(object sender, EventArgs e)
         {
             indicador.probarConexion();
+        }
+
+        private bool camposLlenos()
+        {
+            if (numMaximo.Text != "" && numMinimo.Text != "" && numPosicion.Text != "")
+                return true;
+            else
+                return false;
         }
     }
 }
