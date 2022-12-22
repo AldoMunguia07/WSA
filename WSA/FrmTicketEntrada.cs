@@ -28,5 +28,22 @@ namespace WSA
             this.reportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
             this.reportViewer1.RefreshReport();
         }
+
+        private void reportViewer1_RenderingComplete(object sender, Microsoft.Reporting.WinForms.RenderingCompleteEventArgs e)
+        {
+            try
+            {
+                if (this.reportViewer1.DisplayMode == Microsoft.Reporting.WinForms.DisplayMode.PrintLayout)
+                {
+                    this.reportViewer1.PrintDialog();
+                    this.Close();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

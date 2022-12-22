@@ -30,54 +30,55 @@ namespace WSA
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTicketEntrada));
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.WSA_ALGDataSet = new WSA.WSA_ALGDataSet();
             this.sp_Obtener_Encabezado_BoletaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sp_Obtener_Encabezado_BoletaTableAdapter = new WSA.WSA_ALGDataSetTableAdapters.sp_Obtener_Encabezado_BoletaTableAdapter();
+            this.WSA_ALGDataSet = new WSA.WSA_ALGDataSet();
             this.sp_Datos_Boleta_EntradaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.sp_Obtener_Encabezado_BoletaTableAdapter = new WSA.WSA_ALGDataSetTableAdapters.sp_Obtener_Encabezado_BoletaTableAdapter();
             this.sp_Datos_Boleta_EntradaTableAdapter = new WSA.WSA_ALGDataSetTableAdapters.sp_Datos_Boleta_EntradaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.WSA_ALGDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_Obtener_Encabezado_BoletaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WSA_ALGDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_Datos_Boleta_EntradaBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource3.Name = "DatosEncabezado";
-            reportDataSource3.Value = this.sp_Obtener_Encabezado_BoletaBindingSource;
-            reportDataSource4.Name = "DatosBoleta";
-            reportDataSource4.Value = this.sp_Datos_Boleta_EntradaBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WSA.Reportes.rptTicketEntrada.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
-            this.reportViewer1.TabIndex = 0;
-            // 
-            // WSA_ALGDataSet
-            // 
-            this.WSA_ALGDataSet.DataSetName = "WSA_ALGDataSet";
-            this.WSA_ALGDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // sp_Obtener_Encabezado_BoletaBindingSource
             // 
             this.sp_Obtener_Encabezado_BoletaBindingSource.DataMember = "sp_Obtener_Encabezado_Boleta";
             this.sp_Obtener_Encabezado_BoletaBindingSource.DataSource = this.WSA_ALGDataSet;
             // 
-            // sp_Obtener_Encabezado_BoletaTableAdapter
+            // WSA_ALGDataSet
             // 
-            this.sp_Obtener_Encabezado_BoletaTableAdapter.ClearBeforeFill = true;
+            this.WSA_ALGDataSet.DataSetName = "WSA_ALGDataSet";
+            this.WSA_ALGDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // sp_Datos_Boleta_EntradaBindingSource
             // 
             this.sp_Datos_Boleta_EntradaBindingSource.DataMember = "sp_Datos_Boleta_Entrada";
             this.sp_Datos_Boleta_EntradaBindingSource.DataSource = this.WSA_ALGDataSet;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DatosEncabezado";
+            reportDataSource1.Value = this.sp_Obtener_Encabezado_BoletaBindingSource;
+            reportDataSource2.Name = "DatosBoleta";
+            reportDataSource2.Value = this.sp_Datos_Boleta_EntradaBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WSA.Reportes.rptTicketEntrada.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
+            this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.RenderingComplete += new Microsoft.Reporting.WinForms.RenderingCompleteEventHandler(this.reportViewer1_RenderingComplete);
+            // 
+            // sp_Obtener_Encabezado_BoletaTableAdapter
+            // 
+            this.sp_Obtener_Encabezado_BoletaTableAdapter.ClearBeforeFill = true;
             // 
             // sp_Datos_Boleta_EntradaTableAdapter
             // 
@@ -95,8 +96,8 @@ namespace WSA
             this.Text = "Boleta de entrada";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmTicketEntrada_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.WSA_ALGDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_Obtener_Encabezado_BoletaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WSA_ALGDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_Datos_Boleta_EntradaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
