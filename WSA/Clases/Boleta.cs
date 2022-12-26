@@ -371,7 +371,7 @@ namespace WSA.Clases
 
                 if (dataTable.Rows.Count == 0)
                 {
-                    MessageBox.Show("Conductor no encontrado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Conductor no encontrado", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtCodigoConductor.Clear();
                     txtConductor.Clear();
                 }
@@ -425,7 +425,7 @@ namespace WSA.Clases
 
                 if (dataTable.Rows.Count == 0)
                 {
-                    MessageBox.Show("Cliente no encontrado", "WAS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Cliente no encontrado", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtCodigoCliente.Clear();
                     txtCliente.Clear();
                 }
@@ -474,7 +474,7 @@ namespace WSA.Clases
 
                 if (dataTable.Rows.Count == 0)
                 {
-                    MessageBox.Show("Producto no encontrado", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Producto no encontrado", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtCodigoProducto.Clear();
                     txtProducto.Clear();
                 }
@@ -483,7 +483,7 @@ namespace WSA.Clases
             {
                 txtCodigoProducto.Clear();
                 txtProducto.Clear();
-                MessageBox.Show(ex.Message.ToString(), "AWS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -523,7 +523,7 @@ namespace WSA.Clases
 
                 if (dataTable.Rows.Count == 0)
                 {
-                    MessageBox.Show("Barco no encontrado", "AWS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Barco no encontrado", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtCodigoBarco.Clear();
                     txtBarco.Clear();
                 }
@@ -532,7 +532,7 @@ namespace WSA.Clases
             {
                 txtCodigoBarco.Clear();
                 txtBarco.Clear();
-                MessageBox.Show(ex.Message.ToString(), "AWS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -589,7 +589,7 @@ namespace WSA.Clases
             catch (Exception ex)
             {
                 
-                MessageBox.Show(ex.Message.ToString(), "AWS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -651,7 +651,7 @@ namespace WSA.Clases
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message.ToString(), "AWS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

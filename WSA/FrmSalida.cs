@@ -87,7 +87,7 @@ namespace WSA
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if(txtPesoSalida.Text != "")
+            if(camposLlenos())
             {
                 if(float.Parse(txtPesoSalida.Text) > float.Parse(txtPesoEntrada.Text))
                 {
@@ -112,10 +112,6 @@ namespace WSA
                 }
 
             }
-            else
-            {
-                MessageBox.Show("Obtenga el peso de la báscula", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
             
         }
 
@@ -136,6 +132,63 @@ namespace WSA
             boleta.UsuarioId = VariablesGlobales.Usuario.UsuarioId;
             boleta.Estado = 'C';
             boleta.Observaciones = txtObservaciones.Text;
+
+        }
+
+        private bool camposLlenos()
+        {
+            if (txtCodigoConductor.Text != "")
+            {
+                if (txtPlacaCabezal.Text != "")
+                {
+                    if (txtPlacaRastra.Text != "")
+                    {
+                        if (txtCodigoCliente.Text != "")
+                        {
+                            if (txtCodigoProducto.Text != "")
+                            {
+                                if (txtCodigoBarco.Text != "")
+                                {
+                                    if (txtPesoSalida.Text != "")
+                                    {
+                                        return true;
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Obtenga el peso de la báscula", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Ingrese el código del barco", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Ingrese el código del producto", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ingrese el código del cliente", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ingrese la placa de la rastra", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese la placa del cabezal", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingrese el código del conductor", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            return false;
 
         }
 

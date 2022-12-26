@@ -125,7 +125,7 @@ namespace WSA
             // 
             this.vehículosEnTransitoToolStripMenuItem.Name = "vehículosEnTransitoToolStripMenuItem";
             this.vehículosEnTransitoToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
-            this.vehículosEnTransitoToolStripMenuItem.Text = "Vehículos en transito";
+            this.vehículosEnTransitoToolStripMenuItem.Text = "Vehículos en tránsito";
             this.vehículosEnTransitoToolStripMenuItem.Click += new System.EventHandler(this.vehículosEnTransitoToolStripMenuItem_Click);
             // 
             // boletasToolStripMenuItem

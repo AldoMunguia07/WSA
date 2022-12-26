@@ -52,7 +52,7 @@ namespace WSA
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(295, 29);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Vehículos en transito";
+            this.label1.Text = "Vehículos en tránsito";
             // 
             // dgvEntradas
             // 

@@ -178,7 +178,7 @@ namespace WSA
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(208, 18);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Compañia transportista:";
+            this.label5.Text = "Compañía transportista:";
             // 
             // txtCliente
             // 
@@ -374,7 +374,7 @@ namespace WSA
             // 
             this.txtObservaciones.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtObservaciones.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservaciones.Location = new System.Drawing.Point(835, 372);
+            this.txtObservaciones.Location = new System.Drawing.Point(835, 359);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(412, 116);

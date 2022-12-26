@@ -111,7 +111,7 @@ namespace WSA
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 18);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Telefono:";
+            this.label4.Text = "Teléfono:";
             // 
             // btnGuardar
             // 

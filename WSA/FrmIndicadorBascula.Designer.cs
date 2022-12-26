@@ -247,7 +247,7 @@ namespace WSA
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(73, 18);
             this.label8.TabIndex = 27;
-            this.label8.Text = "Minímo:";
+            this.label8.Text = "Mínimo:";
             // 
             // label9
             // 
