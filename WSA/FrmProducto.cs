@@ -44,6 +44,7 @@ namespace WSA
             numPrecio.Refresh();
             seleccionado = false;
             btnGuardar.Enabled = true;
+            numPrecio.Value = 0;
             cargarDatos();
         }
 
