@@ -32,15 +32,6 @@ CREATE TABLE Conductor
 );
 GO
 
-CREATE TABLE Proveedor
-(
-	Proveedor_Id INT NOT NULL IDENTITY,
-	Proveedor VARCHAR(70) NOT NULL,
-
-	CONSTRAINT PK_Proveedor_Proveedor_Id
-		PRIMARY KEY CLUSTERED (Proveedor_Id)
-);
-GO
 
 CREATE TABLE Producto
 (
@@ -259,35 +250,6 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE sp_Proveedor
-@Proveedor_Id INT = NULL,
-@Proveedor VARCHAR(70) = NULL,
-@valorBuscado VARCHAR(80)  = NULL,
-@accion VARCHAR(50)
-
-AS
-BEGIN
-	IF @accion = 'insertar'
-	BEGIN
-		INSERT INTO Proveedor VALUES (@Proveedor)
-	END
-	ELSE IF @accion = 'modificar'
-	BEGIN
-		UPDATE Proveedor SET Proveedor = @Proveedor WHERE Proveedor_Id = @Proveedor_Id
-	END
-	ELSE IF @accion = 'mostrar'
-	BEGIN
-		SELECT Proveedor_Id 'Código del proveedor', Proveedor FROM Proveedor
-	END
-	ELSE IF @accion = 'buscar'
-	BEGIN
-		SELECT Proveedor_Id 'Código del proveedor', Proveedor
-		FROM Proveedor 
-		WHERE CONCAT(Proveedor_Id, ' ', Proveedor) LIKE CONCAT('%', @valorBuscado,'%')
-	END
-
-END
-GO
 
 CREATE PROCEDURE sp_Conductor
 @Conductor_Id INT = NULL,
@@ -638,7 +600,6 @@ CREATE PROCEDURE sp_Boleta
 	@Placa_Rastra VARCHAR(10) = NULL,
 	@Conductor_Id INT = NULL,
 	@Cliente_Id INT = NULL,
-	@Proveedor_Id INT = NULL,
 	@Producto_Id INT = NULL,
 	@Peso_Ingreso FLOAT = NULL,
 	@Unidades_Peso_Ingreso VARCHAR(4) = NULL,

@@ -281,5 +281,15 @@ namespace WSA
                 boleta.BuscarBarco(txtCodigoBarco, txtBarco);
             }
         }
+
+        private void txtPlacaCabezal_TextChanged(object sender, EventArgs e)
+        {
+            txtPlacaCabezal.CharacterCasing = CharacterCasing.Upper;
+        }
+
+        private void txtPlacaRastra_TextChanged(object sender, EventArgs e)
+        {
+            txtPlacaRastra.CharacterCasing = CharacterCasing.Upper;
+        }
     }
 }

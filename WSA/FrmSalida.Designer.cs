@@ -527,6 +527,7 @@ namespace WSA
             this.txtPlacaRastra.Name = "txtPlacaRastra";
             this.txtPlacaRastra.Size = new System.Drawing.Size(125, 27);
             this.txtPlacaRastra.TabIndex = 81;
+            this.txtPlacaRastra.TextChanged += new System.EventHandler(this.txtPlacaRastra_TextChanged);
             // 
             // label4
             // 
@@ -548,6 +549,7 @@ namespace WSA
             this.txtPlacaCabezal.Name = "txtPlacaCabezal";
             this.txtPlacaCabezal.Size = new System.Drawing.Size(128, 27);
             this.txtPlacaCabezal.TabIndex = 79;
+            this.txtPlacaCabezal.TextChanged += new System.EventHandler(this.txtPlacaCabezal_TextChanged);
             // 
             // label3
             // 
