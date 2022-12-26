@@ -232,6 +232,14 @@ namespace WSA.Clases
                 // Establecer los valores de los parámetros
                 sqlCommand.Parameters.AddWithValue("@Boleta_Id", boleta.BoletaId);
                 sqlCommand.Parameters.AddWithValue("@Fecha_Salida", boleta.FechaSalida);
+                sqlCommand.Parameters.AddWithValue("@Placa_Cabezal", boleta.PlacaCabezal);
+                sqlCommand.Parameters.AddWithValue("@Placa_Rastra", boleta.PlacaRastra);
+                sqlCommand.Parameters.AddWithValue("@Conductor_Id", boleta.ConductorId);
+                sqlCommand.Parameters.AddWithValue("@Cliente_Id", boleta.ClienteId);
+                sqlCommand.Parameters.AddWithValue("@Producto_Id", boleta.ProductoId);
+                sqlCommand.Parameters.AddWithValue("@Cia_Transportista", boleta.CiaTransportista.ToUpper());
+                sqlCommand.Parameters.AddWithValue("@Envio_N", boleta.EnvioN.ToUpper());
+                sqlCommand.Parameters.AddWithValue("@Barco_Id", boleta.BarcoId);
                 sqlCommand.Parameters.AddWithValue("@Peso_Salida", boleta.PesoSalida);
                 sqlCommand.Parameters.AddWithValue("@Unidades_Peso_Salida", boleta.UnidadesPesoSalida.ToUpper());
                 sqlCommand.Parameters.AddWithValue("@Estado", boleta.Estado);

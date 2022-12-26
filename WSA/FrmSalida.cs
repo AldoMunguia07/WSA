@@ -123,6 +123,14 @@ namespace WSA
         {
             boleta.BoletaId = idBoleta;
             boleta.FechaSalida = DateTime.Now;
+            boleta.PlacaCabezal = txtPlacaCabezal.Text;
+            boleta.PlacaRastra = txtPlacaRastra.Text;
+            boleta.ConductorId = int.Parse(txtCodigoConductor.Text);
+            boleta.ClienteId = int.Parse(txtCodigoCliente.Text);
+            boleta.ProductoId = int.Parse(txtCodigoProducto.Text);
+            boleta.CiaTransportista = txtCia.Text;
+            boleta.EnvioN = txtEnvioN.Text;
+            boleta.BarcoId = int.Parse(txtCodigoBarco.Text);
             boleta.PesoSalida = float.Parse(txtPesoSalida.Text);
             boleta.UnidadesPesoSalida = Regex.Match(txtPesoBascula.Text, "([A-Za-z]+)").Value;
             boleta.UsuarioId = VariablesGlobales.Usuario.UsuarioId;

@@ -693,7 +693,10 @@ BEGIN
 		END
 	IF @accion = 'insertarSalida'
 		BEGIN
-			UPDATE Boleta SET Fecha_Salida = @Fecha_Salida, Peso_Salida = @Peso_Salida, Unidades_Peso_Salida = @Unidades_Peso_Salida, Estado = @Estado, Observaciones = @Observaciones WHERE Boleta_Id = @Boleta_Id
+			UPDATE Boleta SET Fecha_Salida = @Fecha_Salida, Placa_Cabezal = @Placa_Cabezal, Placa_Rastra = @Placa_Rastra, Conductor_Id = @Conductor_Id, Cliente_Id = @Cliente_Id, Producto_Id = @Producto_Id, Cia_Transportista = @Cia_Transportista,
+			Envio_N = @Envio_N, Peso_Salida = @Peso_Salida, Unidades_Peso_Salida = @Unidades_Peso_Salida, Barco_Id = @Barco_Id, Estado = @Estado, Observaciones = @Observaciones 
+			
+			WHERE Boleta_Id = @Boleta_Id
 		END
 	ELSE IF @accion = 'mostrarSalidas'
 		BEGIN
