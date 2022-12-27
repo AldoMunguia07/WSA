@@ -50,9 +50,9 @@ namespace WSA
             this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(593, 114);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(295, 29);
+            this.label1.Size = new System.Drawing.Size(307, 29);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Vehículos en tránsito";
+            this.label1.Text = "Entradas de vehículos";
             // 
             // dgvEntradas
             // 
@@ -184,7 +184,7 @@ namespace WSA
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmVehiculosEnTransito";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vehículos en transito";
+            this.Text = "Entradas de vehículos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

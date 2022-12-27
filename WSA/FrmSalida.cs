@@ -145,21 +145,16 @@ namespace WSA
                     {
                         if (txtCodigoProducto.Text != "")
                         {
-                            if (txtCodigoBarco.Text != "")
+                            
+                            if (txtPesoSalida.Text != "")
                             {
-                                if (txtPesoSalida.Text != "")
-                                {
-                                    return true;
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Obtenga el peso de la báscula", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                                }
+                                return true;
                             }
                             else
                             {
-                                MessageBox.Show("Ingrese el código del barco", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("Obtenga el peso de la báscula", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
+                           
                         }
                         else
                         {

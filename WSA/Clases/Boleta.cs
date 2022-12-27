@@ -29,6 +29,7 @@ namespace WSA.Clases
         public string EnvioN { get; set; }
         public float PesoSalida { get; set; }
         public string UnidadesPesoSalida { get; set; }
+        public int TipoPesajeId { get; set; }
         public int BarcoId { get; set; }
         public int UsuarioId { get; set; }
         public char Estado { get; set; }
@@ -54,6 +55,7 @@ namespace WSA.Clases
                 sqlCommand.Parameters.AddWithValue("@Unidades_Peso_Ingreso", boleta.UnidadesPesoIngreso.ToUpper());
                 sqlCommand.Parameters.AddWithValue("@Cia_Transportista", boleta.CiaTransportista.ToUpper());
                 sqlCommand.Parameters.AddWithValue("@Envio_N", boleta.EnvioN.ToUpper());
+                sqlCommand.Parameters.AddWithValue("@Tipo_Pesaje_Id", boleta.TipoPesajeId);
                 sqlCommand.Parameters.AddWithValue("@Barco_Id", boleta.BarcoId);
                 sqlCommand.Parameters.AddWithValue("@Usuario_Id", boleta.UsuarioId);
                 sqlCommand.Parameters.AddWithValue("@Estado", boleta.Estado);

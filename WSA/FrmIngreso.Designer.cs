@@ -67,6 +67,10 @@ namespace WSA
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.rbdTara = new System.Windows.Forms.RadioButton();
+            this.rbdBruto = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -116,7 +120,7 @@ namespace WSA
             // 
             this.txtPlacaCabezal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPlacaCabezal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlacaCabezal.Location = new System.Drawing.Point(270, 264);
+            this.txtPlacaCabezal.Location = new System.Drawing.Point(270, 258);
             this.txtPlacaCabezal.MaxLength = 7;
             this.txtPlacaCabezal.Name = "txtPlacaCabezal";
             this.txtPlacaCabezal.Size = new System.Drawing.Size(128, 27);
@@ -129,7 +133,7 @@ namespace WSA
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(107, 264);
+            this.label3.Location = new System.Drawing.Point(107, 262);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(157, 18);
             this.label3.TabIndex = 4;
@@ -339,7 +343,7 @@ namespace WSA
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(680, 356);
+            this.label12.Location = new System.Drawing.Point(692, 464);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(134, 18);
             this.label12.TabIndex = 26;
@@ -349,11 +353,11 @@ namespace WSA
             // 
             this.txtObservaciones.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtObservaciones.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservaciones.Location = new System.Drawing.Point(835, 359);
+            this.txtObservaciones.Location = new System.Drawing.Point(835, 466);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.Size = new System.Drawing.Size(412, 116);
-            this.txtObservaciones.TabIndex = 20;
+            this.txtObservaciones.Size = new System.Drawing.Size(444, 85);
+            this.txtObservaciones.TabIndex = 24;
             // 
             // btnCancelar
             // 
@@ -362,10 +366,10 @@ namespace WSA
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(1174, 524);
+            this.btnCancelar.Location = new System.Drawing.Point(1174, 588);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(105, 27);
-            this.btnCancelar.TabIndex = 22;
+            this.btnCancelar.TabIndex = 26;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -376,7 +380,7 @@ namespace WSA
             this.lblConexion.AutoSize = true;
             this.lblConexion.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConexion.ForeColor = System.Drawing.Color.Red;
-            this.lblConexion.Location = new System.Drawing.Point(996, 260);
+            this.lblConexion.Location = new System.Drawing.Point(996, 259);
             this.lblConexion.Name = "lblConexion";
             this.lblConexion.Size = new System.Drawing.Size(99, 14);
             this.lblConexion.TabIndex = 30;
@@ -487,13 +491,52 @@ namespace WSA
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(1034, 524);
+            this.btnGuardar.Location = new System.Drawing.Point(1034, 588);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(105, 27);
-            this.btnGuardar.TabIndex = 21;
+            this.btnGuardar.TabIndex = 25;
             this.btnGuardar.Text = "Guardar ingreso";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // rbdTara
+            // 
+            this.rbdTara.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rbdTara.AutoSize = true;
+            this.rbdTara.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbdTara.Location = new System.Drawing.Point(163, 26);
+            this.rbdTara.Name = "rbdTara";
+            this.rbdTara.Size = new System.Drawing.Size(105, 22);
+            this.rbdTara.TabIndex = 22;
+            this.rbdTara.TabStop = true;
+            this.rbdTara.Text = "Peso Tara";
+            this.rbdTara.UseVisualStyleBackColor = true;
+            // 
+            // rbdBruto
+            // 
+            this.rbdBruto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rbdBruto.AutoSize = true;
+            this.rbdBruto.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbdBruto.Location = new System.Drawing.Point(349, 26);
+            this.rbdBruto.Name = "rbdBruto";
+            this.rbdBruto.Size = new System.Drawing.Size(115, 22);
+            this.rbdBruto.TabIndex = 23;
+            this.rbdBruto.TabStop = true;
+            this.rbdBruto.Text = "Peso Bruto";
+            this.rbdBruto.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.rbdBruto);
+            this.groupBox1.Controls.Add(this.rbdTara);
+            this.groupBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(695, 374);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(584, 70);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tipo de pesaje";
             // 
             // FrmIngreso
             // 
@@ -501,6 +544,7 @@ namespace WSA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1341, 666);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblConsultarBarcos);
@@ -543,6 +587,8 @@ namespace WSA
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingreso de vehículo";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmIngreso_FormClosed);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -587,5 +633,8 @@ namespace WSA
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.RadioButton rbdTara;
+        private System.Windows.Forms.RadioButton rbdBruto;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

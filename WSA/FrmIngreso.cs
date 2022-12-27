@@ -22,7 +22,7 @@ namespace WSA
         public FrmIngreso()
         {
             InitializeComponent();
-            
+            rbdTara.Checked = true;
             conectado = indicador.LeerDatos(/*mySerialPort,*/ this, lblConexion, txtPesoBascula);
             
 
@@ -118,7 +118,15 @@ namespace WSA
             boleta.UnidadesPesoIngreso = Regex.Match(txtPesoBascula.Text, "([A-Za-z]+)").Value;
             boleta.CiaTransportista = txtCia.Text;
             boleta.EnvioN = txtEnvioN.Text;
-            boleta.BarcoId = int.Parse(txtCodigoBarco.Text);
+            if(rbdTara.Checked)
+            {
+                boleta.TipoPesajeId = 1;
+            }
+            else
+            {
+                boleta.TipoPesajeId = 2;
+            }
+            boleta.BarcoId = txtCodigoBarco.Text != "" ? int.Parse(txtCodigoBarco.Text) : 0;
             boleta.UsuarioId = VariablesGlobales.Usuario.UsuarioId;
             boleta.Estado = 'P';
             boleta.Observaciones = txtObservaciones.Text;
@@ -172,21 +180,16 @@ namespace WSA
                     {
                         if(txtCodigoProducto.Text != "")
                         {
-                            if(txtCodigoBarco.Text != "")
+                            
+                            if(txtPesoEntrada.Text != "")
                             {
-                                if(txtPesoEntrada.Text != "")
-                                {
-                                    return true;
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Obtenga el peso de la báscula", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                                }
+                                return true;
                             }
                             else
                             {
-                                MessageBox.Show("Ingrese el código del barco", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("Obtenga el peso de la báscula", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
+                            
                         }
                         else
                         {
