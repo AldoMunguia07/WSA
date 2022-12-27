@@ -158,35 +158,35 @@ namespace WSA
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clienteToolStripMenuItem.Text = "Clientes";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // conductoresToolStripMenuItem
             // 
             this.conductoresToolStripMenuItem.Name = "conductoresToolStripMenuItem";
-            this.conductoresToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.conductoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.conductoresToolStripMenuItem.Text = "Conductores";
             this.conductoresToolStripMenuItem.Click += new System.EventHandler(this.conductoresToolStripMenuItem_Click);
             // 
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
             // barcosToolStripMenuItem
             // 
             this.barcosToolStripMenuItem.Name = "barcosToolStripMenuItem";
-            this.barcosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.barcosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.barcosToolStripMenuItem.Text = "Barcos";
             this.barcosToolStripMenuItem.Click += new System.EventHandler(this.barcosToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
@@ -203,14 +203,14 @@ namespace WSA
             // boletasToolStripMenuItem1
             // 
             this.boletasToolStripMenuItem1.Name = "boletasToolStripMenuItem1";
-            this.boletasToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
+            this.boletasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.boletasToolStripMenuItem1.Text = "Boletas";
             this.boletasToolStripMenuItem1.Click += new System.EventHandler(this.boletasToolStripMenuItem1_Click);
             // 
             // bitácoraToolStripMenuItem
             // 
             this.bitácoraToolStripMenuItem.Name = "bitácoraToolStripMenuItem";
-            this.bitácoraToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.bitácoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bitácoraToolStripMenuItem.Text = "Bitácora";
             this.bitácoraToolStripMenuItem.Click += new System.EventHandler(this.bitácoraToolStripMenuItem_Click);
             // 
@@ -229,29 +229,29 @@ namespace WSA
             // bitacoraToolStripMenuItem
             // 
             this.bitacoraToolStripMenuItem.Name = "bitacoraToolStripMenuItem";
-            this.bitacoraToolStripMenuItem.Size = new System.Drawing.Size(361, 22);
+            this.bitacoraToolStripMenuItem.Size = new System.Drawing.Size(387, 22);
             this.bitacoraToolStripMenuItem.Text = "Bitácora";
             this.bitacoraToolStripMenuItem.Click += new System.EventHandler(this.bitacoraToolStripMenuItem_Click);
             // 
             // encabezadoBoletaToolStripMenuItem
             // 
             this.encabezadoBoletaToolStripMenuItem.Name = "encabezadoBoletaToolStripMenuItem";
-            this.encabezadoBoletaToolStripMenuItem.Size = new System.Drawing.Size(361, 22);
-            this.encabezadoBoletaToolStripMenuItem.Text = "Encabezado boleta";
+            this.encabezadoBoletaToolStripMenuItem.Size = new System.Drawing.Size(387, 22);
+            this.encabezadoBoletaToolStripMenuItem.Text = "Encabezado de boleta";
             this.encabezadoBoletaToolStripMenuItem.Click += new System.EventHandler(this.encabezadoBoletaToolStripMenuItem_Click);
             // 
             // respaldoDeBaseDeDatosToolStripMenuItem
             // 
             this.respaldoDeBaseDeDatosToolStripMenuItem.Name = "respaldoDeBaseDeDatosToolStripMenuItem";
-            this.respaldoDeBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(361, 22);
+            this.respaldoDeBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(387, 22);
             this.respaldoDeBaseDeDatosToolStripMenuItem.Text = "Respaldo de base de datos";
             this.respaldoDeBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.respaldoDeBaseDeDatosToolStripMenuItem_Click);
             // 
             // configuraciónIndicadorDeBásculaToolStripMenuItem
             // 
             this.configuraciónIndicadorDeBásculaToolStripMenuItem.Name = "configuraciónIndicadorDeBásculaToolStripMenuItem";
-            this.configuraciónIndicadorDeBásculaToolStripMenuItem.Size = new System.Drawing.Size(361, 22);
-            this.configuraciónIndicadorDeBásculaToolStripMenuItem.Text = "Configuración indicador de báscula";
+            this.configuraciónIndicadorDeBásculaToolStripMenuItem.Size = new System.Drawing.Size(387, 22);
+            this.configuraciónIndicadorDeBásculaToolStripMenuItem.Text = "Configuración de indicador de báscula";
             this.configuraciónIndicadorDeBásculaToolStripMenuItem.Click += new System.EventHandler(this.configuraciónIndicadorDeBásculaToolStripMenuItem_Click);
             // 
             // toolStrip

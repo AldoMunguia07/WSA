@@ -257,11 +257,11 @@ namespace WSA.Clases
 
                     mySerialPort.Open();
 
-                    MessageBox.Show(String.Format("Conexión al puerto {0} éxitosa", mySerialPort.PortName), "AWS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(String.Format("Conexión al puerto {0} éxitosa", mySerialPort.PortName), VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show(String.Format("El puerto {0} está abierto", mySerialPort.PortName), "AWS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(String.Format("El puerto {0} está abierto", mySerialPort.PortName), VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
             }
@@ -318,7 +318,7 @@ namespace WSA.Clases
             catch (Exception ex)
             {
                 
-                MessageBox.Show(ex.Message, "AWS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -345,7 +345,7 @@ namespace WSA.Clases
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "AWS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 
             }

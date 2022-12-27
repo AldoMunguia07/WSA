@@ -250,7 +250,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Accion</Value>
+                              <Value>Acción</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
@@ -541,7 +541,7 @@
         <Top>1.72516cm</Top>
         <Left>0.39688cm</Left>
         <Height>1.2cm</Height>
-        <Width>27.21292cm</Width>
+        <Width>27.21294cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
