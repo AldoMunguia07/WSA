@@ -20,7 +20,6 @@ namespace WSA.Clases
         public DateTime FechaEntrada { get; set; }
         public DateTime FechaSalida { get; set; }
         public string PlacaCabezal { get; set; }
-        public string PlacaRastra { get; set; }
         public int ConductorId { get; set; }
         public int ClienteId { get; set; }
         public int ProductoId { get; set; }
@@ -48,7 +47,6 @@ namespace WSA.Clases
                 // Establecer los valores de los parámetros
                 sqlCommand.Parameters.AddWithValue("@Fecha_Entrada", boleta.FechaEntrada);
                 sqlCommand.Parameters.AddWithValue("@Placa_Cabezal", boleta.PlacaCabezal);
-                sqlCommand.Parameters.AddWithValue("@Placa_Rastra", boleta.PlacaRastra);
                 sqlCommand.Parameters.AddWithValue("@Conductor_Id", boleta.ConductorId);
                 sqlCommand.Parameters.AddWithValue("@Cliente_Id", boleta.ClienteId);
                 sqlCommand.Parameters.AddWithValue("@Producto_Id", boleta.ProductoId);
@@ -233,7 +231,6 @@ namespace WSA.Clases
                 sqlCommand.Parameters.AddWithValue("@Boleta_Id", boleta.BoletaId);
                 sqlCommand.Parameters.AddWithValue("@Fecha_Salida", boleta.FechaSalida);
                 sqlCommand.Parameters.AddWithValue("@Placa_Cabezal", boleta.PlacaCabezal);
-                sqlCommand.Parameters.AddWithValue("@Placa_Rastra", boleta.PlacaRastra);
                 sqlCommand.Parameters.AddWithValue("@Conductor_Id", boleta.ConductorId);
                 sqlCommand.Parameters.AddWithValue("@Cliente_Id", boleta.ClienteId);
                 sqlCommand.Parameters.AddWithValue("@Producto_Id", boleta.ProductoId);
@@ -541,7 +538,7 @@ namespace WSA.Clases
             }
         }
 
-        public void CargarFormularioSalida(int boletaId, DateTimePicker dtpFechaEntrada, DateTimePicker dtpHoraEntrada, TextBox txtCodigoConductor, TextBox txtConductor, TextBox txtPlacaCabezal, TextBox txtPlacaRastra,
+        public void CargarFormularioSalida(int boletaId, DateTimePicker dtpFechaEntrada, DateTimePicker dtpHoraEntrada, TextBox txtCodigoConductor, TextBox txtConductor, TextBox txtPlacaCabezal,
             TextBox txtCia, TextBox txtEnvioN, TextBox txtCodigoCliente, TextBox txtCliente, TextBox txtCodigoProducto, TextBox txtProducto, TextBox txtCodigoBarco, TextBox txtBarco,
            TextBox txtPesoEntrada, TextBox txtObservaciones)
         {
@@ -568,7 +565,6 @@ namespace WSA.Clases
                         txtCodigoConductor.Text = rdr["Conductor_Id"].ToString();
                         txtConductor.Text = rdr["Conductor"].ToString();
                         txtPlacaCabezal.Text = rdr["Placa_Cabezal"].ToString();
-                        txtPlacaRastra.Text = rdr["Placa_Rastra"].ToString();
                         txtCia.Text = rdr["Cia_Transportista"].ToString();
                         txtEnvioN.Text = rdr["Envio_N"].ToString();
                         txtCodigoCliente.Text = rdr["Cliente_Id"].ToString();
@@ -599,7 +595,7 @@ namespace WSA.Clases
         }
 
         public void CargarFormularioVerBoleta(int boletaId, DateTimePicker dtpFechaEntrada, DateTimePicker dtpHoraEntrada, DateTimePicker dtpFechaSalida, DateTimePicker dtpHoraSalida, 
-            TextBox txtCodigoConductor, TextBox txtConductor, TextBox txtPlacaCabezal, TextBox txtPlacaRastra, TextBox txtCia, TextBox txtEnvioN, TextBox txtCodigoCliente, TextBox txtCliente,
+            TextBox txtCodigoConductor, TextBox txtConductor, TextBox txtPlacaCabezal, TextBox txtCia, TextBox txtEnvioN, TextBox txtCodigoCliente, TextBox txtCliente,
             TextBox txtCodigoProducto, TextBox txtProducto, TextBox txtCodigoBarco, TextBox txtBarco, TextBox txtPesoEntrada, TextBox txtPesoSalida, TextBox txtPesoNeto, TextBox txtObservaciones)
         {
 
@@ -627,7 +623,6 @@ namespace WSA.Clases
                         txtCodigoConductor.Text = rdr["Conductor_Id"].ToString();
                         txtConductor.Text = rdr["Conductor"].ToString();
                         txtPlacaCabezal.Text = rdr["Placa_Cabezal"].ToString();
-                        txtPlacaRastra.Text = rdr["Placa_Rastra"].ToString();
                         txtCia.Text = rdr["Cia_Transportista"].ToString();
                         txtEnvioN.Text = rdr["Envio_N"].ToString();
                         txtCodigoCliente.Text = rdr["Cliente_Id"].ToString();

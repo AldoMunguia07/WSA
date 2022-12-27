@@ -19,7 +19,7 @@ namespace WSA
         {
             InitializeComponent();
             idBoleta = boletaId;
-            boleta.CargarFormularioVerBoleta(idBoleta, dtpFechaEntrada, dtpHoraEntrada, dtpFechaSalida, dtpHoraSalida, txtCodigoConductor, txtConductor, txtPlacaCabezal, txtPlacaRastra, txtCia, txtEnvioN, txtCodigoCliente,
+            boleta.CargarFormularioVerBoleta(idBoleta, dtpFechaEntrada, dtpHoraEntrada, dtpFechaSalida, dtpHoraSalida, txtCodigoConductor, txtConductor, txtPlacaCabezal, txtCia, txtEnvioN, txtCodigoCliente,
                txtCliente, txtCodigoProducto, txtProducto, txtCodigoBarco, txtBarco, txtPesoEntrada, txtPesoSalida, txtPesoNeto, txtObservaciones);
             lblTitulo.Text = String.Format("{0}{1}", lblTitulo.Text, idBoleta);
         }

@@ -349,6 +349,8 @@ namespace WSA {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class sp_Datos_BoletaDataTable : global::System.Data.TypedTableBase<sp_Datos_BoletaRow> {
             
+            private global::System.Data.DataColumn columnPlaca_Rastra;
+            
             private global::System.Data.DataColumn columnBoleta_Id;
             
             private global::System.Data.DataColumn columnFecha_Entrada;
@@ -356,8 +358,6 @@ namespace WSA {
             private global::System.Data.DataColumn columnFecha_Salida;
             
             private global::System.Data.DataColumn columnPlaca_Cabezal;
-            
-            private global::System.Data.DataColumn columnPlaca_Rastra;
             
             private global::System.Data.DataColumn columnConductor_Id;
             
@@ -418,6 +418,14 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Placa_RastraColumn {
+                get {
+                    return this.columnPlaca_Rastra;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn Boleta_IdColumn {
                 get {
                     return this.columnBoleta_Id;
@@ -445,14 +453,6 @@ namespace WSA {
             public global::System.Data.DataColumn Placa_CabezalColumn {
                 get {
                     return this.columnPlaca_Cabezal;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Placa_RastraColumn {
-                get {
-                    return this.columnPlaca_Rastra;
                 }
             }
             
@@ -589,14 +589,14 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public sp_Datos_BoletaRow Addsp_Datos_BoletaRow(System.DateTime Fecha_Entrada, System.DateTime Fecha_Salida, string Placa_Cabezal, string Placa_Rastra, string Conductor, string Cliente, string Producto, string Peso_Ingreso, string Peso_Salida, string Peso_Neto, int Barco_Id, string Barco, string Estado, string Usuario, string Observaciones) {
+            public sp_Datos_BoletaRow Addsp_Datos_BoletaRow(string Placa_Rastra, System.DateTime Fecha_Entrada, System.DateTime Fecha_Salida, string Placa_Cabezal, string Conductor, string Cliente, string Producto, string Peso_Ingreso, string Peso_Salida, string Peso_Neto, int Barco_Id, string Barco, string Estado, string Usuario, string Observaciones) {
                 sp_Datos_BoletaRow rowsp_Datos_BoletaRow = ((sp_Datos_BoletaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        Placa_Rastra,
                         null,
                         Fecha_Entrada,
                         Fecha_Salida,
                         Placa_Cabezal,
-                        Placa_Rastra,
                         null,
                         Conductor,
                         Cliente,
@@ -631,11 +631,11 @@ namespace WSA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
+                this.columnPlaca_Rastra = base.Columns["Placa_Rastra"];
                 this.columnBoleta_Id = base.Columns["Boleta_Id"];
                 this.columnFecha_Entrada = base.Columns["Fecha_Entrada"];
                 this.columnFecha_Salida = base.Columns["Fecha_Salida"];
                 this.columnPlaca_Cabezal = base.Columns["Placa_Cabezal"];
-                this.columnPlaca_Rastra = base.Columns["Placa_Rastra"];
                 this.columnConductor_Id = base.Columns["Conductor_Id"];
                 this.columnConductor = base.Columns["Conductor"];
                 this.columnCliente = base.Columns["Cliente"];
@@ -653,6 +653,8 @@ namespace WSA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
+                this.columnPlaca_Rastra = new global::System.Data.DataColumn("Placa_Rastra", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPlaca_Rastra);
                 this.columnBoleta_Id = new global::System.Data.DataColumn("Boleta_Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBoleta_Id);
                 this.columnFecha_Entrada = new global::System.Data.DataColumn("Fecha_Entrada", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -661,8 +663,6 @@ namespace WSA {
                 base.Columns.Add(this.columnFecha_Salida);
                 this.columnPlaca_Cabezal = new global::System.Data.DataColumn("Placa_Cabezal", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPlaca_Cabezal);
-                this.columnPlaca_Rastra = new global::System.Data.DataColumn("Placa_Rastra", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPlaca_Rastra);
                 this.columnConductor_Id = new global::System.Data.DataColumn("Conductor_Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnConductor_Id);
                 this.columnConductor = new global::System.Data.DataColumn("Conductor", typeof(string), null, global::System.Data.MappingType.Element);
@@ -687,13 +687,18 @@ namespace WSA {
                 base.Columns.Add(this.columnUsuario);
                 this.columnObservaciones = new global::System.Data.DataColumn("Observaciones", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnObservaciones);
+                this.columnPlaca_Rastra.MaxLength = 10;
                 this.columnBoleta_Id.AutoIncrement = true;
+                this.columnBoleta_Id.AutoIncrementSeed = -1;
+                this.columnBoleta_Id.AutoIncrementStep = -1;
                 this.columnBoleta_Id.AllowDBNull = false;
                 this.columnBoleta_Id.ReadOnly = true;
                 this.columnFecha_Entrada.AllowDBNull = false;
+                this.columnPlaca_Cabezal.AllowDBNull = false;
                 this.columnPlaca_Cabezal.MaxLength = 10;
-                this.columnPlaca_Rastra.MaxLength = 10;
                 this.columnConductor_Id.AutoIncrement = true;
+                this.columnConductor_Id.AutoIncrementSeed = -1;
+                this.columnConductor_Id.AutoIncrementStep = -1;
                 this.columnConductor_Id.AllowDBNull = false;
                 this.columnConductor_Id.ReadOnly = true;
                 this.columnConductor.AllowDBNull = false;
@@ -1156,13 +1161,13 @@ namespace WSA {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class sp_Datos_Boleta_EntradaDataTable : global::System.Data.TypedTableBase<sp_Datos_Boleta_EntradaRow> {
             
+            private global::System.Data.DataColumn columnPlaca_Rastra;
+            
             private global::System.Data.DataColumn columnBoleta_Id;
             
             private global::System.Data.DataColumn columnFecha_Entrada;
             
             private global::System.Data.DataColumn columnPlaca_Cabezal;
-            
-            private global::System.Data.DataColumn columnPlaca_Rastra;
             
             private global::System.Data.DataColumn columnConductor_Id;
             
@@ -1219,6 +1224,14 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Placa_RastraColumn {
+                get {
+                    return this.columnPlaca_Rastra;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn Boleta_IdColumn {
                 get {
                     return this.columnBoleta_Id;
@@ -1238,14 +1251,6 @@ namespace WSA {
             public global::System.Data.DataColumn Placa_CabezalColumn {
                 get {
                     return this.columnPlaca_Cabezal;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Placa_RastraColumn {
-                get {
-                    return this.columnPlaca_Rastra;
                 }
             }
             
@@ -1366,13 +1371,13 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public sp_Datos_Boleta_EntradaRow Addsp_Datos_Boleta_EntradaRow(System.DateTime Fecha_Entrada, string Placa_Cabezal, string Placa_Rastra, string Conductor, string Cliente, string Producto, string Peso_Ingreso, int Barco_Id, string Barco, string Estado, string Usuario, string Observaciones) {
+            public sp_Datos_Boleta_EntradaRow Addsp_Datos_Boleta_EntradaRow(string Placa_Rastra, System.DateTime Fecha_Entrada, string Placa_Cabezal, string Conductor, string Cliente, string Producto, string Peso_Ingreso, int Barco_Id, string Barco, string Estado, string Usuario, string Observaciones) {
                 sp_Datos_Boleta_EntradaRow rowsp_Datos_Boleta_EntradaRow = ((sp_Datos_Boleta_EntradaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        Placa_Rastra,
                         null,
                         Fecha_Entrada,
                         Placa_Cabezal,
-                        Placa_Rastra,
                         null,
                         Conductor,
                         Cliente,
@@ -1405,10 +1410,10 @@ namespace WSA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
+                this.columnPlaca_Rastra = base.Columns["Placa_Rastra"];
                 this.columnBoleta_Id = base.Columns["Boleta_Id"];
                 this.columnFecha_Entrada = base.Columns["Fecha_Entrada"];
                 this.columnPlaca_Cabezal = base.Columns["Placa_Cabezal"];
-                this.columnPlaca_Rastra = base.Columns["Placa_Rastra"];
                 this.columnConductor_Id = base.Columns["Conductor_Id"];
                 this.columnConductor = base.Columns["Conductor"];
                 this.columnCliente = base.Columns["Cliente"];
@@ -1424,14 +1429,14 @@ namespace WSA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
+                this.columnPlaca_Rastra = new global::System.Data.DataColumn("Placa_Rastra", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPlaca_Rastra);
                 this.columnBoleta_Id = new global::System.Data.DataColumn("Boleta_Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBoleta_Id);
                 this.columnFecha_Entrada = new global::System.Data.DataColumn("Fecha_Entrada", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFecha_Entrada);
                 this.columnPlaca_Cabezal = new global::System.Data.DataColumn("Placa_Cabezal", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPlaca_Cabezal);
-                this.columnPlaca_Rastra = new global::System.Data.DataColumn("Placa_Rastra", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPlaca_Rastra);
                 this.columnConductor_Id = new global::System.Data.DataColumn("Conductor_Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnConductor_Id);
                 this.columnConductor = new global::System.Data.DataColumn("Conductor", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1452,13 +1457,18 @@ namespace WSA {
                 base.Columns.Add(this.columnUsuario);
                 this.columnObservaciones = new global::System.Data.DataColumn("Observaciones", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnObservaciones);
+                this.columnPlaca_Rastra.MaxLength = 10;
                 this.columnBoleta_Id.AutoIncrement = true;
+                this.columnBoleta_Id.AutoIncrementSeed = -1;
+                this.columnBoleta_Id.AutoIncrementStep = -1;
                 this.columnBoleta_Id.AllowDBNull = false;
                 this.columnBoleta_Id.ReadOnly = true;
                 this.columnFecha_Entrada.AllowDBNull = false;
+                this.columnPlaca_Cabezal.AllowDBNull = false;
                 this.columnPlaca_Cabezal.MaxLength = 10;
-                this.columnPlaca_Rastra.MaxLength = 10;
                 this.columnConductor_Id.AutoIncrement = true;
+                this.columnConductor_Id.AutoIncrementSeed = -1;
+                this.columnConductor_Id.AutoIncrementStep = -1;
                 this.columnConductor_Id.AllowDBNull = false;
                 this.columnConductor_Id.ReadOnly = true;
                 this.columnConductor.AllowDBNull = false;
@@ -1619,6 +1629,22 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Placa_Rastra {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Datos_Boleta.Placa_RastraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Placa_Rastra\' de la tabla \'sp_Datos_Boleta\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Datos_Boleta.Placa_RastraColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int Boleta_Id {
                 get {
                     return ((int)(this[this.tablesp_Datos_Boleta.Boleta_IdColumn]));
@@ -1659,31 +1685,10 @@ namespace WSA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Placa_Cabezal {
                 get {
-                    try {
-                        return ((string)(this[this.tablesp_Datos_Boleta.Placa_CabezalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Placa_Cabezal\' de la tabla \'sp_Datos_Boleta\' es DBNull.", e);
-                    }
+                    return ((string)(this[this.tablesp_Datos_Boleta.Placa_CabezalColumn]));
                 }
                 set {
                     this[this.tablesp_Datos_Boleta.Placa_CabezalColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Placa_Rastra {
-                get {
-                    try {
-                        return ((string)(this[this.tablesp_Datos_Boleta.Placa_RastraColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Placa_Rastra\' de la tabla \'sp_Datos_Boleta\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesp_Datos_Boleta.Placa_RastraColumn] = value;
                 }
             }
             
@@ -1841,30 +1846,6 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsFecha_SalidaNull() {
-                return this.IsNull(this.tablesp_Datos_Boleta.Fecha_SalidaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetFecha_SalidaNull() {
-                this[this.tablesp_Datos_Boleta.Fecha_SalidaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPlaca_CabezalNull() {
-                return this.IsNull(this.tablesp_Datos_Boleta.Placa_CabezalColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPlaca_CabezalNull() {
-                this[this.tablesp_Datos_Boleta.Placa_CabezalColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsPlaca_RastraNull() {
                 return this.IsNull(this.tablesp_Datos_Boleta.Placa_RastraColumn);
             }
@@ -1873,6 +1854,18 @@ namespace WSA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPlaca_RastraNull() {
                 this[this.tablesp_Datos_Boleta.Placa_RastraColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFecha_SalidaNull() {
+                return this.IsNull(this.tablesp_Datos_Boleta.Fecha_SalidaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFecha_SalidaNull() {
+                this[this.tablesp_Datos_Boleta.Fecha_SalidaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2017,6 +2010,23 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Placa_Rastra {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Datos_Boleta_Entrada.Placa_RastraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Placa_Rastra\' de la tabla \'sp_Datos_Boleta_Entrada\' es DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Datos_Boleta_Entrada.Placa_RastraColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int Boleta_Id {
                 get {
                     return ((int)(this[this.tablesp_Datos_Boleta_Entrada.Boleta_IdColumn]));
@@ -2041,33 +2051,10 @@ namespace WSA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Placa_Cabezal {
                 get {
-                    try {
-                        return ((string)(this[this.tablesp_Datos_Boleta_Entrada.Placa_CabezalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Placa_Cabezal\' de la tabla \'sp_Datos_Boleta_Entrada\' es D" +
-                                "BNull.", e);
-                    }
+                    return ((string)(this[this.tablesp_Datos_Boleta_Entrada.Placa_CabezalColumn]));
                 }
                 set {
                     this[this.tablesp_Datos_Boleta_Entrada.Placa_CabezalColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Placa_Rastra {
-                get {
-                    try {
-                        return ((string)(this[this.tablesp_Datos_Boleta_Entrada.Placa_RastraColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Placa_Rastra\' de la tabla \'sp_Datos_Boleta_Entrada\' es DB" +
-                                "Null.", e);
-                    }
-                }
-                set {
-                    this[this.tablesp_Datos_Boleta_Entrada.Placa_RastraColumn] = value;
                 }
             }
             
@@ -2191,18 +2178,6 @@ namespace WSA {
                 set {
                     this[this.tablesp_Datos_Boleta_Entrada.ObservacionesColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPlaca_CabezalNull() {
-                return this.IsNull(this.tablesp_Datos_Boleta_Entrada.Placa_CabezalColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPlaca_CabezalNull() {
-                this[this.tablesp_Datos_Boleta_Entrada.Placa_CabezalColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2469,11 +2444,11 @@ namespace WSA.WSA_ALGDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "sp_Datos_Boleta";
+            tableMapping.ColumnMappings.Add("Placa_Rastra", "Placa_Rastra");
             tableMapping.ColumnMappings.Add("Boleta_Id", "Boleta_Id");
             tableMapping.ColumnMappings.Add("Fecha_Entrada", "Fecha_Entrada");
             tableMapping.ColumnMappings.Add("Fecha_Salida", "Fecha_Salida");
             tableMapping.ColumnMappings.Add("Placa_Cabezal", "Placa_Cabezal");
-            tableMapping.ColumnMappings.Add("Placa_Rastra", "Placa_Rastra");
             tableMapping.ColumnMappings.Add("Conductor_Id", "Conductor_Id");
             tableMapping.ColumnMappings.Add("Conductor", "Conductor");
             tableMapping.ColumnMappings.Add("Cliente", "Cliente");
@@ -2837,10 +2812,10 @@ namespace WSA.WSA_ALGDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "sp_Datos_Boleta_Entrada";
+            tableMapping.ColumnMappings.Add("Placa_Rastra", "Placa_Rastra");
             tableMapping.ColumnMappings.Add("Boleta_Id", "Boleta_Id");
             tableMapping.ColumnMappings.Add("Fecha_Entrada", "Fecha_Entrada");
             tableMapping.ColumnMappings.Add("Placa_Cabezal", "Placa_Cabezal");
-            tableMapping.ColumnMappings.Add("Placa_Rastra", "Placa_Rastra");
             tableMapping.ColumnMappings.Add("Conductor_Id", "Conductor_Id");
             tableMapping.ColumnMappings.Add("Conductor", "Conductor");
             tableMapping.ColumnMappings.Add("Cliente", "Cliente");

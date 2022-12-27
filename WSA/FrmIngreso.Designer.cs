@@ -36,8 +36,6 @@ namespace WSA
             this.txtConductor = new System.Windows.Forms.TextBox();
             this.txtPlacaCabezal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtPlacaRastra = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtCia = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
@@ -118,7 +116,7 @@ namespace WSA
             // 
             this.txtPlacaCabezal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPlacaCabezal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlacaCabezal.Location = new System.Drawing.Point(235, 260);
+            this.txtPlacaCabezal.Location = new System.Drawing.Point(270, 264);
             this.txtPlacaCabezal.MaxLength = 7;
             this.txtPlacaCabezal.Name = "txtPlacaCabezal";
             this.txtPlacaCabezal.Size = new System.Drawing.Size(128, 27);
@@ -131,34 +129,11 @@ namespace WSA
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(101, 264);
+            this.label3.Location = new System.Drawing.Point(107, 264);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 18);
+            this.label3.Size = new System.Drawing.Size(157, 18);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Placa cabezal:";
-            // 
-            // txtPlacaRastra
-            // 
-            this.txtPlacaRastra.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPlacaRastra.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlacaRastra.Location = new System.Drawing.Point(487, 260);
-            this.txtPlacaRastra.MaxLength = 7;
-            this.txtPlacaRastra.Name = "txtPlacaRastra";
-            this.txtPlacaRastra.Size = new System.Drawing.Size(125, 27);
-            this.txtPlacaRastra.TabIndex = 4;
-            this.txtPlacaRastra.TextChanged += new System.EventHandler(this.txtPlacaRastra_TextChanged);
-            this.txtPlacaRastra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPlacaRastra_KeyPress);
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(369, 264);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 18);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Placa rastra:";
+            this.label3.Text = "Placa del cabezal:";
             // 
             // txtCia
             // 
@@ -557,8 +532,6 @@ namespace WSA
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtCia);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtPlacaRastra);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPlacaCabezal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtConductor);
@@ -583,8 +556,6 @@ namespace WSA
         private System.Windows.Forms.TextBox txtConductor;
         private System.Windows.Forms.TextBox txtPlacaCabezal;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtPlacaRastra;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCia;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCliente;

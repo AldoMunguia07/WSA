@@ -56,7 +56,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>6.68516cm</Top>
+        <Top>6.22655cm</Top>
         <Left>1.4645cm</Left>
         <Height>0.6cm</Height>
         <Width>4.65256cm</Width>
@@ -91,7 +91,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>7.31657cm</Top>
+        <Top>6.85796cm</Top>
         <Left>0.65783cm</Left>
         <Height>0.6cm</Height>
         <Width>2.6808cm</Width>
@@ -148,7 +148,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Placa Cabezal:</Value>
+                <Value>Placa del cabezal:</Value>
                 <Style>
                   <FontSize>8pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -164,43 +164,8 @@
         <Top>3.44677cm</Top>
         <Left>0.71075cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.28833cm</Width>
+        <Width>3.32903cm</Width>
         <ZIndex>4</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox11">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Placa Rastra:</Value>
-                <Style>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>4.01149cm</Top>
-        <Left>0.71075cm</Left>
-        <Height>0.6cm</Height>
-        <Width>1.98847cm</Width>
-        <ZIndex>5</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -231,11 +196,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>4.49683cm</Top>
+        <Top>4.03822cm</Top>
         <Left>0.71075cm</Left>
         <Height>0.6cm</Height>
         <Width>1.84736cm</Width>
-        <ZIndex>6</ZIndex>
+        <ZIndex>5</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -266,11 +231,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>4.97777cm</Top>
+        <Top>4.51916cm</Top>
         <Left>0.71075cm</Left>
         <Height>0.6cm</Height>
         <Width>1.98847cm</Width>
-        <ZIndex>7</ZIndex>
+        <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -301,11 +266,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>5.44988cm</Top>
+        <Top>4.99127cm</Top>
         <Left>0.71075cm</Left>
         <Height>0.6cm</Height>
         <Width>1.60042cm</Width>
-        <ZIndex>8</ZIndex>
+        <ZIndex>7</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -336,11 +301,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>5.90877cm</Top>
+        <Top>5.45016cm</Top>
         <Left>0.71076cm</Left>
         <Height>0.6cm</Height>
         <Width>2.42945cm</Width>
-        <ZIndex>9</ZIndex>
+        <ZIndex>8</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -371,11 +336,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>7.8157cm</Top>
+        <Top>7.35709cm</Top>
         <Left>0.65783cm</Left>
         <Height>0.6cm</Height>
         <Width>2.74694cm</Width>
-        <ZIndex>10</ZIndex>
+        <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -410,7 +375,7 @@
         <Left>0.65783cm</Left>
         <Height>0.6cm</Height>
         <Width>6.34055cm</Width>
-        <ZIndex>11</ZIndex>
+        <ZIndex>10</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -441,11 +406,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>9.15266cm</Top>
+        <Top>8.69405cm</Top>
         <Left>0.9536cm</Left>
         <Height>0.6cm</Height>
         <Width>1.69333cm</Width>
-        <ZIndex>12</ZIndex>
+        <ZIndex>11</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -479,7 +444,7 @@
         <Left>3.44005cm</Left>
         <Height>0.6cm</Height>
         <Width>2.01492cm</Width>
-        <ZIndex>13</ZIndex>
+        <ZIndex>12</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -515,7 +480,7 @@
         <Left>0.39325cm</Left>
         <Height>0.6cm</Height>
         <Width>6.92264cm</Width>
-        <ZIndex>14</ZIndex>
+        <ZIndex>13</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -549,7 +514,7 @@
         <Left>0.39325cm</Left>
         <Height>0.6cm</Height>
         <Width>6.92264cm</Width>
-        <ZIndex>15</ZIndex>
+        <ZIndex>14</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -583,7 +548,7 @@
         <Left>2.52283cm</Left>
         <Height>0.6cm</Height>
         <Width>4.59902cm</Width>
-        <ZIndex>16</ZIndex>
+        <ZIndex>15</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -614,44 +579,10 @@
         </Paragraphs>
         <rd:DefaultName>Placa_Cabezal</rd:DefaultName>
         <Top>3.44677cm</Top>
-        <Left>2.87561cm</Left>
+        <Left>3.32477cm</Left>
         <Height>0.6cm</Height>
         <Width>4.03457cm</Width>
-        <ZIndex>17</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Placa_Rastra">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!Placa_Rastra.Value, "DatosBoleta")</Value>
-                <Style>
-                  <FontSize>8pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Placa_Rastra</rd:DefaultName>
-        <Top>4.01149cm</Top>
-        <Left>2.64693cm</Left>
-        <Height>0.6cm</Height>
-        <Width>4.06985cm</Width>
-        <ZIndex>18</ZIndex>
+        <ZIndex>16</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -681,11 +612,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Cliente</rd:DefaultName>
-        <Top>4.49683cm</Top>
+        <Top>4.03822cm</Top>
         <Left>1.9754cm</Left>
         <Height>0.6cm</Height>
         <Width>5.19874cm</Width>
-        <ZIndex>19</ZIndex>
+        <ZIndex>17</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -715,11 +646,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Producto</rd:DefaultName>
-        <Top>4.97777cm</Top>
+        <Top>4.51916cm</Top>
         <Left>2.23998cm</Left>
         <Height>0.6cm</Height>
         <Width>4.7584cm</Width>
-        <ZIndex>20</ZIndex>
+        <ZIndex>18</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -749,11 +680,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Barco</rd:DefaultName>
-        <Top>5.44989cm</Top>
+        <Top>4.99128cm</Top>
         <Left>1.85193cm</Left>
         <Height>0.6cm</Height>
         <Width>5.14645cm</Width>
-        <ZIndex>21</ZIndex>
+        <ZIndex>19</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -783,11 +714,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Observaciones</rd:DefaultName>
-        <Top>5.90877cm</Top>
+        <Top>5.45016cm</Top>
         <Left>3.03374cm</Left>
         <Height>0.6cm</Height>
         <Width>4.1404cm</Width>
-        <ZIndex>22</ZIndex>
+        <ZIndex>20</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -799,11 +730,11 @@
         </Style>
       </Textbox>
       <Line Name="Line4">
-        <Top>9.01155cm</Top>
+        <Top>8.55294cm</Top>
         <Left>1.39835cm</Left>
         <Height>0cm</Height>
         <Width>4.90391cm</Width>
-        <ZIndex>23</ZIndex>
+        <ZIndex>21</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -827,11 +758,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Usuario</rd:DefaultName>
-        <Top>9.15266cm</Top>
+        <Top>8.69405cm</Top>
         <Left>2.64693cm</Left>
         <Height>0.6cm</Height>
         <Width>3.27673cm</Width>
-        <ZIndex>24</ZIndex>
+        <ZIndex>22</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -861,11 +792,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Peso_Ingreso</rd:DefaultName>
-        <Top>7.31657cm</Top>
+        <Top>6.85796cm</Top>
         <Left>3.14019cm</Left>
         <Height>0.6cm</Height>
         <Width>3.38256cm</Width>
-        <ZIndex>25</ZIndex>
+        <ZIndex>23</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -895,11 +826,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Fecha_Entrada</rd:DefaultName>
-        <Top>7.8157cm</Top>
+        <Top>7.35709cm</Top>
         <Left>3.32477cm</Left>
         <Height>0.6cm</Height>
         <Width>3.02978cm</Width>
-        <ZIndex>26</ZIndex>
+        <ZIndex>24</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -929,11 +860,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>9.75266cm</Top>
+        <Top>9.29405cm</Top>
         <Left>0.18127cm</Left>
         <Height>0.6cm</Height>
         <Width>7.36455cm</Width>
-        <ZIndex>27</ZIndex>
+        <ZIndex>25</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -967,7 +898,7 @@
         <Left>0.39324cm</Left>
         <Height>0.6cm</Height>
         <Width>6.92264cm</Width>
-        <ZIndex>28</ZIndex>
+        <ZIndex>26</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -979,12 +910,12 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>106.96618mm</Height>
+    <Height>102.46826mm</Height>
     <Style />
   </Body>
   <Width>78.71038mm</Width>
   <Page>
-    <PageHeight>10.8cm</PageHeight>
+    <PageHeight>10.5cm</PageHeight>
     <PageWidth>8cm</PageWidth>
     <LeftMargin>0cm</LeftMargin>
     <RightMargin>0cm</RightMargin>
@@ -1042,6 +973,10 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
+        <Field Name="Placa_Rastra">
+          <DataField>Placa_Rastra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="Boleta_Id">
           <DataField>Boleta_Id</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -1052,10 +987,6 @@
         </Field>
         <Field Name="Placa_Cabezal">
           <DataField>Placa_Cabezal</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Placa_Rastra">
-          <DataField>Placa_Rastra</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Conductor_Id">

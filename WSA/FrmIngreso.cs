@@ -111,7 +111,6 @@ namespace WSA
         {
             boleta.FechaEntrada = DateTime.Now;
             boleta.PlacaCabezal = txtPlacaCabezal.Text;
-            boleta.PlacaRastra = txtPlacaRastra.Text;
             boleta.ConductorId = int.Parse(txtCodigoConductor.Text);
             boleta.ClienteId = int.Parse(txtCodigoCliente.Text);
             boleta.ProductoId = int.Parse(txtCodigoProducto.Text);
@@ -168,42 +167,37 @@ namespace WSA
             {
                 if(txtPlacaCabezal.Text != "")
                 {
-                    if(txtPlacaRastra.Text != "")
+                   
+                    if(txtCodigoCliente.Text != "")
                     {
-                        if(txtCodigoCliente.Text != "")
+                        if(txtCodigoProducto.Text != "")
                         {
-                            if(txtCodigoProducto.Text != "")
+                            if(txtCodigoBarco.Text != "")
                             {
-                                if(txtCodigoBarco.Text != "")
+                                if(txtPesoEntrada.Text != "")
                                 {
-                                    if(txtPesoEntrada.Text != "")
-                                    {
-                                        return true;
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Obtenga el peso de la báscula", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                                    }
+                                    return true;
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Ingrese el código del barco", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    MessageBox.Show("Obtenga el peso de la báscula", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                 }
                             }
                             else
                             {
-                                MessageBox.Show("Ingrese el código del producto", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("Ingrese el código del barco", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Ingrese el código del cliente", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("Ingrese el código del producto", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Ingrese la placa de la rastra", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Ingrese el código del cliente", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
+                   
                 }
                 else
                 {
@@ -308,7 +302,7 @@ namespace WSA
         private void txtPlacaRastra_TextChanged(object sender, EventArgs e)
         {
            
-            txtPlacaRastra.CharacterCasing = CharacterCasing.Upper;
+           
 
         }
     }

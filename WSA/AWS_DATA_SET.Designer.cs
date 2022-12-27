@@ -1371,15 +1371,11 @@ namespace WSA {
             
             private global::System.Data.DataColumn columnPlaca_del_cabezal;
             
-            private global::System.Data.DataColumn columnPlaca_de_la_rastra;
-            
             private global::System.Data.DataColumn columnCódigo_del_conductor;
             
             private global::System.Data.DataColumn columnConductor;
             
             private global::System.Data.DataColumn columnCliente;
-            
-            private global::System.Data.DataColumn columnProdcuto;
             
             private global::System.Data.DataColumn columnPeso_de_ingreso;
             
@@ -1392,6 +1388,8 @@ namespace WSA {
             private global::System.Data.DataColumn columnUsuario;
             
             private global::System.Data.DataColumn columnObservaciones;
+            
+            private global::System.Data.DataColumn columnProducto;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -1452,14 +1450,6 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Placa_de_la_rastraColumn {
-                get {
-                    return this.columnPlaca_de_la_rastra;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn Código_del_conductorColumn {
                 get {
                     return this.columnCódigo_del_conductor;
@@ -1479,14 +1469,6 @@ namespace WSA {
             public global::System.Data.DataColumn ClienteColumn {
                 get {
                     return this.columnCliente;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ProdcutoColumn {
-                get {
-                    return this.columnProdcuto;
                 }
             }
             
@@ -1540,6 +1522,14 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ProductoColumn {
+                get {
+                    return this.columnProducto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1575,23 +1565,22 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public sp_BoletaRow Addsp_BoletaRow(System.DateTime Fecha_de_entrada, string Placa_del_cabezal, string Placa_de_la_rastra, string Conductor, string Cliente, string Prodcuto, string Peso_de_ingreso, int Código_del_barco, string Barco, string Estado, string Usuario, string Observaciones) {
+            public sp_BoletaRow Addsp_BoletaRow(System.DateTime Fecha_de_entrada, string Placa_del_cabezal, string Conductor, string Cliente, string Peso_de_ingreso, int Código_del_barco, string Barco, string Estado, string Usuario, string Observaciones, string Producto) {
                 sp_BoletaRow rowsp_BoletaRow = ((sp_BoletaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Fecha_de_entrada,
                         Placa_del_cabezal,
-                        Placa_de_la_rastra,
                         null,
                         Conductor,
                         Cliente,
-                        Prodcuto,
                         Peso_de_ingreso,
                         Código_del_barco,
                         Barco,
                         Estado,
                         Usuario,
-                        Observaciones};
+                        Observaciones,
+                        Producto};
                 rowsp_BoletaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowsp_BoletaRow);
                 return rowsp_BoletaRow;
@@ -1617,17 +1606,16 @@ namespace WSA {
                 this.columnCódigo_de_boleta = base.Columns["Código de boleta"];
                 this.columnFecha_de_entrada = base.Columns["Fecha de entrada"];
                 this.columnPlaca_del_cabezal = base.Columns["Placa del cabezal"];
-                this.columnPlaca_de_la_rastra = base.Columns["Placa de la rastra"];
                 this.columnCódigo_del_conductor = base.Columns["Código del conductor"];
                 this.columnConductor = base.Columns["Conductor"];
                 this.columnCliente = base.Columns["Cliente"];
-                this.columnProdcuto = base.Columns["Prodcuto"];
                 this.columnPeso_de_ingreso = base.Columns["Peso de ingreso"];
                 this.columnCódigo_del_barco = base.Columns["Código del barco"];
                 this.columnBarco = base.Columns["Barco"];
                 this.columnEstado = base.Columns["Estado"];
                 this.columnUsuario = base.Columns["Usuario"];
                 this.columnObservaciones = base.Columns["Observaciones"];
+                this.columnProducto = base.Columns["Producto"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1639,16 +1627,12 @@ namespace WSA {
                 base.Columns.Add(this.columnFecha_de_entrada);
                 this.columnPlaca_del_cabezal = new global::System.Data.DataColumn("Placa del cabezal", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPlaca_del_cabezal);
-                this.columnPlaca_de_la_rastra = new global::System.Data.DataColumn("Placa de la rastra", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPlaca_de_la_rastra);
                 this.columnCódigo_del_conductor = new global::System.Data.DataColumn("Código del conductor", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCódigo_del_conductor);
                 this.columnConductor = new global::System.Data.DataColumn("Conductor", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnConductor);
                 this.columnCliente = new global::System.Data.DataColumn("Cliente", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCliente);
-                this.columnProdcuto = new global::System.Data.DataColumn("Prodcuto", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProdcuto);
                 this.columnPeso_de_ingreso = new global::System.Data.DataColumn("Peso de ingreso", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPeso_de_ingreso);
                 this.columnCódigo_del_barco = new global::System.Data.DataColumn("Código del barco", typeof(int), null, global::System.Data.MappingType.Element);
@@ -1661,12 +1645,14 @@ namespace WSA {
                 base.Columns.Add(this.columnUsuario);
                 this.columnObservaciones = new global::System.Data.DataColumn("Observaciones", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnObservaciones);
+                this.columnProducto = new global::System.Data.DataColumn("Producto", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProducto);
                 this.columnCódigo_de_boleta.AutoIncrement = true;
                 this.columnCódigo_de_boleta.AllowDBNull = false;
                 this.columnCódigo_de_boleta.ReadOnly = true;
                 this.columnFecha_de_entrada.AllowDBNull = false;
+                this.columnPlaca_del_cabezal.AllowDBNull = false;
                 this.columnPlaca_del_cabezal.MaxLength = 10;
-                this.columnPlaca_de_la_rastra.MaxLength = 10;
                 this.columnCódigo_del_conductor.AutoIncrement = true;
                 this.columnCódigo_del_conductor.AllowDBNull = false;
                 this.columnCódigo_del_conductor.ReadOnly = true;
@@ -1674,8 +1660,6 @@ namespace WSA {
                 this.columnConductor.MaxLength = 70;
                 this.columnCliente.AllowDBNull = false;
                 this.columnCliente.MaxLength = 70;
-                this.columnProdcuto.AllowDBNull = false;
-                this.columnProdcuto.MaxLength = 80;
                 this.columnPeso_de_ingreso.ReadOnly = true;
                 this.columnPeso_de_ingreso.MaxLength = 28;
                 this.columnCódigo_del_barco.AllowDBNull = false;
@@ -1686,6 +1670,8 @@ namespace WSA {
                 this.columnUsuario.AllowDBNull = false;
                 this.columnUsuario.MaxLength = 80;
                 this.columnObservaciones.MaxLength = 200;
+                this.columnProducto.AllowDBNull = false;
+                this.columnProducto.MaxLength = 80;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4777,6 +4763,8 @@ namespace WSA {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class sp_Reporte_Mostrar_BoletasDataTable : global::System.Data.TypedTableBase<sp_Reporte_Mostrar_BoletasRow> {
             
+            private global::System.Data.DataColumn columnPlaca_Rastra;
+            
             private global::System.Data.DataColumn columnBoleta_Id;
             
             private global::System.Data.DataColumn columnFecha_Entrada;
@@ -4784,8 +4772,6 @@ namespace WSA {
             private global::System.Data.DataColumn columnFecha_Salida;
             
             private global::System.Data.DataColumn columnPlaca_Cabezal;
-            
-            private global::System.Data.DataColumn columnPlaca_Rastra;
             
             private global::System.Data.DataColumn columnConductor;
             
@@ -4846,6 +4832,14 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Placa_RastraColumn {
+                get {
+                    return this.columnPlaca_Rastra;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn Boleta_IdColumn {
                 get {
                     return this.columnBoleta_Id;
@@ -4873,14 +4867,6 @@ namespace WSA {
             public global::System.Data.DataColumn Placa_CabezalColumn {
                 get {
                     return this.columnPlaca_Cabezal;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Placa_RastraColumn {
-                get {
-                    return this.columnPlaca_Rastra;
                 }
             }
             
@@ -5018,10 +5004,10 @@ namespace WSA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public sp_Reporte_Mostrar_BoletasRow Addsp_Reporte_Mostrar_BoletasRow(
+                        string Placa_Rastra, 
                         System.DateTime Fecha_Entrada, 
                         System.DateTime Fecha_Salida, 
                         string Placa_Cabezal, 
-                        string Placa_Rastra, 
                         string Conductor, 
                         string Cliente, 
                         string Producto, 
@@ -5036,11 +5022,11 @@ namespace WSA {
                         System.DateTime fechaFinal) {
                 sp_Reporte_Mostrar_BoletasRow rowsp_Reporte_Mostrar_BoletasRow = ((sp_Reporte_Mostrar_BoletasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        Placa_Rastra,
                         null,
                         Fecha_Entrada,
                         Fecha_Salida,
                         Placa_Cabezal,
-                        Placa_Rastra,
                         Conductor,
                         Cliente,
                         Producto,
@@ -5082,11 +5068,11 @@ namespace WSA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
+                this.columnPlaca_Rastra = base.Columns["Placa_Rastra"];
                 this.columnBoleta_Id = base.Columns["Boleta_Id"];
                 this.columnFecha_Entrada = base.Columns["Fecha_Entrada"];
                 this.columnFecha_Salida = base.Columns["Fecha_Salida"];
                 this.columnPlaca_Cabezal = base.Columns["Placa_Cabezal"];
-                this.columnPlaca_Rastra = base.Columns["Placa_Rastra"];
                 this.columnConductor = base.Columns["Conductor"];
                 this.columnCliente = base.Columns["Cliente"];
                 this.columnProducto = base.Columns["Producto"];
@@ -5104,6 +5090,8 @@ namespace WSA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
+                this.columnPlaca_Rastra = new global::System.Data.DataColumn("Placa_Rastra", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPlaca_Rastra);
                 this.columnBoleta_Id = new global::System.Data.DataColumn("Boleta_Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBoleta_Id);
                 this.columnFecha_Entrada = new global::System.Data.DataColumn("Fecha_Entrada", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -5112,8 +5100,6 @@ namespace WSA {
                 base.Columns.Add(this.columnFecha_Salida);
                 this.columnPlaca_Cabezal = new global::System.Data.DataColumn("Placa_Cabezal", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPlaca_Cabezal);
-                this.columnPlaca_Rastra = new global::System.Data.DataColumn("Placa_Rastra", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPlaca_Rastra);
                 this.columnConductor = new global::System.Data.DataColumn("Conductor", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnConductor);
                 this.columnCliente = new global::System.Data.DataColumn("Cliente", typeof(string), null, global::System.Data.MappingType.Element);
@@ -5140,13 +5126,16 @@ namespace WSA {
                 base.Columns.Add(this.columnfechaFinal);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnBoleta_Id}, true));
+                this.columnPlaca_Rastra.MaxLength = 10;
                 this.columnBoleta_Id.AutoIncrement = true;
+                this.columnBoleta_Id.AutoIncrementSeed = -1;
+                this.columnBoleta_Id.AutoIncrementStep = -1;
                 this.columnBoleta_Id.AllowDBNull = false;
                 this.columnBoleta_Id.ReadOnly = true;
                 this.columnBoleta_Id.Unique = true;
                 this.columnFecha_Entrada.AllowDBNull = false;
+                this.columnPlaca_Cabezal.AllowDBNull = false;
                 this.columnPlaca_Cabezal.MaxLength = 10;
-                this.columnPlaca_Rastra.MaxLength = 10;
                 this.columnConductor.AllowDBNull = false;
                 this.columnConductor.MaxLength = 70;
                 this.columnCliente.AllowDBNull = false;
@@ -5851,31 +5840,10 @@ namespace WSA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Placa_del_cabezal {
                 get {
-                    try {
-                        return ((string)(this[this.tablesp_Boleta.Placa_del_cabezalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Placa del cabezal\' de la tabla \'sp_Boleta\' es DBNull.", e);
-                    }
+                    return ((string)(this[this.tablesp_Boleta.Placa_del_cabezalColumn]));
                 }
                 set {
                     this[this.tablesp_Boleta.Placa_del_cabezalColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Placa_de_la_rastra {
-                get {
-                    try {
-                        return ((string)(this[this.tablesp_Boleta.Placa_de_la_rastraColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Placa de la rastra\' de la tabla \'sp_Boleta\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesp_Boleta.Placa_de_la_rastraColumn] = value;
                 }
             }
             
@@ -5909,17 +5877,6 @@ namespace WSA {
                 }
                 set {
                     this[this.tablesp_Boleta.ClienteColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Prodcuto {
-                get {
-                    return ((string)(this[this.tablesp_Boleta.ProdcutoColumn]));
-                }
-                set {
-                    this[this.tablesp_Boleta.ProdcutoColumn] = value;
                 }
             }
             
@@ -6001,26 +5958,13 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPlaca_del_cabezalNull() {
-                return this.IsNull(this.tablesp_Boleta.Placa_del_cabezalColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPlaca_del_cabezalNull() {
-                this[this.tablesp_Boleta.Placa_del_cabezalColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPlaca_de_la_rastraNull() {
-                return this.IsNull(this.tablesp_Boleta.Placa_de_la_rastraColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPlaca_de_la_rastraNull() {
-                this[this.tablesp_Boleta.Placa_de_la_rastraColumn] = global::System.Convert.DBNull;
+            public string Producto {
+                get {
+                    return ((string)(this[this.tablesp_Boleta.ProductoColumn]));
+                }
+                set {
+                    this[this.tablesp_Boleta.ProductoColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6961,6 +6905,23 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Placa_Rastra {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Reporte_Mostrar_Boletas.Placa_RastraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Placa_Rastra\' de la tabla \'sp_Reporte_Mostrar_Boletas\' es" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Reporte_Mostrar_Boletas.Placa_RastraColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int Boleta_Id {
                 get {
                     return ((int)(this[this.tablesp_Reporte_Mostrar_Boletas.Boleta_IdColumn]));
@@ -7002,33 +6963,10 @@ namespace WSA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Placa_Cabezal {
                 get {
-                    try {
-                        return ((string)(this[this.tablesp_Reporte_Mostrar_Boletas.Placa_CabezalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Placa_Cabezal\' de la tabla \'sp_Reporte_Mostrar_Boletas\' e" +
-                                "s DBNull.", e);
-                    }
+                    return ((string)(this[this.tablesp_Reporte_Mostrar_Boletas.Placa_CabezalColumn]));
                 }
                 set {
                     this[this.tablesp_Reporte_Mostrar_Boletas.Placa_CabezalColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Placa_Rastra {
-                get {
-                    try {
-                        return ((string)(this[this.tablesp_Reporte_Mostrar_Boletas.Placa_RastraColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Placa_Rastra\' de la tabla \'sp_Reporte_Mostrar_Boletas\' es" +
-                                " DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesp_Reporte_Mostrar_Boletas.Placa_RastraColumn] = value;
                 }
             }
             
@@ -7202,30 +7140,6 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsFecha_SalidaNull() {
-                return this.IsNull(this.tablesp_Reporte_Mostrar_Boletas.Fecha_SalidaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetFecha_SalidaNull() {
-                this[this.tablesp_Reporte_Mostrar_Boletas.Fecha_SalidaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPlaca_CabezalNull() {
-                return this.IsNull(this.tablesp_Reporte_Mostrar_Boletas.Placa_CabezalColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPlaca_CabezalNull() {
-                this[this.tablesp_Reporte_Mostrar_Boletas.Placa_CabezalColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsPlaca_RastraNull() {
                 return this.IsNull(this.tablesp_Reporte_Mostrar_Boletas.Placa_RastraColumn);
             }
@@ -7234,6 +7148,18 @@ namespace WSA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPlaca_RastraNull() {
                 this[this.tablesp_Reporte_Mostrar_Boletas.Placa_RastraColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFecha_SalidaNull() {
+                return this.IsNull(this.tablesp_Reporte_Mostrar_Boletas.Fecha_SalidaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFecha_SalidaNull() {
+                this[this.tablesp_Reporte_Mostrar_Boletas.Fecha_SalidaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8495,17 +8421,16 @@ namespace WSA.AWS_DATA_SETTableAdapters {
             tableMapping.ColumnMappings.Add("Código de boleta", "Código de boleta");
             tableMapping.ColumnMappings.Add("Fecha de entrada", "Fecha de entrada");
             tableMapping.ColumnMappings.Add("Placa del cabezal", "Placa del cabezal");
-            tableMapping.ColumnMappings.Add("Placa de la rastra", "Placa de la rastra");
             tableMapping.ColumnMappings.Add("Código del conductor", "Código del conductor");
             tableMapping.ColumnMappings.Add("Conductor", "Conductor");
             tableMapping.ColumnMappings.Add("Cliente", "Cliente");
-            tableMapping.ColumnMappings.Add("Prodcuto", "Prodcuto");
             tableMapping.ColumnMappings.Add("Peso de ingreso", "Peso de ingreso");
             tableMapping.ColumnMappings.Add("Código del barco", "Código del barco");
             tableMapping.ColumnMappings.Add("Barco", "Barco");
             tableMapping.ColumnMappings.Add("Estado", "Estado");
             tableMapping.ColumnMappings.Add("Usuario", "Usuario");
             tableMapping.ColumnMappings.Add("Observaciones", "Observaciones");
+            tableMapping.ColumnMappings.Add("Producto", "Producto");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -8529,10 +8454,8 @@ namespace WSA.AWS_DATA_SETTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha_Entrada", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fecha_Salida", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Placa_Cabezal", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Placa_Rastra", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Conductor_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cliente_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Proveedor_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Producto_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Peso_Ingreso", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 53, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Unidades_Peso_Ingreso", global::System.Data.SqlDbType.VarChar, 4, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8545,6 +8468,8 @@ namespace WSA.AWS_DATA_SETTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estado", global::System.Data.SqlDbType.Char, 1, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Observaciones", global::System.Data.SqlDbType.VarChar, 200, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@valorBuscado", global::System.Data.SqlDbType.VarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaInicio", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@accion", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -8558,10 +8483,8 @@ namespace WSA.AWS_DATA_SETTableAdapters {
                     global::System.Nullable<global::System.DateTime> Fecha_Entrada, 
                     global::System.Nullable<global::System.DateTime> Fecha_Salida, 
                     string Placa_Cabezal, 
-                    string Placa_Rastra, 
                     global::System.Nullable<int> Conductor_Id, 
                     global::System.Nullable<int> Cliente_Id, 
-                    global::System.Nullable<int> Proveedor_Id, 
                     global::System.Nullable<int> Producto_Id, 
                     global::System.Nullable<double> Peso_Ingreso, 
                     string Unidades_Peso_Ingreso, 
@@ -8574,6 +8497,8 @@ namespace WSA.AWS_DATA_SETTableAdapters {
                     string Estado, 
                     string Observaciones, 
                     string valorBuscado, 
+                    global::System.Nullable<global::System.DateTime> fechaInicio, 
+                    global::System.Nullable<global::System.DateTime> fechaFinal, 
                     string accion) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((Boleta_Id.HasValue == true)) {
@@ -8600,101 +8525,101 @@ namespace WSA.AWS_DATA_SETTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = ((string)(Placa_Cabezal));
             }
-            if ((Placa_Rastra == null)) {
-                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            if ((Conductor_Id.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(Conductor_Id.Value));
             }
             else {
-                this.Adapter.SelectCommand.Parameters[5].Value = ((string)(Placa_Rastra));
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Conductor_Id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(Conductor_Id.Value));
+            if ((Cliente_Id.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(Cliente_Id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Cliente_Id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[7].Value = ((int)(Cliente_Id.Value));
+            if ((Producto_Id.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[7].Value = ((int)(Producto_Id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Proveedor_Id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[8].Value = ((int)(Proveedor_Id.Value));
+            if ((Peso_Ingreso.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[8].Value = ((double)(Peso_Ingreso.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Producto_Id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[9].Value = ((int)(Producto_Id.Value));
-            }
-            else {
+            if ((Unidades_Peso_Ingreso == null)) {
                 this.Adapter.SelectCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Peso_Ingreso.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[10].Value = ((double)(Peso_Ingreso.Value));
-            }
             else {
+                this.Adapter.SelectCommand.Parameters[9].Value = ((string)(Unidades_Peso_Ingreso));
+            }
+            if ((Cia_Transportista == null)) {
                 this.Adapter.SelectCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Unidades_Peso_Ingreso == null)) {
+            else {
+                this.Adapter.SelectCommand.Parameters[10].Value = ((string)(Cia_Transportista));
+            }
+            if ((Envio_N == null)) {
                 this.Adapter.SelectCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[11].Value = ((string)(Unidades_Peso_Ingreso));
+                this.Adapter.SelectCommand.Parameters[11].Value = ((string)(Envio_N));
             }
-            if ((Cia_Transportista == null)) {
-                this.Adapter.SelectCommand.Parameters[12].Value = global::System.DBNull.Value;
+            if ((Peso_Salida.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[12].Value = ((double)(Peso_Salida.Value));
             }
             else {
-                this.Adapter.SelectCommand.Parameters[12].Value = ((string)(Cia_Transportista));
+                this.Adapter.SelectCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Envio_N == null)) {
+            if ((Unidades_Peso_Salida == null)) {
                 this.Adapter.SelectCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[13].Value = ((string)(Envio_N));
+                this.Adapter.SelectCommand.Parameters[13].Value = ((string)(Unidades_Peso_Salida));
             }
-            if ((Peso_Salida.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[14].Value = ((double)(Peso_Salida.Value));
+            if ((Barco_Id.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[14].Value = ((int)(Barco_Id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Unidades_Peso_Salida == null)) {
+            if ((Usuario_Id.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[15].Value = ((int)(Usuario_Id.Value));
+            }
+            else {
                 this.Adapter.SelectCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.SelectCommand.Parameters[15].Value = ((string)(Unidades_Peso_Salida));
-            }
-            if ((Barco_Id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[16].Value = ((int)(Barco_Id.Value));
-            }
-            else {
+            if ((Estado == null)) {
                 this.Adapter.SelectCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Usuario_Id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[17].Value = ((int)(Usuario_Id.Value));
-            }
             else {
+                this.Adapter.SelectCommand.Parameters[16].Value = ((string)(Estado));
+            }
+            if ((Observaciones == null)) {
                 this.Adapter.SelectCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            if ((Estado == null)) {
+            else {
+                this.Adapter.SelectCommand.Parameters[17].Value = ((string)(Observaciones));
+            }
+            if ((valorBuscado == null)) {
                 this.Adapter.SelectCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[18].Value = ((string)(Estado));
+                this.Adapter.SelectCommand.Parameters[18].Value = ((string)(valorBuscado));
             }
-            if ((Observaciones == null)) {
+            if ((fechaInicio.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[19].Value = ((System.DateTime)(fechaInicio.Value));
+            }
+            else {
                 this.Adapter.SelectCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.SelectCommand.Parameters[19].Value = ((string)(Observaciones));
+            if ((fechaFinal.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[20].Value = ((System.DateTime)(fechaFinal.Value));
             }
-            if ((valorBuscado == null)) {
+            else {
                 this.Adapter.SelectCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[20].Value = ((string)(valorBuscado));
             }
             if ((accion == null)) {
                 this.Adapter.SelectCommand.Parameters[21].Value = global::System.DBNull.Value;
@@ -8718,10 +8643,8 @@ namespace WSA.AWS_DATA_SETTableAdapters {
                     global::System.Nullable<global::System.DateTime> Fecha_Entrada, 
                     global::System.Nullable<global::System.DateTime> Fecha_Salida, 
                     string Placa_Cabezal, 
-                    string Placa_Rastra, 
                     global::System.Nullable<int> Conductor_Id, 
                     global::System.Nullable<int> Cliente_Id, 
-                    global::System.Nullable<int> Proveedor_Id, 
                     global::System.Nullable<int> Producto_Id, 
                     global::System.Nullable<double> Peso_Ingreso, 
                     string Unidades_Peso_Ingreso, 
@@ -8734,6 +8657,8 @@ namespace WSA.AWS_DATA_SETTableAdapters {
                     string Estado, 
                     string Observaciones, 
                     string valorBuscado, 
+                    global::System.Nullable<global::System.DateTime> fechaInicio, 
+                    global::System.Nullable<global::System.DateTime> fechaFinal, 
                     string accion) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((Boleta_Id.HasValue == true)) {
@@ -8760,101 +8685,101 @@ namespace WSA.AWS_DATA_SETTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = ((string)(Placa_Cabezal));
             }
-            if ((Placa_Rastra == null)) {
-                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            if ((Conductor_Id.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(Conductor_Id.Value));
             }
             else {
-                this.Adapter.SelectCommand.Parameters[5].Value = ((string)(Placa_Rastra));
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Conductor_Id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(Conductor_Id.Value));
+            if ((Cliente_Id.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((int)(Cliente_Id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Cliente_Id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[7].Value = ((int)(Cliente_Id.Value));
+            if ((Producto_Id.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[7].Value = ((int)(Producto_Id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Proveedor_Id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[8].Value = ((int)(Proveedor_Id.Value));
+            if ((Peso_Ingreso.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[8].Value = ((double)(Peso_Ingreso.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Producto_Id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[9].Value = ((int)(Producto_Id.Value));
-            }
-            else {
+            if ((Unidades_Peso_Ingreso == null)) {
                 this.Adapter.SelectCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Peso_Ingreso.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[10].Value = ((double)(Peso_Ingreso.Value));
-            }
             else {
+                this.Adapter.SelectCommand.Parameters[9].Value = ((string)(Unidades_Peso_Ingreso));
+            }
+            if ((Cia_Transportista == null)) {
                 this.Adapter.SelectCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Unidades_Peso_Ingreso == null)) {
+            else {
+                this.Adapter.SelectCommand.Parameters[10].Value = ((string)(Cia_Transportista));
+            }
+            if ((Envio_N == null)) {
                 this.Adapter.SelectCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[11].Value = ((string)(Unidades_Peso_Ingreso));
+                this.Adapter.SelectCommand.Parameters[11].Value = ((string)(Envio_N));
             }
-            if ((Cia_Transportista == null)) {
-                this.Adapter.SelectCommand.Parameters[12].Value = global::System.DBNull.Value;
+            if ((Peso_Salida.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[12].Value = ((double)(Peso_Salida.Value));
             }
             else {
-                this.Adapter.SelectCommand.Parameters[12].Value = ((string)(Cia_Transportista));
+                this.Adapter.SelectCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Envio_N == null)) {
+            if ((Unidades_Peso_Salida == null)) {
                 this.Adapter.SelectCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[13].Value = ((string)(Envio_N));
+                this.Adapter.SelectCommand.Parameters[13].Value = ((string)(Unidades_Peso_Salida));
             }
-            if ((Peso_Salida.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[14].Value = ((double)(Peso_Salida.Value));
+            if ((Barco_Id.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[14].Value = ((int)(Barco_Id.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Unidades_Peso_Salida == null)) {
+            if ((Usuario_Id.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[15].Value = ((int)(Usuario_Id.Value));
+            }
+            else {
                 this.Adapter.SelectCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.SelectCommand.Parameters[15].Value = ((string)(Unidades_Peso_Salida));
-            }
-            if ((Barco_Id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[16].Value = ((int)(Barco_Id.Value));
-            }
-            else {
+            if ((Estado == null)) {
                 this.Adapter.SelectCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Usuario_Id.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[17].Value = ((int)(Usuario_Id.Value));
-            }
             else {
+                this.Adapter.SelectCommand.Parameters[16].Value = ((string)(Estado));
+            }
+            if ((Observaciones == null)) {
                 this.Adapter.SelectCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            if ((Estado == null)) {
+            else {
+                this.Adapter.SelectCommand.Parameters[17].Value = ((string)(Observaciones));
+            }
+            if ((valorBuscado == null)) {
                 this.Adapter.SelectCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[18].Value = ((string)(Estado));
+                this.Adapter.SelectCommand.Parameters[18].Value = ((string)(valorBuscado));
             }
-            if ((Observaciones == null)) {
+            if ((fechaInicio.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[19].Value = ((System.DateTime)(fechaInicio.Value));
+            }
+            else {
                 this.Adapter.SelectCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.SelectCommand.Parameters[19].Value = ((string)(Observaciones));
+            if ((fechaFinal.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[20].Value = ((System.DateTime)(fechaFinal.Value));
             }
-            if ((valorBuscado == null)) {
+            else {
                 this.Adapter.SelectCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[20].Value = ((string)(valorBuscado));
             }
             if ((accion == null)) {
                 this.Adapter.SelectCommand.Parameters[21].Value = global::System.DBNull.Value;
@@ -10970,11 +10895,11 @@ namespace WSA.AWS_DATA_SETTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "sp_Reporte_Mostrar_Boletas";
+            tableMapping.ColumnMappings.Add("Placa_Rastra", "Placa_Rastra");
             tableMapping.ColumnMappings.Add("Boleta_Id", "Boleta_Id");
             tableMapping.ColumnMappings.Add("Fecha_Entrada", "Fecha_Entrada");
             tableMapping.ColumnMappings.Add("Fecha_Salida", "Fecha_Salida");
             tableMapping.ColumnMappings.Add("Placa_Cabezal", "Placa_Cabezal");
-            tableMapping.ColumnMappings.Add("Placa_Rastra", "Placa_Rastra");
             tableMapping.ColumnMappings.Add("Conductor", "Conductor");
             tableMapping.ColumnMappings.Add("Cliente", "Cliente");
             tableMapping.ColumnMappings.Add("Producto", "Producto");
@@ -11009,7 +10934,7 @@ namespace WSA.AWS_DATA_SETTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@buscado", global::System.Data.SqlDbType.VarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaInicio", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaFinal", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado", global::System.Data.SqlDbType.Char, 1, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
