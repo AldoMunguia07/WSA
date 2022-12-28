@@ -125,7 +125,7 @@ namespace WSA
             boleta.ProductoId = int.Parse(txtCodigoProducto.Text);
             boleta.CiaTransportista = txtCia.Text;
             boleta.EnvioN = txtEnvioN.Text;
-            boleta.BarcoId = int.Parse(txtCodigoBarco.Text);
+            boleta.BarcoId = txtCodigoBarco.Text != "" ? int.Parse(txtCodigoBarco.Text) : 0;
             boleta.PesoSalida = float.Parse(txtPesoSalida.Text);
             boleta.UnidadesPesoSalida = Regex.Match(txtPesoBascula.Text, "([A-Za-z]+)").Value;
             boleta.UsuarioId = VariablesGlobales.Usuario.UsuarioId;

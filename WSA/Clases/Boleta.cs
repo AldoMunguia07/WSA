@@ -56,7 +56,7 @@ namespace WSA.Clases
                 sqlCommand.Parameters.AddWithValue("@Cia_Transportista", boleta.CiaTransportista.ToUpper());
                 sqlCommand.Parameters.AddWithValue("@Envio_N", boleta.EnvioN.ToUpper());
                 sqlCommand.Parameters.AddWithValue("@Tipo_Pesaje_Id", boleta.TipoPesajeId);
-                sqlCommand.Parameters.AddWithValue("@Barco_Id", boleta.BarcoId);
+                if(boleta.BarcoId != 0) { sqlCommand.Parameters.AddWithValue("@Barco_Id", boleta.BarcoId); }                
                 sqlCommand.Parameters.AddWithValue("@Usuario_Id", boleta.UsuarioId);
                 sqlCommand.Parameters.AddWithValue("@Estado", boleta.Estado);
                 sqlCommand.Parameters.AddWithValue("@Observaciones", boleta.Observaciones.ToUpper());
@@ -238,7 +238,7 @@ namespace WSA.Clases
                 sqlCommand.Parameters.AddWithValue("@Producto_Id", boleta.ProductoId);
                 sqlCommand.Parameters.AddWithValue("@Cia_Transportista", boleta.CiaTransportista.ToUpper());
                 sqlCommand.Parameters.AddWithValue("@Envio_N", boleta.EnvioN.ToUpper());
-                sqlCommand.Parameters.AddWithValue("@Barco_Id", boleta.BarcoId);
+                if (boleta.BarcoId != 0) { sqlCommand.Parameters.AddWithValue("@Barco_Id", boleta.BarcoId); }
                 sqlCommand.Parameters.AddWithValue("@Peso_Salida", boleta.PesoSalida);
                 sqlCommand.Parameters.AddWithValue("@Unidades_Peso_Salida", boleta.UnidadesPesoSalida.ToUpper());
                 sqlCommand.Parameters.AddWithValue("@Estado", boleta.Estado);

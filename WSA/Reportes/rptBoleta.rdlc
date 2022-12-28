@@ -1182,10 +1182,6 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Placa_Rastra">
-          <DataField>Placa_Rastra</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="Boleta_Id">
           <DataField>Boleta_Id</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
@@ -1230,9 +1226,9 @@
           <DataField>Peso_Neto</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Barco_Id">
-          <DataField>Barco_Id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="Tipo_Pesaje">
+          <DataField>Tipo_Pesaje</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Barco">
           <DataField>Barco</DataField>

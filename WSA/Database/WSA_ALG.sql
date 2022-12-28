@@ -609,7 +609,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE sp_Boleta
+ALTER PROCEDURE sp_Boleta
 	@Boleta_Id INT = NULL,
 	@Fecha_Entrada DATETIME = NULL,
 	@Fecha_Salida DATETIME = NULL,
@@ -651,7 +651,7 @@ BEGIN
 			ON b.Conductor_Id = c.Conductor_Id
 			JOIN Producto p ON b.Producto_Id = p.Producto_Id
 			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
-			JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
+			LEFT JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
 			JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
 			JOIN Tipo_Pesaje tp ON b.Tipo_Pesaje_Id = tp.Tipo_Pesaje_Id
 			WHERE Estado = 'P'
@@ -666,7 +666,7 @@ BEGIN
 			ON b.Conductor_Id = c.Conductor_Id
 			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
 			JOIN Producto p ON b.Producto_Id = p.Producto_Id
-			JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
+			LEFT JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
 			WHERE Boleta_Id = @Boleta_Id
 			
 		END
@@ -686,7 +686,7 @@ BEGIN
 			ON b.Conductor_Id = c.Conductor_Id
 			JOIN Producto p ON b.Producto_Id = p.Producto_Id
 			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
-			JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
+			LEFT JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
 			JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
 			WHERE b.Estado = 'C'
 			ORDER BY Boleta_Id DESC
@@ -701,7 +701,7 @@ BEGIN
 			ON b.Conductor_Id = c.Conductor_Id
 			JOIN Producto p ON b.Producto_Id = p.Producto_Id
 			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
-			JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
+			LEFT JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
 			JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
 			WHERE b.Estado = 'C' AND CONVERT(DATE, B.Fecha_Salida) BETWEEN @fechaInicio and @fechaFinal AND 
 			CONCAT(b.Boleta_Id, ' ', b.Conductor_Id, ' ' ,b.Placa_Cabezal,' ' ,c.Conductor_Id,' ' ,c.Conductor,' ' ,Cliente,' ',p.Descripcion, ' ',bc.Barco_Id ,' ',bc.Descripcion, ' ', u.Nombre_Usuario, ' ', u.Usuario, ' ', b.Observaciones) LIKE CONCAT('%',@valorBuscado,'%')
@@ -720,7 +720,7 @@ BEGIN
 			ON b.Conductor_Id = c.Conductor_Id
 			JOIN Producto p ON b.Producto_Id = p.Producto_Id
 			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
-			JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
+			LEFT JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
 			JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
 			WHERE Estado = 'A'
 			ORDER BY Boleta_Id DESC
@@ -734,7 +734,7 @@ BEGIN
 			ON b.Conductor_Id = c.Conductor_Id
 			JOIN Producto p ON b.Producto_Id = p.Producto_Id
 			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
-			JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
+			LEFT JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
 			JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
 			WHERE Estado = 'A'AND CONVERT(DATE, B.Fecha_Entrada) BETWEEN @fechaInicio and @fechaFinal AND 
 			CONCAT(b.Boleta_Id, ' ', b.Conductor_Id, ' ' ,b.Placa_Cabezal,' ' ,c.Conductor_Id,' ' ,c.Conductor,' ' ,Cliente,' ',p.Descripcion, ' ',bc.Barco_Id ,' ',bc.Descripcion, ' ', u.Nombre_Usuario, ' ', u.Usuario, ' ', b.Observaciones) LIKE CONCAT('%',@valorBuscado,'%')
@@ -789,38 +789,38 @@ END
 GO
 
 --PROCEDMIENTOS ALMACENADOS REPORTES
-CREATE PROCEDURE sp_Datos_Boleta
+ALTER PROCEDURE sp_Datos_Boleta
 	@Boleta_Id INT = NULL
 AS
 BEGIN
 	
 	SELECT b.Boleta_Id, b.Fecha_Entrada, b.Fecha_Salida, b.Placa_Cabezal, c.Conductor_Id, c.Conductor, cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) Peso_Ingreso, 
-	CONCAT(b.Peso_Salida,' ',b.Unidades_Peso_Salida) Peso_Salida, CONCAT(ABS(b.Peso_Ingreso - b.Peso_Salida), ' ',b.Unidades_Peso_Salida) Peso_Neto, tp.Descripcion Tipo_Pesaje, b.Barco_Id, bc.Descripcion Barco , b.Estado, u.Nombre_Usuario Usuario, 
+	CONCAT(b.Peso_Salida,' ',b.Unidades_Peso_Salida) Peso_Salida, CONCAT(ABS(b.Peso_Ingreso - b.Peso_Salida), ' ',b.Unidades_Peso_Salida) Peso_Neto, tp.Descripcion Tipo_Pesaje, ISNULL(bc.Descripcion, 'N/A') Barco , b.Estado, u.Nombre_Usuario Usuario, 
 	b.Observaciones
 	FROM Boleta b JOIN Conductor c
 	ON b.Conductor_Id = c.Conductor_Id
 	JOIN Producto p ON b.Producto_Id = p.Producto_Id
 	JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
-	JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
+	LEFT JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
 	JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
 	JOIN Tipo_Pesaje tp ON b.Tipo_Pesaje_Id = tp.Tipo_Pesaje_Id
 	WHERE b.Boleta_Id = @Boleta_Id
 END
 GO
 
-CREATE PROCEDURE sp_Datos_Boleta_Entrada
+ALTER PROCEDURE sp_Datos_Boleta_Entrada
 	@Boleta_Id INT = NULL
 AS
 BEGIN
 	
 	SELECT b.Boleta_Id, b.Fecha_Entrada, b.Placa_Cabezal, c.Conductor_Id, c.Conductor, cl.Cliente, p.Descripcion Producto, 
-	CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) Peso_Ingreso,  tp.Descripcion Tipo_Pesaje, b.Barco_Id, bc.Descripcion Barco , b.Estado, u.Nombre_Usuario Usuario, 
+	CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) Peso_Ingreso,  tp.Descripcion Tipo_Pesaje, ISNULL(bc.Descripcion, 'N/A') Barco, b.Estado, u.Nombre_Usuario Usuario, 
 	b.Observaciones
 	FROM Boleta b JOIN Conductor c
 	ON b.Conductor_Id = c.Conductor_Id
 	JOIN Producto p ON b.Producto_Id = p.Producto_Id
 	JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
-	JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
+	LEFT JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
 	JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
 	JOIN Tipo_Pesaje tp ON b.Tipo_Pesaje_Id = tp.Tipo_Pesaje_Id
 	WHERE b.Boleta_Id = @Boleta_Id
@@ -849,7 +849,7 @@ BEGIN
 			ON b.Conductor_Id = c.Conductor_Id
 			JOIN Producto p ON b.Producto_Id = p.Producto_Id
 			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
-			JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
+			LEFT JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
 			JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
 			WHERE b.Estado LIKE CONCAT('%',@estado,'%')  AND CONVERT(DATE, B.Fecha_Entrada) BETWEEN @fechaInicio and @fechaFinal AND 
 			CONCAT(b.Boleta_Id, ' ', b.Conductor_Id,' ' ,b.Placa_Cabezal,' ' ,c.Conductor_Id,' ' ,c.Conductor,' ' ,Cliente,' ',p.Descripcion, ' ',bc.Barco_Id ,' ',bc.Descripcion, ' ', u.Nombre_Usuario, ' ', u.Usuario) LIKE CONCAT('%',@buscado,'%')
