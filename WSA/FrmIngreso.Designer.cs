@@ -306,7 +306,7 @@ namespace WSA
             this.txtPesoEntrada.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPesoEntrada.BackColor = System.Drawing.Color.White;
             this.txtPesoEntrada.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesoEntrada.Location = new System.Drawing.Point(835, 305);
+            this.txtPesoEntrada.Location = new System.Drawing.Point(815, 305);
             this.txtPesoEntrada.Name = "txtPesoEntrada";
             this.txtPesoEntrada.ReadOnly = true;
             this.txtPesoEntrada.Size = new System.Drawing.Size(179, 27);
@@ -319,7 +319,7 @@ namespace WSA
             this.btnObtenerPeso.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnObtenerPeso.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnObtenerPeso.ForeColor = System.Drawing.Color.White;
-            this.btnObtenerPeso.Location = new System.Drawing.Point(1034, 304);
+            this.btnObtenerPeso.Location = new System.Drawing.Point(1014, 304);
             this.btnObtenerPeso.Name = "btnObtenerPeso";
             this.btnObtenerPeso.Size = new System.Drawing.Size(136, 28);
             this.btnObtenerPeso.TabIndex = 19;

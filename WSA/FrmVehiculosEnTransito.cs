@@ -27,18 +27,22 @@ namespace WSA
         {
             FrmIngreso frmIngreso = new FrmIngreso();
             frmIngreso.ShowDialog();
-            boleta.MostrarEntradas(dgvEntradas);
-            seleccionado = false;
+            refresh();
         }
 
+        private void refresh()
+        {
+            boleta.MostrarEntradas(dgvEntradas);
+            seleccionado = false;
+            txtBuscar.Clear();
+        }
         private void btnSalida_Click(object sender, EventArgs e)
         {
             if(seleccionado)
             {
                 FrmSalida frmSalida = new FrmSalida(idBoleta);
                 frmSalida.ShowDialog();
-                boleta.MostrarEntradas(dgvEntradas);
-                seleccionado = false;
+                refresh();
             }
             else
             {
@@ -75,8 +79,7 @@ namespace WSA
                     
                 }
                 VariablesGlobales.Boleta = null;
-                boleta.MostrarEntradas(dgvEntradas);
-                seleccionado = false;
+                refresh();
 
 
             }
@@ -92,13 +95,17 @@ namespace WSA
             {
                 FrmTicketEntrada frmTicketEntrada = new FrmTicketEntrada(idBoleta);
                 frmTicketEntrada.ShowDialog();
-                boleta.MostrarEntradas(dgvEntradas);
-                seleccionado = false;
+                refresh();
             }
             else
             {
                 MessageBox.Show("Seleccione una entrada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            boleta.BuscarEntradaPorCodigo(txtBuscar.Text, dgvEntradas);
         }
     }
 }

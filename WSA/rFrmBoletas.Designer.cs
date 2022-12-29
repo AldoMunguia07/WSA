@@ -67,9 +67,9 @@ namespace WSA
             this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(174, 175);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 18);
+            this.label4.Size = new System.Drawing.Size(69, 18);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Buscar";
+            this.label4.Text = "Buscar:";
             // 
             // txtBuscar
             // 

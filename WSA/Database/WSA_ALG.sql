@@ -658,6 +658,21 @@ BEGIN
 			ORDER BY Boleta_Id DESC
 			
 		END
+	ELSE IF @accion = 'buscarEntradaPorCodigo'
+		BEGIN
+			SELECT b.Boleta_Id 'Código de boleta', b.Fecha_Entrada 'Fecha de entrada', b.Placa_Cabezal 'Placa del cabezal', c.Conductor_Id 'Código del conductor', c.Conductor,
+			cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) 'Peso de ingreso', tp.Descripcion 'Ingreso',  b.Barco_Id 'Código del barco', ISNULL(bc.Descripcion, 'N/A') Barco, b.Estado, u.Nombre_Usuario Usuario, b.Observaciones
+			FROM Boleta b JOIN Conductor c
+			ON b.Conductor_Id = c.Conductor_Id
+			JOIN Producto p ON b.Producto_Id = p.Producto_Id
+			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
+			LEFT JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
+			JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
+			JOIN Tipo_Pesaje tp ON b.Tipo_Pesaje_Id = tp.Tipo_Pesaje_Id
+			WHERE Estado = 'P' AND b.Boleta_Id LIKE CONCAT('%',@valorBuscado,'%')
+			ORDER BY Boleta_Id DESC
+			
+		END
 	ELSE IF @accion = 'cagarFormSalida'
 		BEGIN
 			SELECT b.Fecha_Entrada, b.Fecha_Salida, b.Conductor_Id, c.Conductor, b.Placa_Cabezal, b.Cia_Transportista, b.Envio_N, b.Cliente_Id, cl.Cliente, b.Producto_Id,

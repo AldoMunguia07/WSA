@@ -40,6 +40,8 @@ namespace WSA
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnImprimir = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +50,7 @@ namespace WSA
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(593, 114);
+            this.label1.Location = new System.Drawing.Point(585, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(307, 29);
             this.label1.TabIndex = 1;
@@ -80,11 +82,11 @@ namespace WSA
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEntradas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEntradas.GridColor = System.Drawing.Color.DimGray;
-            this.dgvEntradas.Location = new System.Drawing.Point(26, 197);
+            this.dgvEntradas.Location = new System.Drawing.Point(26, 210);
             this.dgvEntradas.Name = "dgvEntradas";
             this.dgvEntradas.ReadOnly = true;
             this.dgvEntradas.Size = new System.Drawing.Size(1423, 189);
-            this.dgvEntradas.TabIndex = 11;
+            this.dgvEntradas.TabIndex = 5;
             this.dgvEntradas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvEntradas_CellMouseClick);
             // 
             // btnEntrada
@@ -94,7 +96,7 @@ namespace WSA
             this.btnEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEntrada.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrada.ForeColor = System.Drawing.Color.White;
-            this.btnEntrada.Location = new System.Drawing.Point(807, 410);
+            this.btnEntrada.Location = new System.Drawing.Point(807, 424);
             this.btnEntrada.Name = "btnEntrada";
             this.btnEntrada.Size = new System.Drawing.Size(183, 31);
             this.btnEntrada.TabIndex = 1;
@@ -109,10 +111,10 @@ namespace WSA
             this.btnSalida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalida.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalida.ForeColor = System.Drawing.Color.White;
-            this.btnSalida.Location = new System.Drawing.Point(1125, 410);
+            this.btnSalida.Location = new System.Drawing.Point(1125, 424);
             this.btnSalida.Name = "btnSalida";
             this.btnSalida.Size = new System.Drawing.Size(170, 31);
-            this.btnSalida.TabIndex = 2;
+            this.btnSalida.TabIndex = 3;
             this.btnSalida.Text = "Registrar salida";
             this.btnSalida.UseVisualStyleBackColor = false;
             this.btnSalida.Click += new System.EventHandler(this.btnSalida_Click);
@@ -124,10 +126,10 @@ namespace WSA
             this.btnAnular.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAnular.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnular.ForeColor = System.Drawing.Color.White;
-            this.btnAnular.Location = new System.Drawing.Point(1301, 410);
+            this.btnAnular.Location = new System.Drawing.Point(1301, 424);
             this.btnAnular.Name = "btnAnular";
             this.btnAnular.Size = new System.Drawing.Size(148, 31);
-            this.btnAnular.TabIndex = 3;
+            this.btnAnular.TabIndex = 4;
             this.btnAnular.Text = "Anular entrada";
             this.btnAnular.UseVisualStyleBackColor = false;
             this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
@@ -159,13 +161,34 @@ namespace WSA
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImprimir.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
-            this.btnImprimir.Location = new System.Drawing.Point(996, 410);
+            this.btnImprimir.Location = new System.Drawing.Point(996, 424);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(123, 31);
-            this.btnImprimir.TabIndex = 17;
+            this.btnImprimir.TabIndex = 2;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = false;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(28, 168);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(313, 18);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Buscar entrada por código de boleta:";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(347, 164);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(258, 27);
+            this.txtBuscar.TabIndex = 0;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // FrmVehiculosEnTransito
             // 
@@ -173,6 +196,8 @@ namespace WSA
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1491, 643);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -201,5 +226,7 @@ namespace WSA
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtBuscar;
     }
 }

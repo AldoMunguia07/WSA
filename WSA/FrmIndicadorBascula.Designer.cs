@@ -264,7 +264,7 @@ namespace WSA
             // 
             this.numMaximo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numMaximo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numMaximo.Location = new System.Drawing.Point(552, 124);
+            this.numMaximo.Location = new System.Drawing.Point(544, 123);
             this.numMaximo.Maximum = new decimal(new int[] {
             999999,
             0,
@@ -278,7 +278,7 @@ namespace WSA
             // 
             this.numMinimo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numMinimo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numMinimo.Location = new System.Drawing.Point(552, 169);
+            this.numMinimo.Location = new System.Drawing.Point(544, 168);
             this.numMinimo.Maximum = new decimal(new int[] {
             999999,
             0,
@@ -292,7 +292,7 @@ namespace WSA
             // 
             this.numPosicion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numPosicion.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numPosicion.Location = new System.Drawing.Point(552, 212);
+            this.numPosicion.Location = new System.Drawing.Point(544, 211);
             this.numPosicion.Maximum = new decimal(new int[] {
             999999,
             0,
