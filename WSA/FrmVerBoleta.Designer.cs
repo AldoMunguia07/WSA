@@ -68,6 +68,9 @@ namespace WSA
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTipoPesoEntrada = new System.Windows.Forms.Label();
+            this.lblTipoPesoSalida = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dtpHoraEntrada
@@ -98,7 +101,7 @@ namespace WSA
             this.txtPesoEntrada.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPesoEntrada.BackColor = System.Drawing.Color.White;
             this.txtPesoEntrada.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesoEntrada.Location = new System.Drawing.Point(850, 207);
+            this.txtPesoEntrada.Location = new System.Drawing.Point(850, 206);
             this.txtPesoEntrada.Name = "txtPesoEntrada";
             this.txtPesoEntrada.ReadOnly = true;
             this.txtPesoEntrada.Size = new System.Drawing.Size(179, 27);
@@ -109,7 +112,7 @@ namespace WSA
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(721, 211);
+            this.label15.Location = new System.Drawing.Point(721, 210);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(123, 18);
             this.label15.TabIndex = 106;
@@ -495,12 +498,48 @@ namespace WSA
             this.panel1.Size = new System.Drawing.Size(1252, 30);
             this.panel1.TabIndex = 116;
             // 
+            // lblTipoPesoEntrada
+            // 
+            this.lblTipoPesoEntrada.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTipoPesoEntrada.AutoSize = true;
+            this.lblTipoPesoEntrada.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoPesoEntrada.Location = new System.Drawing.Point(1035, 210);
+            this.lblTipoPesoEntrada.Name = "lblTipoPesoEntrada";
+            this.lblTipoPesoEntrada.Size = new System.Drawing.Size(155, 18);
+            this.lblTipoPesoEntrada.TabIndex = 118;
+            this.lblTipoPesoEntrada.Text = "Tipo peso entrada";
+            // 
+            // lblTipoPesoSalida
+            // 
+            this.lblTipoPesoSalida.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTipoPesoSalida.AutoSize = true;
+            this.lblTipoPesoSalida.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoPesoSalida.Location = new System.Drawing.Point(1035, 265);
+            this.lblTipoPesoSalida.Name = "lblTipoPesoSalida";
+            this.lblTipoPesoSalida.Size = new System.Drawing.Size(138, 18);
+            this.lblTipoPesoSalida.TabIndex = 119;
+            this.lblTipoPesoSalida.Text = "Tipo peso salida";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(1035, 312);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 18);
+            this.label4.TabIndex = 120;
+            this.label4.Text = "NETO";
+            // 
             // FrmVerBoleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1244, 666);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblTipoPesoSalida);
+            this.Controls.Add(this.lblTipoPesoEntrada);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtPesoNeto);
@@ -588,5 +627,8 @@ namespace WSA
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTipoPesoEntrada;
+        private System.Windows.Forms.Label lblTipoPesoSalida;
+        private System.Windows.Forms.Label label4;
     }
 }

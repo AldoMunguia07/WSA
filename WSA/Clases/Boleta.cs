@@ -686,9 +686,10 @@ namespace WSA.Clases
                     return 0;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
             }
             finally
             {
@@ -696,6 +697,77 @@ namespace WSA.Clases
             }
 
 
+        }
+
+        public DataTable ObtenerTipoPesaje(Boleta boleta)
+        {
+            DataTable data = new DataTable();
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Boleta", conexion.sqlConnection);
+
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                // Establecer los valores de los parámetros
+                sqlCommand.Parameters.AddWithValue("@Boleta_Id", boleta.BoletaId);
+                sqlCommand.Parameters.AddWithValue("@accion", "obtenerTipoPesaje");
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                
+
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+
+                if (dataTable.Rows.Count != 0)
+                {
+                    return dataTable;
+                   
+                }
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return data;
+            }
+            finally
+            {
+                // Cerrar la conexión
+                conexion.sqlConnection.Close();
+            }
+        }
+
+        public bool CambiarTipoPesaje(Boleta boleta)
+        {
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Boleta", conexion.sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                // Establecer los valores de los parámetros
+                sqlCommand.Parameters.AddWithValue("@Boleta_Id", boleta.BoletaId);
+                sqlCommand.Parameters.AddWithValue("@Tipo_Pesaje_Id", boleta.TipoPesajeId);
+
+                sqlCommand.Parameters.AddWithValue("@accion", "cambiarTipoPesaje");
+                bitacora.DefinirUsuarioId(VariablesGlobales.Usuario.UsuarioId, conexion.sqlConnection);
+                sqlCommand.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            finally
+            {
+                // Cerrar la conexión
+                conexion.sqlConnection.Close();
+            }
         }
 
 

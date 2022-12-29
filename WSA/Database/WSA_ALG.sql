@@ -199,8 +199,8 @@ GO
 INSERT INTO Tipo_Usuario VALUES(1, 'ADMINISTRADOR');
 INSERT INTO Tipo_Usuario VALUES(2, 'OPERADOR');
 
-INSERT INTO Tipo_Pesaje VALUES(1, 'PESO TARA');
-INSERT INTO Tipo_Pesaje VALUES(2, 'PESO BRUTO');
+INSERT INTO Tipo_Pesaje VALUES(1, 'TARA');
+INSERT INTO Tipo_Pesaje VALUES(2, 'BRUTO');
 
 INSERT INTO Usuario VALUES('ADMIN', 'ADMIN', ENCRYPTBYPASSPHRASE('WAS_ALG_ENCRYPT','ADMIN1234'), 1, 1);
 GO
@@ -609,7 +609,7 @@ BEGIN
 END
 GO
 
-ALTER PROCEDURE sp_Boleta
+CREATE PROCEDURE sp_Boleta
 	@Boleta_Id INT = NULL,
 	@Fecha_Entrada DATETIME = NULL,
 	@Fecha_Salida DATETIME = NULL,
@@ -646,7 +646,7 @@ BEGIN
 	ELSE IF @accion = 'mostrarEntradas'
 		BEGIN
 			SELECT b.Boleta_Id 'Código de boleta', b.Fecha_Entrada 'Fecha de entrada', b.Placa_Cabezal 'Placa del cabezal', c.Conductor_Id 'Código del conductor', c.Conductor,
-			cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) 'Peso de ingreso', tp.Descripcion 'Pesaje en entrada',  b.Barco_Id 'Código del barco', ISNULL(bc.Descripcion, 'N/A') Barco, b.Estado, u.Nombre_Usuario Usuario, b.Observaciones
+			cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) 'Peso de ingreso', tp.Descripcion 'Ingreso',  b.Barco_Id 'Código del barco', ISNULL(bc.Descripcion, 'N/A') Barco, b.Estado, u.Nombre_Usuario Usuario, b.Observaciones
 			FROM Boleta b JOIN Conductor c
 			ON b.Conductor_Id = c.Conductor_Id
 			JOIN Producto p ON b.Producto_Id = p.Producto_Id
@@ -667,6 +667,7 @@ BEGIN
 			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
 			JOIN Producto p ON b.Producto_Id = p.Producto_Id
 			LEFT JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
+			JOIN Tipo_Pesaje tp ON b.Tipo_Pesaje_Id = tp.Tipo_Pesaje_Id
 			WHERE Boleta_Id = @Boleta_Id
 			
 		END
@@ -680,7 +681,8 @@ BEGIN
 	ELSE IF @accion = 'mostrarSalidas'
 		BEGIN
 			SELECT b.Boleta_Id 'Código de boleta', b.Fecha_Entrada 'Fecha de entrada', b.Fecha_Salida 'Fecha de salida', b.Placa_Cabezal 'Placa del cabezal', c.Conductor_Id 'Código del conductor', c.Conductor,
-			cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) 'Peso de ingreso', CONCAT(b.Peso_Salida,' ',b.Unidades_Peso_Salida) 'Peso de salida', CONCAT(ABS(b.Peso_Ingreso - b.Peso_Salida), ' ',b.Unidades_Peso_Salida) 'Peso neto', 
+			cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) 'Peso de ingreso', tp.Descripcion 'Ingreso', CONCAT(b.Peso_Salida,' ',b.Unidades_Peso_Salida) 'Peso de salida',
+			CASE  WHEN tp.Tipo_Pesaje_Id = 1 THEN 'BRUTO' WHEN tp.Tipo_Pesaje_Id = 2 THEN 'TARA' END 'Salida', CONCAT(ABS(b.Peso_Ingreso - b.Peso_Salida), ' ',b.Unidades_Peso_Salida) 'Peso neto', 
 			b.Barco_Id 'Código del barco', ISNULL(bc.Descripcion, 'N/A') Barco, b.Estado, u.Nombre_Usuario Usuario, b.Observaciones
 			FROM Boleta b JOIN Conductor c
 			ON b.Conductor_Id = c.Conductor_Id
@@ -688,6 +690,7 @@ BEGIN
 			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
 			LEFT JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
 			JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
+			JOIN Tipo_Pesaje tp ON b.Tipo_Pesaje_Id = tp.Tipo_Pesaje_Id
 			WHERE b.Estado = 'C'
 			ORDER BY Boleta_Id DESC
 			
@@ -695,7 +698,8 @@ BEGIN
 	ELSE IF @accion = 'buscarSalidas'
 		BEGIN
 			SELECT b.Boleta_Id 'Código de boleta', b.Fecha_Entrada 'Fecha de entrada', b.Fecha_Salida 'Fecha de salida', b.Placa_Cabezal 'Placa del cabezal', c.Conductor_Id 'Código del conductor', c.Conductor,
-			cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) 'Peso de ingreso', CONCAT(b.Peso_Salida,' ',b.Unidades_Peso_Salida) 'Peso de salida', CONCAT(ABS(b.Peso_Ingreso - b.Peso_Salida), ' ',b.Unidades_Peso_Salida) 'Peso neto', 
+			cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) 'Peso de ingreso', tp.Descripcion 'Ingreso',
+			 CONCAT(b.Peso_Salida,' ',b.Unidades_Peso_Salida) 'Peso de salida', CASE  WHEN tp.Tipo_Pesaje_Id = 1 THEN 'BRUTO' WHEN tp.Tipo_Pesaje_Id = 2 THEN 'TARA' END 'Salida', CONCAT(ABS(b.Peso_Ingreso - b.Peso_Salida), ' ',b.Unidades_Peso_Salida) 'Peso neto', 
 			b.Barco_Id 'Código del barco', ISNULL(bc.Descripcion, 'N/A') Barco, b.Estado, u.Nombre_Usuario Usuario, b.Observaciones
 			FROM Boleta b JOIN Conductor c
 			ON b.Conductor_Id = c.Conductor_Id
@@ -703,6 +707,7 @@ BEGIN
 			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
 			LEFT JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
 			JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
+			JOIN Tipo_Pesaje tp ON b.Tipo_Pesaje_Id = tp.Tipo_Pesaje_Id
 			WHERE b.Estado = 'C' AND CONVERT(DATE, B.Fecha_Salida) BETWEEN @fechaInicio and @fechaFinal AND 
 			CONCAT(b.Boleta_Id, ' ', b.Conductor_Id, ' ' ,b.Placa_Cabezal,' ' ,c.Conductor_Id,' ' ,c.Conductor,' ' ,Cliente,' ',p.Descripcion, ' ',bc.Barco_Id ,' ',bc.Descripcion, ' ', u.Nombre_Usuario, ' ', u.Usuario, ' ', b.Observaciones) LIKE CONCAT('%',@valorBuscado,'%')
 			ORDER BY Boleta_Id DESC
@@ -715,13 +720,14 @@ BEGIN
 	ELSE IF @accion = 'mostrarAnuladas'
 		BEGIN
 			SELECT b.Boleta_Id 'Código de boleta', b.Fecha_Entrada 'Fecha de entrada', b.Placa_Cabezal 'Placa del cabezal', c.Conductor_Id 'Código del conductor', c.Conductor,
-			cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) 'Peso de ingreso', b.Barco_Id 'Código del barco', ISNULL(bc.Descripcion, 'N/A') Barco, b.Estado, u.Nombre_Usuario Usuario, b.Observaciones
+			cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) 'Peso de ingreso',  tp.Descripcion 'Ingreso', b.Barco_Id 'Código del barco', ISNULL(bc.Descripcion, 'N/A') Barco, b.Estado, u.Nombre_Usuario Usuario, b.Observaciones
 			FROM Boleta b JOIN Conductor c
 			ON b.Conductor_Id = c.Conductor_Id
 			JOIN Producto p ON b.Producto_Id = p.Producto_Id
 			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
 			LEFT JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
 			JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
+			JOIN Tipo_Pesaje tp ON b.Tipo_Pesaje_Id = tp.Tipo_Pesaje_Id
 			WHERE Estado = 'A'
 			ORDER BY Boleta_Id DESC
 
@@ -729,13 +735,14 @@ BEGIN
 	ELSE IF @accion = 'buscarAnuladas'
 		BEGIN
 			SELECT b.Boleta_Id 'Código de boleta', b.Fecha_Entrada 'Fecha de entrada', b.Placa_Cabezal 'Placa del cabezal', c.Conductor_Id 'Código del conductor', c.Conductor,
-			cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) 'Peso de ingreso', b.Barco_Id'Código del barco', ISNULL(bc.Descripcion, 'N/A') Barco, b.Estado, u.Nombre_Usuario Usuario, b.Observaciones
+			cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) 'Peso de ingreso', tp.Descripcion 'Ingreso', b.Barco_Id'Código del barco', ISNULL(bc.Descripcion, 'N/A') Barco, b.Estado, u.Nombre_Usuario Usuario, b.Observaciones
 			FROM Boleta b JOIN Conductor c
 			ON b.Conductor_Id = c.Conductor_Id
 			JOIN Producto p ON b.Producto_Id = p.Producto_Id
 			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
 			LEFT JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
 			JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
+			JOIN Tipo_Pesaje tp ON b.Tipo_Pesaje_Id = tp.Tipo_Pesaje_Id
 			WHERE Estado = 'A'AND CONVERT(DATE, B.Fecha_Entrada) BETWEEN @fechaInicio and @fechaFinal AND 
 			CONCAT(b.Boleta_Id, ' ', b.Conductor_Id, ' ' ,b.Placa_Cabezal,' ' ,c.Conductor_Id,' ' ,c.Conductor,' ' ,Cliente,' ',p.Descripcion, ' ',bc.Barco_Id ,' ',bc.Descripcion, ' ', u.Nombre_Usuario, ' ', u.Usuario, ' ', b.Observaciones) LIKE CONCAT('%',@valorBuscado,'%')
 			ORDER BY Boleta_Id DESC
@@ -763,6 +770,18 @@ BEGIN
 	ELSE IF @accion = 'ultimaBoleta'
 		BEGIN
 			SELECT MAX(Boleta_Id) Boleta_Id FROM Boleta
+			
+		END
+	ELSE IF @accion = 'obtenerTipoPesaje'
+		BEGIN
+			SELECT tp.Tipo_Pesaje_Id, tp.Descripcion Entrada, CASE  WHEN tp.Tipo_Pesaje_Id = 1 THEN 'BRUTO' WHEN tp.Tipo_Pesaje_Id = 2 THEN 'TARA' END Salida FROM 
+			Boleta b JOIN Tipo_Pesaje tp ON b.Tipo_Pesaje_Id = tp.Tipo_Pesaje_Id
+			WHERE Boleta_Id = @Boleta_Id
+			
+		END
+	ELSE IF @accion = 'cambiarTipoPesaje'
+		BEGIN
+			UPDATE Boleta SET  Tipo_Pesaje_Id = @Tipo_Pesaje_Id  WHERE Boleta_Id = @Boleta_Id
 			
 		END
 
@@ -795,7 +814,8 @@ AS
 BEGIN
 	
 	SELECT b.Boleta_Id, b.Fecha_Entrada, b.Fecha_Salida, b.Placa_Cabezal, c.Conductor_Id, c.Conductor, cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) Peso_Ingreso, 
-	CONCAT(b.Peso_Salida,' ',b.Unidades_Peso_Salida) Peso_Salida, CONCAT(ABS(b.Peso_Ingreso - b.Peso_Salida), ' ',b.Unidades_Peso_Salida) Peso_Neto, tp.Descripcion Tipo_Pesaje, ISNULL(bc.Descripcion, 'N/A') Barco , b.Estado, u.Nombre_Usuario Usuario, 
+	CONCAT(b.Peso_Salida,' ',b.Unidades_Peso_Salida) Peso_Salida, CONCAT(ABS(b.Peso_Ingreso - b.Peso_Salida), ' ',b.Unidades_Peso_Salida) Peso_Neto, tp.Descripcion Entrada, 
+	CASE  WHEN tp.Tipo_Pesaje_Id = 1 THEN 'BRUTO' WHEN tp.Tipo_Pesaje_Id = 2 THEN 'TARA' END Salida, ISNULL(bc.Descripcion, 'N/A') Barco , b.Estado, u.Nombre_Usuario Usuario, 
 	b.Observaciones
 	FROM Boleta b JOIN Conductor c
 	ON b.Conductor_Id = c.Conductor_Id
@@ -814,7 +834,7 @@ AS
 BEGIN
 	
 	SELECT b.Boleta_Id, b.Fecha_Entrada, b.Placa_Cabezal, c.Conductor_Id, c.Conductor, cl.Cliente, p.Descripcion Producto, 
-	CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) Peso_Ingreso,  tp.Descripcion Tipo_Pesaje, ISNULL(bc.Descripcion, 'N/A') Barco, b.Estado, u.Nombre_Usuario Usuario, 
+	CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) Peso_Ingreso,  tp.Descripcion Entrada, ISNULL(bc.Descripcion, 'N/A') Barco, b.Estado, u.Nombre_Usuario Usuario, 
 	b.Observaciones
 	FROM Boleta b JOIN Conductor c
 	ON b.Conductor_Id = c.Conductor_Id
@@ -836,14 +856,15 @@ BEGIN
 END
 GO
 
-ALTER PROCEDURE sp_Reporte_Mostrar_Boletas
+CREATE PROCEDURE sp_Reporte_Mostrar_Boletas --27.94cm; 3.96875cm
 	@buscado VARCHAR(80)  = NULL,	@fechaInicio DATETIME = NULL,	@fechaFinal DATETIME = NULL,
 	@estado VARCHAR(10) = NULL
 AS
 BEGIN
 	
 	SELECT b.Boleta_Id, b.Fecha_Entrada, b.Fecha_Salida, b.Placa_Cabezal, c.Conductor,
-			cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) Peso_Ingreso, CONCAT(b.Peso_Salida,' ',b.Unidades_Peso_Salida) Peso_Salida, CONCAT(((b.Peso_Ingreso - b.Peso_Salida) * -1), ' ',b.Unidades_Peso_Salida) Peso_Neto, 
+			cl.Cliente, p.Descripcion Producto, CONCAT(b.Peso_Ingreso,' ',b.Unidades_Peso_Ingreso) Peso_Ingreso, tp.Descripcion Ingreso, CONCAT(b.Peso_Salida,' ',b.Unidades_Peso_Salida) Peso_Salida,
+			CASE  WHEN tp.Tipo_Pesaje_Id = 1 THEN 'BRUTO' WHEN tp.Tipo_Pesaje_Id = 2 THEN 'TARA' END Salida, CONCAT(ABS(b.Peso_Ingreso - b.Peso_Salida), ' ',b.Unidades_Peso_Salida) Peso_Neto, 
 			ISNULL(bc.Descripcion, 'N/A') Barco, b.Estado, u.Nombre_Usuario Usuario, b.Observaciones, @fechaInicio fechaInicio, @fechaFinal fechaFinal
 			FROM Boleta b JOIN Conductor c
 			ON b.Conductor_Id = c.Conductor_Id
@@ -851,6 +872,7 @@ BEGIN
 			JOIN Cliente cl ON b.Cliente_Id = cl.Cliente_Id
 			LEFT JOIN Barco bc ON b.Barco_Id = bc.Barco_Id
 			JOIN Usuario u ON b.Usuario_Id = u.Usuario_Id
+			JOIN Tipo_Pesaje tp ON b.Tipo_Pesaje_Id = tp.Tipo_Pesaje_Id
 			WHERE b.Estado LIKE CONCAT('%',@estado,'%')  AND CONVERT(DATE, B.Fecha_Entrada) BETWEEN @fechaInicio and @fechaFinal AND 
 			CONCAT(b.Boleta_Id, ' ', b.Conductor_Id,' ' ,b.Placa_Cabezal,' ' ,c.Conductor_Id,' ' ,c.Conductor,' ' ,Cliente,' ',p.Descripcion, ' ',bc.Barco_Id ,' ',bc.Descripcion, ' ', u.Nombre_Usuario, ' ', u.Usuario) LIKE CONCAT('%',@buscado,'%')
 			ORDER BY Boleta_Id DESC

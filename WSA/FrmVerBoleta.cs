@@ -19,9 +19,14 @@ namespace WSA
         {
             InitializeComponent();
             idBoleta = boletaId;
+            boleta.BoletaId = idBoleta;
             boleta.CargarFormularioVerBoleta(idBoleta, dtpFechaEntrada, dtpHoraEntrada, dtpFechaSalida, dtpHoraSalida, txtCodigoConductor, txtConductor, txtPlacaCabezal, txtCia, txtEnvioN, txtCodigoCliente,
                txtCliente, txtCodigoProducto, txtProducto, txtCodigoBarco, txtBarco, txtPesoEntrada, txtPesoSalida, txtPesoNeto, txtObservaciones);
             lblTitulo.Text = String.Format("{0}{1}", lblTitulo.Text, idBoleta);
+
+            lblTipoPesoEntrada.Text = boleta.ObtenerTipoPesaje(boleta).Rows[0]["Entrada"].ToString();
+            lblTipoPesoSalida.Text = boleta.ObtenerTipoPesaje(boleta).Rows[0]["Salida"].ToString();
+
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)

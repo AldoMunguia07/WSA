@@ -672,7 +672,7 @@ namespace WSA {
             
             private global::System.Data.DataColumn columnPeso_Ingreso;
             
-            private global::System.Data.DataColumn columnTipo_Pesaje;
+            private global::System.Data.DataColumn columnEntrada;
             
             private global::System.Data.DataColumn columnBarco;
             
@@ -781,9 +781,9 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Tipo_PesajeColumn {
+            public global::System.Data.DataColumn EntradaColumn {
                 get {
-                    return this.columnTipo_Pesaje;
+                    return this.columnEntrada;
                 }
             }
             
@@ -856,7 +856,7 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public sp_Datos_Boleta_EntradaRow Addsp_Datos_Boleta_EntradaRow(System.DateTime Fecha_Entrada, string Placa_Cabezal, string Conductor, string Cliente, string Producto, string Peso_Ingreso, string Tipo_Pesaje, string Barco, string Estado, string Usuario, string Observaciones) {
+            public sp_Datos_Boleta_EntradaRow Addsp_Datos_Boleta_EntradaRow(System.DateTime Fecha_Entrada, string Placa_Cabezal, string Conductor, string Cliente, string Producto, string Peso_Ingreso, string Entrada, string Barco, string Estado, string Usuario, string Observaciones) {
                 sp_Datos_Boleta_EntradaRow rowsp_Datos_Boleta_EntradaRow = ((sp_Datos_Boleta_EntradaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -867,7 +867,7 @@ namespace WSA {
                         Cliente,
                         Producto,
                         Peso_Ingreso,
-                        Tipo_Pesaje,
+                        Entrada,
                         Barco,
                         Estado,
                         Usuario,
@@ -902,7 +902,7 @@ namespace WSA {
                 this.columnCliente = base.Columns["Cliente"];
                 this.columnProducto = base.Columns["Producto"];
                 this.columnPeso_Ingreso = base.Columns["Peso_Ingreso"];
-                this.columnTipo_Pesaje = base.Columns["Tipo_Pesaje"];
+                this.columnEntrada = base.Columns["Entrada"];
                 this.columnBarco = base.Columns["Barco"];
                 this.columnEstado = base.Columns["Estado"];
                 this.columnUsuario = base.Columns["Usuario"];
@@ -928,8 +928,8 @@ namespace WSA {
                 base.Columns.Add(this.columnProducto);
                 this.columnPeso_Ingreso = new global::System.Data.DataColumn("Peso_Ingreso", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPeso_Ingreso);
-                this.columnTipo_Pesaje = new global::System.Data.DataColumn("Tipo_Pesaje", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTipo_Pesaje);
+                this.columnEntrada = new global::System.Data.DataColumn("Entrada", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEntrada);
                 this.columnBarco = new global::System.Data.DataColumn("Barco", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBarco);
                 this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(string), null, global::System.Data.MappingType.Element);
@@ -959,8 +959,9 @@ namespace WSA {
                 this.columnProducto.MaxLength = 80;
                 this.columnPeso_Ingreso.ReadOnly = true;
                 this.columnPeso_Ingreso.MaxLength = 28;
-                this.columnTipo_Pesaje.AllowDBNull = false;
-                this.columnTipo_Pesaje.MaxLength = 70;
+                this.columnEntrada.AllowDBNull = false;
+                this.columnEntrada.MaxLength = 70;
+                this.columnBarco.ReadOnly = true;
                 this.columnBarco.MaxLength = 70;
                 this.columnEstado.AllowDBNull = false;
                 this.columnEstado.MaxLength = 1;
@@ -1122,7 +1123,9 @@ namespace WSA {
             
             private global::System.Data.DataColumn columnPeso_Neto;
             
-            private global::System.Data.DataColumn columnTipo_Pesaje;
+            private global::System.Data.DataColumn columnEntrada;
+            
+            private global::System.Data.DataColumn columnSalida;
             
             private global::System.Data.DataColumn columnBarco;
             
@@ -1255,9 +1258,17 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Tipo_PesajeColumn {
+            public global::System.Data.DataColumn EntradaColumn {
                 get {
-                    return this.columnTipo_Pesaje;
+                    return this.columnEntrada;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SalidaColumn {
+                get {
+                    return this.columnSalida;
                 }
             }
             
@@ -1330,7 +1341,7 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public sp_Datos_BoletaRow Addsp_Datos_BoletaRow(System.DateTime Fecha_Entrada, System.DateTime Fecha_Salida, string Placa_Cabezal, string Conductor, string Cliente, string Producto, string Peso_Ingreso, string Peso_Salida, string Peso_Neto, string Tipo_Pesaje, string Barco, string Estado, string Usuario, string Observaciones) {
+            public sp_Datos_BoletaRow Addsp_Datos_BoletaRow(System.DateTime Fecha_Entrada, System.DateTime Fecha_Salida, string Placa_Cabezal, string Conductor, string Cliente, string Producto, string Peso_Ingreso, string Peso_Salida, string Peso_Neto, string Entrada, string Salida, string Barco, string Estado, string Usuario, string Observaciones) {
                 sp_Datos_BoletaRow rowsp_Datos_BoletaRow = ((sp_Datos_BoletaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1344,7 +1355,8 @@ namespace WSA {
                         Peso_Ingreso,
                         Peso_Salida,
                         Peso_Neto,
-                        Tipo_Pesaje,
+                        Entrada,
+                        Salida,
                         Barco,
                         Estado,
                         Usuario,
@@ -1382,7 +1394,8 @@ namespace WSA {
                 this.columnPeso_Ingreso = base.Columns["Peso_Ingreso"];
                 this.columnPeso_Salida = base.Columns["Peso_Salida"];
                 this.columnPeso_Neto = base.Columns["Peso_Neto"];
-                this.columnTipo_Pesaje = base.Columns["Tipo_Pesaje"];
+                this.columnEntrada = base.Columns["Entrada"];
+                this.columnSalida = base.Columns["Salida"];
                 this.columnBarco = base.Columns["Barco"];
                 this.columnEstado = base.Columns["Estado"];
                 this.columnUsuario = base.Columns["Usuario"];
@@ -1414,8 +1427,10 @@ namespace WSA {
                 base.Columns.Add(this.columnPeso_Salida);
                 this.columnPeso_Neto = new global::System.Data.DataColumn("Peso_Neto", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPeso_Neto);
-                this.columnTipo_Pesaje = new global::System.Data.DataColumn("Tipo_Pesaje", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTipo_Pesaje);
+                this.columnEntrada = new global::System.Data.DataColumn("Entrada", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEntrada);
+                this.columnSalida = new global::System.Data.DataColumn("Salida", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSalida);
                 this.columnBarco = new global::System.Data.DataColumn("Barco", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBarco);
                 this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1449,8 +1464,11 @@ namespace WSA {
                 this.columnPeso_Salida.MaxLength = 28;
                 this.columnPeso_Neto.ReadOnly = true;
                 this.columnPeso_Neto.MaxLength = 28;
-                this.columnTipo_Pesaje.AllowDBNull = false;
-                this.columnTipo_Pesaje.MaxLength = 70;
+                this.columnEntrada.AllowDBNull = false;
+                this.columnEntrada.MaxLength = 70;
+                this.columnSalida.ReadOnly = true;
+                this.columnSalida.MaxLength = 5;
+                this.columnBarco.ReadOnly = true;
                 this.columnBarco.MaxLength = 70;
                 this.columnEstado.AllowDBNull = false;
                 this.columnEstado.MaxLength = 1;
@@ -1770,12 +1788,12 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Tipo_Pesaje {
+            public string Entrada {
                 get {
-                    return ((string)(this[this.tablesp_Datos_Boleta_Entrada.Tipo_PesajeColumn]));
+                    return ((string)(this[this.tablesp_Datos_Boleta_Entrada.EntradaColumn]));
                 }
                 set {
-                    this[this.tablesp_Datos_Boleta_Entrada.Tipo_PesajeColumn] = value;
+                    this[this.tablesp_Datos_Boleta_Entrada.EntradaColumn] = value;
                 }
             }
             
@@ -2028,12 +2046,28 @@ namespace WSA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Tipo_Pesaje {
+            public string Entrada {
                 get {
-                    return ((string)(this[this.tablesp_Datos_Boleta.Tipo_PesajeColumn]));
+                    return ((string)(this[this.tablesp_Datos_Boleta.EntradaColumn]));
                 }
                 set {
-                    this[this.tablesp_Datos_Boleta.Tipo_PesajeColumn] = value;
+                    this[this.tablesp_Datos_Boleta.EntradaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Salida {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Datos_Boleta.SalidaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Salida\' de la tabla \'sp_Datos_Boleta\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Datos_Boleta.SalidaColumn] = value;
                 }
             }
             
@@ -2137,6 +2171,18 @@ namespace WSA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPeso_NetoNull() {
                 this[this.tablesp_Datos_Boleta.Peso_NetoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSalidaNull() {
+                return this.IsNull(this.tablesp_Datos_Boleta.SalidaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSalidaNull() {
+                this[this.tablesp_Datos_Boleta.SalidaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2570,7 +2616,7 @@ namespace WSA.WSA_ALGDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Cliente", "Cliente");
             tableMapping.ColumnMappings.Add("Producto", "Producto");
             tableMapping.ColumnMappings.Add("Peso_Ingreso", "Peso_Ingreso");
-            tableMapping.ColumnMappings.Add("Tipo_Pesaje", "Tipo_Pesaje");
+            tableMapping.ColumnMappings.Add("Entrada", "Entrada");
             tableMapping.ColumnMappings.Add("Barco", "Barco");
             tableMapping.ColumnMappings.Add("Estado", "Estado");
             tableMapping.ColumnMappings.Add("Usuario", "Usuario");
@@ -2766,7 +2812,8 @@ namespace WSA.WSA_ALGDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Peso_Ingreso", "Peso_Ingreso");
             tableMapping.ColumnMappings.Add("Peso_Salida", "Peso_Salida");
             tableMapping.ColumnMappings.Add("Peso_Neto", "Peso_Neto");
-            tableMapping.ColumnMappings.Add("Tipo_Pesaje", "Tipo_Pesaje");
+            tableMapping.ColumnMappings.Add("Entrada", "Entrada");
+            tableMapping.ColumnMappings.Add("Salida", "Salida");
             tableMapping.ColumnMappings.Add("Barco", "Barco");
             tableMapping.ColumnMappings.Add("Estado", "Estado");
             tableMapping.ColumnMappings.Add("Usuario", "Usuario");

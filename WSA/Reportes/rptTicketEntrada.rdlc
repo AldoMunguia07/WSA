@@ -1005,8 +1005,8 @@
           <DataField>Peso_Ingreso</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Tipo_Pesaje">
-          <DataField>Tipo_Pesaje</DataField>
+        <Field Name="Entrada">
+          <DataField>Entrada</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Barco">

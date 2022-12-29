@@ -22,9 +22,11 @@ namespace WSA
         {
             InitializeComponent();
             idBoleta = boletaId;
+            boleta.BoletaId = idBoleta;
             boleta.CargarFormularioSalida(idBoleta, dtpFechaEntrada, dtpHoraEntrada, txtCodigoConductor, txtConductor, txtPlacaCabezal, txtCia, txtEnvioN, txtCodigoCliente, 
                 txtCliente, txtCodigoProducto, txtProducto, txtCodigoBarco, txtBarco, txtPesoEntrada, txtObservaciones);
             conectado = indicador.LeerDatos(/*mySerialPort,*/ this, lblConexion, txtPesoBascula);
+            lblTipoPeso.Text = boleta.ObtenerTipoPesaje(boleta).Rows[0]["Entrada"].ToString();
         }
 
         private void btnConectar_Click(object sender, EventArgs e)
@@ -87,29 +89,47 @@ namespace WSA
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if(camposLlenos())
+            
+            if (camposLlenos())
             {
-                if(float.Parse(txtPesoSalida.Text) > float.Parse(txtPesoEntrada.Text))
+                
+                getValues();
+                
+                if (boleta.AgregarSalida(boleta))
                 {
-                    getValues();
-                    if(boleta.AgregarSalida(boleta))
+                    
+                    if (float.Parse(txtPesoSalida.Text) > float.Parse(txtPesoEntrada.Text))
                     {
-                        MessageBox.Show("Salida agregada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FrmTicket frmTicket = new FrmTicket(boleta.UltimaBoleta());
-                        frmTicket.ShowDialog();
+                        if(Convert.ToInt32(boleta.ObtenerTipoPesaje(boleta).Rows[0]["Tipo_Pesaje_Id"].ToString()) == 2)
+                        {
+                            boleta.TipoPesajeId = 1;
+                            boleta.CambiarTipoPesaje(boleta);
+                            MessageBox.Show("Correción de pesos aplicada: Peso ingreso (Tara) y Peso Salida (Bruto)", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
                     }
                     else
                     {
-                       MessageBox.Show("Error al agregar salida", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                       
+                        if (Convert.ToInt32(boleta.ObtenerTipoPesaje(boleta).Rows[0]["Tipo_Pesaje_Id"].ToString()) == 1)
+                        {
+                            boleta.TipoPesajeId = 2;
+                            boleta.CambiarTipoPesaje(boleta);
+                            MessageBox.Show("Correción de pesos aplicada: Peso ingreso (Bruto) y Peso Salida (Tara)", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        }
                     }
 
-                    this.Close();
+                    MessageBox.Show("Salida agregada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FrmTicket frmTicket = new FrmTicket(boleta.UltimaBoleta());
+                    frmTicket.ShowDialog();
                 }
                 else
                 {
-                    MessageBox.Show("El peso de salida debe ser mayor al peso de entrada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Error al agregar salida", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
+
+                this.Close();
+                
 
             }
             

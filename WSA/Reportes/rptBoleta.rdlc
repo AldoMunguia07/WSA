@@ -885,7 +885,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Peso_Ingreso.Value, "DatosBoleta")</Value>
+                <Value>=First(Fields!Peso_Ingreso.Value, "DatosBoleta") + " - " + First(Fields!Entrada.Value, "DatosBoleta")</Value>
                 <Style>
                   <FontSize>8pt</FontSize>
                 </Style>
@@ -919,7 +919,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Peso_Salida.Value, "DatosBoleta")</Value>
+                <Value>=First(Fields!Peso_Salida.Value, "DatosBoleta") + " - " + First(Fields!Salida.Value, "DatosBoleta")</Value>
                 <Style>
                   <FontSize>8pt</FontSize>
                 </Style>
@@ -1226,8 +1226,12 @@
           <DataField>Peso_Neto</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Tipo_Pesaje">
-          <DataField>Tipo_Pesaje</DataField>
+        <Field Name="Entrada">
+          <DataField>Entrada</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Salida">
+          <DataField>Salida</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Barco">

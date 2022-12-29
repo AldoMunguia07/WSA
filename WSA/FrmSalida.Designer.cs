@@ -75,6 +75,7 @@ namespace WSA
             this.txtConductor = new System.Windows.Forms.TextBox();
             this.txtCodigoConductor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblTipoPeso = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnConectar
@@ -570,12 +571,24 @@ namespace WSA
             this.label2.TabIndex = 76;
             this.label2.Text = "Código del conductor:";
             // 
+            // lblTipoPeso
+            // 
+            this.lblTipoPeso.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTipoPeso.AutoSize = true;
+            this.lblTipoPeso.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoPeso.Location = new System.Drawing.Point(1015, 245);
+            this.lblTipoPeso.Name = "lblTipoPeso";
+            this.lblTipoPeso.Size = new System.Drawing.Size(86, 18);
+            this.lblTipoPeso.TabIndex = 99;
+            this.lblTipoPeso.Text = "Tipo peso";
+            // 
             // FrmSalida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1367, 647);
+            this.Controls.Add(this.lblTipoPeso);
             this.Controls.Add(this.lblConsultarBarcos);
             this.Controls.Add(this.lblConsultarProductos);
             this.Controls.Add(this.lblConsultarClientes);
@@ -675,5 +688,6 @@ namespace WSA
         private System.Windows.Forms.TextBox txtConductor;
         private System.Windows.Forms.TextBox txtCodigoConductor;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTipoPeso;
     }
 }

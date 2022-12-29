@@ -51,7 +51,7 @@
               <Mapping SourceColumn="Cliente" DataSetColumn="Cliente" />
               <Mapping SourceColumn="Producto" DataSetColumn="Producto" />
               <Mapping SourceColumn="Peso_Ingreso" DataSetColumn="Peso_Ingreso" />
-              <Mapping SourceColumn="Tipo_Pesaje" DataSetColumn="Tipo_Pesaje" />
+              <Mapping SourceColumn="Entrada" DataSetColumn="Entrada" />
               <Mapping SourceColumn="Barco" DataSetColumn="Barco" />
               <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
               <Mapping SourceColumn="Usuario" DataSetColumn="Usuario" />
@@ -85,7 +85,8 @@
               <Mapping SourceColumn="Peso_Ingreso" DataSetColumn="Peso_Ingreso" />
               <Mapping SourceColumn="Peso_Salida" DataSetColumn="Peso_Salida" />
               <Mapping SourceColumn="Peso_Neto" DataSetColumn="Peso_Neto" />
-              <Mapping SourceColumn="Tipo_Pesaje" DataSetColumn="Tipo_Pesaje" />
+              <Mapping SourceColumn="Entrada" DataSetColumn="Entrada" />
+              <Mapping SourceColumn="Salida" DataSetColumn="Salida" />
               <Mapping SourceColumn="Barco" DataSetColumn="Barco" />
               <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
               <Mapping SourceColumn="Usuario" DataSetColumn="Usuario" />
@@ -170,14 +171,14 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Tipo_Pesaje" msprop:Generator_ColumnVarNameInTable="columnTipo_Pesaje" msprop:Generator_ColumnPropNameInRow="Tipo_Pesaje" msprop:Generator_ColumnPropNameInTable="Tipo_PesajeColumn" msprop:Generator_UserColumnName="Tipo_Pesaje">
+              <xs:element name="Entrada" msprop:Generator_ColumnVarNameInTable="columnEntrada" msprop:Generator_ColumnPropNameInRow="Entrada" msprop:Generator_ColumnPropNameInTable="EntradaColumn" msprop:Generator_UserColumnName="Entrada">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="70" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Barco" msprop:Generator_ColumnVarNameInTable="columnBarco" msprop:Generator_ColumnPropNameInRow="Barco" msprop:Generator_ColumnPropNameInTable="BarcoColumn" msprop:Generator_UserColumnName="Barco" minOccurs="0">
+              <xs:element name="Barco" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBarco" msprop:Generator_ColumnPropNameInRow="Barco" msprop:Generator_ColumnPropNameInTable="BarcoColumn" msprop:Generator_UserColumnName="Barco" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="70" />
@@ -264,14 +265,21 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Tipo_Pesaje" msprop:Generator_ColumnVarNameInTable="columnTipo_Pesaje" msprop:Generator_ColumnPropNameInRow="Tipo_Pesaje" msprop:Generator_ColumnPropNameInTable="Tipo_PesajeColumn" msprop:Generator_UserColumnName="Tipo_Pesaje">
+              <xs:element name="Entrada" msprop:Generator_ColumnVarNameInTable="columnEntrada" msprop:Generator_ColumnPropNameInRow="Entrada" msprop:Generator_ColumnPropNameInTable="EntradaColumn" msprop:Generator_UserColumnName="Entrada">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="70" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Barco" msprop:Generator_ColumnVarNameInTable="columnBarco" msprop:Generator_ColumnPropNameInRow="Barco" msprop:Generator_ColumnPropNameInTable="BarcoColumn" msprop:Generator_UserColumnName="Barco" minOccurs="0">
+              <xs:element name="Salida" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSalida" msprop:Generator_ColumnPropNameInRow="Salida" msprop:Generator_ColumnPropNameInTable="SalidaColumn" msprop:Generator_UserColumnName="Salida" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Barco" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBarco" msprop:Generator_ColumnPropNameInRow="Barco" msprop:Generator_ColumnPropNameInTable="BarcoColumn" msprop:Generator_UserColumnName="Barco" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="70" />
