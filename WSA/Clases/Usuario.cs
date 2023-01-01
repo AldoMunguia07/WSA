@@ -212,7 +212,7 @@ namespace WSA.Clases
 
                 using (sqlDataAdapter)
                 {
-                    sqlCommand.Parameters.AddWithValue("@Usuario", user.ToLower());
+                    sqlCommand.Parameters.AddWithValue("@Usuario", user.ToUpper());
                     sqlCommand.Parameters.AddWithValue("@accion", "existeUsuario");
 
                     DataTable dataTable = new DataTable();

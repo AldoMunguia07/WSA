@@ -55,7 +55,7 @@ namespace WSA
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(975, 295);
+            this.label8.Location = new System.Drawing.Point(964, 295);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(71, 18);
             this.label8.TabIndex = 38;
@@ -66,7 +66,7 @@ namespace WSA
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(902, 213);
+            this.label7.Location = new System.Drawing.Point(902, 214);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(142, 18);
             this.label7.TabIndex = 37;
@@ -174,11 +174,11 @@ namespace WSA
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(99, 214);
+            this.label1.Location = new System.Drawing.Point(196, 214);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 18);
+            this.label1.Size = new System.Drawing.Size(78, 18);
             this.label1.TabIndex = 26;
-            this.label1.Text = "Nombre del usuario:";
+            this.label1.Text = "Nombre:";
             // 
             // txtTipoUsuario
             // 

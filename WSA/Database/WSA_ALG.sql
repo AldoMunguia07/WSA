@@ -264,6 +264,10 @@ BEGIN
 		FROM Producto 
 		WHERE CONCAT(Producto_Id, ' ', Descripcion) LIKE CONCAT('%', @valorBuscado,'%')
 	END
+	ELSE IF @accion = 'existeProducto'
+	BEGIN
+		SELECT Descripcion FROM Producto WHERE Descripcion = @Descripcion
+	END
 END
 GO
 
@@ -809,7 +813,7 @@ CREATE PROCEDURE sp_Bitacora@value SQL_VARIANT = NULL,@key SYSNAME = NULL,@bu
 			SELECT b.Bitacora_Id 'Código de registro', CONVERT(DATE, b.Fecha) Fecha, CONVERT(VARCHAR, b.Fecha, 8) Hora, u.Usuario, B.Usuario_PC 'PC', UPPER(b.Tipo_Accion) 'Tipo', UPPER(b.Accion) Accion
 			FROM Bitacora b JOIN Usuario u
 			ON u.Usuario_Id = b.Usuario_Id
-		    WHERE CONVERT(DATE, b.Fecha) BETWEEN @fechaInicio and @fechaFinal and CONCAT(u.Usuario_Id, ' ', u.Usuario, ' ', b.Tipo_Accion,' ' ,b.accion) LIKE CONCAT('%',@buscado,'%')
+		    WHERE CONVERT(DATE, b.Fecha) BETWEEN @fechaInicio and @fechaFinal and CONCAT(b.Bitacora_Id, ' ',u.Usuario_Id, ' ', u.Usuario, ' ', b.Tipo_Accion,' ' ,b.accion) LIKE CONCAT('%',@buscado,'%')
 			ORDER BY b.Bitacora_Id DESC
 		END
 
@@ -904,7 +908,7 @@ BEGIN
 			@fechaInicio fechaInicio, @fechaFinal fechaFinal
 			FROM Bitacora b JOIN Usuario u
 			ON u.Usuario_Id = b.Usuario_Id
-		    WHERE CONVERT(DATE, b.Fecha) BETWEEN @fechaInicio and @fechaFinal and CONCAT(u.Usuario_Id, ' ', u.Usuario, ' ', b.Tipo_Accion,' ' ,b.accion) LIKE CONCAT('%',@buscado,'%')
+		    WHERE CONVERT(DATE, b.Fecha) BETWEEN @fechaInicio and @fechaFinal and CONCAT(b.Bitacora_Id , ' ',u.Usuario_Id, ' ', u.Usuario, ' ', b.Tipo_Accion,' ' ,b.accion) LIKE CONCAT('%',@buscado,'%')
 			ORDER BY b.Bitacora_Id DESC
 			
 END

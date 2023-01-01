@@ -29,6 +29,7 @@ namespace WSA
             
             dgvUsuarios.Columns[5].Visible = false;
             dgvUsuarios.Columns[6].Visible = false;
+           
 
         }
 
@@ -140,7 +141,7 @@ namespace WSA
                     {
                         if (txtContrasena.Text == txtConfirmarContrasena.Text)
                         {
-                            if (!usuario.ExisteUsuario(txtUsuario.Text) || txtUsuario.Text == username)
+                            if (!usuario.ExisteUsuario(txtUsuario.Text) || txtUsuario.Text.ToUpper() == username)
                             {
                                 getValues();
                                 usuario.ModificarUsuario(usuario);

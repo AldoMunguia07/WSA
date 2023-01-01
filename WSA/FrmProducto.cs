@@ -16,6 +16,7 @@ namespace WSA
         Producto producto = new Producto();
         private bool seleccionado = false;
         private bool isIncome = false;
+        private string descripcionProducto = "";
         public FrmProducto(bool esIngreso)
         {
             InitializeComponent();
@@ -46,6 +47,7 @@ namespace WSA
             btnGuardar.Enabled = true;
             numPrecio.Value = 0;
             cargarDatos();
+            descripcionProducto = "";
         }
 
         private bool camposLlenos()
@@ -65,10 +67,18 @@ namespace WSA
         {
             if (camposLlenos())
             {
-                getValues();
-                producto.AgregarProducto(producto);
-                MessageBox.Show("Producto agregado", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                refresh();
+                if (!producto.ExisteProducto(txtDescProducto.Text))
+                {
+                    getValues();
+                    producto.AgregarProducto(producto);
+                    MessageBox.Show("Producto agregado", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    refresh();
+                }
+                else
+                {
+                    MessageBox.Show("El producto ya existe", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
             }
             else
             {
@@ -82,10 +92,18 @@ namespace WSA
             {
                 if (camposLlenos())
                 {
-                    getValues();
-                    producto.ModificarProducto(producto);
-                    MessageBox.Show("Producto modificado", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    refresh();
+                    if (!producto.ExisteProducto(txtDescProducto.Text) || txtDescProducto.Text.ToUpper() == descripcionProducto)
+                    {
+                        getValues();
+                        producto.ModificarProducto(producto);
+                        MessageBox.Show("Producto modificado", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        refresh();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El producto ya existe", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+
                 }
                 else
                 {
@@ -94,7 +112,7 @@ namespace WSA
             }
             else
             {
-                MessageBox.Show("Seleccione el cliente", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione el producto", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -106,6 +124,7 @@ namespace WSA
 
                 producto.ProductoId = int.Parse(row.Cells[0].Value.ToString());
                 txtDescProducto.Text = row.Cells[1].Value.ToString();
+                descripcionProducto = row.Cells[1].Value.ToString();
                 numPrecio.Text = row.Cells[2].Value.ToString();
 
                 numPrecio.Value = decimal.Parse(row.Cells[2].Value.ToString());
