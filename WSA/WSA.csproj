@@ -7,7 +7,7 @@
     <ProjectGuid>{A9ADEC2B-D3E9-42AB-883C-F1EC7B30426B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>WSA</RootNamespace>
-    <AssemblyName>WSA</AssemblyName>
+    <AssemblyName>AWS</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,6 +46,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>AWS-Icono.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -393,6 +396,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AWS-Icono.ico" />
     <Content Include="Database\WSA_ALG.sql" />
     <None Include="Resources\Logo AWS.png" />
     <Content Include="SqlServerTypes\readme.htm" />
