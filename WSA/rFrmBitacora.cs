@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Printing;
+using WSA.Clases;
 
 namespace WSA
 {
@@ -16,7 +17,14 @@ namespace WSA
         public rFrmBitacora()
         {
             InitializeComponent();
-           
+            foreach (Control c in this.Controls)
+            {
+                if (c is Button )
+                {
+                    c.BackColor = Color.FromArgb(VariablesGlobales.rgbBotones[0], VariablesGlobales.rgbBotones[1], VariablesGlobales.rgbBotones[2]);
+                }
+            }
+
         }
 
         private void rFrmBitacora_Load(object sender, EventArgs e)

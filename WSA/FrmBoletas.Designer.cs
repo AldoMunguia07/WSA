@@ -36,8 +36,6 @@ namespace WSA
             this.label1 = new System.Windows.Forms.Label();
             this.btnVerBoleta = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dtpFechaFinal = new System.Windows.Forms.DateTimePicker();
@@ -121,26 +119,6 @@ namespace WSA
             this.btnImprimir.UseVisualStyleBackColor = false;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel2.Location = new System.Drawing.Point(-1, 562);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1288, 30);
-            this.panel2.TabIndex = 23;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
-            this.panel1.Location = new System.Drawing.Point(-1, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1288, 30);
-            this.panel1.TabIndex = 22;
-            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -216,8 +194,6 @@ namespace WSA
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtpFechaInicio);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnVerBoleta);
             this.Controls.Add(this.dgvBoletas);
@@ -237,8 +213,6 @@ namespace WSA
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnVerBoleta;
         private System.Windows.Forms.Button btnImprimir;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DateTimePicker dtpFechaFinal;

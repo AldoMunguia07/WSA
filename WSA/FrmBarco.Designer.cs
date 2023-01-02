@@ -41,8 +41,6 @@ namespace WSA
             this.txtDescBarco = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnCncelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBarcos)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +52,7 @@ namespace WSA
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(875, 461);
+            this.btnModificar.Location = new System.Drawing.Point(875, 395);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(101, 26);
             this.btnModificar.TabIndex = 5;
@@ -67,7 +65,7 @@ namespace WSA
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(146, 464);
+            this.label3.Location = new System.Drawing.Point(146, 398);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 18);
             this.label3.TabIndex = 14;
@@ -77,7 +75,7 @@ namespace WSA
             // 
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(211, 461);
+            this.txtBuscar.Location = new System.Drawing.Point(211, 395);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(373, 27);
             this.txtBuscar.TabIndex = 2;
@@ -88,7 +86,7 @@ namespace WSA
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(530, 132);
+            this.label2.Location = new System.Drawing.Point(530, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(252, 29);
             this.label2.TabIndex = 12;
@@ -101,7 +99,7 @@ namespace WSA
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(744, 461);
+            this.btnGuardar.Location = new System.Drawing.Point(744, 395);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(110, 26);
             this.btnGuardar.TabIndex = 4;
@@ -135,7 +133,7 @@ namespace WSA
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvBarcos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBarcos.GridColor = System.Drawing.Color.DimGray;
-            this.dgvBarcos.Location = new System.Drawing.Point(149, 249);
+            this.dgvBarcos.Location = new System.Drawing.Point(149, 183);
             this.dgvBarcos.Name = "dgvBarcos";
             this.dgvBarcos.ReadOnly = true;
             this.dgvBarcos.Size = new System.Drawing.Size(946, 196);
@@ -146,7 +144,7 @@ namespace WSA
             // 
             this.txtDescBarco.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDescBarco.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescBarco.Location = new System.Drawing.Point(360, 207);
+            this.txtDescBarco.Location = new System.Drawing.Point(360, 141);
             this.txtDescBarco.Name = "txtDescBarco";
             this.txtDescBarco.Size = new System.Drawing.Size(352, 27);
             this.txtDescBarco.TabIndex = 0;
@@ -156,7 +154,7 @@ namespace WSA
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(165, 211);
+            this.label1.Location = new System.Drawing.Point(165, 145);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(189, 18);
             this.label1.TabIndex = 8;
@@ -169,7 +167,7 @@ namespace WSA
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSeleccionar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Location = new System.Drawing.Point(615, 461);
+            this.btnSeleccionar.Location = new System.Drawing.Point(615, 395);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(108, 26);
             this.btnSeleccionar.TabIndex = 3;
@@ -178,26 +176,6 @@ namespace WSA
             this.btnSeleccionar.Visible = false;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
-            this.panel1.Location = new System.Drawing.Point(-2, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1230, 30);
-            this.panel1.TabIndex = 20;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel2.Location = new System.Drawing.Point(-2, 611);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1230, 30);
-            this.panel2.TabIndex = 21;
-            // 
             // btnCncelar
             // 
             this.btnCncelar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -205,7 +183,7 @@ namespace WSA
             this.btnCncelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCncelar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCncelar.ForeColor = System.Drawing.Color.White;
-            this.btnCncelar.Location = new System.Drawing.Point(994, 461);
+            this.btnCncelar.Location = new System.Drawing.Point(994, 395);
             this.btnCncelar.Name = "btnCncelar";
             this.btnCncelar.Size = new System.Drawing.Size(101, 27);
             this.btnCncelar.TabIndex = 6;
@@ -218,10 +196,8 @@ namespace WSA
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(1228, 639);
+            this.ClientSize = new System.Drawing.Size(1228, 506);
             this.Controls.Add(this.btnCncelar);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.label3);
@@ -252,8 +228,6 @@ namespace WSA
         private System.Windows.Forms.TextBox txtDescBarco;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSeleccionar;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnCncelar;
     }
 }

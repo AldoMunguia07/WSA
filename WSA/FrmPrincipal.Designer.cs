@@ -82,6 +82,7 @@ namespace WSA
             this.miUsuarioToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileMenu.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileMenu.ForeColor = System.Drawing.Color.White;
             this.fileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
             this.fileMenu.Name = "fileMenu";
             this.fileMenu.Size = new System.Drawing.Size(95, 22);
@@ -91,7 +92,7 @@ namespace WSA
             // 
             this.miUsuarioToolStripMenuItem.Image = global::WSA.Properties.Resources.mi_usuario;
             this.miUsuarioToolStripMenuItem.Name = "miUsuarioToolStripMenuItem";
-            this.miUsuarioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.miUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.miUsuarioToolStripMenuItem.Text = "Mi usuario";
             this.miUsuarioToolStripMenuItem.Click += new System.EventHandler(this.miUsuarioToolStripMenuItem_Click);
             // 
@@ -99,7 +100,7 @@ namespace WSA
             // 
             this.exitToolStripMenuItem.Image = global::WSA.Properties.Resources.salir;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "&Salir";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 
@@ -110,6 +111,7 @@ namespace WSA
             this.boletasToolStripMenuItem,
             this.entradasAnuladasToolStripMenuItem});
             this.procesoToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.procesoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.procesoToolStripMenuItem.Name = "procesoToolStripMenuItem";
             this.procesoToolStripMenuItem.Size = new System.Drawing.Size(75, 22);
             this.procesoToolStripMenuItem.Text = "Pesaje";
@@ -147,6 +149,7 @@ namespace WSA
             this.barcosToolStripMenuItem,
             this.usuariosToolStripMenuItem});
             this.gestionToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gestionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.gestionToolStripMenuItem.Name = "gestionToolStripMenuItem";
             this.gestionToolStripMenuItem.Size = new System.Drawing.Size(83, 22);
             this.gestionToolStripMenuItem.Text = "Gestión";
@@ -197,6 +200,7 @@ namespace WSA
             this.boletasToolStripMenuItem1,
             this.bitácoraToolStripMenuItem});
             this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.reportesToolStripMenuItem.Text = "Reportes";
@@ -226,6 +230,7 @@ namespace WSA
             this.configuraciónIndicadorDeBásculaToolStripMenuItem,
             this.históricoToolStripMenuItem});
             this.administracinToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.administracinToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.administracinToolStripMenuItem.Name = "administracinToolStripMenuItem";
             this.administracinToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.administracinToolStripMenuItem.Text = "Administración";
@@ -284,6 +289,7 @@ namespace WSA
             // tslbNombreUsuario
             // 
             this.tslbNombreUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tslbNombreUsuario.ForeColor = System.Drawing.Color.White;
             this.tslbNombreUsuario.Name = "tslbNombreUsuario";
             this.tslbNombreUsuario.Size = new System.Drawing.Size(66, 21);
             this.tslbNombreUsuario.Text = "Usuario";

@@ -41,8 +41,6 @@ namespace WSA
             this.txtDescConductor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnCncelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConductores)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +52,7 @@ namespace WSA
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(816, 390);
+            this.btnModificar.Location = new System.Drawing.Point(816, 381);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(97, 28);
             this.btnModificar.TabIndex = 5;
@@ -67,7 +65,7 @@ namespace WSA
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(92, 395);
+            this.label3.Location = new System.Drawing.Point(92, 386);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 18);
             this.label3.TabIndex = 14;
@@ -77,7 +75,7 @@ namespace WSA
             // 
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(161, 391);
+            this.txtBuscar.Location = new System.Drawing.Point(161, 382);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(368, 27);
             this.txtBuscar.TabIndex = 2;
@@ -88,7 +86,7 @@ namespace WSA
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(395, 62);
+            this.label2.Location = new System.Drawing.Point(395, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(327, 29);
             this.label2.TabIndex = 12;
@@ -101,7 +99,7 @@ namespace WSA
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(706, 390);
+            this.btnGuardar.Location = new System.Drawing.Point(706, 381);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(86, 29);
             this.btnGuardar.TabIndex = 4;
@@ -135,7 +133,7 @@ namespace WSA
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvConductores.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvConductores.GridColor = System.Drawing.Color.DimGray;
-            this.dgvConductores.Location = new System.Drawing.Point(98, 173);
+            this.dgvConductores.Location = new System.Drawing.Point(98, 164);
             this.dgvConductores.Name = "dgvConductores";
             this.dgvConductores.ReadOnly = true;
             this.dgvConductores.Size = new System.Drawing.Size(929, 196);
@@ -146,7 +144,7 @@ namespace WSA
             // 
             this.txtDescConductor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDescConductor.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescConductor.Location = new System.Drawing.Point(284, 132);
+            this.txtDescConductor.Location = new System.Drawing.Point(284, 123);
             this.txtDescConductor.Name = "txtDescConductor";
             this.txtDescConductor.Size = new System.Drawing.Size(378, 27);
             this.txtDescConductor.TabIndex = 0;
@@ -156,7 +154,7 @@ namespace WSA
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(91, 135);
+            this.label1.Location = new System.Drawing.Point(91, 126);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(194, 18);
             this.label1.TabIndex = 8;
@@ -169,7 +167,7 @@ namespace WSA
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSeleccionar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Location = new System.Drawing.Point(569, 390);
+            this.btnSeleccionar.Location = new System.Drawing.Point(569, 381);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(115, 28);
             this.btnSeleccionar.TabIndex = 3;
@@ -178,26 +176,6 @@ namespace WSA
             this.btnSeleccionar.Visible = false;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel2.Location = new System.Drawing.Point(0, 522);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1089, 30);
-            this.panel2.TabIndex = 23;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1089, 30);
-            this.panel1.TabIndex = 22;
-            // 
             // btnCncelar
             // 
             this.btnCncelar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -205,7 +183,7 @@ namespace WSA
             this.btnCncelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCncelar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCncelar.ForeColor = System.Drawing.Color.White;
-            this.btnCncelar.Location = new System.Drawing.Point(926, 391);
+            this.btnCncelar.Location = new System.Drawing.Point(926, 382);
             this.btnCncelar.Name = "btnCncelar";
             this.btnCncelar.Size = new System.Drawing.Size(101, 27);
             this.btnCncelar.TabIndex = 6;
@@ -218,10 +196,8 @@ namespace WSA
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(1089, 552);
+            this.ClientSize = new System.Drawing.Size(1089, 506);
             this.Controls.Add(this.btnCncelar);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.label3);
@@ -252,8 +228,6 @@ namespace WSA
         private System.Windows.Forms.TextBox txtDescConductor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSeleccionar;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCncelar;
     }
 }

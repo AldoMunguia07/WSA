@@ -17,6 +17,13 @@ namespace WSA
         {
             InitializeComponent();
             historico.MostrarHistorico(dgvHistorico);
+            foreach (Control c in this.Controls)
+            {
+                if (c is Button)
+                {
+                    c.BackColor = Color.FromArgb(VariablesGlobales.rgbBotones[0], VariablesGlobales.rgbBotones[1], VariablesGlobales.rgbBotones[2]);
+                }
+            }
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)

@@ -50,8 +50,6 @@ namespace WSA
             this.cmbTipoUsuario = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnCncelar = new System.Windows.Forms.Button();
             this.chbVerContraseña = new System.Windows.Forms.CheckBox();
             this.chbVerCContraseña = new System.Windows.Forms.CheckBox();
@@ -284,26 +282,6 @@ namespace WSA
             this.label8.TabIndex = 25;
             this.label8.Text = "Estado:";
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel2.Location = new System.Drawing.Point(0, 597);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1165, 30);
-            this.panel2.TabIndex = 27;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1165, 30);
-            this.panel1.TabIndex = 26;
-            // 
             // btnCncelar
             // 
             this.btnCncelar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -354,8 +332,6 @@ namespace WSA
             this.Controls.Add(this.chbVerContraseña);
             this.Controls.Add(this.chbVerCContraseña);
             this.Controls.Add(this.btnCncelar);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cmbTipoUsuario);
@@ -403,8 +379,6 @@ namespace WSA
         private System.Windows.Forms.ComboBox cmbTipoUsuario;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCncelar;
         private System.Windows.Forms.CheckBox chbVerContraseña;
         private System.Windows.Forms.CheckBox chbVerCContraseña;

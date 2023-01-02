@@ -16,7 +16,9 @@ namespace WSA
         Usuario miUsuario = new Usuario();
         public FrmPrincipal(Usuario usuario)
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            menuStrip.BackColor = Color.FromArgb(VariablesGlobales.rgbBotones[0], VariablesGlobales.rgbBotones[1], VariablesGlobales.rgbBotones[2]);
+            statusStrip1.BackColor = Color.FromArgb(VariablesGlobales.rgbBotones[0], VariablesGlobales.rgbBotones[1], VariablesGlobales.rgbBotones[2]);
             miUsuario = usuario;
             FrmVehiculosEnTransito frmVehiculosEnTransito = new FrmVehiculosEnTransito();
             CargarFormulario(frmVehiculosEnTransito);

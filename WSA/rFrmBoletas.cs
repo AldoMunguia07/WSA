@@ -17,6 +17,13 @@ namespace WSA
         {
             InitializeComponent();
             cargarComboBox.CargarComboBoxEstadoBoleta(cmbEstado);
+            foreach (Control c in this.Controls)
+            {
+                if (c is Button)
+                {
+                    c.BackColor = Color.FromArgb(VariablesGlobales.rgbBotones[0], VariablesGlobales.rgbBotones[1], VariablesGlobales.rgbBotones[2]);
+                }
+            }
         }
 
         private void rFrmBoletas_Load(object sender, EventArgs e)

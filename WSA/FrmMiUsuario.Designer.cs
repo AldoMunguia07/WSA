@@ -46,8 +46,6 @@ namespace WSA
             this.chbVerCContraseña = new System.Windows.Forms.CheckBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.chbVerContraseña = new System.Windows.Forms.CheckBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label8
@@ -232,34 +230,12 @@ namespace WSA
             this.chbVerContraseña.UseVisualStyleBackColor = true;
             this.chbVerContraseña.CheckedChanged += new System.EventHandler(this.chbVerContraseña_CheckedChanged);
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel2.Location = new System.Drawing.Point(-1, 549);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1282, 30);
-            this.panel2.TabIndex = 44;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
-            this.panel1.Location = new System.Drawing.Point(-1, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1282, 30);
-            this.panel1.TabIndex = 43;
-            // 
             // FrmMiUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1281, 579);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.chbVerContraseña);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.chbVerCContraseña);
@@ -302,7 +278,5 @@ namespace WSA
         private System.Windows.Forms.CheckBox chbVerCContraseña;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.CheckBox chbVerContraseña;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
     }
 }
