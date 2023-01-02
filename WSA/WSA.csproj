@@ -113,6 +113,8 @@
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Conductor.cs" />
     <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Clases\ConexionHistorico.cs" />
+    <Compile Include="Clases\Historico.cs" />
     <Compile Include="Clases\Indicador.cs" />
     <Compile Include="Clases\Database.cs" />
     <Compile Include="Clases\EncabezadoBoleta.cs" />
@@ -161,6 +163,12 @@
     </Compile>
     <Compile Include="FrmEntradasAnuladas.Designer.cs">
       <DependentUpon>FrmEntradasAnuladas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHistorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHistorico.Designer.cs">
+      <DependentUpon>FrmHistorico.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmIndicadorBascula.cs">
       <SubType>Form</SubType>
@@ -287,6 +295,9 @@
     <EmbeddedResource Include="FrmEntradasAnuladas.resx">
       <DependentUpon>FrmEntradasAnuladas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmHistorico.resx">
+      <DependentUpon>FrmHistorico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmIndicadorBascula.resx">
       <DependentUpon>FrmIndicadorBascula.cs</DependentUpon>
     </EmbeddedResource>
@@ -403,6 +414,7 @@
     <None Include="Resources\encabezado.png" />
     <None Include="Resources\backup.png" />
     <None Include="Resources\indicador.png" />
+    <None Include="Resources\historico.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -428,6 +440,35 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

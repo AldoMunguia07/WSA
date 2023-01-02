@@ -229,5 +229,12 @@ namespace WSA
             CerrarFormularios();
             CargarFormulario(rFrmBitacora);
         }
+
+        private void históricoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmHistorico frmHistorico = new FrmHistorico();
+            CerrarFormularios();
+            CargarFormulario(frmHistorico);
+        }
     }
 }

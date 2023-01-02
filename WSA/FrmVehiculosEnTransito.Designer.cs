@@ -85,7 +85,7 @@ namespace WSA
             this.dgvEntradas.Location = new System.Drawing.Point(26, 210);
             this.dgvEntradas.Name = "dgvEntradas";
             this.dgvEntradas.ReadOnly = true;
-            this.dgvEntradas.Size = new System.Drawing.Size(1423, 189);
+            this.dgvEntradas.Size = new System.Drawing.Size(1423, 257);
             this.dgvEntradas.TabIndex = 5;
             this.dgvEntradas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvEntradas_CellMouseClick);
             // 
@@ -96,7 +96,7 @@ namespace WSA
             this.btnEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEntrada.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrada.ForeColor = System.Drawing.Color.White;
-            this.btnEntrada.Location = new System.Drawing.Point(807, 424);
+            this.btnEntrada.Location = new System.Drawing.Point(807, 484);
             this.btnEntrada.Name = "btnEntrada";
             this.btnEntrada.Size = new System.Drawing.Size(183, 31);
             this.btnEntrada.TabIndex = 1;
@@ -111,7 +111,7 @@ namespace WSA
             this.btnSalida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalida.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalida.ForeColor = System.Drawing.Color.White;
-            this.btnSalida.Location = new System.Drawing.Point(1125, 424);
+            this.btnSalida.Location = new System.Drawing.Point(1125, 484);
             this.btnSalida.Name = "btnSalida";
             this.btnSalida.Size = new System.Drawing.Size(170, 31);
             this.btnSalida.TabIndex = 3;
@@ -126,7 +126,7 @@ namespace WSA
             this.btnAnular.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAnular.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnular.ForeColor = System.Drawing.Color.White;
-            this.btnAnular.Location = new System.Drawing.Point(1301, 424);
+            this.btnAnular.Location = new System.Drawing.Point(1301, 484);
             this.btnAnular.Name = "btnAnular";
             this.btnAnular.Size = new System.Drawing.Size(148, 31);
             this.btnAnular.TabIndex = 4;
@@ -161,7 +161,7 @@ namespace WSA
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImprimir.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
-            this.btnImprimir.Location = new System.Drawing.Point(996, 424);
+            this.btnImprimir.Location = new System.Drawing.Point(996, 484);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(123, 31);
             this.btnImprimir.TabIndex = 2;
