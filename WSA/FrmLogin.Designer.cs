@@ -112,8 +112,8 @@ namespace WSA
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::WSA.Properties.Resources.Logo_AWS;
-            this.pictureBox1.Location = new System.Drawing.Point(64, 12);
+            this.pictureBox1.Image = global::WSA.Properties.Resources.AWS_LOGO;
+            this.pictureBox1.Location = new System.Drawing.Point(66, -25);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(255, 331);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
