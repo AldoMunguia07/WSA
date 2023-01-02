@@ -19,6 +19,8 @@ namespace WSA
         public FrmBoletas()
         {
             InitializeComponent();
+            panel1.BackColor = Color.FromArgb(VariablesGlobales.rgbPanel[0], VariablesGlobales.rgbPanel[1], VariablesGlobales.rgbPanel[2]);
+            panel2.BackColor = Color.FromArgb(VariablesGlobales.rgbPanel[0], VariablesGlobales.rgbPanel[1], VariablesGlobales.rgbPanel[2]);
             boleta.BuscarBoletas(dgvBoletas, dtpFechaInicio, dtpFechaFinal, txtBuscar.Text);
         }
 

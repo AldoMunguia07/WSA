@@ -54,5 +54,9 @@ namespace WSA.Clases
         }
 
         public static String TitleMessageBox = "AWS - Advanced Weighing System";
+
+        public static int[] rgbPanel = new int[] { 48, 50, 52 };
+        public static int[] rgbBotones = new int[] { 74, 114, 178 };
+
     }
 }

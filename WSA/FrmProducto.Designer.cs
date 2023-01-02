@@ -246,7 +246,7 @@ namespace WSA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1105, 542);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.panel2);

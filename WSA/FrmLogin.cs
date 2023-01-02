@@ -17,6 +17,7 @@ namespace WSA
         public FrmLogin()
         {
             InitializeComponent();
+            //btnInicioSesion.BackColor = Color.FromArgb();
         }
 
         private void btnInicioSesion_Click(object sender, EventArgs e)

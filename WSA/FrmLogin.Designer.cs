@@ -94,7 +94,7 @@ namespace WSA
             this.btnInicioSesion.Name = "btnInicioSesion";
             this.btnInicioSesion.Size = new System.Drawing.Size(150, 32);
             this.btnInicioSesion.TabIndex = 3;
-            this.btnInicioSesion.Text = "Iniciar sesión";
+            this.btnInicioSesion.Text = "Ingresar";
             this.btnInicioSesion.UseVisualStyleBackColor = false;
             this.btnInicioSesion.Click += new System.EventHandler(this.btnInicioSesion_Click);
             // 

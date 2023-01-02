@@ -18,6 +18,8 @@ namespace WSA
         public FrmRealizarBackup()
         {
             InitializeComponent();
+            panel1.BackColor = Color.FromArgb(VariablesGlobales.rgbPanel[0], VariablesGlobales.rgbPanel[1], VariablesGlobales.rgbPanel[2]);
+            panel2.BackColor = Color.FromArgb(VariablesGlobales.rgbPanel[0], VariablesGlobales.rgbPanel[1], VariablesGlobales.rgbPanel[2]);
         }
 
         private void btnBackup_Click(object sender, EventArgs e)

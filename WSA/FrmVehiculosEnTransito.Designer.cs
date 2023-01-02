@@ -50,11 +50,11 @@ namespace WSA
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(585, 72);
+            this.label1.Location = new System.Drawing.Point(582, 76);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(307, 29);
+            this.label1.Size = new System.Drawing.Size(366, 29);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Entradas de vehículos";
+            this.label1.Text = "ENTRADAS DE VEHÍCULOS";
             // 
             // dgvEntradas
             // 
@@ -138,7 +138,7 @@ namespace WSA
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1492, 30);
@@ -148,7 +148,7 @@ namespace WSA
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(0, 617);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1492, 30);
@@ -194,7 +194,7 @@ namespace WSA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1491, 643);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtBuscar);
