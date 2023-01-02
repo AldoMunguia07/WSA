@@ -399,6 +399,20 @@
     <Content Include="AWS-Icono.ico" />
     <Content Include="Database\WSA_ALG.sql" />
     <None Include="Resources\Logo AWS.png" />
+    <None Include="Resources\mi usuario.png" />
+    <None Include="Resources\salir.png" />
+    <None Include="Resources\entradaVehiculo.png" />
+    <None Include="Resources\boletas.png" />
+    <None Include="Resources\anuladas.png" />
+    <None Include="Resources\clientes.png" />
+    <None Include="Resources\conductores.png" />
+    <None Include="Resources\Productos.png" />
+    <None Include="Resources\barcos.png" />
+    <None Include="Resources\usuarios.png" />
+    <None Include="Resources\bitacora.png" />
+    <None Include="Resources\encabezado.png" />
+    <None Include="Resources\backup.png" />
+    <None Include="Resources\indicador.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
