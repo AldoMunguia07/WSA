@@ -34,7 +34,6 @@ namespace WSA
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.miUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vehículosEnTransitoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,16 +54,16 @@ namespace WSA
             this.respaldoDeBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraciónIndicadorDeBásculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.históricoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip = new System.Windows.Forms.ToolStrip();
-            this.tslbNombreUsuario = new System.Windows.Forms.ToolStripLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tslbNombreUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip.SuspendLayout();
-            this.toolStrip.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
             // 
-            this.menuStrip.BackColor = System.Drawing.Color.White;
+            this.menuStrip.BackColor = System.Drawing.Color.LightBlue;
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenu,
             this.procesoToolStripMenuItem,
@@ -81,7 +80,6 @@ namespace WSA
             // 
             this.fileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miUsuarioToolStripMenuItem,
-            this.toolStripSeparator5,
             this.exitToolStripMenuItem});
             this.fileMenu.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
@@ -96,11 +94,6 @@ namespace WSA
             this.miUsuarioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.miUsuarioToolStripMenuItem.Text = "Mi usuario";
             this.miUsuarioToolStripMenuItem.Click += new System.EventHandler(this.miUsuarioToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(157, 6);
             // 
             // exitToolStripMenuItem
             // 
@@ -277,30 +270,30 @@ namespace WSA
             this.históricoToolStripMenuItem.Text = "Histórico";
             this.históricoToolStripMenuItem.Click += new System.EventHandler(this.históricoToolStripMenuItem_Click);
             // 
-            // toolStrip
+            // statusStrip1
             // 
-            this.toolStrip.BackColor = System.Drawing.Color.White;
-            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusStrip1.BackColor = System.Drawing.Color.LightBlue;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tslbNombreUsuario});
-            this.toolStrip.Location = new System.Drawing.Point(0, 26);
-            this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(1147, 25);
-            this.toolStrip.TabIndex = 1;
-            this.toolStrip.Text = "ToolStrip";
+            this.statusStrip1.Location = new System.Drawing.Point(0, 535);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1147, 26);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
             // 
             // tslbNombreUsuario
             // 
-            this.tslbNombreUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tslbNombreUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tslbNombreUsuario.Name = "tslbNombreUsuario";
-            this.tslbNombreUsuario.Size = new System.Drawing.Size(103, 22);
-            this.tslbNombreUsuario.Text = "Nombre usuario";
+            this.tslbNombreUsuario.Size = new System.Drawing.Size(66, 21);
+            this.tslbNombreUsuario.Text = "Usuario";
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1147, 561);
-            this.Controls.Add(this.toolStrip);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -311,8 +304,8 @@ namespace WSA
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            this.toolStrip.ResumeLayout(false);
-            this.toolStrip.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,8 +314,6 @@ namespace WSA
 
 
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStrip toolStrip;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem fileMenu;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip;
@@ -335,7 +326,6 @@ namespace WSA
         private System.Windows.Forms.ToolStripMenuItem procesoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vehículosEnTransitoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem boletasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripLabel tslbNombreUsuario;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administracinToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bitacoraToolStripMenuItem;
@@ -347,6 +337,8 @@ namespace WSA
         private System.Windows.Forms.ToolStripMenuItem boletasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem bitácoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem históricoToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel tslbNombreUsuario;
     }
 }
 

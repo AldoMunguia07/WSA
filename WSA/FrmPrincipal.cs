@@ -236,5 +236,7 @@ namespace WSA
             CerrarFormularios();
             CargarFormulario(frmHistorico);
         }
+
+       
     }
 }

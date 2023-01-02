@@ -17,7 +17,7 @@ namespace WSA
         public FrmLogin()
         {
             InitializeComponent();
-            //btnInicioSesion.BackColor = Color.FromArgb();
+            btnInicioSesion.BackColor = Color.FromArgb(VariablesGlobales.rgbBotones[0], VariablesGlobales.rgbBotones[1], VariablesGlobales.rgbBotones[2]);
         }
 
         private void btnInicioSesion_Click(object sender, EventArgs e)

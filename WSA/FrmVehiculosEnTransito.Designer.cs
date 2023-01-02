@@ -37,8 +37,6 @@ namespace WSA
             this.btnEntrada = new System.Windows.Forms.Button();
             this.btnSalida = new System.Windows.Forms.Button();
             this.btnAnular = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -134,26 +132,6 @@ namespace WSA
             this.btnAnular.UseVisualStyleBackColor = false;
             this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1492, 30);
-            this.panel1.TabIndex = 15;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(0, 617);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1492, 30);
-            this.panel2.TabIndex = 16;
-            // 
             // btnImprimir
             // 
             this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -199,8 +177,6 @@ namespace WSA
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnImprimir);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAnular);
             this.Controls.Add(this.btnSalida);
             this.Controls.Add(this.btnEntrada);
@@ -223,8 +199,6 @@ namespace WSA
         private System.Windows.Forms.Button btnEntrada;
         private System.Windows.Forms.Button btnSalida;
         private System.Windows.Forms.Button btnAnular;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBuscar;
