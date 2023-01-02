@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>AWS-Icono.ico</ApplicationIcon>
+    <ApplicationIcon>IconoAWS.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -416,6 +416,7 @@
     <None Include="Resources\indicador.png" />
     <None Include="Resources\historico.png" />
     <None Include="Resources\AWS LOGO.png" />
+    <Content Include="IconoAWS.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

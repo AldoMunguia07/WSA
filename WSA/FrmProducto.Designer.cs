@@ -89,11 +89,11 @@ namespace WSA
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(422, 43);
+            this.label2.Location = new System.Drawing.Point(404, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(297, 29);
+            this.label2.Size = new System.Drawing.Size(352, 29);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Gestión de productos";
+            this.label2.Text = "GESTIÓN DE PRODUCTOS";
             // 
             // btnGuardar
             // 

@@ -169,11 +169,11 @@ namespace WSA
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(187, 58);
+            this.label6.Location = new System.Drawing.Point(139, 56);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(523, 29);
+            this.label6.Size = new System.Drawing.Size(634, 29);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Configuración de indicador de báscula";
+            this.label6.Text = "CONFIGURACIÓN DE INDICADOR DE BÁSCULA\r\n";
             // 
             // btnGuardar
             // 

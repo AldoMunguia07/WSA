@@ -39,11 +39,11 @@ namespace WSA
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(137, 105);
+            this.label2.Location = new System.Drawing.Point(96, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(651, 29);
+            this.label2.Size = new System.Drawing.Size(767, 29);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Realizar copia de seguridad de la base de datos";
+            this.label2.Text = "REALIZAR COPIA DE SEGURIDAD DE LA BASE DE DATOS\r\n";
             // 
             // btnBackup
             // 

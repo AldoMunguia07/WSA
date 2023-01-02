@@ -80,9 +80,9 @@ namespace WSA
             this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(520, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 29);
+            this.label1.Size = new System.Drawing.Size(327, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Ingreso de vehículo";
+            this.label1.Text = "INGRESO DE VEHÍCULO";
             // 
             // label2
             // 

@@ -406,9 +406,9 @@ namespace WSA
             this.lblTitulo.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(583, 77);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(127, 29);
+            this.lblTitulo.Size = new System.Drawing.Size(146, 29);
             this.lblTitulo.TabIndex = 73;
-            this.lblTitulo.Text = "Boleta #";
+            this.lblTitulo.Text = "BOLETA #";
             // 
             // dtpHoraSalida
             // 

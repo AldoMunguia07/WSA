@@ -92,7 +92,7 @@ namespace WSA
             // 
             this.miUsuarioToolStripMenuItem.Image = global::WSA.Properties.Resources.mi_usuario;
             this.miUsuarioToolStripMenuItem.Name = "miUsuarioToolStripMenuItem";
-            this.miUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.miUsuarioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.miUsuarioToolStripMenuItem.Text = "Mi usuario";
             this.miUsuarioToolStripMenuItem.Click += new System.EventHandler(this.miUsuarioToolStripMenuItem_Click);
             // 
@@ -100,7 +100,7 @@ namespace WSA
             // 
             this.exitToolStripMenuItem.Image = global::WSA.Properties.Resources.salir;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.exitToolStripMenuItem.Text = "&Salir";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 

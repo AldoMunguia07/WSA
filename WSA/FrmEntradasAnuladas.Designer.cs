@@ -34,8 +34,6 @@ namespace WSA
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEntradasAnuladas));
             this.dgvEntradasAnuladas = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dtpFechaFinal = new System.Windows.Forms.DateTimePicker();
@@ -83,31 +81,11 @@ namespace WSA
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(408, 49);
+            this.label1.Location = new System.Drawing.Point(377, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 29);
+            this.label1.Size = new System.Drawing.Size(315, 29);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Entradas anuladas";
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel2.Location = new System.Drawing.Point(-1, 499);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1042, 30);
-            this.panel2.TabIndex = 23;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
-            this.panel1.Location = new System.Drawing.Point(-1, -2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1042, 30);
-            this.panel1.TabIndex = 22;
+            this.label1.Text = "ENTRADAS ANULADAS";
             // 
             // label4
             // 
@@ -184,8 +162,6 @@ namespace WSA
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtpFechaInicio);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvEntradasAnuladas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -201,8 +177,6 @@ namespace WSA
 
         private System.Windows.Forms.DataGridView dgvEntradasAnuladas;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DateTimePicker dtpFechaFinal;
