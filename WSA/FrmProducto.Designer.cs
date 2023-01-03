@@ -147,7 +147,7 @@ namespace WSA
             // 
             this.txtDescProducto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDescProducto.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescProducto.Location = new System.Drawing.Point(317, 105);
+            this.txtDescProducto.Location = new System.Drawing.Point(243, 105);
             this.txtDescProducto.Name = "txtDescProducto";
             this.txtDescProducto.Size = new System.Drawing.Size(294, 27);
             this.txtDescProducto.TabIndex = 0;
@@ -157,7 +157,7 @@ namespace WSA
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(207, 109);
+            this.label1.Location = new System.Drawing.Point(133, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 18);
             this.label1.TabIndex = 8;

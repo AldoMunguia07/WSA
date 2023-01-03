@@ -144,7 +144,7 @@ namespace WSA
             // 
             this.txtDescBarco.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDescBarco.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescBarco.Location = new System.Drawing.Point(360, 123);
+            this.txtDescBarco.Location = new System.Drawing.Point(343, 123);
             this.txtDescBarco.Name = "txtDescBarco";
             this.txtDescBarco.Size = new System.Drawing.Size(352, 27);
             this.txtDescBarco.TabIndex = 0;
@@ -154,7 +154,7 @@ namespace WSA
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(165, 127);
+            this.label1.Location = new System.Drawing.Point(148, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(189, 18);
             this.label1.TabIndex = 8;
