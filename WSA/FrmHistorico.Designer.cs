@@ -48,7 +48,9 @@ namespace WSA
             this.dgvHistorico.AllowUserToAddRows = false;
             this.dgvHistorico.AllowUserToDeleteRows = false;
             this.dgvHistorico.AllowUserToOrderColumns = true;
-            this.dgvHistorico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvHistorico.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvHistorico.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHistorico.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -69,16 +71,16 @@ namespace WSA
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvHistorico.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHistorico.GridColor = System.Drawing.Color.DimGray;
-            this.dgvHistorico.Location = new System.Drawing.Point(86, 239);
+            this.dgvHistorico.Location = new System.Drawing.Point(12, 239);
             this.dgvHistorico.Name = "dgvHistorico";
             this.dgvHistorico.ReadOnly = true;
-            this.dgvHistorico.Size = new System.Drawing.Size(1017, 321);
+            this.dgvHistorico.Size = new System.Drawing.Size(1164, 336);
             this.dgvHistorico.TabIndex = 3;
             this.dgvHistorico.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHistorico_CellMouseClick);
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(166, 190);
@@ -89,7 +91,7 @@ namespace WSA
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(235, 186);
             this.txtBuscar.Name = "txtBuscar";
@@ -99,7 +101,7 @@ namespace WSA
             // 
             // dtpFechaFinal
             // 
-            this.dtpFechaFinal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpFechaFinal.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpFechaFinal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaFinal.Location = new System.Drawing.Point(661, 122);
             this.dtpFechaFinal.Name = "dtpFechaFinal";
@@ -109,7 +111,7 @@ namespace WSA
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(599, 125);
@@ -120,7 +122,7 @@ namespace WSA
             // 
             // dtpFechaInicio
             // 
-            this.dtpFechaInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpFechaInicio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpFechaInicio.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaInicio.Location = new System.Drawing.Point(235, 122);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
@@ -130,7 +132,7 @@ namespace WSA
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(169, 125);
@@ -141,7 +143,7 @@ namespace WSA
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(290, 35);
@@ -152,7 +154,7 @@ namespace WSA
             // 
             // btnExportar
             // 
-            this.btnExportar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnExportar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnExportar.BackColor = System.Drawing.Color.DarkGreen;
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExportar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

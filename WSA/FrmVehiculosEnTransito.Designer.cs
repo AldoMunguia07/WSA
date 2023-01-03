@@ -46,10 +46,10 @@ namespace WSA
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(582, 76);
+            this.label1.Location = new System.Drawing.Point(515, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(366, 29);
             this.label1.TabIndex = 1;
@@ -60,7 +60,9 @@ namespace WSA
             this.dgvEntradas.AllowUserToAddRows = false;
             this.dgvEntradas.AllowUserToDeleteRows = false;
             this.dgvEntradas.AllowUserToOrderColumns = true;
-            this.dgvEntradas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEntradas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEntradas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEntradas.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -81,21 +83,21 @@ namespace WSA
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEntradas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEntradas.GridColor = System.Drawing.Color.DimGray;
-            this.dgvEntradas.Location = new System.Drawing.Point(26, 210);
+            this.dgvEntradas.Location = new System.Drawing.Point(12, 189);
             this.dgvEntradas.Name = "dgvEntradas";
             this.dgvEntradas.ReadOnly = true;
-            this.dgvEntradas.Size = new System.Drawing.Size(1423, 257);
+            this.dgvEntradas.Size = new System.Drawing.Size(1467, 389);
             this.dgvEntradas.TabIndex = 5;
             this.dgvEntradas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvEntradas_CellMouseClick);
             // 
             // btnEntrada
             // 
-            this.btnEntrada.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnEntrada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEntrada.BackColor = System.Drawing.Color.DarkBlue;
             this.btnEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEntrada.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrada.ForeColor = System.Drawing.Color.White;
-            this.btnEntrada.Location = new System.Drawing.Point(807, 484);
+            this.btnEntrada.Location = new System.Drawing.Point(837, 600);
             this.btnEntrada.Name = "btnEntrada";
             this.btnEntrada.Size = new System.Drawing.Size(183, 31);
             this.btnEntrada.TabIndex = 1;
@@ -105,12 +107,12 @@ namespace WSA
             // 
             // btnSalida
             // 
-            this.btnSalida.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnSalida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalida.BackColor = System.Drawing.Color.DarkBlue;
             this.btnSalida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalida.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalida.ForeColor = System.Drawing.Color.White;
-            this.btnSalida.Location = new System.Drawing.Point(1125, 484);
+            this.btnSalida.Location = new System.Drawing.Point(1155, 600);
             this.btnSalida.Name = "btnSalida";
             this.btnSalida.Size = new System.Drawing.Size(170, 31);
             this.btnSalida.TabIndex = 3;
@@ -120,12 +122,12 @@ namespace WSA
             // 
             // btnAnular
             // 
-            this.btnAnular.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnAnular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAnular.BackColor = System.Drawing.Color.DarkBlue;
             this.btnAnular.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAnular.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnular.ForeColor = System.Drawing.Color.White;
-            this.btnAnular.Location = new System.Drawing.Point(1301, 484);
+            this.btnAnular.Location = new System.Drawing.Point(1331, 600);
             this.btnAnular.Name = "btnAnular";
             this.btnAnular.Size = new System.Drawing.Size(148, 31);
             this.btnAnular.TabIndex = 4;
@@ -135,12 +137,12 @@ namespace WSA
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnImprimir.BackColor = System.Drawing.Color.DarkBlue;
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImprimir.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
-            this.btnImprimir.Location = new System.Drawing.Point(996, 484);
+            this.btnImprimir.Location = new System.Drawing.Point(1026, 600);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(123, 31);
             this.btnImprimir.TabIndex = 2;
@@ -150,10 +152,11 @@ namespace WSA
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 168);
+            this.label4.Location = new System.Drawing.Point(28, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(313, 18);
             this.label4.TabIndex = 19;
@@ -161,9 +164,10 @@ namespace WSA
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(347, 164);
+            this.txtBuscar.Location = new System.Drawing.Point(347, 118);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(258, 27);
             this.txtBuscar.TabIndex = 0;
@@ -171,10 +175,10 @@ namespace WSA
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1072, 152);
+            this.label2.Location = new System.Drawing.Point(1072, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 48);
             this.label2.TabIndex = 20;
