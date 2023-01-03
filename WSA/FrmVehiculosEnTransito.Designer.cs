@@ -40,6 +40,7 @@ namespace WSA
             this.btnImprimir = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,12 +169,24 @@ namespace WSA
             this.txtBuscar.TabIndex = 0;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1072, 152);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 48);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "C: Cerradas \r\nA: Anuladas\r\nP: En proceso";
+            // 
             // FrmVehiculosEnTransito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1491, 643);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnImprimir);
@@ -202,5 +215,6 @@ namespace WSA
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Label label2;
     }
 }

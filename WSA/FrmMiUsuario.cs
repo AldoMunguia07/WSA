@@ -31,8 +31,8 @@ namespace WSA
         private void cargarFormulario()
         {
             usuario.BuscarUsuarioPorId(VariablesGlobales.Usuario.UsuarioId, usuario);
-            txtNombreUsuario.Text = usuario.NombreUsuario;
-            txtUsuario.Text = usuario.UsuarioD;
+            txtNombreUsuario.Text = usuario.NombreUsuario.ToUpper();
+            txtUsuario.Text = usuario.UsuarioD.ToUpper();
             txtContrasena.Text = usuario.Contrasena;
             txtConfirmarContrasena.Text = usuario.Contrasena;
             txtTipoUsuario.Text = usuario.TipoUsuario;
@@ -47,6 +47,7 @@ namespace WSA
                 btnActivo.Text = "Inactivo";
             }
             username = VariablesGlobales.Usuario.UsuarioD;
+            
 
         }
 
@@ -82,7 +83,7 @@ namespace WSA
                 {
                     if (txtContrasena.Text == txtConfirmarContrasena.Text)
                     {
-                        if (!usuario.ExisteUsuario(txtUsuario.Text) || txtUsuario.Text == username)
+                        if (!usuario.ExisteUsuario(txtUsuario.Text) || txtUsuario.Text.ToUpper() == username)
                         {
                             getValues();
                             usuario.ModificarUsuario(usuario);

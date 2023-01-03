@@ -101,44 +101,53 @@ namespace WSA
             
             if (camposLlenos())
             {
-                
-                getValues();
-                
-                if (boleta.AgregarSalida(boleta))
+                if((float.Parse(txtPesoEntrada.Text) - float.Parse(txtPesoSalida.Text)) != 0)
                 {
-                    
-                    if (float.Parse(txtPesoSalida.Text) > float.Parse(txtPesoEntrada.Text))
+                    getValues();
+
+                    if (boleta.AgregarSalida(boleta))
                     {
-                        if(Convert.ToInt32(boleta.ObtenerTipoPesaje(boleta).Rows[0]["Tipo_Pesaje_Id"].ToString()) == 2)
+
+                        if (float.Parse(txtPesoSalida.Text) > float.Parse(txtPesoEntrada.Text))
                         {
-                            boleta.TipoPesajeId = 1;
-                            boleta.CambiarTipoPesaje(boleta);
-                            MessageBox.Show("Correción de pesos aplicada: Peso ingreso (Tara) y Peso Salida (Bruto)", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            if (Convert.ToInt32(boleta.ObtenerTipoPesaje(boleta).Rows[0]["Tipo_Pesaje_Id"].ToString()) == 2)
+                            {
+                                boleta.TipoPesajeId = 1;
+                                boleta.CambiarTipoPesaje(boleta);
+                                MessageBox.Show("Correción de pesos aplicada: Peso ingreso (Tara) y Peso Salida (Bruto)", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
                         }
+                        else
+                        {
+
+                            if (Convert.ToInt32(boleta.ObtenerTipoPesaje(boleta).Rows[0]["Tipo_Pesaje_Id"].ToString()) == 1)
+                            {
+                                boleta.TipoPesajeId = 2;
+                                boleta.CambiarTipoPesaje(boleta);
+                                MessageBox.Show("Correción de pesos aplicada: Peso ingreso (Bruto) y Peso Salida (Tara)", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
+                        }
+
+                        MessageBox.Show("Salida agregada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FrmTicket frmTicket = new FrmTicket(boleta.UltimaBoleta());
+                        frmTicket.ShowDialog();
                     }
                     else
                     {
-                       
-                        if (Convert.ToInt32(boleta.ObtenerTipoPesaje(boleta).Rows[0]["Tipo_Pesaje_Id"].ToString()) == 1)
-                        {
-                            boleta.TipoPesajeId = 2;
-                            boleta.CambiarTipoPesaje(boleta);
-                            MessageBox.Show("Correción de pesos aplicada: Peso ingreso (Bruto) y Peso Salida (Tara)", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        }
+                        MessageBox.Show("Error al agregar salida", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
 
-                    MessageBox.Show("Salida agregada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    FrmTicket frmTicket = new FrmTicket(boleta.UltimaBoleta());
-                    frmTicket.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Error al agregar salida", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    MessageBox.Show("La diferencia de pesos no puede ser 0", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 }
 
-                this.Close();
-                
+
 
             }
             

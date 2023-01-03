@@ -42,6 +42,7 @@ namespace WSA
             this.label3 = new System.Windows.Forms.Label();
             this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBoletas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +75,7 @@ namespace WSA
             this.dgvBoletas.Location = new System.Drawing.Point(32, 243);
             this.dgvBoletas.Name = "dgvBoletas";
             this.dgvBoletas.ReadOnly = true;
-            this.dgvBoletas.Size = new System.Drawing.Size(1228, 196);
+            this.dgvBoletas.Size = new System.Drawing.Size(1228, 297);
             this.dgvBoletas.TabIndex = 13;
             this.dgvBoletas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBoletas_CellMouseClick);
             // 
@@ -96,7 +97,7 @@ namespace WSA
             this.btnVerBoleta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVerBoleta.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerBoleta.ForeColor = System.Drawing.Color.White;
-            this.btnVerBoleta.Location = new System.Drawing.Point(1052, 476);
+            this.btnVerBoleta.Location = new System.Drawing.Point(1052, 554);
             this.btnVerBoleta.Name = "btnVerBoleta";
             this.btnVerBoleta.Size = new System.Drawing.Size(102, 26);
             this.btnVerBoleta.TabIndex = 14;
@@ -111,7 +112,7 @@ namespace WSA
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImprimir.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
-            this.btnImprimir.Location = new System.Drawing.Point(1174, 476);
+            this.btnImprimir.Location = new System.Drawing.Point(1174, 554);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(86, 26);
             this.btnImprimir.TabIndex = 15;
@@ -182,12 +183,24 @@ namespace WSA
             this.label2.TabIndex = 32;
             this.label2.Text = "Desde:";
             // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(962, 189);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 48);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "C: Cerradas \r\nA: Anuladas\r\nP: En proceso";
+            // 
             // FrmBoletas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1287, 592);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dtpFechaFinal);
@@ -219,5 +232,6 @@ namespace WSA
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpFechaInicio;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -40,6 +40,7 @@ namespace WSA
             this.label3 = new System.Windows.Forms.Label();
             this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradasAnuladas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +73,7 @@ namespace WSA
             this.dgvEntradasAnuladas.Location = new System.Drawing.Point(12, 223);
             this.dgvEntradasAnuladas.Name = "dgvEntradasAnuladas";
             this.dgvEntradasAnuladas.ReadOnly = true;
-            this.dgvEntradasAnuladas.Size = new System.Drawing.Size(1017, 193);
+            this.dgvEntradasAnuladas.Size = new System.Drawing.Size(1017, 292);
             this.dgvEntradasAnuladas.TabIndex = 12;
             this.dgvEntradasAnuladas.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvEntradasAnuladas_CellMouseClick);
             // 
@@ -150,12 +151,24 @@ namespace WSA
             this.label2.TabIndex = 38;
             this.label2.Text = "Desde:";
             // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(636, 163);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 48);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "C: Cerradas \r\nA: Anuladas\r\nP: En proceso";
+            // 
             // FrmEntradasAnuladas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1041, 527);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dtpFechaFinal);
@@ -183,5 +196,6 @@ namespace WSA
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpFechaInicio;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
     }
 }
