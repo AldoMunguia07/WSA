@@ -45,5 +45,15 @@ namespace WSA
         {
             historico.ExportarExcel(dgvHistorico);
         }
+
+        private void dgvHistorico_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvHistorico.Rows[e.RowIndex];
+                row.Selected = true;
+                
+            }
+        }
     }
 }

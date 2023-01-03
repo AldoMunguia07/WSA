@@ -74,6 +74,7 @@ namespace WSA
             this.dgvHistorico.ReadOnly = true;
             this.dgvHistorico.Size = new System.Drawing.Size(1017, 321);
             this.dgvHistorico.TabIndex = 3;
+            this.dgvHistorico.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHistorico_CellMouseClick);
             // 
             // label4
             // 

@@ -501,7 +501,7 @@ namespace WSA.Clases
                             }
                             else
                             {
-                                txtDatos.Text = "No valores negativos";
+                                txtDatos.Text = "Sin signo '+'";
                             }
                         }
                         else

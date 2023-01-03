@@ -47,7 +47,7 @@ namespace WSA
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.boletasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.bitácoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rptbitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administracinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.encabezadoBoletaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -198,7 +198,7 @@ namespace WSA
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.boletasToolStripMenuItem1,
-            this.bitácoraToolStripMenuItem});
+            this.rptbitacoraToolStripMenuItem});
             this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
@@ -209,17 +209,17 @@ namespace WSA
             // 
             this.boletasToolStripMenuItem1.Image = global::WSA.Properties.Resources.boletas;
             this.boletasToolStripMenuItem1.Name = "boletasToolStripMenuItem1";
-            this.boletasToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
+            this.boletasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.boletasToolStripMenuItem1.Text = "Boletas";
             this.boletasToolStripMenuItem1.Click += new System.EventHandler(this.boletasToolStripMenuItem1_Click);
             // 
-            // bitácoraToolStripMenuItem
+            // rptbitacoraToolStripMenuItem
             // 
-            this.bitácoraToolStripMenuItem.Image = global::WSA.Properties.Resources.bitacora;
-            this.bitácoraToolStripMenuItem.Name = "bitácoraToolStripMenuItem";
-            this.bitácoraToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
-            this.bitácoraToolStripMenuItem.Text = "Bitácora";
-            this.bitácoraToolStripMenuItem.Click += new System.EventHandler(this.bitácoraToolStripMenuItem_Click);
+            this.rptbitacoraToolStripMenuItem.Image = global::WSA.Properties.Resources.bitacora;
+            this.rptbitacoraToolStripMenuItem.Name = "rptbitacoraToolStripMenuItem";
+            this.rptbitacoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rptbitacoraToolStripMenuItem.Text = "Bitácora";
+            this.rptbitacoraToolStripMenuItem.Click += new System.EventHandler(this.bitácoraToolStripMenuItem_Click);
             // 
             // administracinToolStripMenuItem
             // 
@@ -341,7 +341,7 @@ namespace WSA
         private System.Windows.Forms.ToolStripMenuItem miUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuraciónIndicadorDeBásculaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem boletasToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem bitácoraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rptbitacoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem históricoToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel tslbNombreUsuario;

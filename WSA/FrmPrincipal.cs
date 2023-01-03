@@ -27,6 +27,7 @@ namespace WSA
             {
                 gestionToolStripMenuItem.Visible = false;
                 administracinToolStripMenuItem.Visible = false;
+                rptbitacoraToolStripMenuItem.Visible = false;
                 
             }
         }
