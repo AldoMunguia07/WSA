@@ -6,7 +6,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.82263cm</Width>
+              <Width>1.43929cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.29289cm</Width>
@@ -48,10 +48,10 @@
               <Width>1.39581cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.62101cm</Width>
+              <Width>1.30351cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.36884cm</Width>
+              <Width>2.34238cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1203,9 +1203,9 @@
         </TablixRowHierarchy>
         <DataSetName>Boletas</DataSetName>
         <Top>1.87537cm</Top>
-        <Left>0.24788cm</Left>
+        <Left>0.56538cm</Left>
         <Height>1.2cm</Height>
-        <Width>27.39827cm</Width>
+        <Width>26.67097cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1287,7 +1287,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Reporte de boletas</Value>
+                  <Value>REPORTE DE BOLETAS</Value>
                   <Style>
                     <FontSize>22pt</FontSize>
                     <FontWeight>Bold</FontWeight>
@@ -1301,9 +1301,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox35</rd:DefaultName>
           <Top>1.72861cm</Top>
-          <Left>9.65285cm</Left>
+          <Left>9.55994cm</Left>
           <Height>1.0498cm</Height>
-          <Width>7.15667cm</Width>
+          <Width>9.53629cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1331,7 +1331,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>fechaInicio</rd:DefaultName>
-          <Top>3.47487cm</Top>
+          <Top>3.79237cm</Top>
           <Left>9.55994cm</Left>
           <Height>0.6cm</Height>
           <Width>3.32021cm</Width>
@@ -1363,7 +1363,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>fechaFinal</rd:DefaultName>
-          <Top>3.47487cm</Top>
+          <Top>3.79237cm</Top>
           <Left>14.23014cm</Left>
           <Height>0.6cm</Height>
           <Width>4.03458cm</Width>
@@ -1395,7 +1395,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox40</rd:DefaultName>
-          <Top>3.47487cm</Top>
+          <Top>3.79237cm</Top>
           <Left>8.2241cm</Left>
           <Height>0.6cm</Height>
           <Width>1.33583cm</Width>
@@ -1427,7 +1427,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox40</rd:DefaultName>
-          <Top>3.47487cm</Top>
+          <Top>3.79237cm</Top>
           <Left>13.02538cm</Left>
           <Height>0.6cm</Height>
           <Width>1.33583cm</Width>
@@ -1639,6 +1639,8 @@
     </PageFooter>
     <PageHeight>21.59cm</PageHeight>
     <PageWidth>27.94cm</PageWidth>
+    <InteractiveHeight>21.59cm</InteractiveHeight>
+    <InteractiveWidth>28cm</InteractiveWidth>
     <LeftMargin>0cm</LeftMargin>
     <RightMargin>0cm</RightMargin>
     <TopMargin>0cm</TopMargin>

@@ -216,6 +216,16 @@ namespace WSA
             }
         }
 
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar == Convert.ToChar(Keys.Back))
+                return;
+
+            e.Handled = !char.IsLetterOrDigit(e.KeyChar);
+
+        }
+
         private void dgvUsuarios_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex >= 0)
