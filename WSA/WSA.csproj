@@ -89,6 +89,7 @@
     </Reference>
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -114,6 +115,7 @@
     <Compile Include="Clases\Conductor.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\ConexionHistorico.cs" />
+    <Compile Include="Clases\Grafico.cs" />
     <Compile Include="Clases\Historico.cs" />
     <Compile Include="Clases\Indicador.cs" />
     <Compile Include="Clases\Database.cs" />
@@ -224,6 +226,12 @@
     <Compile Include="FrmSalida.Designer.cs">
       <DependentUpon>FrmSalida.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTablero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTablero.Designer.cs">
+      <DependentUpon>FrmTablero.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTicket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSalida.resx">
       <DependentUpon>FrmSalida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTablero.resx">
+      <DependentUpon>FrmTablero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTicket.resx">
       <DependentUpon>FrmTicket.cs</DependentUpon>

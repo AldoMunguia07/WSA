@@ -8,8 +8,8 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 using System.Collections;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace WSA.Clases
 {
