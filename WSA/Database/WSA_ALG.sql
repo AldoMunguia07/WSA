@@ -915,6 +915,45 @@ END
 GO
 
 
+--PROCEDMIENTO ALMACENADO DE GRAFICOS
+ALTER PROCEDURE sp_Graficos@accion nvarchar(50)ASBEGIN
+	IF @accion = 'UltimosMeses'	BEGIN		--ULTIMOS 12 MESES PESAJE
+		SELECT TOP(12) MONTH(Fecha_Salida) N, CONCAT(DATENAME(MONTH, Fecha_Salida), ' del ', YEAR(Fecha_Salida)) Mes, SUM(ABS(Peso_Ingreso - Peso_Salida)) Peso
+		FROM Boleta
+		WHERE Estado = 'C'
+		GROUP BY DATENAME(MONTH, Fecha_Salida), MONTH(Fecha_Salida), YEAR(Fecha_Salida)
+		ORDER BY YEAR(Fecha_Salida), MONTH(Fecha_Salida)	END
+	ELSE IF @accion = 'TopConductores'	BEGIN		--TOP 5 CONDUCTORES
+		SELECT TOP(5) C.Conductor, COUNT(B.Boleta_Id) Frecuencia
+		FROM Boleta B JOIN Conductor C
+		ON B.Conductor_Id = C.Conductor_Id
+		WHERE Estado = 'C'
+		GROUP BY C.Conductor
+		ORDER BY COUNT(B.Boleta_Id) DESC
+	END
+	ELSE IF @accion = 'TopProductos'	BEGIN		--TOP 5 PRODUCTOS		SELECT TOP(5) P.Descripcion Producto, COUNT(B.Barco_Id) Frecuencia
+		FROM Boleta B JOIN Producto P
+		ON B.Producto_Id = P.Producto_Id
+		WHERE Estado = 'C'
+		GROUP BY P.Descripcion
+		ORDER BY COUNT(B.Boleta_Id) DESC
+	END
+
+	ELSE IF @accion = 'Datos'	BEGIN		--TOP 5 PRODUCTOS		SELECT (SELECT COUNT(*) FROM Boleta WHERE Estado = 'C') Boletas, 
+		(SELECT COUNT(*) FROM Boleta WHERE Estado = 'P') Proceso, 
+		(SELECT COUNT(*) FROM Boleta WHERE Estado = 'A') Anuladas, 
+		(SELECT SUM(ABS(Peso_Ingreso - Peso_Salida)) FROM Boleta WHERE Estado = 'C') Peso_Total, 
+		(SELECT MAX(ABS(Peso_Ingreso - Peso_Salida)) FROM Boleta WHERE Estado = 'C') Mayor_Pesaje, 
+		(SELECT MIN(ABS(Peso_Ingreso - Peso_Salida)) FROM Boleta WHERE Estado = 'C') Menor_Pesaje,
+		(SELECT COUNT(*) FROM Usuario WHERE Tipo_Usuario_Id = 1) Administradores,
+		(SELECT COUNT(*) FROM Usuario WHERE Tipo_Usuario_Id = 2) Operadores,
+		(SELECT COUNT(*) FROM Conductor) Conductores,
+		(SELECT COUNT(*) FROM Cliente) Clientes,
+		(SELECT COUNT(*) FROM Barco) Barcos,
+		(SELECT COUNT(*) FROM Producto) Productos	END
+
+END
+GO
 
 
 
