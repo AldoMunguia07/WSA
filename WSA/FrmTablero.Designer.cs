@@ -52,37 +52,37 @@ namespace WSA
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblTotalBoletas = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblProceso = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblCerradas = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblPesoTotal = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblMenorPesaje = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblAdministradores = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblPesoPromedio = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblMayorPesaje = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.label19 = new System.Windows.Forms.Label();
+            this.lblClientes = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.lblBarcos = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.label23 = new System.Windows.Forms.Label();
+            this.lblOperadores = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.lblConductores = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.splitContainer8 = new System.Windows.Forms.SplitContainer();
-            this.label31 = new System.Windows.Forms.Label();
+            this.lblProductos = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gpMeses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gpOperadores)).BeginInit();
@@ -240,29 +240,29 @@ namespace WSA
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.splitContainer1.Panel1.Controls.Add(this.label4);
+            this.splitContainer1.Panel1.Controls.Add(this.lblTotalBoletas);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.splitContainer1.Panel2.Controls.Add(this.label5);
+            this.splitContainer1.Panel2.Controls.Add(this.lblProceso);
             this.splitContainer1.Panel2.Controls.Add(this.label6);
             this.splitContainer1.Size = new System.Drawing.Size(973, 192);
             this.splitContainer1.SplitterDistance = 478;
             this.splitContainer1.TabIndex = 10;
             // 
-            // label4
+            // lblTotalBoletas
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(158, 108);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 48);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "label4";
+            this.lblTotalBoletas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTotalBoletas.AutoSize = true;
+            this.lblTotalBoletas.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalBoletas.ForeColor = System.Drawing.Color.White;
+            this.lblTotalBoletas.Location = new System.Drawing.Point(158, 108);
+            this.lblTotalBoletas.Name = "lblTotalBoletas";
+            this.lblTotalBoletas.Size = new System.Drawing.Size(158, 48);
+            this.lblTotalBoletas.TabIndex = 1;
+            this.lblTotalBoletas.Text = "label4";
             // 
             // label3
             // 
@@ -270,23 +270,23 @@ namespace WSA
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(157, 37);
+            this.label3.Location = new System.Drawing.Point(121, 37);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 52);
+            this.label3.Size = new System.Drawing.Size(239, 52);
             this.label3.TabIndex = 0;
-            this.label3.Text = "label3";
+            this.label3.Text = "Cerradas";
             // 
-            // label5
+            // lblProceso
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(155, 108);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 48);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "label5";
+            this.lblProceso.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblProceso.AutoSize = true;
+            this.lblProceso.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProceso.ForeColor = System.Drawing.Color.White;
+            this.lblProceso.Location = new System.Drawing.Point(155, 108);
+            this.lblProceso.Name = "lblProceso";
+            this.lblProceso.Size = new System.Drawing.Size(158, 48);
+            this.lblProceso.TabIndex = 3;
+            this.lblProceso.Text = "label5";
             // 
             // label6
             // 
@@ -294,11 +294,11 @@ namespace WSA
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(154, 37);
+            this.label6.Location = new System.Drawing.Point(124, 37);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(172, 52);
+            this.label6.Size = new System.Drawing.Size(289, 52);
             this.label6.TabIndex = 2;
-            this.label6.Text = "label6";
+            this.label6.Text = "En proceso";
             // 
             // splitContainer2
             // 
@@ -310,29 +310,29 @@ namespace WSA
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.splitContainer2.Panel1.Controls.Add(this.label7);
+            this.splitContainer2.Panel1.Controls.Add(this.lblCerradas);
             this.splitContainer2.Panel1.Controls.Add(this.label8);
             // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.splitContainer2.Panel2.Controls.Add(this.label9);
+            this.splitContainer2.Panel2.Controls.Add(this.lblPesoTotal);
             this.splitContainer2.Panel2.Controls.Add(this.label10);
             this.splitContainer2.Size = new System.Drawing.Size(973, 192);
             this.splitContainer2.SplitterDistance = 478;
             this.splitContainer2.TabIndex = 11;
             // 
-            // label7
+            // lblCerradas
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(158, 108);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(158, 48);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "label7";
+            this.lblCerradas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCerradas.AutoSize = true;
+            this.lblCerradas.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCerradas.ForeColor = System.Drawing.Color.White;
+            this.lblCerradas.Location = new System.Drawing.Point(158, 108);
+            this.lblCerradas.Name = "lblCerradas";
+            this.lblCerradas.Size = new System.Drawing.Size(158, 48);
+            this.lblCerradas.TabIndex = 1;
+            this.lblCerradas.Text = "label7";
             // 
             // label8
             // 
@@ -340,23 +340,23 @@ namespace WSA
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(157, 37);
+            this.label8.Location = new System.Drawing.Point(130, 37);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(172, 52);
+            this.label8.Size = new System.Drawing.Size(239, 52);
             this.label8.TabIndex = 0;
-            this.label8.Text = "label8";
+            this.label8.Text = "Cerradas";
             // 
-            // label9
+            // lblPesoTotal
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(155, 108);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(158, 48);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "label9";
+            this.lblPesoTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPesoTotal.AutoSize = true;
+            this.lblPesoTotal.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPesoTotal.ForeColor = System.Drawing.Color.White;
+            this.lblPesoTotal.Location = new System.Drawing.Point(155, 108);
+            this.lblPesoTotal.Name = "lblPesoTotal";
+            this.lblPesoTotal.Size = new System.Drawing.Size(158, 48);
+            this.lblPesoTotal.TabIndex = 3;
+            this.lblPesoTotal.Text = "label9";
             // 
             // label10
             // 
@@ -364,11 +364,11 @@ namespace WSA
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(154, 37);
+            this.label10.Location = new System.Drawing.Point(124, 37);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(203, 52);
+            this.label10.Size = new System.Drawing.Size(269, 52);
             this.label10.TabIndex = 2;
-            this.label10.Text = "label10";
+            this.label10.Text = "Peso total";
             // 
             // splitContainer3
             // 
@@ -380,29 +380,29 @@ namespace WSA
             // splitContainer3.Panel1
             // 
             this.splitContainer3.Panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.splitContainer3.Panel1.Controls.Add(this.label11);
+            this.splitContainer3.Panel1.Controls.Add(this.lblMenorPesaje);
             this.splitContainer3.Panel1.Controls.Add(this.label12);
             // 
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.splitContainer3.Panel2.Controls.Add(this.label13);
+            this.splitContainer3.Panel2.Controls.Add(this.lblAdministradores);
             this.splitContainer3.Panel2.Controls.Add(this.label14);
             this.splitContainer3.Size = new System.Drawing.Size(973, 192);
             this.splitContainer3.SplitterDistance = 478;
             this.splitContainer3.TabIndex = 13;
             // 
-            // label11
+            // lblMenorPesaje
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(158, 108);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(186, 48);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "label11";
+            this.lblMenorPesaje.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblMenorPesaje.AutoSize = true;
+            this.lblMenorPesaje.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMenorPesaje.ForeColor = System.Drawing.Color.White;
+            this.lblMenorPesaje.Location = new System.Drawing.Point(158, 108);
+            this.lblMenorPesaje.Name = "lblMenorPesaje";
+            this.lblMenorPesaje.Size = new System.Drawing.Size(186, 48);
+            this.lblMenorPesaje.TabIndex = 1;
+            this.lblMenorPesaje.Text = "label11";
             // 
             // label12
             // 
@@ -410,23 +410,23 @@ namespace WSA
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(157, 37);
+            this.label12.Location = new System.Drawing.Point(93, 37);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(203, 52);
+            this.label12.Size = new System.Drawing.Size(350, 52);
             this.label12.TabIndex = 0;
-            this.label12.Text = "label12";
+            this.label12.Text = "Menor pesaje";
             // 
-            // label13
+            // lblAdministradores
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(155, 108);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(186, 48);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "label13";
+            this.lblAdministradores.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblAdministradores.AutoSize = true;
+            this.lblAdministradores.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdministradores.ForeColor = System.Drawing.Color.White;
+            this.lblAdministradores.Location = new System.Drawing.Point(155, 108);
+            this.lblAdministradores.Name = "lblAdministradores";
+            this.lblAdministradores.Size = new System.Drawing.Size(186, 48);
+            this.lblAdministradores.TabIndex = 3;
+            this.lblAdministradores.Text = "label23";
             // 
             // label14
             // 
@@ -434,11 +434,11 @@ namespace WSA
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(154, 37);
+            this.label14.Location = new System.Drawing.Point(54, 37);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(203, 52);
+            this.label14.Size = new System.Drawing.Size(425, 52);
             this.label14.TabIndex = 2;
-            this.label14.Text = "label14";
+            this.label14.Text = "Administradores";
             // 
             // splitContainer4
             // 
@@ -450,29 +450,29 @@ namespace WSA
             // splitContainer4.Panel1
             // 
             this.splitContainer4.Panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.splitContainer4.Panel1.Controls.Add(this.label15);
+            this.splitContainer4.Panel1.Controls.Add(this.lblPesoPromedio);
             this.splitContainer4.Panel1.Controls.Add(this.label16);
             // 
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.splitContainer4.Panel2.Controls.Add(this.label17);
+            this.splitContainer4.Panel2.Controls.Add(this.lblMayorPesaje);
             this.splitContainer4.Panel2.Controls.Add(this.label18);
             this.splitContainer4.Size = new System.Drawing.Size(973, 192);
             this.splitContainer4.SplitterDistance = 478;
             this.splitContainer4.TabIndex = 12;
             // 
-            // label15
+            // lblPesoPromedio
             // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(158, 108);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(186, 48);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "label15";
+            this.lblPesoPromedio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPesoPromedio.AutoSize = true;
+            this.lblPesoPromedio.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPesoPromedio.ForeColor = System.Drawing.Color.White;
+            this.lblPesoPromedio.Location = new System.Drawing.Point(158, 108);
+            this.lblPesoPromedio.Name = "lblPesoPromedio";
+            this.lblPesoPromedio.Size = new System.Drawing.Size(186, 48);
+            this.lblPesoPromedio.TabIndex = 1;
+            this.lblPesoPromedio.Text = "label15";
             // 
             // label16
             // 
@@ -480,23 +480,23 @@ namespace WSA
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(157, 37);
+            this.label16.Location = new System.Drawing.Point(57, 37);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(203, 52);
+            this.label16.Size = new System.Drawing.Size(386, 52);
             this.label16.TabIndex = 0;
-            this.label16.Text = "label16";
+            this.label16.Text = "Peso promedio";
             // 
-            // label17
+            // lblMayorPesaje
             // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(155, 108);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(186, 48);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "label17";
+            this.lblMayorPesaje.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblMayorPesaje.AutoSize = true;
+            this.lblMayorPesaje.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMayorPesaje.ForeColor = System.Drawing.Color.White;
+            this.lblMayorPesaje.Location = new System.Drawing.Point(155, 108);
+            this.lblMayorPesaje.Name = "lblMayorPesaje";
+            this.lblMayorPesaje.Size = new System.Drawing.Size(186, 48);
+            this.lblMayorPesaje.TabIndex = 3;
+            this.lblMayorPesaje.Text = "label17";
             // 
             // label18
             // 
@@ -504,11 +504,11 @@ namespace WSA
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(154, 37);
+            this.label18.Location = new System.Drawing.Point(91, 37);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(203, 52);
+            this.label18.Size = new System.Drawing.Size(347, 52);
             this.label18.TabIndex = 2;
-            this.label18.Text = "label18";
+            this.label18.Text = "Mayor pesaje";
             // 
             // splitContainer5
             // 
@@ -520,29 +520,29 @@ namespace WSA
             // splitContainer5.Panel1
             // 
             this.splitContainer5.Panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.splitContainer5.Panel1.Controls.Add(this.label19);
+            this.splitContainer5.Panel1.Controls.Add(this.lblClientes);
             this.splitContainer5.Panel1.Controls.Add(this.label20);
             // 
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.splitContainer5.Panel2.Controls.Add(this.label21);
+            this.splitContainer5.Panel2.Controls.Add(this.lblBarcos);
             this.splitContainer5.Panel2.Controls.Add(this.label22);
             this.splitContainer5.Size = new System.Drawing.Size(973, 192);
             this.splitContainer5.SplitterDistance = 478;
             this.splitContainer5.TabIndex = 15;
             // 
-            // label19
+            // lblClientes
             // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(158, 108);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(186, 48);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "label19";
+            this.lblClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblClientes.AutoSize = true;
+            this.lblClientes.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientes.ForeColor = System.Drawing.Color.White;
+            this.lblClientes.Location = new System.Drawing.Point(158, 108);
+            this.lblClientes.Name = "lblClientes";
+            this.lblClientes.Size = new System.Drawing.Size(186, 48);
+            this.lblClientes.TabIndex = 1;
+            this.lblClientes.Text = "label19";
             // 
             // label20
             // 
@@ -552,21 +552,21 @@ namespace WSA
             this.label20.ForeColor = System.Drawing.Color.White;
             this.label20.Location = new System.Drawing.Point(157, 37);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(203, 52);
+            this.label20.Size = new System.Drawing.Size(219, 52);
             this.label20.TabIndex = 0;
-            this.label20.Text = "label20";
+            this.label20.Text = "Clientes";
             // 
-            // label21
+            // lblBarcos
             // 
-            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(155, 108);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(186, 48);
-            this.label21.TabIndex = 3;
-            this.label21.Text = "label21";
+            this.lblBarcos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblBarcos.AutoSize = true;
+            this.lblBarcos.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBarcos.ForeColor = System.Drawing.Color.White;
+            this.lblBarcos.Location = new System.Drawing.Point(155, 108);
+            this.lblBarcos.Name = "lblBarcos";
+            this.lblBarcos.Size = new System.Drawing.Size(186, 48);
+            this.lblBarcos.TabIndex = 3;
+            this.lblBarcos.Text = "label21";
             // 
             // label22
             // 
@@ -576,9 +576,9 @@ namespace WSA
             this.label22.ForeColor = System.Drawing.Color.White;
             this.label22.Location = new System.Drawing.Point(154, 37);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(203, 52);
+            this.label22.Size = new System.Drawing.Size(187, 52);
             this.label22.TabIndex = 2;
-            this.label22.Text = "label22";
+            this.label22.Text = "Barcos";
             // 
             // splitContainer6
             // 
@@ -590,29 +590,29 @@ namespace WSA
             // splitContainer6.Panel1
             // 
             this.splitContainer6.Panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.splitContainer6.Panel1.Controls.Add(this.label23);
+            this.splitContainer6.Panel1.Controls.Add(this.lblOperadores);
             this.splitContainer6.Panel1.Controls.Add(this.label24);
             // 
             // splitContainer6.Panel2
             // 
             this.splitContainer6.Panel2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.splitContainer6.Panel2.Controls.Add(this.label25);
+            this.splitContainer6.Panel2.Controls.Add(this.lblConductores);
             this.splitContainer6.Panel2.Controls.Add(this.label26);
             this.splitContainer6.Size = new System.Drawing.Size(973, 192);
             this.splitContainer6.SplitterDistance = 478;
             this.splitContainer6.TabIndex = 14;
             // 
-            // label23
+            // lblOperadores
             // 
-            this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(158, 108);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(186, 48);
-            this.label23.TabIndex = 1;
-            this.label23.Text = "label23";
+            this.lblOperadores.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblOperadores.AutoSize = true;
+            this.lblOperadores.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOperadores.ForeColor = System.Drawing.Color.White;
+            this.lblOperadores.Location = new System.Drawing.Point(158, 108);
+            this.lblOperadores.Name = "lblOperadores";
+            this.lblOperadores.Size = new System.Drawing.Size(186, 48);
+            this.lblOperadores.TabIndex = 1;
+            this.lblOperadores.Text = "label23";
             // 
             // label24
             // 
@@ -620,23 +620,23 @@ namespace WSA
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(157, 37);
+            this.label24.Location = new System.Drawing.Point(84, 37);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(203, 52);
+            this.label24.Size = new System.Drawing.Size(305, 52);
             this.label24.TabIndex = 0;
-            this.label24.Text = "label24";
+            this.label24.Text = "Operadores";
             // 
-            // label25
+            // lblConductores
             // 
-            this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(155, 108);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(186, 48);
-            this.label25.TabIndex = 3;
-            this.label25.Text = "label25";
+            this.lblConductores.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblConductores.AutoSize = true;
+            this.lblConductores.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConductores.ForeColor = System.Drawing.Color.White;
+            this.lblConductores.Location = new System.Drawing.Point(155, 108);
+            this.lblConductores.Name = "lblConductores";
+            this.lblConductores.Size = new System.Drawing.Size(186, 48);
+            this.lblConductores.TabIndex = 3;
+            this.lblConductores.Text = "label25";
             // 
             // label26
             // 
@@ -644,11 +644,11 @@ namespace WSA
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(154, 37);
+            this.label26.Location = new System.Drawing.Point(91, 37);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(203, 52);
+            this.label26.Size = new System.Drawing.Size(327, 52);
             this.label26.TabIndex = 2;
-            this.label26.Text = "label26";
+            this.label26.Text = "Conductores";
             // 
             // splitContainer8
             // 
@@ -660,7 +660,7 @@ namespace WSA
             // splitContainer8.Panel1
             // 
             this.splitContainer8.Panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.splitContainer8.Panel1.Controls.Add(this.label31);
+            this.splitContainer8.Panel1.Controls.Add(this.lblProductos);
             this.splitContainer8.Panel1.Controls.Add(this.label32);
             // 
             // splitContainer8.Panel2
@@ -670,17 +670,17 @@ namespace WSA
             this.splitContainer8.SplitterDistance = 478;
             this.splitContainer8.TabIndex = 16;
             // 
-            // label31
+            // lblProductos
             // 
-            this.label31.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.White;
-            this.label31.Location = new System.Drawing.Point(158, 108);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(186, 48);
-            this.label31.TabIndex = 1;
-            this.label31.Text = "label31";
+            this.lblProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblProductos.AutoSize = true;
+            this.lblProductos.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductos.ForeColor = System.Drawing.Color.White;
+            this.lblProductos.Location = new System.Drawing.Point(158, 108);
+            this.lblProductos.Name = "lblProductos";
+            this.lblProductos.Size = new System.Drawing.Size(186, 48);
+            this.lblProductos.TabIndex = 1;
+            this.lblProductos.Text = "label31";
             // 
             // label32
             // 
@@ -690,9 +690,9 @@ namespace WSA
             this.label32.ForeColor = System.Drawing.Color.White;
             this.label32.Location = new System.Drawing.Point(157, 37);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(203, 52);
+            this.label32.Size = new System.Drawing.Size(268, 52);
             this.label32.TabIndex = 0;
-            this.label32.Text = "label32";
+            this.label32.Text = "Productos";
             // 
             // FrmTablero
             // 
@@ -776,37 +776,37 @@ namespace WSA
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTotalBoletas;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblProceso;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblCerradas;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblPesoTotal;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.SplitContainer splitContainer3;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblMenorPesaje;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblAdministradores;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.SplitContainer splitContainer4;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblPesoPromedio;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblMayorPesaje;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.SplitContainer splitContainer5;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblClientes;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lblBarcos;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.SplitContainer splitContainer6;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lblOperadores;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label lblConductores;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.SplitContainer splitContainer8;
-        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label lblProductos;
         private System.Windows.Forms.Label label32;
     }
 }
