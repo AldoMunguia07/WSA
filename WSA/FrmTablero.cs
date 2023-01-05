@@ -16,15 +16,15 @@ namespace WSA
         public FrmTablero()
         {
             InitializeComponent();
+            cargarGraficos();
+        }
+
+        private void cargarGraficos()
+        {
             grafico.UltimosMeses(gpMeses);
             grafico.TopOperadores(gpOperadores);
             grafico.TopProductos(gpProductos);
             grafico.TopConductores(gpConductores);
-
-
-
-
-
         }
     }
 }

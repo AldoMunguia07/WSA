@@ -951,6 +951,7 @@ CREATE PROCEDURE sp_Graficos@accion nvarchar(50)ASBEGIN
 		(SELECT COUNT(*) FROM Boleta WHERE Estado = 'P') Proceso, 
 		(SELECT COUNT(*) FROM Boleta WHERE Estado = 'A') Anuladas, 
 		(SELECT SUM(ABS(Peso_Ingreso - Peso_Salida)) FROM Boleta WHERE Estado = 'C') Peso_Total, 
+		(SELECT AVG(ABS(Peso_Ingreso - Peso_Salida)) FROM Boleta WHERE Estado = 'C') Peso_Promedio, 
 		(SELECT MAX(ABS(Peso_Ingreso - Peso_Salida)) FROM Boleta WHERE Estado = 'C') Mayor_Pesaje, 
 		(SELECT MIN(ABS(Peso_Ingreso - Peso_Salida)) FROM Boleta WHERE Estado = 'C') Menor_Pesaje,
 		(SELECT COUNT(*) FROM Usuario WHERE Tipo_Usuario_Id = 1) Administradores,
