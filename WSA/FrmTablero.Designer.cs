@@ -254,7 +254,7 @@ namespace WSA
             // 
             // lblTotalBoletas
             // 
-            this.lblTotalBoletas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTotalBoletas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTotalBoletas.AutoSize = true;
             this.lblTotalBoletas.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalBoletas.ForeColor = System.Drawing.Color.White;
@@ -263,14 +263,15 @@ namespace WSA
             this.lblTotalBoletas.Size = new System.Drawing.Size(158, 48);
             this.lblTotalBoletas.TabIndex = 1;
             this.lblTotalBoletas.Text = "label4";
+            this.lblTotalBoletas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(121, 37);
+            this.label3.Location = new System.Drawing.Point(113, 37);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(239, 52);
             this.label3.TabIndex = 0;
@@ -278,7 +279,7 @@ namespace WSA
             // 
             // lblProceso
             // 
-            this.lblProceso.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblProceso.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblProceso.AutoSize = true;
             this.lblProceso.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProceso.ForeColor = System.Drawing.Color.White;
@@ -287,14 +288,15 @@ namespace WSA
             this.lblProceso.Size = new System.Drawing.Size(158, 48);
             this.lblProceso.TabIndex = 3;
             this.lblProceso.Text = "label5";
+            this.lblProceso.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(124, 37);
+            this.label6.Location = new System.Drawing.Point(107, 37);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(289, 52);
             this.label6.TabIndex = 2;
@@ -324,7 +326,7 @@ namespace WSA
             // 
             // lblAnuladas
             // 
-            this.lblAnuladas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblAnuladas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAnuladas.AutoSize = true;
             this.lblAnuladas.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnuladas.ForeColor = System.Drawing.Color.White;
@@ -333,14 +335,15 @@ namespace WSA
             this.lblAnuladas.Size = new System.Drawing.Size(158, 48);
             this.lblAnuladas.TabIndex = 1;
             this.lblAnuladas.Text = "label7";
+            this.lblAnuladas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(130, 37);
+            this.label8.Location = new System.Drawing.Point(113, 37);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(247, 52);
             this.label8.TabIndex = 0;
@@ -348,7 +351,7 @@ namespace WSA
             // 
             // lblPesoTotal
             // 
-            this.lblPesoTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPesoTotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblPesoTotal.AutoSize = true;
             this.lblPesoTotal.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPesoTotal.ForeColor = System.Drawing.Color.White;
@@ -357,14 +360,15 @@ namespace WSA
             this.lblPesoTotal.Size = new System.Drawing.Size(158, 48);
             this.lblPesoTotal.TabIndex = 3;
             this.lblPesoTotal.Text = "label9";
+            this.lblPesoTotal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label10
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(124, 37);
+            this.label10.Location = new System.Drawing.Point(107, 37);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(269, 52);
             this.label10.TabIndex = 2;
@@ -394,7 +398,7 @@ namespace WSA
             // 
             // lblMenorPesaje
             // 
-            this.lblMenorPesaje.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblMenorPesaje.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMenorPesaje.AutoSize = true;
             this.lblMenorPesaje.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMenorPesaje.ForeColor = System.Drawing.Color.White;
@@ -403,10 +407,11 @@ namespace WSA
             this.lblMenorPesaje.Size = new System.Drawing.Size(186, 48);
             this.lblMenorPesaje.TabIndex = 1;
             this.lblMenorPesaje.Text = "label11";
+            this.lblMenorPesaje.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label12
             // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
@@ -418,7 +423,7 @@ namespace WSA
             // 
             // lblAdministradores
             // 
-            this.lblAdministradores.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblAdministradores.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAdministradores.AutoSize = true;
             this.lblAdministradores.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdministradores.ForeColor = System.Drawing.Color.White;
@@ -427,14 +432,15 @@ namespace WSA
             this.lblAdministradores.Size = new System.Drawing.Size(186, 48);
             this.lblAdministradores.TabIndex = 3;
             this.lblAdministradores.Text = "label23";
+            this.lblAdministradores.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label14
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(54, 37);
+            this.label14.Location = new System.Drawing.Point(39, 37);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(425, 52);
             this.label14.TabIndex = 2;
@@ -464,7 +470,7 @@ namespace WSA
             // 
             // lblPesoPromedio
             // 
-            this.lblPesoPromedio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPesoPromedio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblPesoPromedio.AutoSize = true;
             this.lblPesoPromedio.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPesoPromedio.ForeColor = System.Drawing.Color.White;
@@ -473,10 +479,11 @@ namespace WSA
             this.lblPesoPromedio.Size = new System.Drawing.Size(186, 48);
             this.lblPesoPromedio.TabIndex = 1;
             this.lblPesoPromedio.Text = "label15";
+            this.lblPesoPromedio.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label16
             // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
@@ -488,7 +495,7 @@ namespace WSA
             // 
             // lblMayorPesaje
             // 
-            this.lblMayorPesaje.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblMayorPesaje.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMayorPesaje.AutoSize = true;
             this.lblMayorPesaje.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMayorPesaje.ForeColor = System.Drawing.Color.White;
@@ -497,10 +504,11 @@ namespace WSA
             this.lblMayorPesaje.Size = new System.Drawing.Size(186, 48);
             this.lblMayorPesaje.TabIndex = 3;
             this.lblMayorPesaje.Text = "label17";
+            this.lblMayorPesaje.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label18
             // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
@@ -534,23 +542,24 @@ namespace WSA
             // 
             // lblClientes
             // 
-            this.lblClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblClientes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblClientes.AutoSize = true;
             this.lblClientes.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClientes.ForeColor = System.Drawing.Color.White;
-            this.lblClientes.Location = new System.Drawing.Point(158, 108);
+            this.lblClientes.Location = new System.Drawing.Point(144, 108);
             this.lblClientes.Name = "lblClientes";
             this.lblClientes.Size = new System.Drawing.Size(186, 48);
             this.lblClientes.TabIndex = 1;
             this.lblClientes.Text = "label19";
+            this.lblClientes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label20
             // 
-            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(157, 37);
+            this.label20.Location = new System.Drawing.Point(133, 37);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(219, 52);
             this.label20.TabIndex = 0;
@@ -558,7 +567,7 @@ namespace WSA
             // 
             // lblBarcos
             // 
-            this.lblBarcos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblBarcos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblBarcos.AutoSize = true;
             this.lblBarcos.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBarcos.ForeColor = System.Drawing.Color.White;
@@ -567,10 +576,11 @@ namespace WSA
             this.lblBarcos.Size = new System.Drawing.Size(186, 48);
             this.lblBarcos.TabIndex = 3;
             this.lblBarcos.Text = "label21";
+            this.lblBarcos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label22
             // 
-            this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.White;
@@ -604,7 +614,7 @@ namespace WSA
             // 
             // lblOperadores
             // 
-            this.lblOperadores.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblOperadores.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblOperadores.AutoSize = true;
             this.lblOperadores.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOperadores.ForeColor = System.Drawing.Color.White;
@@ -613,10 +623,11 @@ namespace WSA
             this.lblOperadores.Size = new System.Drawing.Size(186, 48);
             this.lblOperadores.TabIndex = 1;
             this.lblOperadores.Text = "label23";
+            this.lblOperadores.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label24
             // 
-            this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.White;
@@ -628,7 +639,7 @@ namespace WSA
             // 
             // lblConductores
             // 
-            this.lblConductores.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblConductores.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblConductores.AutoSize = true;
             this.lblConductores.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConductores.ForeColor = System.Drawing.Color.White;
@@ -637,10 +648,11 @@ namespace WSA
             this.lblConductores.Size = new System.Drawing.Size(186, 48);
             this.lblConductores.TabIndex = 3;
             this.lblConductores.Text = "label25";
+            this.lblConductores.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label26
             // 
-            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.White;
@@ -672,7 +684,7 @@ namespace WSA
             // 
             // lblProductos
             // 
-            this.lblProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblProductos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblProductos.AutoSize = true;
             this.lblProductos.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductos.ForeColor = System.Drawing.Color.White;
@@ -681,14 +693,15 @@ namespace WSA
             this.lblProductos.Size = new System.Drawing.Size(186, 48);
             this.lblProductos.TabIndex = 1;
             this.lblProductos.Text = "label31";
+            this.lblProductos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label32
             // 
-            this.label32.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label32.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.White;
-            this.label32.Location = new System.Drawing.Point(157, 37);
+            this.label32.Location = new System.Drawing.Point(121, 37);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(268, 52);
             this.label32.TabIndex = 0;
