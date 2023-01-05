@@ -57,7 +57,7 @@ namespace WSA
             this.lblProceso = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.lblCerradas = new System.Windows.Forms.Label();
+            this.lblAnuladas = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblPesoTotal = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -209,7 +209,7 @@ namespace WSA
             this.chart1.ChartAreas.Add(chartArea5);
             legend5.Name = "Legend1";
             this.chart1.Legends.Add(legend5);
-            this.chart1.Location = new System.Drawing.Point(72, 3797);
+            this.chart1.Location = new System.Drawing.Point(42, 3772);
             this.chart1.Name = "chart1";
             series5.ChartArea = "ChartArea1";
             series5.Legend = "Legend1";
@@ -310,7 +310,7 @@ namespace WSA
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.splitContainer2.Panel1.Controls.Add(this.lblCerradas);
+            this.splitContainer2.Panel1.Controls.Add(this.lblAnuladas);
             this.splitContainer2.Panel1.Controls.Add(this.label8);
             // 
             // splitContainer2.Panel2
@@ -322,17 +322,17 @@ namespace WSA
             this.splitContainer2.SplitterDistance = 478;
             this.splitContainer2.TabIndex = 11;
             // 
-            // lblCerradas
+            // lblAnuladas
             // 
-            this.lblCerradas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCerradas.AutoSize = true;
-            this.lblCerradas.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCerradas.ForeColor = System.Drawing.Color.White;
-            this.lblCerradas.Location = new System.Drawing.Point(158, 108);
-            this.lblCerradas.Name = "lblCerradas";
-            this.lblCerradas.Size = new System.Drawing.Size(158, 48);
-            this.lblCerradas.TabIndex = 1;
-            this.lblCerradas.Text = "label7";
+            this.lblAnuladas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblAnuladas.AutoSize = true;
+            this.lblAnuladas.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnuladas.ForeColor = System.Drawing.Color.White;
+            this.lblAnuladas.Location = new System.Drawing.Point(158, 108);
+            this.lblAnuladas.Name = "lblAnuladas";
+            this.lblAnuladas.Size = new System.Drawing.Size(158, 48);
+            this.lblAnuladas.TabIndex = 1;
+            this.lblAnuladas.Text = "label7";
             // 
             // label8
             // 
@@ -342,9 +342,9 @@ namespace WSA
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(130, 37);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(239, 52);
+            this.label8.Size = new System.Drawing.Size(247, 52);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Cerradas";
+            this.label8.Text = "Anuladas";
             // 
             // lblPesoTotal
             // 
@@ -781,7 +781,7 @@ namespace WSA
         private System.Windows.Forms.Label lblProceso;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Label lblCerradas;
+        private System.Windows.Forms.Label lblAnuladas;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblPesoTotal;
         private System.Windows.Forms.Label label10;
