@@ -916,13 +916,21 @@ GO
 
 
 --PROCEDMIENTO ALMACENADO DE GRAFICOS
-ALTER PROCEDURE sp_Graficos@accion nvarchar(50)ASBEGIN
+CREATE PROCEDURE sp_Graficos@accion nvarchar(50)ASBEGIN
 	IF @accion = 'UltimosMeses'	BEGIN		--ULTIMOS 12 MESES PESAJE
 		SELECT TOP(12) MONTH(Fecha_Salida) N, CONCAT(DATENAME(MONTH, Fecha_Salida), ' del ', YEAR(Fecha_Salida)) Mes, SUM(ABS(Peso_Ingreso - Peso_Salida)) Peso
 		FROM Boleta
 		WHERE Estado = 'C'
 		GROUP BY DATENAME(MONTH, Fecha_Salida), MONTH(Fecha_Salida), YEAR(Fecha_Salida)
 		ORDER BY YEAR(Fecha_Salida), MONTH(Fecha_Salida)	END
+	ELSE IF @accion = 'TopOperadores'	BEGIN		--TOP 5 CONDUCTORES
+		SELECT TOP(5) U.Nombre_Usuario, COUNT(B.Boleta_Id) Frecuencia
+		FROM Boleta B JOIN Usuario U
+		ON B.Usuario_Id = U.Usuario_Id
+		WHERE Estado = 'C'
+		GROUP BY U.Nombre_Usuario
+		ORDER BY COUNT(B.Boleta_Id) DESC
+	END
 	ELSE IF @accion = 'TopConductores'	BEGIN		--TOP 5 CONDUCTORES
 		SELECT TOP(5) C.Conductor, COUNT(B.Boleta_Id) Frecuencia
 		FROM Boleta B JOIN Conductor C

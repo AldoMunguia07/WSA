@@ -57,6 +57,7 @@ namespace WSA
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tslbNombreUsuario = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tableroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -198,7 +199,8 @@ namespace WSA
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.boletasToolStripMenuItem1,
-            this.rptbitacoraToolStripMenuItem});
+            this.rptbitacoraToolStripMenuItem,
+            this.tableroToolStripMenuItem});
             this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
@@ -294,6 +296,13 @@ namespace WSA
             this.tslbNombreUsuario.Size = new System.Drawing.Size(66, 21);
             this.tslbNombreUsuario.Text = "Usuario";
             // 
+            // tableroToolStripMenuItem
+            // 
+            this.tableroToolStripMenuItem.Name = "tableroToolStripMenuItem";
+            this.tableroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tableroToolStripMenuItem.Text = "Tablero";
+            this.tableroToolStripMenuItem.Click += new System.EventHandler(this.tableroToolStripMenuItem_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,6 +354,7 @@ namespace WSA
         private System.Windows.Forms.ToolStripMenuItem históricoToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel tslbNombreUsuario;
+        private System.Windows.Forms.ToolStripMenuItem tableroToolStripMenuItem;
     }
 }
 

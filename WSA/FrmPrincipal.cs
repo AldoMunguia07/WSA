@@ -240,6 +240,11 @@ namespace WSA
             CargarFormulario(frmHistorico);
         }
 
-       
+        private void tableroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTablero frmTablero = new FrmTablero();
+            CerrarFormularios();
+            CargarFormulario(frmTablero);
+        }
     }
 }

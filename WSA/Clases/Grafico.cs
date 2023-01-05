@@ -56,6 +56,45 @@ namespace WSA.Clases
             }
         }
 
+        public void TopOperadores(Chart chart)
+        {
+
+            try
+            {
+                conexion.sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand("sp_Graficos", conexion.sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@accion", "TopOperadores");
+
+                ArrayList totales = new ArrayList();
+                ArrayList operadores = new ArrayList();
+
+                using (SqlDataReader rdr = sqlCommand.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        totales.Add(rdr.GetValue(1));
+                        operadores.Add(rdr.GetString(0));
+                    }
+
+
+
+                }
+                chart.Series[0].Points.DataBindXY(operadores, totales);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexion.sqlConnection.Close();
+            }
+        }
+
         public void TopConductores(Chart chart)
         {
 
