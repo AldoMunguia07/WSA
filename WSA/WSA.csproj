@@ -428,6 +428,7 @@
     <None Include="Resources\historico.png" />
     <None Include="Resources\AWS LOGO.png" />
     <Content Include="IconoAWS.ico" />
+    <None Include="Resources\dashboard-icon.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

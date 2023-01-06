@@ -56,7 +56,7 @@ namespace WSA.Clases
             }
         }
 
-        public void TopOperadores(Chart chart)
+        public void Operadores(Chart chart)
         {
 
             try
@@ -65,7 +65,7 @@ namespace WSA.Clases
 
                 SqlCommand sqlCommand = new SqlCommand("sp_Graficos", conexion.sqlConnection);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@accion", "TopOperadores");
+                sqlCommand.Parameters.AddWithValue("@accion", "Operadores");
 
                 ArrayList totales = new ArrayList();
                 ArrayList operadores = new ArrayList();
@@ -95,7 +95,7 @@ namespace WSA.Clases
             }
         }
 
-        public void TopConductores(Chart chart)
+        public void Conductores(Chart chart)
         {
 
             try
@@ -104,7 +104,7 @@ namespace WSA.Clases
 
                 SqlCommand sqlCommand = new SqlCommand("sp_Graficos", conexion.sqlConnection);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@accion", "TopConductores");
+                sqlCommand.Parameters.AddWithValue("@accion", "Conductores");
 
                 ArrayList totales = new ArrayList();
                 ArrayList conductores = new ArrayList();
@@ -134,7 +134,7 @@ namespace WSA.Clases
             }
         }
 
-        public void TopProductos(Chart chart)
+        public void Producto(Chart chart)
         {
 
             try
@@ -143,7 +143,7 @@ namespace WSA.Clases
 
                 SqlCommand sqlCommand = new SqlCommand("sp_Graficos", conexion.sqlConnection);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@accion", "TopProductos");
+                sqlCommand.Parameters.AddWithValue("@accion", "Productos");
 
                 ArrayList totales = new ArrayList();
                 ArrayList productos = new ArrayList();
@@ -173,9 +173,10 @@ namespace WSA.Clases
             }
         }
 
-        public DataTable Datos()
+        public void Datos(Label lblTotalBoletas, Label lblProceso, Label lblAnuladas, Label lblPesoTotal, Label lblPesoPromedio, Label lblMayorPesaje,
+            Label lblMenorPesaje, Label lblAdministradores, Label lblOperadores, Label lblConductores, Label lblClientes, Label lblBarcos, Label lblProductos)
         {
-            DataTable data = new DataTable();
+         
             try
             {
 
@@ -198,16 +199,29 @@ namespace WSA.Clases
 
                     if (dataTable.Rows.Count == 1) //Si el usuario existe retorna un true
                     {
-                        return dataTable;
+                        lblTotalBoletas.Text = String.Format("Cerradas: {0:n0}", int.Parse(dataTable.Rows[0]["Boletas"].ToString()));
+                        lblProceso.Text = String.Format("En proceso: {0:n0}", int.Parse(dataTable.Rows[0]["Proceso"].ToString()));
+                        lblAnuladas.Text = String.Format("Anuladas: {0:n0}", int.Parse(dataTable.Rows[0]["Anuladas"].ToString()));
+                        lblPesoTotal.Text = String.Format("Peso total general: {0:n} Kg", float.Parse(dataTable.Rows[0]["Peso_Total"].ToString()));
+                        lblPesoPromedio.Text = String.Format("Peso promedio general: {0:n} Kg", float.Parse(dataTable.Rows[0]["Peso_Promedio"].ToString()));
+                        lblMayorPesaje.Text = String.Format("Mayor pesaje: {0:n} Kg", float.Parse(dataTable.Rows[0]["Mayor_Pesaje"].ToString()));
+                        lblMenorPesaje.Text = String.Format("Menor pesaje: {0:n} Kg", float.Parse(dataTable.Rows[0]["Menor_Pesaje"].ToString()));
+                        lblAdministradores.Text = String.Format("Administradores: {0:n0}", int.Parse(dataTable.Rows[0]["Administradores"].ToString()));
+                        lblOperadores.Text = String.Format("Operadores: {0:n0}", int.Parse(dataTable.Rows[0]["Operadores"].ToString()));
+                        lblConductores.Text = String.Format("Conductores: {0:n0}", int.Parse(dataTable.Rows[0]["Conductores"].ToString()));
+                        lblClientes.Text = String.Format("Clientes: {0:n0}", int.Parse(dataTable.Rows[0]["Clientes"].ToString()));
+                        lblBarcos.Text = String.Format("Barcos: {0:n0}", int.Parse(dataTable.Rows[0]["Barcos"].ToString()));
+                        lblProductos.Text = String.Format("Productos: {0:n0}", int.Parse(dataTable.Rows[0]["Productos"].ToString()));
                     }
+                  
 
-                    return data;
+                    
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return data;
+                
 
             }
             finally

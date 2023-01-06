@@ -693,7 +693,7 @@ BEGIN
 	IF @accion = 'insertarSalida'
 		BEGIN
 			UPDATE Boleta SET Fecha_Salida = @Fecha_Salida, Placa_Cabezal = @Placa_Cabezal, Conductor_Id = @Conductor_Id, Cliente_Id = @Cliente_Id, Producto_Id = @Producto_Id, Cia_Transportista = @Cia_Transportista,
-			Envio_N = @Envio_N, Peso_Salida = @Peso_Salida, Unidades_Peso_Salida = @Unidades_Peso_Salida, Barco_Id = @Barco_Id, Estado = @Estado, Observaciones = @Observaciones 
+			Envio_N = @Envio_N, Peso_Salida = @Peso_Salida, Unidades_Peso_Salida = @Unidades_Peso_Salida, Barco_Id = @Barco_Id, Usuario_Id = @Usuario_Id, Estado = @Estado, Observaciones = @Observaciones 
 			
 			WHERE Boleta_Id = @Boleta_Id
 		END
@@ -923,23 +923,23 @@ CREATE PROCEDURE sp_Graficos@accion nvarchar(50)ASBEGIN
 		WHERE Estado = 'C'
 		GROUP BY DATENAME(MONTH, Fecha_Salida), MONTH(Fecha_Salida), YEAR(Fecha_Salida)
 		ORDER BY YEAR(Fecha_Salida), MONTH(Fecha_Salida)	END
-	ELSE IF @accion = 'TopOperadores'	BEGIN		--TOP 5 CONDUCTORES
-		SELECT TOP(5) U.Nombre_Usuario, COUNT(B.Boleta_Id) Frecuencia
+	ELSE IF @accion = 'Operadores'	BEGIN		--TOP 5 CONDUCTORES
+		SELECT U.Nombre_Usuario, COUNT(B.Boleta_Id) Frecuencia
 		FROM Boleta B JOIN Usuario U
 		ON B.Usuario_Id = U.Usuario_Id
 		WHERE Estado = 'C'
 		GROUP BY U.Nombre_Usuario
 		ORDER BY COUNT(B.Boleta_Id) DESC
 	END
-	ELSE IF @accion = 'TopConductores'	BEGIN		--TOP 5 CONDUCTORES
-		SELECT TOP(5) C.Conductor, COUNT(B.Boleta_Id) Frecuencia
+	ELSE IF @accion = 'Conductores'	BEGIN		--TOP 5 CONDUCTORES
+		SELECT C.Conductor, COUNT(B.Boleta_Id) Frecuencia
 		FROM Boleta B JOIN Conductor C
 		ON B.Conductor_Id = C.Conductor_Id
 		WHERE Estado = 'C'
 		GROUP BY C.Conductor
 		ORDER BY COUNT(B.Boleta_Id) DESC
 	END
-	ELSE IF @accion = 'TopProductos'	BEGIN		--TOP 5 PRODUCTOS		SELECT TOP(5) P.Descripcion Producto, COUNT(B.Barco_Id) Frecuencia
+	ELSE IF @accion = 'Productos'	BEGIN		--TOP 5 PRODUCTOS		SELECT P.Descripcion Producto, COUNT(B.Barco_Id) Frecuencia
 		FROM Boleta B JOIN Producto P
 		ON B.Producto_Id = P.Producto_Id
 		WHERE Estado = 'C'
@@ -950,10 +950,10 @@ CREATE PROCEDURE sp_Graficos@accion nvarchar(50)ASBEGIN
 	ELSE IF @accion = 'Datos'	BEGIN		--TOP 5 PRODUCTOS		SELECT (SELECT COUNT(*) FROM Boleta WHERE Estado = 'C') Boletas, 
 		(SELECT COUNT(*) FROM Boleta WHERE Estado = 'P') Proceso, 
 		(SELECT COUNT(*) FROM Boleta WHERE Estado = 'A') Anuladas, 
-		(SELECT SUM(ABS(Peso_Ingreso - Peso_Salida)) FROM Boleta WHERE Estado = 'C') Peso_Total, 
-		(SELECT AVG(ABS(Peso_Ingreso - Peso_Salida)) FROM Boleta WHERE Estado = 'C') Peso_Promedio, 
-		(SELECT MAX(ABS(Peso_Ingreso - Peso_Salida)) FROM Boleta WHERE Estado = 'C') Mayor_Pesaje, 
-		(SELECT MIN(ABS(Peso_Ingreso - Peso_Salida)) FROM Boleta WHERE Estado = 'C') Menor_Pesaje,
+		ISNULL((SELECT SUM(ABS(Peso_Ingreso - Peso_Salida)) FROM Boleta WHERE Estado = 'C'), 0) Peso_Total, 
+		ISNULL((SELECT AVG(ABS(Peso_Ingreso - Peso_Salida)) FROM Boleta WHERE Estado = 'C'), 0) Peso_Promedio, 
+		ISNULL((SELECT MAX(ABS(Peso_Ingreso - Peso_Salida)) FROM Boleta WHERE Estado = 'C'), 0) Mayor_Pesaje, 
+		ISNULL((SELECT MIN(ABS(Peso_Ingreso - Peso_Salida)) FROM Boleta WHERE Estado = 'C'), 0) Menor_Pesaje,
 		(SELECT COUNT(*) FROM Usuario WHERE Tipo_Usuario_Id = 1) Administradores,
 		(SELECT COUNT(*) FROM Usuario WHERE Tipo_Usuario_Id = 2) Operadores,
 		(SELECT COUNT(*) FROM Conductor) Conductores,

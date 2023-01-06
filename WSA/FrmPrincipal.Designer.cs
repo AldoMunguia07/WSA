@@ -48,6 +48,7 @@ namespace WSA
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.boletasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.rptbitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administracinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.encabezadoBoletaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +58,6 @@ namespace WSA
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tslbNombreUsuario = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tableroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -223,6 +223,14 @@ namespace WSA
             this.rptbitacoraToolStripMenuItem.Text = "Bitácora";
             this.rptbitacoraToolStripMenuItem.Click += new System.EventHandler(this.bitácoraToolStripMenuItem_Click);
             // 
+            // tableroToolStripMenuItem
+            // 
+            this.tableroToolStripMenuItem.Image = global::WSA.Properties.Resources.dashboard_icon;
+            this.tableroToolStripMenuItem.Name = "tableroToolStripMenuItem";
+            this.tableroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tableroToolStripMenuItem.Text = "Tablero";
+            this.tableroToolStripMenuItem.Click += new System.EventHandler(this.tableroToolStripMenuItem_Click);
+            // 
             // administracinToolStripMenuItem
             // 
             this.administracinToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -295,13 +303,6 @@ namespace WSA
             this.tslbNombreUsuario.Name = "tslbNombreUsuario";
             this.tslbNombreUsuario.Size = new System.Drawing.Size(66, 21);
             this.tslbNombreUsuario.Text = "Usuario";
-            // 
-            // tableroToolStripMenuItem
-            // 
-            this.tableroToolStripMenuItem.Name = "tableroToolStripMenuItem";
-            this.tableroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.tableroToolStripMenuItem.Text = "Tablero";
-            this.tableroToolStripMenuItem.Click += new System.EventHandler(this.tableroToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
