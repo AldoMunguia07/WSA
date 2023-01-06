@@ -123,7 +123,7 @@ namespace WSA
             series1.Legend = "Legend1";
             series1.Name = "Peso en Kg";
             this.gpMeses.Series.Add(series1);
-            this.gpMeses.Size = new System.Drawing.Size(956, 503);
+            this.gpMeses.Size = new System.Drawing.Size(922, 503);
             this.gpMeses.TabIndex = 0;
             this.gpMeses.Text = "chart1";
             title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,7 +136,7 @@ namespace WSA
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(358, 9);
+            this.label2.Location = new System.Drawing.Point(340, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(371, 32);
             this.label2.TabIndex = 4;
@@ -162,7 +162,7 @@ namespace WSA
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.gpOperadores.Series.Add(series2);
-            this.gpOperadores.Size = new System.Drawing.Size(956, 503);
+            this.gpOperadores.Size = new System.Drawing.Size(922, 503);
             this.gpOperadores.TabIndex = 5;
             this.gpOperadores.Text = "chart1";
             title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -188,7 +188,7 @@ namespace WSA
             series3.Legend = "Legend1";
             series3.Name = "Exportaciones";
             this.gpProductos.Series.Add(series3);
-            this.gpProductos.Size = new System.Drawing.Size(956, 503);
+            this.gpProductos.Size = new System.Drawing.Size(922, 503);
             this.gpProductos.TabIndex = 6;
             this.gpProductos.Text = "chart1";
             title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -215,7 +215,7 @@ namespace WSA
             series4.Legend = "Legend1";
             series4.Name = "Series1";
             this.gpConductores.Series.Add(series4);
-            this.gpConductores.Size = new System.Drawing.Size(956, 503);
+            this.gpConductores.Size = new System.Drawing.Size(922, 503);
             this.gpConductores.TabIndex = 7;
             this.gpConductores.Text = "chart1";
             title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -228,7 +228,7 @@ namespace WSA
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(358, 2291);
+            this.label1.Location = new System.Drawing.Point(340, 2291);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(382, 29);
             this.label1.TabIndex = 9;
@@ -250,19 +250,19 @@ namespace WSA
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.RoyalBlue;
             this.splitContainer1.Panel2.Controls.Add(this.lblProceso);
-            this.splitContainer1.Size = new System.Drawing.Size(956, 192);
-            this.splitContainer1.SplitterDistance = 469;
+            this.splitContainer1.Size = new System.Drawing.Size(922, 192);
+            this.splitContainer1.SplitterDistance = 451;
             this.splitContainer1.TabIndex = 10;
             // 
             // lblTotalBoletas
             // 
             this.lblTotalBoletas.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblTotalBoletas.AutoSize = true;
-            this.lblTotalBoletas.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalBoletas.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalBoletas.ForeColor = System.Drawing.Color.White;
             this.lblTotalBoletas.Location = new System.Drawing.Point(16, 76);
             this.lblTotalBoletas.Name = "lblTotalBoletas";
-            this.lblTotalBoletas.Size = new System.Drawing.Size(43, 42);
+            this.lblTotalBoletas.Size = new System.Drawing.Size(30, 29);
             this.lblTotalBoletas.TabIndex = 1;
             this.lblTotalBoletas.Text = "0";
             this.lblTotalBoletas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -271,11 +271,11 @@ namespace WSA
             // 
             this.lblProceso.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblProceso.AutoSize = true;
-            this.lblProceso.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProceso.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProceso.ForeColor = System.Drawing.Color.White;
             this.lblProceso.Location = new System.Drawing.Point(34, 76);
             this.lblProceso.Name = "lblProceso";
-            this.lblProceso.Size = new System.Drawing.Size(43, 42);
+            this.lblProceso.Size = new System.Drawing.Size(30, 29);
             this.lblProceso.TabIndex = 3;
             this.lblProceso.Text = "0";
             this.lblProceso.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -296,19 +296,19 @@ namespace WSA
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.RoyalBlue;
             this.splitContainer2.Panel2.Controls.Add(this.lblPesoTotal);
-            this.splitContainer2.Size = new System.Drawing.Size(956, 192);
-            this.splitContainer2.SplitterDistance = 469;
+            this.splitContainer2.Size = new System.Drawing.Size(922, 192);
+            this.splitContainer2.SplitterDistance = 451;
             this.splitContainer2.TabIndex = 11;
             // 
             // lblAnuladas
             // 
             this.lblAnuladas.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblAnuladas.AutoSize = true;
-            this.lblAnuladas.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnuladas.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnuladas.ForeColor = System.Drawing.Color.White;
             this.lblAnuladas.Location = new System.Drawing.Point(16, 80);
             this.lblAnuladas.Name = "lblAnuladas";
-            this.lblAnuladas.Size = new System.Drawing.Size(43, 42);
+            this.lblAnuladas.Size = new System.Drawing.Size(30, 29);
             this.lblAnuladas.TabIndex = 1;
             this.lblAnuladas.Text = "0";
             this.lblAnuladas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -317,11 +317,11 @@ namespace WSA
             // 
             this.lblPesoTotal.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblPesoTotal.AutoSize = true;
-            this.lblPesoTotal.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPesoTotal.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPesoTotal.ForeColor = System.Drawing.Color.White;
             this.lblPesoTotal.Location = new System.Drawing.Point(34, 80);
             this.lblPesoTotal.Name = "lblPesoTotal";
-            this.lblPesoTotal.Size = new System.Drawing.Size(43, 42);
+            this.lblPesoTotal.Size = new System.Drawing.Size(30, 29);
             this.lblPesoTotal.TabIndex = 3;
             this.lblPesoTotal.Text = "0";
             this.lblPesoTotal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -342,19 +342,19 @@ namespace WSA
             // 
             this.splitContainer3.Panel2.BackColor = System.Drawing.Color.RoyalBlue;
             this.splitContainer3.Panel2.Controls.Add(this.lblAdministradores);
-            this.splitContainer3.Size = new System.Drawing.Size(956, 192);
-            this.splitContainer3.SplitterDistance = 469;
+            this.splitContainer3.Size = new System.Drawing.Size(922, 192);
+            this.splitContainer3.SplitterDistance = 451;
             this.splitContainer3.TabIndex = 13;
             // 
             // lblMenorPesaje
             // 
             this.lblMenorPesaje.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblMenorPesaje.AutoSize = true;
-            this.lblMenorPesaje.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMenorPesaje.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMenorPesaje.ForeColor = System.Drawing.Color.White;
             this.lblMenorPesaje.Location = new System.Drawing.Point(16, 85);
             this.lblMenorPesaje.Name = "lblMenorPesaje";
-            this.lblMenorPesaje.Size = new System.Drawing.Size(43, 42);
+            this.lblMenorPesaje.Size = new System.Drawing.Size(30, 29);
             this.lblMenorPesaje.TabIndex = 1;
             this.lblMenorPesaje.Text = "0";
             this.lblMenorPesaje.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -363,11 +363,11 @@ namespace WSA
             // 
             this.lblAdministradores.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblAdministradores.AutoSize = true;
-            this.lblAdministradores.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdministradores.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdministradores.ForeColor = System.Drawing.Color.White;
             this.lblAdministradores.Location = new System.Drawing.Point(34, 85);
             this.lblAdministradores.Name = "lblAdministradores";
-            this.lblAdministradores.Size = new System.Drawing.Size(43, 42);
+            this.lblAdministradores.Size = new System.Drawing.Size(30, 29);
             this.lblAdministradores.TabIndex = 3;
             this.lblAdministradores.Text = "0";
             this.lblAdministradores.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -388,19 +388,19 @@ namespace WSA
             // 
             this.splitContainer4.Panel2.BackColor = System.Drawing.Color.RoyalBlue;
             this.splitContainer4.Panel2.Controls.Add(this.lblMayorPesaje);
-            this.splitContainer4.Size = new System.Drawing.Size(956, 192);
-            this.splitContainer4.SplitterDistance = 469;
+            this.splitContainer4.Size = new System.Drawing.Size(922, 192);
+            this.splitContainer4.SplitterDistance = 451;
             this.splitContainer4.TabIndex = 12;
             // 
             // lblPesoPromedio
             // 
             this.lblPesoPromedio.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblPesoPromedio.AutoSize = true;
-            this.lblPesoPromedio.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPesoPromedio.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPesoPromedio.ForeColor = System.Drawing.Color.White;
             this.lblPesoPromedio.Location = new System.Drawing.Point(16, 70);
             this.lblPesoPromedio.Name = "lblPesoPromedio";
-            this.lblPesoPromedio.Size = new System.Drawing.Size(43, 42);
+            this.lblPesoPromedio.Size = new System.Drawing.Size(30, 29);
             this.lblPesoPromedio.TabIndex = 1;
             this.lblPesoPromedio.Text = "0";
             this.lblPesoPromedio.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -409,11 +409,11 @@ namespace WSA
             // 
             this.lblMayorPesaje.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblMayorPesaje.AutoSize = true;
-            this.lblMayorPesaje.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMayorPesaje.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMayorPesaje.ForeColor = System.Drawing.Color.White;
             this.lblMayorPesaje.Location = new System.Drawing.Point(34, 70);
             this.lblMayorPesaje.Name = "lblMayorPesaje";
-            this.lblMayorPesaje.Size = new System.Drawing.Size(43, 42);
+            this.lblMayorPesaje.Size = new System.Drawing.Size(30, 29);
             this.lblMayorPesaje.TabIndex = 3;
             this.lblMayorPesaje.Text = "0";
             this.lblMayorPesaje.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -434,19 +434,19 @@ namespace WSA
             // 
             this.splitContainer5.Panel2.BackColor = System.Drawing.Color.RoyalBlue;
             this.splitContainer5.Panel2.Controls.Add(this.lblBarcos);
-            this.splitContainer5.Size = new System.Drawing.Size(956, 192);
-            this.splitContainer5.SplitterDistance = 469;
+            this.splitContainer5.Size = new System.Drawing.Size(922, 192);
+            this.splitContainer5.SplitterDistance = 451;
             this.splitContainer5.TabIndex = 15;
             // 
             // lblClientes
             // 
             this.lblClientes.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblClientes.AutoSize = true;
-            this.lblClientes.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientes.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClientes.ForeColor = System.Drawing.Color.White;
             this.lblClientes.Location = new System.Drawing.Point(16, 71);
             this.lblClientes.Name = "lblClientes";
-            this.lblClientes.Size = new System.Drawing.Size(43, 42);
+            this.lblClientes.Size = new System.Drawing.Size(30, 29);
             this.lblClientes.TabIndex = 1;
             this.lblClientes.Text = "0";
             this.lblClientes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -455,11 +455,11 @@ namespace WSA
             // 
             this.lblBarcos.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblBarcos.AutoSize = true;
-            this.lblBarcos.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBarcos.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBarcos.ForeColor = System.Drawing.Color.White;
             this.lblBarcos.Location = new System.Drawing.Point(34, 71);
             this.lblBarcos.Name = "lblBarcos";
-            this.lblBarcos.Size = new System.Drawing.Size(43, 42);
+            this.lblBarcos.Size = new System.Drawing.Size(30, 29);
             this.lblBarcos.TabIndex = 3;
             this.lblBarcos.Text = "0";
             this.lblBarcos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -480,19 +480,19 @@ namespace WSA
             // 
             this.splitContainer6.Panel2.BackColor = System.Drawing.Color.RoyalBlue;
             this.splitContainer6.Panel2.Controls.Add(this.lblConductores);
-            this.splitContainer6.Size = new System.Drawing.Size(956, 192);
-            this.splitContainer6.SplitterDistance = 469;
+            this.splitContainer6.Size = new System.Drawing.Size(922, 192);
+            this.splitContainer6.SplitterDistance = 451;
             this.splitContainer6.TabIndex = 14;
             // 
             // lblOperadores
             // 
             this.lblOperadores.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblOperadores.AutoSize = true;
-            this.lblOperadores.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOperadores.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOperadores.ForeColor = System.Drawing.Color.White;
             this.lblOperadores.Location = new System.Drawing.Point(16, 75);
             this.lblOperadores.Name = "lblOperadores";
-            this.lblOperadores.Size = new System.Drawing.Size(43, 42);
+            this.lblOperadores.Size = new System.Drawing.Size(30, 29);
             this.lblOperadores.TabIndex = 1;
             this.lblOperadores.Text = "0";
             this.lblOperadores.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -501,11 +501,11 @@ namespace WSA
             // 
             this.lblConductores.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblConductores.AutoSize = true;
-            this.lblConductores.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConductores.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConductores.ForeColor = System.Drawing.Color.White;
             this.lblConductores.Location = new System.Drawing.Point(34, 75);
             this.lblConductores.Name = "lblConductores";
-            this.lblConductores.Size = new System.Drawing.Size(43, 42);
+            this.lblConductores.Size = new System.Drawing.Size(30, 29);
             this.lblConductores.TabIndex = 3;
             this.lblConductores.Text = "0";
             this.lblConductores.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -525,19 +525,19 @@ namespace WSA
             // splitContainer8.Panel2
             // 
             this.splitContainer8.Panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.splitContainer8.Size = new System.Drawing.Size(956, 192);
-            this.splitContainer8.SplitterDistance = 469;
+            this.splitContainer8.Size = new System.Drawing.Size(922, 192);
+            this.splitContainer8.SplitterDistance = 451;
             this.splitContainer8.TabIndex = 16;
             // 
             // lblProductos
             // 
             this.lblProductos.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblProductos.AutoSize = true;
-            this.lblProductos.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductos.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductos.ForeColor = System.Drawing.Color.White;
             this.lblProductos.Location = new System.Drawing.Point(16, 76);
             this.lblProductos.Name = "lblProductos";
-            this.lblProductos.Size = new System.Drawing.Size(43, 42);
+            this.lblProductos.Size = new System.Drawing.Size(30, 29);
             this.lblProductos.TabIndex = 1;
             this.lblProductos.Text = "0";
             this.lblProductos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -573,7 +573,7 @@ namespace WSA
             this.Controls.Add(this.label2);
             this.Controls.Add(this.gpMeses);
             this.Name = "FrmTablero";
-            this.Text = "FrmTablero";
+            this.Text = "Tablero";
             ((System.ComponentModel.ISupportInitialize)(this.gpMeses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gpOperadores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gpProductos)).EndInit();
