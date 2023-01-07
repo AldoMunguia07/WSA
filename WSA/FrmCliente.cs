@@ -19,6 +19,12 @@ namespace WSA
         public FrmCliente(bool esIngreso)
         {
             InitializeComponent();
+            btnGuardar.Enabled = false;
+            btnModificar.Enabled = false;
+            btnGuardar.Visible = false;
+            btnModificar.Visible = false;
+            btnCancelar.Visible = false;
+
             foreach (Control c in this.Controls)
             {
                 if (c is Button)
@@ -31,6 +37,15 @@ namespace WSA
             if (esIngreso)
             {
                 btnSeleccionar.Visible = true;
+            }
+
+            if (VariablesGlobales.Usuario.TipoUsuarioId == 3)
+            {
+                btnGuardar.Enabled = true;
+                btnModificar.Enabled = true;
+                btnGuardar.Visible = true;
+                btnModificar.Visible = true;
+                btnCancelar.Visible = true;
             }
         }
 
@@ -63,7 +78,7 @@ namespace WSA
         {
             txtDescCliente.Clear();
             seleccionado = false;
-            btnGuardar.Enabled = true;
+           // btnGuardar.Enabled = true;
             cargarDatos();
         }
 

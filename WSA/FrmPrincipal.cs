@@ -248,5 +248,7 @@ namespace WSA
             CerrarFormularios();
             CargarFormulario(frmTablero);
         }
+
+       
     }
 }

@@ -211,7 +211,7 @@ namespace WSA
             // 
             this.boletasToolStripMenuItem1.Image = global::WSA.Properties.Resources.boletas;
             this.boletasToolStripMenuItem1.Name = "boletasToolStripMenuItem1";
-            this.boletasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.boletasToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
             this.boletasToolStripMenuItem1.Text = "Boletas";
             this.boletasToolStripMenuItem1.Click += new System.EventHandler(this.boletasToolStripMenuItem1_Click);
             // 
@@ -219,7 +219,7 @@ namespace WSA
             // 
             this.rptbitacoraToolStripMenuItem.Image = global::WSA.Properties.Resources.bitacora;
             this.rptbitacoraToolStripMenuItem.Name = "rptbitacoraToolStripMenuItem";
-            this.rptbitacoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rptbitacoraToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.rptbitacoraToolStripMenuItem.Text = "Bitácora";
             this.rptbitacoraToolStripMenuItem.Click += new System.EventHandler(this.bitácoraToolStripMenuItem_Click);
             // 
@@ -227,7 +227,7 @@ namespace WSA
             // 
             this.tableroToolStripMenuItem.Image = global::WSA.Properties.Resources.dashboard_icon;
             this.tableroToolStripMenuItem.Name = "tableroToolStripMenuItem";
-            this.tableroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tableroToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.tableroToolStripMenuItem.Text = "Tablero";
             this.tableroToolStripMenuItem.Click += new System.EventHandler(this.tableroToolStripMenuItem_Click);
             // 

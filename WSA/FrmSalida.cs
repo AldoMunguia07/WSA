@@ -129,7 +129,7 @@ namespace WSA
                         }
 
                         MessageBox.Show("Salida agregada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FrmTicket frmTicket = new FrmTicket(boleta.UltimaBoleta());
+                        FrmTicket frmTicket = new FrmTicket(idBoleta);
                         frmTicket.ShowDialog();
                     }
                     else

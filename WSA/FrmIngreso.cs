@@ -101,8 +101,8 @@ namespace WSA
                 if (boleta.AgregarEntrada(boleta))
                 {
                     MessageBox.Show("Entrada agregada", VariablesGlobales.TitleMessageBox, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    FrmTicketEntrada frmTicketEntrada = new FrmTicketEntrada(boleta.UltimaBoleta());
-                    frmTicketEntrada.ShowDialog();
+                    /*FrmTicketEntrada frmTicketEntrada = new FrmTicketEntrada(boleta.UltimaBoleta());
+                    frmTicketEntrada.ShowDialog();*/
                 }
                 else
                 {

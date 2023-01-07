@@ -14,7 +14,7 @@ namespace WSA.Clases
 {
     class ConexionHistorico
     {
-        private static string connectionString = @"Data Source=(local)\sqlexpress;Initial Catalog=FADSA_PC;Integrated Security=True";
+        private static string connectionString = @"Data Source=(local)\sqlexpress;Initial Catalog=FADSA_PC;User Id=sa;Password=L17r3c1@;Integrated Security=True";
         public SqlConnection sqlConnection = new SqlConnection(connectionString);
     }
 }
